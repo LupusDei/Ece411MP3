@@ -1,0 +1,36 @@
+IR - This component has had to be modified multiple times for all the new instructions, and has several outputs added such as IMMEDIATE for ADD & AND immediate, or my JSRR output for the JSRR instruction (bit 11).
+
+PCmux - I increased the size of this mux to be a 4 input mux.  The increase was to handle new PC offset values such as the PC offset 11 for JSR, or for a direct register load (after setting the lowest bit to 0) for RET, JMP, or JSRR.
+
+RFmux - I increased the size of this mux to be a 4 input mux.  This was to handle instructions like LEA, which needed an ADJ9 signal to be stored in the specified register & to set the condition codes.
+
+ALUmux - I increased the size of this mux to be a 4 input mux.  This was to allow for new inputs to the ALU for instructions like ADD & AND immediate, which needs a sign extended word from the imm5 signal.
+
+AlignReg - This simple component takes an LC3b_word and sets the lowest bit to 0.  This is to make sure the PC is always an even address, and thus preventing grabbing 2 halfs of 2 different instructions.
+
+SEXT - This component sign extends the imm5 signal for instructions like ADD immediate or AND immediate.
+
+SEXT6 - This component sign extends the index6 signal for LDB & STB.
+
+JSRadd - This component adds the output of ADJ11 to the PC for the JSR instruction.
+
+ADJ11 - This component left shifts & sign extends the offset11 signal for the JSR instruction.
+
+AdjTrap - This component left shifts & zero extends the trapVect signal for the TRAP instruction.
+
+JSR_R7Sel - This component sets the destination register to be R7 for a clock cycle for the JSR[R] instruction.
+
+Address_0 - This component just grabs ADDRESS(0) and feeds it to the output
+signal ADDR_0.  This is used for LDB and STB in order to know whether to
+load/write the high byte or low byte.
+
+ByteExt - This component grabs the low or high byte from MDRout, based on if
+ADDRESS(0) is 1 or 0, and then zero extends the byte to make it a 16 bit word
+for the LDB instruction.
+
+LbyteCopy - This component copies the low byte from the source register and
+copies it to the high byte.  This is so the STB instruction can write bits
+(7:0) from the register to either the low or high bye in memory.
+
+ZEXT4 - This component zero extends the 4 bit imm4 signal for all the shift
+instructions.
