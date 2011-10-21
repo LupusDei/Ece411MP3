@@ -97,19 +97,19 @@ value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_CPU"
 )
 (vvPair
 variable "date"
-value "10/20/11"
+value "10/21/11"
 )
 (vvPair
 variable "day"
-value "Thu"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Thursday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "20"
+value "21"
 )
 (vvPair
 variable "entity_name"
@@ -137,7 +137,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-03.ews.illinois.edu"
+value "gelib-057-34.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -213,7 +213,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "18:01:04"
+value "17:59:03"
 )
 (vvPair
 variable "unit"
@@ -588,8 +588,9 @@ fg "39936,56832,65280"
 lineColor "0,0,32768"
 lineWidth 2
 )
-xt "31000,12000,39000,22000"
+xt "32000,12000,40000,22000"
 )
+oxt "31000,12000,39000,22000"
 ttg (MlTextGroup
 uid 84,0
 ps "CenterOffsetStrategy"
@@ -600,9 +601,9 @@ uid 85,0
 va (VaSet
 font "courier,8,1"
 )
-xt "32250,14650,35250,15550"
+xt "33250,14650,36250,15550"
 st "ece411"
-blo "32250,15350"
+blo "33250,15350"
 tm "BdLibraryNameMgr"
 )
 *14 (Text
@@ -610,9 +611,9 @@ uid 86,0
 va (VaSet
 font "courier,8,1"
 )
-xt "32250,15550,33250,16450"
+xt "33250,15550,34250,16450"
 st "CU"
-blo "32250,16250"
+blo "33250,16250"
 tm "BlkNameMgr"
 )
 *15 (Text
@@ -620,9 +621,9 @@ uid 87,0
 va (VaSet
 font "courier,8,1"
 )
-xt "32250,16450,38250,17350"
+xt "33250,16450,39250,17350"
 st "ControlUnit"
-blo "32250,17150"
+blo "33250,17150"
 tm "InstanceNameMgr"
 )
 ]
@@ -637,7 +638,7 @@ uid 90,0
 va (VaSet
 font "courier,8,0"
 )
-xt "33250,25650,33250,25650"
+xt "34250,25650,34250,25650"
 )
 header ""
 )
@@ -651,7 +652,7 @@ va (VaSet
 vasetType 1
 fg "49152,49152,49152"
 )
-xt "31250,20250,32750,21750"
+xt "32250,20250,33750,21750"
 iconName "UnknownFile.png"
 iconMaskName "UnknownFile.msk"
 )
@@ -666,7 +667,7 @@ uid 94,0
 va (VaSet
 font "courier,8,0"
 )
-xt "39000,12000,39000,12000"
+xt "40000,12000,40000,12000"
 )
 header "Generic Declarations"
 )
@@ -845,8 +846,9 @@ vasetType 1
 fg "49152,49152,49152"
 )
 xt "18250,36250,19750,37750"
-iconName "UnknownFile.png"
-iconMaskName "UnknownFile.msk"
+iconName "BlockDiagram.png"
+iconMaskName "BlockDiagram.msk"
+ftype 1
 )
 viewiconposition 0
 gi *26 (BdGenericInterface
@@ -927,8 +929,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,14400,7500,15300"
-st "RESET_L      : std_logic
-"
+st "RESET_L      : std_logic"
 )
 )
 *29 (BundleNet
@@ -997,8 +998,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,17100,11000,18000"
-st "SIGNAL DataMemIn    : lc3b_word
-"
+st "SIGNAL DataMemIn    : lc3b_word"
 )
 )
 )
@@ -1064,8 +1064,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,21600,11000,22500"
-st "SIGNAL InstMemIn    : lc3b_word
-"
+st "SIGNAL InstMemIn    : lc3b_word"
 )
 )
 )
@@ -1137,8 +1136,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,16200,11000,17100"
-st "SIGNAL DataAddr     : lc3b_word
-"
+st "SIGNAL DataAddr     : lc3b_word"
 )
 )
 )
@@ -1204,8 +1202,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,22500,11000,23400"
-st "SIGNAL MEMWriteData : lc3b_word
-"
+st "SIGNAL MEMWriteData : lc3b_word"
 )
 )
 )
@@ -1271,8 +1268,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,25200,11000,26100"
-st "SIGNAL PCinstAddr   : lc3b_word
-"
+st "SIGNAL PCinstAddr   : lc3b_word"
 )
 )
 )
@@ -1344,8 +1340,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,18900,11000,19800"
-st "SIGNAL EX_C_Out     : lc3b_word
-"
+st "SIGNAL EX_C_Out     : lc3b_word"
 )
 )
 )
@@ -1411,8 +1406,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,20700,11000,21600"
-st "SIGNAL ID_C_Out     : lc3b_word
-"
+st "SIGNAL ID_C_Out     : lc3b_word"
 )
 )
 )
@@ -1478,8 +1472,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,24300,11000,25200"
-st "SIGNAL MEM_C_Out    : lc3b_word
-"
+st "SIGNAL MEM_C_Out    : lc3b_word"
 )
 )
 )
@@ -1551,8 +1544,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,18000,11000,18900"
-st "SIGNAL EX_C_In      : lc3b_word
-"
+st "SIGNAL EX_C_In      : lc3b_word"
 )
 )
 )
@@ -1618,8 +1610,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,19800,11000,20700"
-st "SIGNAL ID_C_In      : lc3b_word
-"
+st "SIGNAL ID_C_In      : lc3b_word"
 )
 )
 )
@@ -1685,8 +1676,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,23400,11000,24300"
-st "SIGNAL MEM_C_In     : lc3b_word
-"
+st "SIGNAL MEM_C_In     : lc3b_word"
 )
 )
 )
@@ -1752,8 +1742,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-5000,26100,11000,27000"
-st "SIGNAL WB_C_In      : lc3b_word
-"
+st "SIGNAL WB_C_In      : lc3b_word"
 )
 )
 )
@@ -1794,7 +1783,7 @@ uid 157,0
 va (VaSet
 vasetType 1
 )
-xt "31600,9600,32400,10400"
+xt "32600,9600,33400,10400"
 radius 400
 )
 )
@@ -1804,11 +1793,11 @@ uid 130,0
 va (VaSet
 vasetType 3
 )
-xt "17000,10000,32000,12000"
+xt "17000,10000,33000,12000"
 pts [
 "17000,10000"
-"32000,10000"
-"32000,12000"
+"33000,10000"
+"33000,12000"
 ]
 )
 start &27
@@ -1902,9 +1891,9 @@ uid 146,0
 va (VaSet
 vasetType 3
 )
-xt "32000,10000,51000,28000"
+xt "33000,10000,51000,28000"
 pts [
-"32000,10000"
+"33000,10000"
 "51000,10000"
 "51000,28000"
 ]
@@ -2049,11 +2038,11 @@ lineColor "32768,0,0"
 lineStyle 3
 lineWidth 2
 )
-xt "38000,22000,45000,29000"
+xt "39000,22000,45000,29000"
 pts [
 "45000,29000"
-"38000,29000"
-"38000,22000"
+"39000,29000"
+"39000,22000"
 ]
 )
 start &17
@@ -2097,9 +2086,9 @@ lineColor "32768,0,0"
 lineStyle 3
 lineWidth 2
 )
-xt "39000,20000,46000,28000"
+xt "40000,20000,46000,28000"
 pts [
-"39000,20000"
+"40000,20000"
 "46000,20000"
 "46000,28000"
 ]
@@ -2117,9 +2106,9 @@ uid 198,0
 va (VaSet
 font "courier,8,0"
 )
-xt "41000,19100,45500,20000"
+xt "42000,19100,46500,20000"
 st "ControlIn"
-blo "41000,19800"
+blo "42000,19800"
 tm "BundleNameMgr"
 )
 second (MLText
@@ -2128,7 +2117,7 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "41000,20000,58500,20900"
+xt "42000,20000,59500,20900"
 st "(EX_C_In,ID_C_In,MEM_C_In,WB_C_In)"
 tm "BundleContentsMgr"
 )
@@ -2264,13 +2253,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "1664,93,2679,783"
-viewArea "4263,6525,73167,51852"
+windowSize "281,130,1296,820"
+viewArea "4300,6500,73204,51827"
 cachedDiagramExtent "-7000,0,69000,51000"
 hasePageBreakOrigin 1
-pageBreakOrigin "0,0"
+pageBreakOrigin "-69000,0"
 active 1
-lastUid 454,0
+lastUid 522,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
