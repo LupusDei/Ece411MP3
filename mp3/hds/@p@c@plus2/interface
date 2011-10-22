@@ -25,15 +25,11 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-<<<<<<< HEAD
-suid 5,0
-=======
-suid 34,0
->>>>>>> dd5d12a... Ifstage outlined
+suid 2,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
-uid 88,0
+uid 67,0
 optionalChildren [
 *2 (RefLabelRowHdr
 )
@@ -70,147 +66,35 @@ tm "EolColHdrMgr"
 )
 *14 (LogPort
 port (LogicalPort
-<<<<<<< HEAD
-=======
-decl (Decl
-n "IF_C_In"
-t "LC3b_word"
-o 1
-suid 28,0
-)
-)
-uid 425,0
-)
-*15 (LogPort
-port (LogicalPort
->>>>>>> dd5d12a... Ifstage outlined
-m 1
-decl (Decl
-n "inst"
-t "lc3b_word"
-<<<<<<< HEAD
-o 26
-suid 1,0
-)
-)
-uid 76,0
-)
-*15 (LogPort
-=======
-o 6
-suid 29,0
-)
-)
-uid 427,0
-)
-*16 (LogPort
->>>>>>> dd5d12a... Ifstage outlined
-port (LogicalPort
-decl (Decl
-n "InstMemIn"
-t "lc3b_word"
-<<<<<<< HEAD
-o 4
-suid 2,0
-)
-)
-uid 78,0
-)
-*16 (LogPort
-=======
-o 2
-suid 30,0
-)
-)
-uid 429,0
-)
-*17 (LogPort
->>>>>>> dd5d12a... Ifstage outlined
-port (LogicalPort
-decl (Decl
-n "newPC"
-t "lc3b_word"
-<<<<<<< HEAD
-o 27
-suid 3,0
-)
-)
-uid 80,0
-)
-*17 (LogPort
-=======
-o 4
-suid 31,0
-)
-)
-uid 431,0
-)
-*18 (LogPort
->>>>>>> dd5d12a... Ifstage outlined
-port (LogicalPort
 m 1
 decl (Decl
 n "nextPC"
 t "lc3b_word"
-<<<<<<< HEAD
 o 28
-suid 4,0
+suid 1,0
 )
 )
-uid 82,0
+uid 61,0
 )
-*18 (LogPort
-=======
-o 7
-suid 32,0
-)
-)
-uid 433,0
-)
-*19 (LogPort
->>>>>>> dd5d12a... Ifstage outlined
+*15 (LogPort
 port (LogicalPort
-m 1
 decl (Decl
 n "PCinstAddr"
 t "lc3b_word"
-<<<<<<< HEAD
 o 13
-suid 5,0
+suid 2,0
 )
 )
-uid 84,0
-=======
-o 5
-suid 33,0
-)
-)
-uid 435,0
-)
-*20 (LogPort
-port (LogicalPort
-decl (Decl
-n "RESET_L"
-t "std_logic"
-o 3
-suid 34,0
-)
-)
-uid 437,0
->>>>>>> dd5d12a... Ifstage outlined
+uid 63,0
 )
 ]
 )
 pdm (PhysicalDM
 displayShortBounds 1
 editShortBounds 1
-uid 101,0
+uid 80,0
 optionalChildren [
-<<<<<<< HEAD
-*19 (Sheet
-=======
-*21 (Sheet
->>>>>>> dd5d12a... Ifstage outlined
+*16 (Sheet
 sheetRow (SheetRow
 headerVa (MVa
 cellColor "49152,49152,49152"
@@ -227,121 +111,43 @@ cellColor "39936,56832,65280"
 fontColor "0,0,0"
 font "courier,10,0"
 )
-<<<<<<< HEAD
-emptyMRCItem *20 (MRCItem
-=======
-emptyMRCItem *22 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+emptyMRCItem *17 (MRCItem
 litem &1
 pos 3
 dimension 20
 )
-uid 103,0
+uid 82,0
 optionalChildren [
-<<<<<<< HEAD
-*21 (MRCItem
-=======
-*23 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*18 (MRCItem
 litem &2
 pos 0
 dimension 20
-uid 104,0
+uid 83,0
 )
-<<<<<<< HEAD
-*22 (MRCItem
-=======
-*24 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*19 (MRCItem
 litem &3
 pos 1
 dimension 23
-uid 105,0
+uid 84,0
 )
-<<<<<<< HEAD
-*23 (MRCItem
-=======
-*25 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*20 (MRCItem
 litem &4
 pos 2
 hidden 1
 dimension 20
-uid 106,0
-)
-<<<<<<< HEAD
-*24 (MRCItem
-litem &14
-pos 0
-dimension 20
-uid 77,0
-)
-*25 (MRCItem
-litem &15
-pos 1
-dimension 20
-uid 79,0
-)
-*26 (MRCItem
-litem &16
-pos 2
-dimension 20
-uid 81,0
-)
-*27 (MRCItem
-litem &17
-pos 3
-dimension 20
-uid 83,0
-)
-*28 (MRCItem
-litem &18
-pos 4
-dimension 20
 uid 85,0
-=======
-*26 (MRCItem
+)
+*21 (MRCItem
 litem &14
 pos 0
 dimension 20
-uid 426,0
+uid 62,0
 )
-*27 (MRCItem
+*22 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 428,0
-)
-*28 (MRCItem
-litem &16
-pos 2
-dimension 20
-uid 430,0
-)
-*29 (MRCItem
-litem &17
-pos 3
-dimension 20
-uid 432,0
-)
-*30 (MRCItem
-litem &18
-pos 4
-dimension 20
-uid 434,0
-)
-*31 (MRCItem
-litem &19
-pos 5
-dimension 20
-uid 436,0
-)
-*32 (MRCItem
-litem &20
-pos 6
-dimension 20
-uid 438,0
->>>>>>> dd5d12a... Ifstage outlined
+uid 64,0
 )
 ]
 )
@@ -352,125 +158,74 @@ fontColor "0,0,0"
 font "courier,10,0"
 textAngle 90
 )
-uid 107,0
+uid 86,0
 optionalChildren [
-<<<<<<< HEAD
-*29 (MRCItem
-=======
-*33 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*23 (MRCItem
 litem &5
 pos 0
 dimension 20
-uid 108,0
+uid 87,0
 )
-<<<<<<< HEAD
-*30 (MRCItem
-=======
-*34 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*24 (MRCItem
 litem &7
 pos 1
 dimension 50
-uid 109,0
+uid 88,0
 )
-<<<<<<< HEAD
-*31 (MRCItem
-=======
-*35 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*25 (MRCItem
 litem &8
 pos 2
 dimension 100
-uid 110,0
+uid 89,0
 )
-<<<<<<< HEAD
-*32 (MRCItem
-=======
-*36 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*26 (MRCItem
 litem &9
 pos 3
 dimension 50
-uid 111,0
+uid 90,0
 )
-<<<<<<< HEAD
-*33 (MRCItem
-=======
-*37 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*27 (MRCItem
 litem &10
 pos 4
 dimension 100
-uid 112,0
+uid 91,0
 )
-<<<<<<< HEAD
-*34 (MRCItem
-=======
-*38 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*28 (MRCItem
 litem &11
 pos 5
 dimension 100
-uid 113,0
+uid 92,0
 )
-<<<<<<< HEAD
-*35 (MRCItem
-=======
-*39 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*29 (MRCItem
 litem &12
 pos 6
 dimension 50
-uid 114,0
+uid 93,0
 )
-<<<<<<< HEAD
-*36 (MRCItem
-=======
-*40 (MRCItem
->>>>>>> dd5d12a... Ifstage outlined
+*30 (MRCItem
 litem &13
 pos 7
 dimension 80
-uid 115,0
+uid 94,0
 )
 ]
 )
 fixedCol 4
 fixedRow 2
 name "Ports"
-uid 102,0
+uid 81,0
 vaOverrides [
 ]
 )
 ]
 )
 active 1
-uid 87,0
+uid 66,0
 )
 VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-<<<<<<< HEAD
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
-)
-(vvPair
-variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
-)
-(vvPair
-variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/interface.info"
-)
-(vvPair
-variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/interface.user"
-)
-(vvPair
-variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
-=======
 value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
@@ -479,16 +234,15 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/interface.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@p@c@plus2/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/interface.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@p@c@plus2/interface.user"
 )
 (vvPair
 variable "SourceDir"
 value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
->>>>>>> dd5d12a... Ifstage outlined
 )
 (vvPair
 variable "appl"
@@ -504,34 +258,11 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-<<<<<<< HEAD
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@p@c@plus2"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/IFStage"
-)
-(vvPair
-variable "date"
-value "10/21/11"
-)
-(vvPair
-variable "day"
-value "Fri"
-)
-(vvPair
-variable "day_long"
-value "Friday"
-)
-(vvPair
-variable "dd"
-value "21"
-=======
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage"
-)
-(vvPair
-variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IFStage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/PCPlus2"
 )
 (vvPair
 variable "date"
@@ -548,11 +279,10 @@ value "Saturday"
 (vvPair
 variable "dd"
 value "22"
->>>>>>> dd5d12a... Ifstage outlined
 )
 (vvPair
 variable "entity_name"
-value "IFStage"
+value "PCPlus2"
 )
 (vvPair
 variable "ext"
@@ -576,11 +306,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-<<<<<<< HEAD
-value "gelib-057-34.ews.illinois.edu"
-=======
 value "gelib-057-32.ews.illinois.edu"
->>>>>>> dd5d12a... Ifstage outlined
 )
 (vvPair
 variable "language"
@@ -600,7 +326,7 @@ value "10"
 )
 (vvPair
 variable "module_name"
-value "IFStage"
+value "PCPlus2"
 )
 (vvPair
 variable "month"
@@ -612,19 +338,11 @@ value "October"
 )
 (vvPair
 variable "p"
-<<<<<<< HEAD
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@p@c@plus2/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/IFStage/interface"
-=======
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/interface"
-)
-(vvPair
-variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IFStage/interface"
->>>>>>> dd5d12a... Ifstage outlined
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/PCPlus2/interface"
 )
 (vvPair
 variable "project_name"
@@ -664,23 +382,15 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-<<<<<<< HEAD
-value "18:49:52"
-=======
-value "17:03:54"
->>>>>>> dd5d12a... Ifstage outlined
+value "16:46:13"
 )
 (vvPair
 variable "unit"
-value "IFStage"
+value "PCPlus2"
 )
 (vvPair
 variable "user"
-<<<<<<< HEAD
-value "martin43"
-=======
 value "bhatia9"
->>>>>>> dd5d12a... Ifstage outlined
 )
 (vvPair
 variable "version"
@@ -701,80 +411,22 @@ value "11"
 ]
 )
 LanguageMgr "VhdlLangMgr"
-uid 86,0
+uid 65,0
 optionalChildren [
-<<<<<<< HEAD
-*37 (SymbolBody
+*31 (SymbolBody
 uid 8,0
 optionalChildren [
-*38 (CptPort
+*32 (CptPort
 uid 51,0
 ps "OnEdgeStrategy"
 shape (Triangle
 uid 52,0
-=======
-*41 (SymbolBody
-uid 8,0
-optionalChildren [
-*42 (CptPort
-uid 390,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 391,0
-ro 180
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "19625,5250,20375,6000"
-)
-tg (CPTG
-uid 392,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 393,0
-ro 270
-va (VaSet
-font "courier,8,0"
-)
-xt "19550,7000,20450,10500"
-st "IF_C_In"
-ju 2
-blo "20250,7000"
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-uid 394,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,1800,60500,2700"
-st "IF_C_In    : IN     LC3b_word  ;"
-)
-thePort (LogicalPort
-decl (Decl
-n "IF_C_In"
-t "LC3b_word"
-o 1
-suid 28,0
-)
-)
-)
-*43 (CptPort
-uid 395,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 396,0
->>>>>>> dd5d12a... Ifstage outlined
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-<<<<<<< HEAD
-xt "24000,9625,24750,10375"
+xt "27000,11625,27750,12375"
 )
 tg (CPTG
 uid 53,0
@@ -785,288 +437,19 @@ uid 54,0
 va (VaSet
 font "courier,8,0"
 )
-xt "21000,9550,23000,10450"
-st "inst"
+xt "23000,11550,26000,12450"
+st "nextPC"
 ju 2
-blo "23000,10250"
-=======
-xt "24000,12625,24750,13375"
-)
-tg (CPTG
-uid 397,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 398,0
-va (VaSet
-font "courier,8,0"
-)
-xt "21000,12550,23000,13450"
-st "inst"
-ju 2
-blo "23000,13250"
->>>>>>> dd5d12a... Ifstage outlined
+blo "26000,12250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-<<<<<<< HEAD
 uid 55,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,4500,60500,5400"
-=======
-uid 399,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,6300,60500,7200"
->>>>>>> dd5d12a... Ifstage outlined
-st "inst       : OUT    lc3b_word  ;"
-)
-thePort (LogicalPort
-m 1
-decl (Decl
-n "inst"
-t "lc3b_word"
-<<<<<<< HEAD
-o 26
-suid 1,0
-)
-)
-)
-*39 (CptPort
-uid 56,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 57,0
-=======
-o 6
-suid 29,0
-)
-)
-)
-*44 (CptPort
-uid 400,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 401,0
->>>>>>> dd5d12a... Ifstage outlined
-ro 180
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-<<<<<<< HEAD
-xt "17625,5250,18375,6000"
-)
-tg (CPTG
-uid 58,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 59,0
-=======
-xt "16625,5250,17375,6000"
-)
-tg (CPTG
-uid 402,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 403,0
->>>>>>> dd5d12a... Ifstage outlined
-ro 270
-va (VaSet
-font "courier,8,0"
-)
-<<<<<<< HEAD
-xt "17550,7000,18450,11500"
-st "InstMemIn"
-ju 2
-blo "18250,7000"
-=======
-xt "16550,7000,17450,11500"
-st "InstMemIn"
-ju 2
-blo "17250,7000"
->>>>>>> dd5d12a... Ifstage outlined
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-<<<<<<< HEAD
-uid 60,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,1800,60500,2700"
-=======
-uid 404,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,2700,60500,3600"
->>>>>>> dd5d12a... Ifstage outlined
-st "InstMemIn  : IN     lc3b_word  ;"
-)
-thePort (LogicalPort
-decl (Decl
-n "InstMemIn"
-t "lc3b_word"
-<<<<<<< HEAD
-o 4
-suid 2,0
-)
-)
-)
-*40 (CptPort
-uid 61,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 62,0
-=======
-o 2
-suid 30,0
-)
-)
-)
-*45 (CptPort
-uid 405,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 406,0
->>>>>>> dd5d12a... Ifstage outlined
-ro 270
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "24000,6625,24750,7375"
-)
-tg (CPTG
-<<<<<<< HEAD
-uid 63,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 64,0
-=======
-uid 407,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 408,0
->>>>>>> dd5d12a... Ifstage outlined
-va (VaSet
-font "courier,8,0"
-)
-xt "20500,6550,23000,7450"
-st "newPC"
-ju 2
-blo "23000,7250"
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-<<<<<<< HEAD
-uid 65,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,2700,60500,3600"
-=======
-uid 409,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,4500,60500,5400"
->>>>>>> dd5d12a... Ifstage outlined
-st "newPC      : IN     lc3b_word  ;"
-)
-thePort (LogicalPort
-decl (Decl
-n "newPC"
-t "lc3b_word"
-<<<<<<< HEAD
-o 27
-suid 3,0
-)
-)
-)
-*41 (CptPort
-uid 66,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 67,0
-=======
-o 4
-suid 31,0
-)
-)
-)
-*46 (CptPort
-uid 410,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 411,0
->>>>>>> dd5d12a... Ifstage outlined
-ro 90
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-<<<<<<< HEAD
-xt "24000,8625,24750,9375"
-)
-tg (CPTG
-uid 68,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 69,0
-va (VaSet
-font "courier,8,0"
-)
-xt "20000,8550,23000,9450"
-st "nextPC"
-ju 2
-blo "23000,9250"
-=======
-xt "24000,9625,24750,10375"
-)
-tg (CPTG
-uid 412,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 413,0
-va (VaSet
-font "courier,8,0"
-)
-xt "20000,9550,23000,10450"
-st "nextPC"
-ju 2
-blo "23000,10250"
->>>>>>> dd5d12a... Ifstage outlined
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-<<<<<<< HEAD
-uid 70,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,5400,59500,6300"
-=======
-uid 414,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,7200,59500,8100"
->>>>>>> dd5d12a... Ifstage outlined
+xt "44000,2700,59500,3600"
 st "nextPC     : OUT    lc3b_word "
 )
 thePort (LogicalPort
@@ -1074,142 +457,52 @@ m 1
 decl (Decl
 n "nextPC"
 t "lc3b_word"
-<<<<<<< HEAD
 o 28
-suid 4,0
+suid 1,0
 )
 )
 )
-*42 (CptPort
-uid 71,0
+*33 (CptPort
+uid 56,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 72,0
-=======
-o 7
-suid 32,0
-)
-)
-)
-*47 (CptPort
-uid 415,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 416,0
->>>>>>> dd5d12a... Ifstage outlined
+uid 57,0
+ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-<<<<<<< HEAD
-xt "19625,5250,20375,6000"
+xt "14250,11625,15000,12375"
 )
 tg (CPTG
-uid 73,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 74,0
-=======
-xt "22625,5250,23375,6000"
-)
-tg (CPTG
-uid 417,0
-ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
-f (Text
-uid 418,0
->>>>>>> dd5d12a... Ifstage outlined
-ro 270
-va (VaSet
-font "courier,8,0"
-)
-<<<<<<< HEAD
-xt "19550,7000,20450,12500"
-st "PCinstAddr"
-ju 2
-blo "20250,7000"
-=======
-xt "22550,7000,23450,12500"
-st "PCinstAddr"
-ju 2
-blo "23250,7000"
->>>>>>> dd5d12a... Ifstage outlined
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-<<<<<<< HEAD
-uid 75,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,3600,60500,4500"
-=======
-uid 419,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,5400,60500,6300"
->>>>>>> dd5d12a... Ifstage outlined
-st "PCinstAddr : OUT    lc3b_word  ;"
-)
-thePort (LogicalPort
-m 1
-decl (Decl
-n "PCinstAddr"
-t "lc3b_word"
-<<<<<<< HEAD
-o 13
-suid 5,0
-=======
-o 5
-suid 33,0
-)
-)
-)
-*48 (CptPort
-uid 420,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 421,0
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "18625,16000,19375,16750"
-)
-tg (CPTG
-uid 422,0
+uid 58,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 423,0
-ro 270
+uid 59,0
 va (VaSet
 font "courier,8,0"
 )
-xt "18550,11500,19450,15000"
-st "RESET_L"
-blo "19250,15000"
+xt "16000,11550,21500,12450"
+st "PCinstAddr"
+blo "16000,12250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 424,0
+uid 60,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,3600,60500,4500"
-st "RESET_L    : IN     std_logic  ;"
+xt "44000,1800,60500,2700"
+st "PCinstAddr : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
-n "RESET_L"
-t "std_logic"
-o 3
-suid 34,0
->>>>>>> dd5d12a... Ifstage outlined
+n "PCinstAddr"
+t "lc3b_word"
+o 13
+suid 2,0
 )
 )
 )
@@ -1222,7 +515,7 @@ fg "0,65535,0"
 lineColor "0,32896,0"
 lineWidth 2
 )
-xt "15000,6000,24000,16000"
+xt "15000,6000,27000,20000"
 )
 biTextGroup (BiTextGroup
 uid 10,0
@@ -1233,25 +526,21 @@ uid 11,0
 va (VaSet
 font "courier,8,1"
 )
-xt "17750,10100,20750,11000"
+xt "19250,12100,22250,13000"
 st "ece411"
-blo "17750,10800"
+blo "19250,12800"
 )
 second (Text
 uid 12,0
 va (VaSet
 font "courier,8,1"
 )
-xt "17750,11000,21250,11900"
-st "IFStage"
-blo "17750,11700"
+xt "19250,13000,22750,13900"
+st "PCPlus2"
+blo "19250,13700"
 )
 )
-<<<<<<< HEAD
-gi *43 (GenericInterface
-=======
-gi *49 (GenericInterface
->>>>>>> dd5d12a... Ifstage outlined
+gi *34 (GenericInterface
 uid 13,0
 ps "CenterOffsetStrategy"
 matrix (Matrix
@@ -1261,11 +550,7 @@ uid 15,0
 va (VaSet
 font "courier,8,0"
 )
-<<<<<<< HEAD
-xt "-7500,7000,3000,7900"
-=======
-xt "-8500,7000,2000,7900"
->>>>>>> dd5d12a... Ifstage outlined
+xt "-6000,9000,4500,9900"
 st "Generic Declarations"
 )
 header "Generic Declarations"
@@ -1284,17 +569,10 @@ sTC 0
 sF 0
 )
 )
-<<<<<<< HEAD
-*44 (Grouping
+*35 (Grouping
 uid 16,0
 optionalChildren [
-*45 (CommentText
-=======
-*50 (Grouping
-uid 16,0
-optionalChildren [
-*51 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*36 (CommentText
 uid 18,0
 shape (Rectangle
 uid 19,0
@@ -1313,11 +591,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-<<<<<<< HEAD
-xt "32200,50050,45700,50950"
-=======
 xt "32200,50050,45200,50950"
->>>>>>> dd5d12a... Ifstage outlined
 st "
 by %user on %dd %month %year
 "
@@ -1330,11 +604,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*46 (CommentText
-=======
-*52 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*37 (CommentText
 uid 21,0
 shape (Rectangle
 uid 22,0
@@ -1366,11 +636,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*47 (CommentText
-=======
-*53 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*38 (CommentText
 uid 24,0
 shape (Rectangle
 uid 25,0
@@ -1402,11 +668,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*48 (CommentText
-=======
-*54 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*39 (CommentText
 uid 27,0
 shape (Rectangle
 uid 28,0
@@ -1438,11 +700,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*49 (CommentText
-=======
-*55 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*40 (CommentText
 uid 30,0
 shape (Rectangle
 uid 31,0
@@ -1473,11 +731,7 @@ visibleWidth 20000
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*50 (CommentText
-=======
-*56 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*41 (CommentText
 uid 33,0
 shape (Rectangle
 uid 34,0
@@ -1509,11 +763,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*51 (CommentText
-=======
-*57 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*42 (CommentText
 uid 36,0
 shape (Rectangle
 uid 37,0
@@ -1544,11 +794,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*52 (CommentText
-=======
-*58 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*43 (CommentText
 uid 39,0
 shape (Rectangle
 uid 40,0
@@ -1580,11 +826,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*53 (CommentText
-=======
-*59 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*44 (CommentText
 uid 42,0
 shape (Rectangle
 uid 43,0
@@ -1616,11 +858,7 @@ position 1
 ignorePrefs 1
 titleBlock 1
 )
-<<<<<<< HEAD
-*54 (CommentText
-=======
-*60 (CommentText
->>>>>>> dd5d12a... Ifstage outlined
+*45 (CommentText
 uid 45,0
 shape (Rectangle
 uid 46,0
@@ -1677,19 +915,11 @@ xShown 1
 yShown 1
 color "26368,26368,26368"
 )
-<<<<<<< HEAD
-packageList *55 (PackageList
+packageList *46 (PackageList
 uid 48,0
 stg "VerticalLayoutStrategy"
 textVec [
-*56 (Text
-=======
-packageList *61 (PackageList
-uid 48,0
-stg "VerticalLayoutStrategy"
-textVec [
-*62 (Text
->>>>>>> dd5d12a... Ifstage outlined
+*47 (Text
 uid 49,0
 va (VaSet
 font "courier,8,1"
@@ -1698,11 +928,7 @@ xt "0,0,6500,900"
 st "Package List"
 blo "0,700"
 )
-<<<<<<< HEAD
-*57 (MLText
-=======
-*63 (MLText
->>>>>>> dd5d12a... Ifstage outlined
+*48 (MLText
 uid 50,0
 va (VaSet
 font "courier,8,0"
@@ -1772,7 +998,7 @@ tm "PanelText"
 )
 parentGraphicsRef (HdmGraphicsRef
 libraryName "ece411"
-entityName "Pipeline"
+entityName "IFStage"
 viewName "struct.bd"
 )
 defaultSymbolBody (SymbolBody
@@ -1805,11 +1031,7 @@ st "<cell>"
 blo "24750,16700"
 )
 )
-<<<<<<< HEAD
-gi *58 (GenericInterface
-=======
-gi *64 (GenericInterface
->>>>>>> dd5d12a... Ifstage outlined
+gi *49 (GenericInterface
 ps "CenterOffsetStrategy"
 matrix (Matrix
 text (MLText
@@ -1908,11 +1130,7 @@ o 0
 )
 )
 )
-<<<<<<< HEAD
-DeclarativeBlock *59 (SymDeclBlock
-=======
-DeclarativeBlock *65 (SymDeclBlock
->>>>>>> dd5d12a... Ifstage outlined
+DeclarativeBlock *50 (SymDeclBlock
 uid 1,0
 stg "SymDeclLayoutStrategy"
 declLabel (Text
@@ -1938,15 +1156,9 @@ uid 4,0
 va (VaSet
 font "courier,8,1"
 )
-<<<<<<< HEAD
-xt "42000,6300,44500,7200"
+xt "42000,3600,44500,4500"
 st "User:"
-blo "42000,7000"
-=======
-xt "42000,8100,44500,9000"
-st "User:"
-blo "42000,8800"
->>>>>>> dd5d12a... Ifstage outlined
+blo "42000,4300"
 )
 internalLabel (Text
 uid 6,0
@@ -1963,11 +1175,7 @@ uid 5,0
 va (VaSet
 font "courier,8,0"
 )
-<<<<<<< HEAD
-xt "44000,7200,44000,7200"
-=======
-xt "44000,9000,44000,9000"
->>>>>>> dd5d12a... Ifstage outlined
+xt "44000,4500,44000,4500"
 tm "SyDeclarativeTextMgr"
 )
 internalText (MLText
@@ -1980,9 +1188,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-<<<<<<< HEAD
-lastUid 115,0
-=======
-lastUid 486,0
->>>>>>> dd5d12a... Ifstage outlined
+lastUid 94,0
 )

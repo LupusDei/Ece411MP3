@@ -65,11 +65,11 @@ value "/team/ece411/G5/ece411mp3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_@c@p@u/struct.bd.$rec.info"
+value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_@c@p@u/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_@c@p@u/struct.bd.$rec.user"
+value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_@c@p@u/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
@@ -81,7 +81,7 @@ value "HDL Designer"
 )
 (vvPair
 variable "arch_name"
-value "struct.bd"
+value "struct"
 )
 (vvPair
 variable "config"
@@ -117,19 +117,19 @@ value "mp3_CPU"
 )
 (vvPair
 variable "ext"
-value "bd"
+value "<TBD>"
 )
 (vvPair
 variable "f"
-value "struct.bd.$rec"
+value "struct.bd"
 )
 (vvPair
 variable "f_logical"
-value "struct.bd.$rec"
+value "struct.bd"
 )
 (vvPair
 variable "f_noext"
-value "struct.bd"
+value "struct"
 )
 (vvPair
 variable "group"
@@ -169,11 +169,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_@c@p@u/struct.bd.$rec"
+value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_@c@p@u/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_CPU/struct.bd.$rec"
+value "/team/ece411/G5/ece411mp3/mp3/hds/mp3_CPU/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -213,7 +213,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "17:51:32"
+value "17:59:03"
 )
 (vvPair
 variable "unit"
@@ -846,8 +846,9 @@ vasetType 1
 fg "49152,49152,49152"
 )
 xt "18250,36250,19750,37750"
-iconName "UnknownFile.png"
-iconMaskName "UnknownFile.msk"
+iconName "BlockDiagram.png"
+iconMaskName "BlockDiagram.msk"
+ftype 1
 )
 viewiconposition 0
 gi *26 (BdGenericInterface
@@ -2252,13 +2253,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "1664,93,2679,783"
-viewArea "4263,6525,73167,51852"
+windowSize "281,130,1296,820"
+viewArea "4300,6500,73204,51827"
 cachedDiagramExtent "-7000,0,69000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-69000,0"
 active 1
-lastUid 488,0
+lastUid 522,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
