@@ -1,0 +1,721 @@
+# //  ModelSim SE 6.1c Nov 17 2005 Linux 2.6.32-131.6.1.el6.x86_64
+# //
+# //  Copyright Mentor Graphics Corporation 2005
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.EXStage(struct) 
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading /software/fpgadv72-x86_64/Modeltech/linux/../std.standard
+# Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.std_logic_1164(body)
+# Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.numeric_std(body)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lc3b_types(body)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.exstage(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ex_c_decode(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# First test, ADD 1, 2 
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# First test, ADD 1, 2 
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# First test, ADD 1, 2 
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# First test, ADD 1, 2 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# First test, ADD 1, 2 
+# Run for 20ns 
+# 0
+# 
+# Check aluout = 3 
+property wave -color blue
+# cannot find item 
+property wave -color blue /exstage/aluout
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# First test, ADD 1, 2 
+# Run for 20ns 
+# 0
+# 
+# Check aluout = 3 
+# No pass 
+seetime wave 40
+seetime wave 1000
+seetime wave 40
+find signals aluin
+find signals aluina
+# /exstage/aluina
+compare add comparing -label equals -wave /exstage/aluina /exstage/aluinb
+# compare add failed:  No compare session started.
+# A compare must be started before adding compare signals.
+compare start
+# Dataset not open: gold
+compare configure -vlogmatches {/exstage/aluout = 3}
+# compare configure failed:  No compare session started.
+# A compare must be started before configuring compare signals.
+compare start /exstage/aluout
+# Dataset not open: /exstage/aluout
+/exstage/aluout = 3
+# invalid command name "/exstage/aluout"
+{/exstage/aluout = 3}
+# invalid command name "/exstage/aluout = 3"
+if {/exstage/aluout = 3} {echo "Hello"} else {echo "Nope"}
+# syntax error in expression "/exstage/aluout = 3": unexpected operator /
+if {sim:/exstage/aluout = 3} {echo "Hello"} else {echo "Nope"}
+# syntax error in expression "sim:/exstage/aluout = 3": variable references require preceding $
+if {$sim:/exstage/aluout = 3} {echo "Hello"} else {echo "Nope"}
+# syntax error in expression "$sim:/exstage/aluout = 3": extra tokens at end of expression
+init_signal_spy
+# invalid command name "init_signal_spy"
+(/exstage/aluout == 3)
+# invalid command name "(/exstage/aluout"
+if ((integer) /exstage/aluout) == 3
+# syntax error in expression "((integer)": variable references require preceding $
+if (/exstage/aluout == 3'hffae)
+# syntax error in expression "(/exstage/aluout": unexpected operator /
+if (sim:/exstage/aluout == 3'hffae)
+# syntax error in expression "(sim:/exstage/aluout": variable references require preceding $
+if ($sim:/exstage/aluout == 3'hffae)
+# can't read "sim": no such variable
+if ($/exstage/aluout == 3'hffae)
+# syntax error in expression "($/exstage/aluout": variable references require preceding $
+3'hffae
+# invalid command name "3'hffae"
+NOW
+# invalid command name "NOW"
+exstage.aluina
+# invalid command name "exstage.aluina"
+virtualsignal
+# invalid command name "virtualsignal"
+virtual signal /exstage/aluout out
+# /exstage/out
+out
+# invalid command name "out"
+virtual signal {/exstage/aluout == 3} equals
+# /exstage/equals
+if {/exstage/aluout == 3}
+# syntax error in expression "/exstage/aluout == 3": unexpected operator /
+if equals {echo "Hellow"} else {echo "fuck"}
+# syntax error in expression "equals": unexpected operator eq
+if equals == TRUE {echo "Hellow"} else {echo "fuck"}
+# syntax error in expression "equals": unexpected operator eq
+if /equals == TRUE {echo "Hellow"} else {echo "fuck"}
+# syntax error in expression "/equals": unexpected operator /
+if {/exstage/equals} == TRUE {echo "Hellow"} else {echo "fuck"}
+# syntax error in expression "/exstage/equals": unexpected operator /
+     The examine command examines one or more objects and displays current values (or the values at a specified previous time) in the Transcript pane. It optionally can compute the value of an expression of one or more objects. If you are using C Debug, examine can display the value of a C variable as well.\
+
+
+# wrong # args: should be "ThereIsCurProj"
+examine -expr /exstage/equals checksum
+# TRUE
+examine -expr /exstage/equals checksum
+# TRUE
+checksum
+# invalid command name "checksum"
+examine -expr /exstage/aluout
+# 0000000000000011
+examine -expr /exstage/aluout == 3
+# 0000000000000011
+examine -expr {/exstage/aluout == 3}
+# TRUE
+if (examine -expr {/exstage/aluout == 3}) {echo "Hell yes"} else {echo "nope"}
+# extra characters after close-brace
+if (examine -expr {/exstage/aluout == 3}) then {echo "Hell yes"} else {echo "nope"}
+# extra characters after close-brace
+if {examine -expr {/exstage/aluout == 3}} then {echo "Hell yes"} else {echo "nope"}
+# syntax error in expression "examine -expr {/exstage/aluout == 3}": variable references require preceding $
+add wave -color blue -hex /exstage/aluout
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# FALSE
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Simulation Breakpoint: 0
+# Simulation stop requested.
+# MACRO ./EX_STAGE_TEST.do PAUSED at line 19
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# FALSE
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# TRUE
+# First test, ADD 1, 2 
+# Run for 20ns 
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# FALSE
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+examine -expr {/exstage/aluout == 3} equal
+# TRUE
+add wave equal
+# (vish-4014) No objects found matching 'equal'.
+add wave /exstage/equal
+# (vish-4014) No objects found matching '/exstage/equal'.
+add wave /exstage/equal
+# (vish-4014) No objects found matching '/exstage/equal'.
+examine -expr {/exstage/aluout == 3} equals
+# TRUE
+equals
+# invalid command name "equals"
+virtual signal {/exstage/aluout == 3} equals
+# /exstage/equals
+add wave /exstage/equals
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 0 
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# 0
+# 
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# 0
+# 
+# Check aluout = 0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# Check aluout = 0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# ** Error: invalid command name "//virtual"
+# Error in macro ./EX_STAGE_TEST.do line 29
+# invalid command name "//virtual"
+#     while executing
+# "//virtual signal {/exstage/aluout == 0} test2"
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Simulation Breakpoint: 0
+# Simulation stop requested.
+# MACRO ./EX_STAGE_TEST.do PAUSED at line 20
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 0 
+run 20
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+force -freeze sim:/exstage/ex_c_in 0000000000000000 0
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout = 0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  0 
+run 20
+run 20-
+# Time value must not be negative: 20-
+run 20
+# 0
+# 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  0 
+run 20
+# 0
+# 
+run 20
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# 0
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# 0
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  0 
+delete wave
+# Usage: delete wave [-window <wname>] <item_name>
+delete wave *
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  0 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  0 
+# Third test, NOT 1 
+# /exstage/test3
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout -2 
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+run 20
+# 0
+# 
+run 20
+run 20
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  0 
+# Third test, NOT 1 
+# /exstage/test3
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout -2 
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# when -label 1 /exstage/aluout = ;# 1
+# when -label 2 /exstage/aluout = ;# 2
+do EX_STAGE_TEST.do
+# --- Executing initialization force file for EX_STAGE_TEST 
+# /exstage/test1
+# First test, ADD 1, 2 
+# Run for 20ns 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /exstage/exalu
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  3 
+# Second test, AND 1, 2 
+# /exstage/test2
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout  0 
+# Third test, NOT 1 
+# /exstage/test3
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
+# when execution error: (1) invalid command name "="
+# Simulation stop requested.
+# Check aluout -2 
+# when execution error: (2) invalid command name "="
+# Simulation stop requested.
