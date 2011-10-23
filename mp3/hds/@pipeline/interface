@@ -148,7 +148,7 @@ uid 831,0
 port (LogicalPort
 decl (Decl
 n "IF_C_In"
-t "LC3b_word"
+t "lc3b_word"
 o 4
 suid 88,0
 )
@@ -318,43 +318,43 @@ uid 832,0
 )
 *40 (MRCItem
 litem &21
-pos 7
+pos 13
 dimension 20
 uid 834,0
 )
 *41 (MRCItem
 litem &22
-pos 8
+pos 7
 dimension 20
 uid 836,0
 )
 *42 (MRCItem
 litem &23
-pos 9
+pos 8
 dimension 20
 uid 838,0
 )
 *43 (MRCItem
 litem &24
-pos 10
+pos 9
 dimension 20
 uid 840,0
 )
 *44 (MRCItem
 litem &25
-pos 11
+pos 10
 dimension 20
 uid 842,0
 )
 *45 (MRCItem
 litem &26
-pos 12
+pos 11
 dimension 20
 uid 844,0
 )
 *46 (MRCItem
 litem &27
-pos 13
+pos 12
 dimension 20
 uid 846,0
 )
@@ -435,23 +435,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/interface.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/interface.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -467,11 +467,11 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/Pipeline"
 )
 (vvPair
 variable "date"
@@ -515,7 +515,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-32.ews.illinois.edu"
+value "gelib-057-33.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -547,11 +547,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/interface"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline/interface"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/Pipeline/interface"
 )
 (vvPair
 variable "project_name"
@@ -591,7 +591,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "17:04:53"
+value "19:22:20"
 )
 (vvPair
 variable "unit"
@@ -599,7 +599,7 @@ value "Pipeline"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -981,13 +981,13 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,4500,61500,5400"
-st "IF_C_In      : IN     LC3b_word  ;
+st "IF_C_In      : IN     lc3b_word  ;
 "
 )
 thePort (LogicalPort
 decl (Decl
 n "IF_C_In"
-t "LC3b_word"
+t "lc3b_word"
 o 4
 suid 88,0
 )
@@ -1952,5 +1952,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 858,0
+lastUid 870,0
 )
