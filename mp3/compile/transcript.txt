@@ -20,3 +20,136 @@
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pcplus2(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.worthless(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
+do IF_STAGE_TEST.do
+# --- Executing initialization force file for IF_STAGE_TEST 
+# /ifstage/test1
+# First test, PC gets addr 0000 after a RESET_L 
+# Run for 20ns 
+# 0
+# 
+# 0
+# 
+# pcinstaddr should be 0000 
+# 0
+# 
+# Second test, PC can increment 2 on loadpc = 1 
+# /ifstage/test2
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# pcinstaddr should be 0002 
+# 0
+# 
+# Third test, newPC changes and it should reflect in PCInstAddr 
+# /ifstage/test3
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# pcinstAddr should be 0005 
+# 0
+# 
+# Fourth test, ensure that a new pc can be loaded using only if_c_in control 
+# /ifstage/test4
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# pcinstaddr should be 0027 
+# 0
+# 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do IF_STAGE_TEST.do
+# --- Executing initialization force file for IF_STAGE_TEST 
+# /ifstage/test1
+# First test, PC gets addr 0000 after a RESET_L 
+# 0
+# 
+# Run for 5ns 
+# 0
+# 
+# 0
+# 
+# pcinstaddr should be 0000 
+# 0
+# 
+# Second test, PC can increment 2 on loadpc = 1 
+# /ifstage/test2
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# pcinstaddr should be 0002 
+# 0
+# 
+# 0
+# 
+# Third test, newPC changes and it should reflect in PCInstAddr 
+# /ifstage/test3
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# pcinstAddr should be 0005 
+# 0
+# 
+# Fourth test, ensure that a new pc can be loaded using only if_c_in control 
+# /ifstage/test4
+# 0
+# 
+# 0
+# 
+# pcinstaddr should be 0027 
+# 0
+# 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do IF_STAGE_TEST.do
+# --- Executing initialization force file for IF_STAGE_TEST 
+# /ifstage/test1
+# First test, PC gets addr 0000 after a RESET_L 
+# Run for 5ns 
+# pcinstaddr should be 0000 
+# Second test, PC can increment 2 on loadpc = 1 
+# /ifstage/test2
+# pcinstaddr should be 0002 
+# Third test, newPC changes and it should reflect in PCInstAddr 
+# /ifstage/test3
+# pcinstAddr should be 0005 
+# Fourth test, ensure that a new pc can be loaded using only if_c_in control 
+# /ifstage/test4
+# pcinstaddr should be 0027 
