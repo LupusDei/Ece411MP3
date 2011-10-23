@@ -14,21 +14,22 @@ USE ieee.NUMERIC_STD.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY separate_controlsignals IS
+ENTITY IF_C_Decode IS
    PORT( 
-      IF_C_In  : IN     LC3b_word;
-      PCMuxSel : OUT    LC3b_word
+      IF_C_In  : IN     lc3b_word;
+      PCMuxSel : OUT    std_logic;
+      loadPC   : OUT    std_logic
    );
 
 -- Declarations
 
-END separate_controlsignals ;
+END IF_C_Decode ;
 
 --
-ARCHITECTURE untitled OF separate_controlsignals IS
+ARCHITECTURE untitled OF IF_C_Decode IS
 
 BEGIN
   PCMuxSel <= IF_C_In(0);
-
+		loadPC <= IF_C_In(1);
 END ARCHITECTURE untitled;
 
