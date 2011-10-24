@@ -20,7 +20,7 @@ ENTITY IF_C_UNIT IS
       clk       : IN     std_logic;
       im_resp_h : IN     std_logic;
       IF_C_In   : OUT    lc3b_word;
-      im_read_l : OUT    std_logic
+      im_read_l : INOUT    std_logic
    );
 
 -- Declarations
@@ -29,29 +29,28 @@ END IF_C_UNIT ;
 
 --
 ARCHITECTURE untitled OF IF_C_UNIT IS
+signal pre_read_out : std_logic;
+signal pre_if_c_out : lc3b_word;
 BEGIN
-  IF_CONTROL_PROCESS : PROCESS (RESET_L, im_resp_h)
-		variable if_c_state : lc3b_word;
-		variable im_read_state : std_logic;
+  IF_CONTROL_PROCESS : PROCESS (CLK, RESET_L, im_resp_h)
     BEGIN
-			IF (RESET_L'EVENT AND (RESET_L = '1') AND (RESET_L'LAST_VALUE = '0')) THEN
-        im_read_state := '0';
-				if_c_state := "0000000000000000";
-      end if;
+						IF (RESET_L'EVENT AND (RESET_L = '1') AND (RESET_L'LAST_VALUE = '0')) THEN
+        pre_read_out <= '0';
+				    pre_if_c_out <= "0000000000000000";
+						else
 
-		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-				im_read_state := '0';
-		END IF;
-
-			if im_resp_h = '1' then
-        im_read_state := '1';
-				if_c_state := "0000000000000010";
-			else
-				if_c_state := "0000000000000000";
-			end if;
-
-			IF_C_IN <= if_c_state;
-			im_read_l <= im_read_state;
+					  	IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+					  			pre_read_out <= '0';
+										pre_if_c_out <= "0000000000000000";
+								else
+					  	  if ((im_resp_h = '1') and (im_read_l = '0')) then
+            pre_read_out <= '1';
+					  	  		pre_if_c_out <= "0000000000000010"; --increment the pc
+					  	  end if;
+					  	end if;
+						end if;
     END PROCESS;
+				IF_C_In <= pre_if_c_out after delay_control_unit;
+				im_read_l <= pre_read_out after delay_control_unit;
 END ARCHITECTURE untitled;
 
