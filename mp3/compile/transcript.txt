@@ -1,4 +1,4 @@
-# //  ModelSim SE 6.1c Nov 17 2005 Linux 2.6.32-131.12.1.el6.x86_64
+# //  ModelSim SE 6.1c Nov 17 2005 Linux 2.6.32-131.6.1.el6.x86_64
 # //
 # //  Copyright Mentor Graphics Corporation 2005
 # //              All Rights Reserved.
@@ -8,148 +8,130 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.IFStage(struct) 
+# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.Pipeline(struct) 
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../std.standard
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.std_logic_1164(body)
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.numeric_std(body)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lc3b_types(body)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ifstage(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.if_c_decode(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pc(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pcplus2(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.worthless(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
-do IF_STAGE_TEST.do
-# --- Executing initialization force file for IF_STAGE_TEST 
-# /ifstage/test1
-# First test, PC gets addr 0000 after a RESET_L 
-# Run for 20ns 
-# 0
-# 
-# 0
-# 
-# pcinstaddr should be 0000 
-# 0
-# 
-# Second test, PC can increment 2 on loadpc = 1 
-# /ifstage/test2
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# pcinstaddr should be 0002 
-# 0
-# 
-# Third test, newPC changes and it should reflect in PCInstAddr 
-# /ifstage/test3
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# pcinstAddr should be 0005 
-# 0
-# 
-# Fourth test, ensure that a new pc can be loaded using only if_c_in control 
-# /ifstage/test4
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# pcinstaddr should be 0027 
-# 0
-# 
-restart -f
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lc3b_types(body)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.exstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.idstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wordmux8(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.worthless(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.regextractor(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ifstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pc(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pcplus2(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(generatedinstance)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wbstage(generatedinstance)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
+restart -f; do PIPELINE_TEST.do
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-do IF_STAGE_TEST.do
-# --- Executing initialization force file for IF_STAGE_TEST 
-# /ifstage/test1
-# First test, PC gets addr 0000 after a RESET_L 
-# 0
-# 
-# Run for 5ns 
-# 0
-# 
-# 0
-# 
-# pcinstaddr should be 0000 
-# 0
-# 
-# Second test, PC can increment 2 on loadpc = 1 
-# /ifstage/test2
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# pcinstaddr should be 0002 
-# 0
-# 
-# 0
-# 
-# Third test, newPC changes and it should reflect in PCInstAddr 
-# /ifstage/test3
+# --- Executing initialization force file for PIPELINE_TEST 
+# Test setup.... preload R1, R6 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 6 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 1  Instance: /pipeline/ourregfile
 # 0
 # 
 # 0
 # 
 # 0
 # 
-# 0
-# 
-# pcinstAddr should be 0005 
-# 0
-# 
-# Fourth test, ensure that a new pc can be loaded using only if_c_in control 
-# /ifstage/test4
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 1  Instance: /pipeline/ourregfile
 # 0
 # 
 # 0
 # 
-# pcinstaddr should be 0027 
-# 0
+# ID & Regfile communication tests. 
+# Test 1, test alu inputs from ID stage on ADD R7, R1,R6 
+# /pipeline/id_test1a
+# /pipeline/id_test1b
+# ** Error: (vish-4008) Object '/idstage/inst' not found.
+# Error in macro ./PIPELINE_TEST.do line 48
+# ** Error: (vish-4008) Object '/idstage/inst' not found.
 # 
-restart -f
+#     while executing
+# "force /idstage/inst 0001111001000110 -freeze"
+env Extractinator
+# sim:/pipeline/instructiondecode/extractinator
+# hds_create_graphics_for_instance [env] DefaultView 
+env Extractinator
+# sim:/pipeline/instructiondecode/extractinator
+restart -f; do PIPELINE_TEST.do
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-do IF_STAGE_TEST.do
-# --- Executing initialization force file for IF_STAGE_TEST 
-# /ifstage/test1
-# First test, PC gets addr 0000 after a RESET_L 
-# Run for 5ns 
-# pcinstaddr should be 0000 
-# Second test, PC can increment 2 on loadpc = 1 
-# /ifstage/test2
-# pcinstaddr should be 0002 
-# Third test, newPC changes and it should reflect in PCInstAddr 
-# /ifstage/test3
-# pcinstAddr should be 0005 
-# Fourth test, ensure that a new pc can be loaded using only if_c_in control 
-# /ifstage/test4
-# pcinstaddr should be 0027 
+# --- Executing initialization force file for PIPELINE_TEST 
+# Test setup.... preload R1, R6 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 6 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# 0
+# 
+# 0
+# 
+# ID & Regfile communication tests. 
+# Test 1, test alu inputs from ID stage on ADD R7, R1,R6 
+# /pipeline/id_test1a
+# /pipeline/id_test1b
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 76 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 76 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 77 ns  Iteration: 1  Instance: /pipeline/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 77 ns  Iteration: 1  Instance: /pipeline/execution/exalu
+# 0
+# 
+# aluina should be 002A and aluinb should be 0025 
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 83 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# 0
+# 

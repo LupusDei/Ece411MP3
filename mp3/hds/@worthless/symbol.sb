@@ -25,11 +25,11 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 2,0
+suid 3,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
-uid 67,0
+uid 52,0
 optionalChildren [
 *2 (RefLabelRowHdr
 )
@@ -66,33 +66,33 @@ tm "EolColHdrMgr"
 )
 *14 (LogPort
 port (LogicalPort
-m 1
 decl (Decl
-n "inst"
-t "lc3b_word"
-o 5
+n "In0"
+t "LC3b_word"
+o 1
 suid 1,0
 )
 )
-uid 61,0
+uid 86,0
 )
 *15 (LogPort
 port (LogicalPort
+m 1
 decl (Decl
-n "InstMemIn"
-t "lc3b_word"
+n "Out0"
+t "LC3b_word"
 o 2
-suid 2,0
+suid 3,0
 )
 )
-uid 63,0
+uid 88,0
 )
 ]
 )
 pdm (PhysicalDM
 displayShortBounds 1
 editShortBounds 1
-uid 80,0
+uid 65,0
 optionalChildren [
 *16 (Sheet
 sheetRow (SheetRow
@@ -113,41 +113,41 @@ font "courier,10,0"
 )
 emptyMRCItem *17 (MRCItem
 litem &1
-pos 3
+pos 2
 dimension 20
 )
-uid 82,0
+uid 67,0
 optionalChildren [
 *18 (MRCItem
 litem &2
 pos 0
 dimension 20
-uid 83,0
+uid 68,0
 )
 *19 (MRCItem
 litem &3
 pos 1
 dimension 23
-uid 84,0
+uid 69,0
 )
 *20 (MRCItem
 litem &4
 pos 2
 hidden 1
 dimension 20
-uid 85,0
+uid 70,0
 )
 *21 (MRCItem
 litem &14
 pos 0
 dimension 20
-uid 62,0
+uid 87,0
 )
 *22 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 64,0
+uid 89,0
 )
 ]
 )
@@ -158,91 +158,90 @@ fontColor "0,0,0"
 font "courier,10,0"
 textAngle 90
 )
-uid 86,0
+uid 71,0
 optionalChildren [
 *23 (MRCItem
 litem &5
 pos 0
 dimension 20
-uid 87,0
+uid 72,0
 )
 *24 (MRCItem
 litem &7
 pos 1
 dimension 50
-uid 88,0
+uid 73,0
 )
 *25 (MRCItem
 litem &8
 pos 2
 dimension 100
-uid 89,0
+uid 74,0
 )
 *26 (MRCItem
 litem &9
 pos 3
 dimension 50
-uid 90,0
+uid 75,0
 )
 *27 (MRCItem
 litem &10
 pos 4
 dimension 100
-uid 91,0
+uid 76,0
 )
 *28 (MRCItem
 litem &11
 pos 5
 dimension 100
-uid 92,0
+uid 77,0
 )
 *29 (MRCItem
 litem &12
 pos 6
 dimension 50
-uid 93,0
+uid 78,0
 )
 *30 (MRCItem
 litem &13
 pos 7
 dimension 80
-uid 94,0
+uid 79,0
 )
 ]
 )
 fixedCol 4
 fixedRow 2
 name "Ports"
-uid 81,0
+uid 66,0
 vaOverrides [
 ]
 )
 ]
 )
-active 1
-uid 66,0
+uid 51,0
 )
 VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@worthless/interface.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@worthless/symbol.sb.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@worthless/interface.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@worthless/symbol.sb.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -250,7 +249,7 @@ value "HDL Designer"
 )
 (vvPair
 variable "arch_name"
-value "interface"
+value "symbol"
 )
 (vvPair
 variable "config"
@@ -258,27 +257,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@worthless"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@worthless"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/Worthless"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Worthless"
 )
 (vvPair
 variable "date"
-value "10/22/11"
+value "10/23/11"
 )
 (vvPair
 variable "day"
-value "Sat"
+value "Sun"
 )
 (vvPair
 variable "day_long"
-value "Saturday"
+value "Sunday"
 )
 (vvPair
 variable "dd"
-value "22"
+value "23"
 )
 (vvPair
 variable "entity_name"
@@ -290,15 +289,15 @@ value "<TBD>"
 )
 (vvPair
 variable "f"
-value "interface"
+value "symbol.sb"
 )
 (vvPair
 variable "f_logical"
-value "interface"
+value "symbol.sb"
 )
 (vvPair
 variable "f_noext"
-value "interface"
+value "symbol"
 )
 (vvPair
 variable "group"
@@ -306,7 +305,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-33.ews.illinois.edu"
+value "gelib-057-12.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -338,11 +337,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@worthless/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@worthless/symbol.sb"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/Worthless/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Worthless/symbol.sb"
 )
 (vvPair
 variable "project_name"
@@ -382,7 +381,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "20:58:09"
+value "20:27:43"
 )
 (vvPair
 variable "unit"
@@ -390,7 +389,7 @@ value "Worthless"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -398,7 +397,7 @@ value "2005.3 (Build 75)"
 )
 (vvPair
 variable "view"
-value "interface"
+value "symbol"
 )
 (vvPair
 variable "year"
@@ -411,98 +410,100 @@ value "11"
 ]
 )
 LanguageMgr "VhdlLangMgr"
-uid 65,0
+uid 80,0
 optionalChildren [
 *31 (SymbolBody
 uid 8,0
 optionalChildren [
 *32 (CptPort
-uid 51,0
+uid 81,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 52,0
+uid 82,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "24000,7625,24750,8375"
+xt "32250,22625,33000,23375"
 )
 tg (CPTG
-uid 53,0
+uid 83,0
 ps "CptPortTextPlaceStrategy"
-stg "RightVerticalLayoutStrategy"
+stg "VerticalLayoutStrategy"
 f (Text
-uid 54,0
+uid 84,0
 va (VaSet
+isHidden 1
 font "courier,8,0"
 )
-xt "21000,7550,23000,8450"
-st "inst"
-ju 2
-blo "23000,8250"
+xt "34000,22550,35500,23450"
+st "In0"
+blo "34000,23250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 55,0
+uid 85,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,2700,59000,3600"
-st "inst      : OUT    lc3b_word "
+xt "44000,1800,57500,2700"
+st "In0  : IN     LC3b_word  ;"
 )
 thePort (LogicalPort
-m 1
 decl (Decl
-n "inst"
-t "lc3b_word"
-o 5
+n "In0"
+t "LC3b_word"
+o 1
 suid 1,0
 )
 )
 )
 *33 (CptPort
-uid 56,0
+uid 90,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 57,0
+uid 91,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "14250,7625,15000,8375"
+xt "40000,22625,40750,23375"
 )
 tg (CPTG
-uid 58,0
+uid 92,0
 ps "CptPortTextPlaceStrategy"
-stg "VerticalLayoutStrategy"
+stg "RightVerticalLayoutStrategy"
 f (Text
-uid 59,0
+uid 93,0
 va (VaSet
+isHidden 1
 font "courier,8,0"
 )
-xt "16000,7550,20500,8450"
-st "InstMemIn"
-blo "16000,8250"
+xt "37000,22550,39000,23450"
+st "Out0"
+ju 2
+blo "39000,23250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 60,0
+uid 94,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,1800,60000,2700"
-st "InstMemIn : IN     lc3b_word  ;"
+xt "44000,2700,56500,3600"
+st "Out0 : OUT    LC3b_word "
 )
 thePort (LogicalPort
+m 1
 decl (Decl
-n "InstMemIn"
-t "lc3b_word"
+n "Out0"
+t "LC3b_word"
 o 2
-suid 2,0
+suid 3,0
 )
 )
 )
@@ -515,7 +516,7 @@ fg "0,65535,0"
 lineColor "0,32896,0"
 lineWidth 2
 )
-xt "15000,6000,24000,10000"
+xt "33000,21000,40000,25000"
 )
 biTextGroup (BiTextGroup
 uid 10,0
@@ -526,18 +527,18 @@ uid 11,0
 va (VaSet
 font "courier,8,1"
 )
-xt "17250,7100,20250,8000"
+xt "33750,22100,36750,23000"
 st "ece411"
-blo "17250,7800"
+blo "33750,22800"
 )
 second (Text
 uid 12,0
 va (VaSet
 font "courier,8,1"
 )
-xt "17250,8000,21750,8900"
+xt "33750,23000,38250,23900"
 st "Worthless"
-blo "17250,8700"
+blo "33750,23700"
 )
 )
 gi *34 (GenericInterface
@@ -550,7 +551,7 @@ uid 15,0
 va (VaSet
 font "courier,8,0"
 )
-xt "-7500,4000,3000,4900"
+xt "9000,19000,19500,19900"
 st "Generic Declarations"
 )
 header "Generic Declarations"
@@ -561,12 +562,12 @@ elements [
 )
 portInstanceVisAsIs 1
 portInstanceVis (PortSigDisplay
-sTC 0
-sF 0
+sN 0
+sIVOD 1
 )
 portVis (PortSigDisplay
-sTC 0
-sF 0
+sN 0
+sIVOD 1
 )
 )
 *35 (Grouping
@@ -591,7 +592,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,50050,45700,50950"
+xt "32200,50050,45200,50950"
 st "
 by %user on %dd %month %year
 "
@@ -877,7 +878,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,49050,45700,49950"
+xt "32200,49050,44200,49950"
 st "
 %library/%unit/%view
 "
@@ -944,10 +945,12 @@ tm "PackageList"
 )
 ]
 )
-windowSize "0,0,1015,690"
-viewArea "0,0,0,0"
-cachedDiagramExtent "0,0,0,0"
+windowSize "1917,181,2932,871"
+viewArea "-500,-13820,70780,35410"
+cachedDiagramExtent "0,0,69000,51000"
+hasePageBreakOrigin 1
 pageBreakOrigin "0,0"
+active 1
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -997,9 +1000,9 @@ tm "PanelText"
 )
 )
 parentGraphicsRef (HdmGraphicsRef
-libraryName "ece411"
-entityName "IFStage"
-viewName "struct.bd"
+libraryName ""
+entityName ""
+viewName ""
 )
 defaultSymbolBody (SymbolBody
 shape (Rectangle

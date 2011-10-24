@@ -1,9 +1,9 @@
 --
--- VHDL Architecture ece411.Worthless.untitled
+-- VHDL Architecture ece411.ID_C_Decode.untitled
 --
 -- Created:
 --          by - bhatia9.UNKNOWN (gelib-057-12.ews.illinois.edu)
---          at - 20:27:53 10/23/11
+--          at - 19:41:54 10/23/11
 --
 -- using Mentor Graphics HDL Designer(TM) 2005.3 (Build 75)
 --
@@ -14,19 +14,19 @@ USE ieee.NUMERIC_STD.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY Worthless IS
+ENTITY ID_C_Decode IS
    PORT( 
-      In0  : IN     LC3b_word;
-      Out0 : OUT    LC3b_word
+      ID_C_In   : IN     lc3b_word;
+      ALUMuxSel : OUT    LC3b_8MUX_SEL
    );
 
 -- Declarations
 
-END Worthless ;
+END ID_C_Decode ;
 
 --
-ARCHITECTURE untitled OF Worthless IS
+ARCHITECTURE untitled OF ID_C_Decode IS
 BEGIN
-  Out0 <= In0;
+  ALUMuxSel <= ID_C_In(2 downto 0); 
 END ARCHITECTURE untitled;
 

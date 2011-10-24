@@ -65,11 +65,11 @@ value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.$rec.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.$rec.user"
 )
 (vvPair
 variable "SourceDir"
@@ -81,7 +81,7 @@ value "HDL Designer"
 )
 (vvPair
 variable "arch_name"
-value "struct"
+value "struct.bd"
 )
 (vvPair
 variable "config"
@@ -117,19 +117,19 @@ value "mp3_CPU"
 )
 (vvPair
 variable "ext"
-value "<TBD>"
+value "bd"
 )
 (vvPair
 variable "f"
-value "struct.bd"
+value "struct.bd.$rec"
 )
 (vvPair
 variable "f_logical"
-value "struct.bd"
+value "struct.bd.$rec"
 )
 (vvPair
 variable "f_noext"
-value "struct"
+value "struct.bd"
 )
 (vvPair
 variable "group"
@@ -169,11 +169,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.$rec"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_CPU/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_CPU/struct.bd.$rec"
 )
 (vvPair
 variable "project_name"
@@ -213,7 +213,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "18:28:43"
+value "18:18:56"
 )
 (vvPair
 variable "unit"
