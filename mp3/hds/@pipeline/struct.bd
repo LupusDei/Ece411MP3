@@ -84,23 +84,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/struct.bd.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/struct.bd.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -116,11 +116,11 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/Pipeline"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline"
 )
 (vvPair
 variable "date"
@@ -164,7 +164,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-13.ews.illinois.edu"
+value "gelib-057-12.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -196,11 +196,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/struct.bd"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/Pipeline/struct.bd"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -240,7 +240,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "18:17:41"
+value "22:16:00"
 )
 (vvPair
 variable "unit"
@@ -248,7 +248,7 @@ value "Pipeline"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -322,7 +322,7 @@ uid 22,0
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 6
+o 7
 suid 1,0
 )
 declText (MLText
@@ -331,7 +331,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,8300,-22500,9200"
-st "RESET_L      : std_logic"
+st "RESET_L      : std_logic
+"
 )
 )
 *3 (Grouping
@@ -356,7 +357,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "25200,50050,38700,50950"
+xt "25200,50050,38200,50950"
 st "
 by %user on %dd %month %year
 "
@@ -1156,7 +1157,7 @@ uid 210,0
 decl (Decl
 n "newPC"
 t "lc3b_word"
-o 27
+o 29
 suid 5,0
 )
 declText (MLText
@@ -1165,7 +1166,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,29000,-19000,29900"
-st "SIGNAL newPC        : lc3b_word"
+st "SIGNAL newPC        : lc3b_word
+"
 )
 )
 *40 (Net
@@ -1173,7 +1175,7 @@ uid 212,0
 decl (Decl
 n "nextPC"
 t "lc3b_word"
-o 28
+o 30
 suid 6,0
 )
 declText (MLText
@@ -1182,7 +1184,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,29900,-19000,30800"
-st "SIGNAL nextPC       : lc3b_word"
+st "SIGNAL nextPC       : lc3b_word
+"
 )
 )
 *41 (Net
@@ -1190,7 +1193,7 @@ uid 214,0
 decl (Decl
 n "inst"
 t "lc3b_word"
-o 26
+o 28
 suid 7,0
 )
 declText (MLText
@@ -1199,7 +1202,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,28100,-19000,29000"
-st "SIGNAL inst         : lc3b_word"
+st "SIGNAL inst         : lc3b_word
+"
 )
 )
 *42 (PortIoIn
@@ -1253,7 +1257,7 @@ uid 231,0
 decl (Decl
 n "InstMemIn"
 t "lc3b_word"
-o 4
+o 5
 suid 9,0
 )
 declText (MLText
@@ -1262,7 +1266,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,6500,-22500,7400"
-st "InstMemIn    : lc3b_word"
+st "InstMemIn    : lc3b_word
+"
 )
 )
 *44 (PortIoOut
@@ -1315,7 +1320,7 @@ uid 248,0
 decl (Decl
 n "PCinstAddr"
 t "lc3b_word"
-o 13
+o 15
 suid 11,0
 )
 declText (MLText
@@ -1324,7 +1329,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,15500,-22500,16400"
-st "PCinstAddr   : lc3b_word"
+st "PCinstAddr   : lc3b_word
+"
 )
 )
 *46 (PortIoIn
@@ -1378,7 +1384,7 @@ uid 306,0
 decl (Decl
 n "RA"
 t "lc3b_reg"
-o 22
+o 24
 suid 18,0
 )
 declText (MLText
@@ -1387,7 +1393,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,24500,-19500,25400"
-st "SIGNAL RA           : lc3b_reg"
+st "SIGNAL RA           : lc3b_reg
+"
 )
 )
 *48 (Net
@@ -1395,7 +1402,7 @@ uid 308,0
 decl (Decl
 n "RB"
 t "lc3b_reg"
-o 23
+o 25
 suid 19,0
 )
 declText (MLText
@@ -1404,7 +1411,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,25400,-19500,26300"
-st "SIGNAL RB           : lc3b_reg"
+st "SIGNAL RB           : lc3b_reg
+"
 )
 )
 *49 (Net
@@ -1412,7 +1420,7 @@ uid 332,0
 decl (Decl
 n "OutB"
 t "lc3b_word"
-o 21
+o 23
 suid 22,0
 )
 declText (MLText
@@ -1421,7 +1429,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,23600,-19000,24500"
-st "SIGNAL OutB         : lc3b_word"
+st "SIGNAL OutB         : lc3b_word
+"
 )
 )
 *50 (Net
@@ -1429,7 +1438,7 @@ uid 334,0
 decl (Decl
 n "OutA"
 t "lc3b_word"
-o 20
+o 22
 suid 23,0
 )
 declText (MLText
@@ -1438,7 +1447,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,22700,-19000,23600"
-st "SIGNAL OutA         : lc3b_word"
+st "SIGNAL OutA         : lc3b_word
+"
 )
 )
 *51 (Net
@@ -1446,7 +1456,7 @@ uid 358,0
 decl (Decl
 n "ALUInA"
 t "lc3b_word"
-o 14
+o 16
 suid 26,0
 )
 declText (MLText
@@ -1455,7 +1465,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,17300,-19000,18200"
-st "SIGNAL ALUInA       : lc3b_word"
+st "SIGNAL ALUInA       : lc3b_word
+"
 )
 )
 *52 (Net
@@ -1463,7 +1474,7 @@ uid 360,0
 decl (Decl
 n "ALUInB"
 t "lc3b_word"
-o 15
+o 17
 suid 27,0
 )
 declText (MLText
@@ -1472,7 +1483,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,18200,-19000,19100"
-st "SIGNAL ALUInB       : lc3b_word"
+st "SIGNAL ALUInB       : lc3b_word
+"
 )
 )
 *53 (PortIoIn
@@ -1526,7 +1538,7 @@ uid 379,0
 decl (Decl
 n "ID_C_Out"
 t "lc3b_word"
-o 10
+o 12
 suid 30,0
 )
 declText (MLText
@@ -1535,7 +1547,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,12800,-22500,13700"
-st "ID_C_Out     : lc3b_word"
+st "ID_C_Out     : lc3b_word
+"
 )
 )
 *55 (Net
@@ -1552,7 +1565,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,4700,-22500,5600"
-st "ID_C_In      : lc3b_word"
+st "ID_C_In      : lc3b_word
+"
 )
 )
 *56 (Net
@@ -1569,7 +1583,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,3800,-22500,4700"
-st "EX_C_In      : lc3b_word"
+st "EX_C_In      : lc3b_word
+"
 )
 )
 *57 (Net
@@ -1577,7 +1592,7 @@ uid 400,0
 decl (Decl
 n "EX_C_Out"
 t "lc3b_word"
-o 9
+o 11
 suid 34,0
 )
 declText (MLText
@@ -1586,7 +1601,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,11900,-22500,12800"
-st "EX_C_Out     : lc3b_word"
+st "EX_C_Out     : lc3b_word
+"
 )
 )
 *58 (PortIoIn
@@ -1640,7 +1656,7 @@ uid 428,0
 decl (Decl
 n "MEM_C_Out"
 t "lc3b_word"
-o 12
+o 14
 suid 35,0
 )
 declText (MLText
@@ -1649,7 +1665,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,14600,-22500,15500"
-st "MEM_C_Out    : lc3b_word"
+st "MEM_C_Out    : lc3b_word
+"
 )
 )
 *60 (Net
@@ -1657,7 +1674,7 @@ uid 430,0
 decl (Decl
 n "MEM_C_In"
 t "lc3b_word"
-o 5
+o 6
 suid 36,0
 )
 declText (MLText
@@ -1666,7 +1683,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,7400,-22500,8300"
-st "MEM_C_In     : lc3b_word"
+st "MEM_C_In     : lc3b_word
+"
 )
 )
 *61 (PortIoOut
@@ -1764,7 +1782,7 @@ uid 462,0
 decl (Decl
 n "DataAddr"
 t "lc3b_word"
-o 8
+o 10
 suid 39,0
 )
 declText (MLText
@@ -1773,7 +1791,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,11000,-22500,11900"
-st "DataAddr     : lc3b_word"
+st "DataAddr     : lc3b_word
+"
 )
 )
 *64 (Net
@@ -1781,7 +1800,7 @@ uid 464,0
 decl (Decl
 n "MEMWriteData"
 t "lc3b_word"
-o 11
+o 13
 suid 40,0
 )
 declText (MLText
@@ -1790,7 +1809,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,13700,-22500,14600"
-st "MEMWriteData : lc3b_word"
+st "MEMWriteData : lc3b_word
+"
 )
 )
 *65 (PortIoIn
@@ -1853,7 +1873,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,2900,-22500,3800"
-st "DataMemIn    : lc3b_word"
+st "DataMemIn    : lc3b_word
+"
 )
 )
 *67 (Net
@@ -1861,7 +1882,7 @@ uid 494,0
 decl (Decl
 n "ALUOut"
 t "lc3b_word"
-o 16
+o 18
 suid 44,0
 )
 declText (MLText
@@ -1870,7 +1891,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,19100,-19000,20000"
-st "SIGNAL ALUOut       : lc3b_word"
+st "SIGNAL ALUOut       : lc3b_word
+"
 )
 )
 *68 (Net
@@ -1878,7 +1900,7 @@ uid 518,0
 decl (Decl
 n "MEMDataOut"
 t "lc3b_word"
-o 19
+o 21
 suid 47,0
 )
 declText (MLText
@@ -1887,7 +1909,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,21800,-19000,22700"
-st "SIGNAL MEMDataOut   : lc3b_word"
+st "SIGNAL MEMDataOut   : lc3b_word
+"
 )
 )
 *69 (Net
@@ -1895,7 +1918,7 @@ uid 520,0
 decl (Decl
 n "MEMAddrOut"
 t "lc3b_word"
-o 18
+o 20
 suid 48,0
 )
 declText (MLText
@@ -1904,7 +1927,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,20900,-19000,21800"
-st "SIGNAL MEMAddrOut   : lc3b_word"
+st "SIGNAL MEMAddrOut   : lc3b_word
+"
 )
 )
 *70 (PortIoIn
@@ -1958,7 +1982,7 @@ uid 537,0
 decl (Decl
 n "WB_C_In"
 t "lc3b_word"
-o 7
+o 8
 suid 50,0
 )
 declText (MLText
@@ -1967,7 +1991,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,9200,-22500,10100"
-st "WB_C_In      : lc3b_word"
+st "WB_C_In      : lc3b_word
+"
 )
 )
 *72 (Net
@@ -1975,7 +2000,7 @@ uid 572,0
 decl (Decl
 n "DR"
 t "lc3b_reg"
-o 17
+o 19
 suid 54,0
 )
 declText (MLText
@@ -1984,7 +2009,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,20000,-19500,20900"
-st "SIGNAL DR           : lc3b_reg"
+st "SIGNAL DR           : lc3b_reg
+"
 )
 )
 *73 (Net
@@ -1992,7 +2018,7 @@ uid 574,0
 decl (Decl
 n "RegDataIn"
 t "lc3b_word"
-o 24
+o 26
 suid 55,0
 )
 declText (MLText
@@ -2001,7 +2027,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,26300,-19000,27200"
-st "SIGNAL RegDataIn    : lc3b_word"
+st "SIGNAL RegDataIn    : lc3b_word
+"
 )
 )
 *74 (Net
@@ -2009,7 +2036,7 @@ uid 576,0
 decl (Decl
 n "RegWrite"
 t "std_logic"
-o 25
+o 27
 suid 56,0
 )
 declText (MLText
@@ -2018,7 +2045,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,27200,-19000,28100"
-st "SIGNAL RegWrite     : std_logic"
+st "SIGNAL RegWrite     : std_logic
+"
 )
 )
 *75 (PortIoOut
@@ -2169,7 +2197,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "31250,34625,32000,35375"
+xt "29250,32625,30000,33375"
 )
 tg (CPTG
 uid 1044,0
@@ -2180,17 +2208,17 @@ uid 1045,0
 sl 0
 va (VaSet
 )
-xt "33000,34450,35400,35450"
+xt "31000,32450,33400,33450"
 st "SRCA"
-blo "33000,35250"
+blo "31000,33250"
 )
 s (Text
 uid 1089,0
 sl 0
 va (VaSet
 )
-xt "33000,35450,33000,35450"
-blo "33000,35450"
+xt "31000,33450,31000,33450"
+blo "31000,33450"
 )
 )
 thePort (LogicalPort
@@ -2212,7 +2240,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "31250,35625,32000,36375"
+xt "29250,33625,30000,34375"
 )
 tg (CPTG
 uid 1048,0
@@ -2223,17 +2251,17 @@ uid 1049,0
 sl 0
 va (VaSet
 )
-xt "33000,35450,35400,36450"
+xt "31000,33450,33400,34450"
 st "SRCB"
-blo "33000,36250"
+blo "31000,34250"
 )
 s (Text
 uid 1090,0
 sl 0
 va (VaSet
 )
-xt "33000,36450,33000,36450"
-blo "33000,36450"
+xt "31000,34450,31000,34450"
+blo "31000,34450"
 )
 )
 thePort (LogicalPort
@@ -2255,7 +2283,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "31250,39625,32000,40375"
+xt "29250,37625,30000,38375"
 )
 tg (CPTG
 uid 1052,0
@@ -2266,17 +2294,17 @@ uid 1053,0
 sl 0
 va (VaSet
 )
-xt "33000,39550,37200,40550"
+xt "31000,37550,35200,38550"
 st "RESET_L"
-blo "33000,40350"
+blo "31000,38350"
 )
 s (Text
 uid 1091,0
 sl 0
 va (VaSet
 )
-xt "33000,40550,33000,40550"
-blo "33000,40550"
+xt "31000,38550,31000,38550"
+blo "31000,38550"
 )
 )
 thePort (LogicalPort
@@ -2298,7 +2326,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "42000,37625,42750,38375"
+xt "40000,35625,40750,36375"
 )
 tg (CPTG
 uid 1056,0
@@ -2309,19 +2337,19 @@ uid 1057,0
 sl 0
 va (VaSet
 )
-xt "39200,37550,41000,38550"
+xt "37200,35550,39000,36550"
 st "DIN"
 ju 2
-blo "41000,38350"
+blo "39000,36350"
 )
 s (Text
 uid 1092,0
 sl 0
 va (VaSet
 )
-xt "41000,38550,41000,38550"
+xt "39000,36550,39000,36550"
 ju 2
-blo "41000,38550"
+blo "39000,36550"
 )
 )
 thePort (LogicalPort
@@ -2342,7 +2370,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "36625,33250,37375,34000"
+xt "34625,31250,35375,32000"
 )
 tg (CPTG
 uid 1060,0
@@ -2354,10 +2382,10 @@ sl 0
 ro 270
 va (VaSet
 )
-xt "36450,35000,37450,35600"
+xt "34450,33000,35450,33600"
 st "A"
 ju 2
-blo "37250,35000"
+blo "35250,33000"
 )
 s (Text
 uid 1093,0
@@ -2365,9 +2393,9 @@ sl 0
 ro 270
 va (VaSet
 )
-xt "37450,35000,37450,35000"
+xt "35450,33000,35450,33000"
 ju 2
-blo "37450,35000"
+blo "35450,33000"
 )
 )
 thePort (LogicalPort
@@ -2389,7 +2417,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "38625,33250,39375,34000"
+xt "36625,31250,37375,32000"
 )
 tg (CPTG
 uid 1064,0
@@ -2401,10 +2429,10 @@ sl 0
 ro 270
 va (VaSet
 )
-xt "38450,35000,39450,35600"
+xt "36450,33000,37450,33600"
 st "B"
 ju 2
-blo "39250,35000"
+blo "37250,33000"
 )
 s (Text
 uid 1094,0
@@ -2412,9 +2440,9 @@ sl 0
 ro 270
 va (VaSet
 )
-xt "39450,35000,39450,35000"
+xt "37450,33000,37450,33000"
 ju 2
-blo "39450,35000"
+blo "37450,33000"
 )
 )
 thePort (LogicalPort
@@ -2437,7 +2465,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "42000,36625,42750,37375"
+xt "40000,34625,40750,35375"
 )
 tg (CPTG
 uid 1068,0
@@ -2448,19 +2476,19 @@ uid 1069,0
 sl 0
 va (VaSet
 )
-xt "38600,36550,41000,37550"
+xt "36600,34550,39000,35550"
 st "DEST"
 ju 2
-blo "41000,37350"
+blo "39000,35350"
 )
 s (Text
 uid 1095,0
 sl 0
 va (VaSet
 )
-xt "41000,37550,41000,37550"
+xt "39000,35550,39000,35550"
 ju 2
-blo "41000,37550"
+blo "39000,35550"
 )
 )
 thePort (LogicalPort
@@ -2477,9 +2505,9 @@ uid 1070,0
 optionalChildren [
 *87 (FFT
 pts [
-"32750,41000"
-"32000,41375"
-"32000,40625"
+"30750,39000"
+"30000,39375"
+"30000,38625"
 ]
 uid 1074,0
 ro 90
@@ -2487,7 +2515,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "32000,40625,32750,41375"
+xt "30000,38625,30750,39375"
 )
 ]
 ps "OnEdgeStrategy"
@@ -2498,7 +2526,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "31250,40625,32000,41375"
+xt "29250,38625,30000,39375"
 )
 tg (CPTG
 uid 1072,0
@@ -2509,17 +2537,17 @@ uid 1073,0
 sl 0
 va (VaSet
 )
-xt "33000,40450,34800,41450"
+xt "31000,38450,32800,39450"
 st "CLK"
-blo "33000,41250"
+blo "31000,39250"
 )
 s (Text
 uid 1096,0
 sl 0
 va (VaSet
 )
-xt "33000,41450,33000,41450"
-blo "33000,41450"
+xt "31000,39450,31000,39450"
+blo "31000,39450"
 )
 )
 thePort (LogicalPort
@@ -2541,7 +2569,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "42000,38625,42750,39375"
+xt "40000,36625,40750,37375"
 )
 tg (CPTG
 uid 1077,0
@@ -2552,19 +2580,19 @@ uid 1078,0
 sl 0
 va (VaSet
 )
-xt "36200,38550,41000,39550"
+xt "34200,36550,39000,37550"
 st "REGWRITE"
 ju 2
-blo "41000,39350"
+blo "39000,37350"
 )
 s (Text
 uid 1097,0
 sl 0
 va (VaSet
 )
-xt "41000,39550,41000,39550"
+xt "39000,37550,39000,37550"
 ju 2
-blo "41000,39550"
+blo "39000,37550"
 )
 )
 thePort (LogicalPort
@@ -2583,7 +2611,7 @@ va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "32000,34000,42000,44000"
+xt "30000,32000,40000,42000"
 )
 oxt "-1000,13000,9000,28000"
 ttg (MlTextGroup
@@ -2596,27 +2624,27 @@ uid 1082,0
 va (VaSet
 isHidden 1
 )
-xt "35800,40800,39400,41800"
+xt "33800,38800,37400,39800"
 st "mp3lib"
-blo "35800,41600"
+blo "33800,39600"
 tm "BdLibraryNameMgr"
 )
 *90 (Text
 uid 1083,0
 va (VaSet
 )
-xt "35800,41800,40000,42800"
+xt "33800,39800,38000,40800"
 st "REGFILE"
-blo "35800,42600"
+blo "33800,40600"
 tm "CptNameMgr"
 )
 *91 (Text
 uid 1084,0
 va (VaSet
 )
-xt "35800,42800,42400,43800"
+xt "33800,40800,40400,41800"
 st "ourRegFile"
-blo "35800,43600"
+blo "33800,41600"
 tm "InstanceNameMgr"
 )
 ]
@@ -2630,7 +2658,7 @@ text (MLText
 uid 1087,0
 va (VaSet
 )
-xt "29600,38000,29600,38000"
+xt "27600,36000,27600,36000"
 )
 header ""
 )
@@ -2644,7 +2672,7 @@ va (VaSet
 vasetType 1
 fg "49152,49152,49152"
 )
-xt "32250,42250,33750,43750"
+xt "30250,40250,31750,41750"
 iconName "VhdlFileViewIcon.png"
 iconMaskName "VhdlFileViewIcon.msk"
 ftype 10
@@ -2708,7 +2736,7 @@ uid 1195,0
 decl (Decl
 n "IF_C_In"
 t "lc3b_word"
-o 29
+o 4
 suid 58,0
 )
 declText (MLText
@@ -2717,7 +2745,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,5600,-22500,6500"
-st "IF_C_In      : lc3b_word"
+st "IF_C_In      : lc3b_word
+"
 )
 )
 *94 (Net
@@ -2725,7 +2754,7 @@ uid 1208,0
 decl (Decl
 n "clk"
 t "std_logic"
-o 30
+o 9
 suid 59,0
 )
 declText (MLText
@@ -2734,7 +2763,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,10100,-22500,11000"
-st "clk          : std_logic"
+st "clk          : std_logic
+"
 )
 )
 *95 (PortIoIn
@@ -2790,10 +2820,12 @@ uid 16,0
 va (VaSet
 vasetType 3
 )
-xt "-3000,40000,31250,40000"
+xt "-3000,38000,29250,40000"
 pts [
 "-3000,40000"
-"31250,40000"
+"12000,40000"
+"12000,38000"
+"29250,38000"
 ]
 )
 start &1
@@ -3179,11 +3211,11 @@ uid 287,0
 va (VaSet
 vasetType 3
 )
-xt "12000,24000,31250,35000"
+xt "12000,24000,29250,33000"
 pts [
 "12000,24000"
-"12000,35000"
-"31250,35000"
+"12000,33000"
+"29250,33000"
 ]
 )
 start &19
@@ -3229,11 +3261,11 @@ uid 298,0
 va (VaSet
 vasetType 3
 )
-xt "11000,24000,31250,36000"
+xt "11000,24000,29250,34000"
 pts [
 "11000,24000"
-"11000,36000"
-"31250,36000"
+"11000,34000"
+"29250,34000"
 ]
 )
 start &19
@@ -3279,10 +3311,10 @@ uid 313,0
 va (VaSet
 vasetType 3
 )
-xt "17000,24000,37000,33250"
+xt "17000,24000,35000,31250"
 pts [
-"37000,33250"
-"37000,31000"
+"35000,31250"
+"35000,31000"
 "17000,31000"
 "17000,24000"
 ]
@@ -3302,9 +3334,9 @@ uid 319,0
 va (VaSet
 font "courier,8,0"
 )
-xt "34000,31100,36000,32000"
+xt "32000,29100,34000,30000"
 st "OutA"
-blo "34000,31800"
+blo "32000,29800"
 tm "WireNameMgr"
 )
 s (Text
@@ -3313,9 +3345,9 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "34000,32000,38500,32900"
+xt "32000,30000,36500,30900"
 st "lc3b_word"
-blo "34000,32700"
+blo "32000,30700"
 tm "SignalTypeMgr"
 )
 )
@@ -3328,10 +3360,10 @@ uid 324,0
 va (VaSet
 vasetType 3
 )
-xt "18000,24000,39000,33250"
+xt "18000,24000,37000,31250"
 pts [
-"39000,33250"
-"39000,30000"
+"37000,31250"
+"37000,30000"
 "18000,30000"
 "18000,24000"
 ]
@@ -3351,9 +3383,9 @@ uid 330,0
 va (VaSet
 font "courier,8,0"
 )
-xt "37000,30100,39000,31000"
+xt "35000,28100,37000,29000"
 st "OutB"
-blo "37000,30800"
+blo "35000,28800"
 tm "WireNameMgr"
 )
 s (Text
@@ -3362,9 +3394,9 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "37000,31000,41500,31900"
+xt "35000,29000,39500,29900"
 st "lc3b_word"
-blo "37000,31700"
+blo "35000,29700"
 tm "SignalTypeMgr"
 )
 )
@@ -4014,11 +4046,11 @@ uid 542,0
 va (VaSet
 vasetType 3
 )
-xt "42750,24000,59000,37000"
+xt "40750,24000,59000,35000"
 pts [
 "59000,24000"
-"59000,37000"
-"42750,37000"
+"59000,35000"
+"40750,35000"
 ]
 )
 start &29
@@ -4065,11 +4097,11 @@ uid 553,0
 va (VaSet
 vasetType 3
 )
-xt "42750,24000,60000,38000"
+xt "40750,24000,60000,36000"
 pts [
 "60000,24000"
-"60000,38000"
-"42750,38000"
+"60000,36000"
+"40750,36000"
 ]
 )
 start &29
@@ -4115,11 +4147,11 @@ uid 564,0
 va (VaSet
 vasetType 3
 )
-xt "42750,24000,61000,39000"
+xt "40750,24000,61000,37000"
 pts [
 "61000,24000"
-"61000,39000"
-"42750,39000"
+"61000,37000"
+"40750,37000"
 ]
 )
 start &29
@@ -4306,10 +4338,12 @@ uid 1322,0
 va (VaSet
 vasetType 3
 )
-xt "-3000,41000,31250,41000"
+xt "-3000,39000,29250,41000"
 pts [
 "-3000,41000"
-"31250,41000"
+"13000,41000"
+"13000,39000"
+"29250,39000"
 ]
 )
 start &95
@@ -4465,13 +4499,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "1628,16,2912,919"
-viewArea "-29144,-300,62102,62824"
+windowSize "1644,18,2928,921"
+viewArea "-22736,-9760,68510,53364"
 cachedDiagramExtent "-37000,-8300,65000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-76000,-51000"
 active 1
-lastUid 1325,0
+lastUid 1417,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -5576,7 +5610,7 @@ port (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 6
+o 7
 suid 1,0
 )
 )
@@ -5588,7 +5622,7 @@ m 4
 decl (Decl
 n "newPC"
 t "lc3b_word"
-o 27
+o 29
 suid 5,0
 )
 )
@@ -5600,7 +5634,7 @@ m 4
 decl (Decl
 n "nextPC"
 t "lc3b_word"
-o 28
+o 30
 suid 6,0
 )
 )
@@ -5612,7 +5646,7 @@ m 4
 decl (Decl
 n "inst"
 t "lc3b_word"
-o 26
+o 28
 suid 7,0
 )
 )
@@ -5623,7 +5657,7 @@ port (LogicalPort
 decl (Decl
 n "InstMemIn"
 t "lc3b_word"
-o 4
+o 5
 suid 9,0
 )
 )
@@ -5635,7 +5669,7 @@ m 1
 decl (Decl
 n "PCinstAddr"
 t "lc3b_word"
-o 13
+o 15
 suid 11,0
 )
 )
@@ -5647,7 +5681,7 @@ m 4
 decl (Decl
 n "RA"
 t "lc3b_reg"
-o 22
+o 24
 suid 18,0
 )
 )
@@ -5659,7 +5693,7 @@ m 4
 decl (Decl
 n "RB"
 t "lc3b_reg"
-o 23
+o 25
 suid 19,0
 )
 )
@@ -5671,7 +5705,7 @@ m 4
 decl (Decl
 n "OutB"
 t "lc3b_word"
-o 21
+o 23
 suid 22,0
 )
 )
@@ -5683,7 +5717,7 @@ m 4
 decl (Decl
 n "OutA"
 t "lc3b_word"
-o 20
+o 22
 suid 23,0
 )
 )
@@ -5695,7 +5729,7 @@ m 4
 decl (Decl
 n "ALUInA"
 t "lc3b_word"
-o 14
+o 16
 suid 26,0
 )
 )
@@ -5707,7 +5741,7 @@ m 4
 decl (Decl
 n "ALUInB"
 t "lc3b_word"
-o 15
+o 17
 suid 27,0
 )
 )
@@ -5719,7 +5753,7 @@ m 1
 decl (Decl
 n "ID_C_Out"
 t "lc3b_word"
-o 10
+o 12
 suid 30,0
 )
 )
@@ -5753,7 +5787,7 @@ m 1
 decl (Decl
 n "EX_C_Out"
 t "lc3b_word"
-o 9
+o 11
 suid 34,0
 )
 )
@@ -5765,7 +5799,7 @@ m 1
 decl (Decl
 n "MEM_C_Out"
 t "lc3b_word"
-o 12
+o 14
 suid 35,0
 )
 )
@@ -5776,7 +5810,7 @@ port (LogicalPort
 decl (Decl
 n "MEM_C_In"
 t "lc3b_word"
-o 5
+o 6
 suid 36,0
 )
 )
@@ -5788,7 +5822,7 @@ m 1
 decl (Decl
 n "DataAddr"
 t "lc3b_word"
-o 8
+o 10
 suid 39,0
 )
 )
@@ -5800,7 +5834,7 @@ m 1
 decl (Decl
 n "MEMWriteData"
 t "lc3b_word"
-o 11
+o 13
 suid 40,0
 )
 )
@@ -5823,7 +5857,7 @@ m 4
 decl (Decl
 n "ALUOut"
 t "lc3b_word"
-o 16
+o 18
 suid 44,0
 )
 )
@@ -5835,7 +5869,7 @@ m 4
 decl (Decl
 n "MEMDataOut"
 t "lc3b_word"
-o 19
+o 21
 suid 47,0
 )
 )
@@ -5847,7 +5881,7 @@ m 4
 decl (Decl
 n "MEMAddrOut"
 t "lc3b_word"
-o 18
+o 20
 suid 48,0
 )
 )
@@ -5858,7 +5892,7 @@ port (LogicalPort
 decl (Decl
 n "WB_C_In"
 t "lc3b_word"
-o 7
+o 8
 suid 50,0
 )
 )
@@ -5870,7 +5904,7 @@ m 4
 decl (Decl
 n "DR"
 t "lc3b_reg"
-o 17
+o 19
 suid 54,0
 )
 )
@@ -5882,7 +5916,7 @@ m 4
 decl (Decl
 n "RegDataIn"
 t "lc3b_word"
-o 24
+o 26
 suid 55,0
 )
 )
@@ -5894,7 +5928,7 @@ m 4
 decl (Decl
 n "RegWrite"
 t "std_logic"
-o 25
+o 27
 suid 56,0
 )
 )
@@ -5905,7 +5939,7 @@ port (LogicalPort
 decl (Decl
 n "IF_C_In"
 t "lc3b_word"
-o 29
+o 4
 suid 58,0
 )
 )
@@ -5916,7 +5950,7 @@ port (LogicalPort
 decl (Decl
 n "clk"
 t "std_logic"
-o 30
+o 9
 suid 59,0
 )
 )
@@ -5974,181 +6008,181 @@ uid 89,0
 )
 *208 (MRCItem
 litem &173
-pos 0
+pos 1
 dimension 20
 uid 25,0
 )
 *209 (MRCItem
 litem &174
-pos 13
+pos 15
 dimension 20
 uid 579,0
 )
 *210 (MRCItem
 litem &175
-pos 14
+pos 16
 dimension 20
 uid 581,0
 )
 *211 (MRCItem
 litem &176
-pos 15
+pos 17
 dimension 20
 uid 583,0
 )
 *212 (MRCItem
 litem &177
-pos 7
+pos 9
 dimension 20
 uid 585,0
 )
 *213 (MRCItem
 litem &178
-pos 11
+pos 13
 dimension 20
 uid 587,0
 )
 *214 (MRCItem
 litem &179
-pos 16
+pos 18
 dimension 20
 uid 589,0
 )
 *215 (MRCItem
 litem &180
-pos 17
+pos 19
 dimension 20
 uid 591,0
 )
 *216 (MRCItem
 litem &181
-pos 18
+pos 20
 dimension 20
 uid 593,0
 )
 *217 (MRCItem
 litem &182
-pos 19
+pos 21
 dimension 20
 uid 595,0
 )
 *218 (MRCItem
 litem &183
-pos 20
+pos 22
 dimension 20
 uid 597,0
 )
 *219 (MRCItem
 litem &184
-pos 21
+pos 23
 dimension 20
 uid 599,0
 )
 *220 (MRCItem
 litem &185
-pos 6
+pos 7
 dimension 20
 uid 601,0
 )
 *221 (MRCItem
 litem &186
-pos 5
+pos 6
 dimension 20
 uid 603,0
 )
 *222 (MRCItem
 litem &187
-pos 3
+pos 4
 dimension 20
 uid 605,0
 )
 *223 (MRCItem
 litem &188
-pos 4
+pos 5
 dimension 20
 uid 607,0
 )
 *224 (MRCItem
 litem &189
-pos 9
+pos 11
 dimension 20
 uid 609,0
 )
 *225 (MRCItem
 litem &190
-pos 8
+pos 10
 dimension 20
 uid 611,0
 )
 *226 (MRCItem
 litem &191
-pos 1
+pos 2
 dimension 20
 uid 613,0
 )
 *227 (MRCItem
 litem &192
-pos 10
+pos 12
 dimension 20
 uid 615,0
 )
 *228 (MRCItem
 litem &193
-pos 2
+pos 3
 dimension 20
 uid 617,0
 )
 *229 (MRCItem
 litem &194
-pos 22
+pos 24
 dimension 20
 uid 619,0
 )
 *230 (MRCItem
 litem &195
-pos 23
+pos 25
 dimension 20
 uid 621,0
 )
 *231 (MRCItem
 litem &196
-pos 24
+pos 26
 dimension 20
 uid 623,0
 )
 *232 (MRCItem
 litem &197
-pos 12
+pos 14
 dimension 20
 uid 625,0
 )
 *233 (MRCItem
 litem &198
-pos 25
+pos 27
 dimension 20
 uid 627,0
 )
 *234 (MRCItem
 litem &199
-pos 26
+pos 28
 dimension 20
 uid 629,0
 )
 *235 (MRCItem
 litem &200
-pos 27
+pos 29
 dimension 20
 uid 631,0
 )
 *236 (MRCItem
 litem &201
-pos 28
+pos 8
 dimension 20
 uid 1198,0
 )
 *237 (MRCItem
 litem &202
-pos 29
+pos 0
 dimension 20
 uid 1220,0
 )
