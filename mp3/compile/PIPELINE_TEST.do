@@ -4,10 +4,11 @@ quietly WaveActivateNextPane {} 0
 delete wave *
 
 add wave -hex /pipeline/id_c_in
-add wave -hex /pipeline/id_c_out
+add wave -hex /pipeline/ex_c_in
 add wave -hex /pipeline/inst
 add wave -hex /pipeline/aluina
 add wave -hex /pipeline/aluinb
+add wave -hex /pipeline/aluout
 add wave -hex /pipeline/regdatain
 add wave /pipeline/dr
 add wave /pipeline/regwrite
@@ -75,5 +76,21 @@ force /pipeline/InstMemIn 0000000000000111 -freeze
 run 10
 force /pipeline/IF_C_In 0000000000000010 -freeze
 run 40
+force /pipeline/InstMemIn 0000000000000000 -freeze
 echo "inst should be 7, nextPC should be 4"
 
+run 20
+
+echo "EX tests"
+echo "Test1, ALUOut will have the sum of ALUInA and ALUInB"
+virtual signal {/pipeline/ALUOut == 21} ex_test1
+add wave -color white /pipeline/ex_test1
+
+force /pipeline/ALUInA 0000000000001011 -freeze
+force /pipeline/ALUInB 0000000000001010 -freeze
+force /pipeline/EX_C_In 0000000000000000 -freeze
+run 40
+
+force /pipeline/EX_C_In 0000000000000011 -freeze
+run 40
+echo "ALUOut should be 21"

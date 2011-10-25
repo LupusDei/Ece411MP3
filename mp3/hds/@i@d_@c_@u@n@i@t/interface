@@ -25,11 +25,11 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 3,0
+suid 6,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
-uid 53,0
+uid 81,0
 optionalChildren [
 *2 (RefLabelRowHdr
 )
@@ -66,32 +66,33 @@ tm "EolColHdrMgr"
 )
 *14 (LogPort
 port (LogicalPort
+m 1
 decl (Decl
-n "RESET_L"
-t "std_logic"
-o 1
-suid 1,0
+n "ID_C_In"
+t "lc3b_word"
+o 9
+suid 5,0
 )
 )
-uid 82,0
+uid 131,0
 )
 *15 (LogPort
 port (LogicalPort
 decl (Decl
-n "clk"
-t "std_logic"
-o 2
-suid 2,0
+n "instOut"
+t "lc3b_word"
+o 15
+suid 6,0
 )
 )
-uid 101,0
+uid 133,0
 )
 ]
 )
 pdm (PhysicalDM
 displayShortBounds 1
 editShortBounds 1
-uid 66,0
+uid 94,0
 optionalChildren [
 *16 (Sheet
 sheetRow (SheetRow
@@ -115,38 +116,38 @@ litem &1
 pos 3
 dimension 20
 )
-uid 68,0
+uid 96,0
 optionalChildren [
 *18 (MRCItem
 litem &2
 pos 0
 dimension 20
-uid 69,0
+uid 97,0
 )
 *19 (MRCItem
 litem &3
 pos 1
 dimension 23
-uid 70,0
+uid 98,0
 )
 *20 (MRCItem
 litem &4
 pos 2
 hidden 1
 dimension 20
-uid 71,0
+uid 99,0
 )
 *21 (MRCItem
 litem &14
 pos 0
 dimension 20
-uid 81,0
+uid 132,0
 )
 *22 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 100,0
+uid 134,0
 )
 ]
 )
@@ -157,69 +158,69 @@ fontColor "0,0,0"
 font "courier,10,0"
 textAngle 90
 )
-uid 72,0
+uid 100,0
 optionalChildren [
 *23 (MRCItem
 litem &5
 pos 0
 dimension 20
-uid 73,0
+uid 101,0
 )
 *24 (MRCItem
 litem &7
 pos 1
 dimension 50
-uid 74,0
+uid 102,0
 )
 *25 (MRCItem
 litem &8
 pos 2
 dimension 100
-uid 75,0
+uid 103,0
 )
 *26 (MRCItem
 litem &9
 pos 3
 dimension 50
-uid 76,0
+uid 104,0
 )
 *27 (MRCItem
 litem &10
 pos 4
 dimension 100
-uid 77,0
+uid 105,0
 )
 *28 (MRCItem
 litem &11
 pos 5
 dimension 100
-uid 78,0
+uid 106,0
 )
 *29 (MRCItem
 litem &12
 pos 6
 dimension 50
-uid 79,0
+uid 107,0
 )
 *30 (MRCItem
 litem &13
 pos 7
 dimension 80
-uid 80,0
+uid 108,0
 )
 ]
 )
 fixedCol 4
 fixedRow 2
 name "Ports"
-uid 67,0
+uid 95,0
 vaOverrides [
 ]
 )
 ]
 )
 active 1
-uid 52,0
+uid 80,0
 )
 VExpander (VariableExpander
 vvMap [
@@ -233,11 +234,11 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/symbol.sb.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@d_@c_@u@n@i@t/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/symbol.sb.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@d_@c_@u@n@i@t/interface.user"
 )
 (vvPair
 variable "SourceDir"
@@ -249,7 +250,7 @@ value "HDL Designer"
 )
 (vvPair
 variable "arch_name"
-value "symbol"
+value "interface"
 )
 (vvPair
 variable "config"
@@ -257,11 +258,11 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@d_@c_@u@n@i@t"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_CPU"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/ID_C_UNIT"
 )
 (vvPair
 variable "date"
@@ -281,7 +282,7 @@ value "24"
 )
 (vvPair
 variable "entity_name"
-value "mp3_CPU"
+value "ID_C_UNIT"
 )
 (vvPair
 variable "ext"
@@ -289,15 +290,15 @@ value "<TBD>"
 )
 (vvPair
 variable "f"
-value "symbol.sb"
+value "interface"
 )
 (vvPair
 variable "f_logical"
-value "symbol.sb"
+value "interface"
 )
 (vvPair
 variable "f_noext"
-value "symbol"
+value "interface"
 )
 (vvPair
 variable "group"
@@ -325,7 +326,7 @@ value "10"
 )
 (vvPair
 variable "module_name"
-value "mp3_CPU"
+value "ID_C_UNIT"
 )
 (vvPair
 variable "month"
@@ -337,11 +338,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/symbol.sb"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@d_@c_@u@n@i@t/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_CPU/symbol.sb"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/ID_C_UNIT/interface"
 )
 (vvPair
 variable "project_name"
@@ -381,11 +382,11 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "21:46:43"
+value "22:33:57"
 )
 (vvPair
 variable "unit"
-value "mp3_CPU"
+value "ID_C_UNIT"
 )
 (vvPair
 variable "user"
@@ -397,7 +398,7 @@ value "2005.3 (Build 75)"
 )
 (vvPair
 variable "view"
-value "symbol"
+value "interface"
 )
 (vvPair
 variable "year"
@@ -410,96 +411,102 @@ value "11"
 ]
 )
 LanguageMgr "VhdlLangMgr"
-uid 51,0
+uid 79,0
 optionalChildren [
 *31 (SymbolBody
 uid 8,0
 optionalChildren [
 *32 (CptPort
-uid 83,0
+uid 121,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 84,0
+uid 122,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "14250,6625,15000,7375"
+xt "23000,14625,23750,15375"
 )
 tg (CPTG
-uid 85,0
+uid 123,0
 ps "CptPortTextPlaceStrategy"
-stg "VerticalLayoutStrategy"
+stg "RightVerticalLayoutStrategy"
 f (Text
-uid 86,0
+uid 124,0
 va (VaSet
 font "courier,8,0"
 )
-xt "16000,6550,19500,7450"
-st "RESET_L"
-blo "16000,7250"
+xt "18500,14550,22000,15450"
+st "ID_C_In"
+ju 2
+blo "22000,15250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 87,0
-va (VaSet
-font "courier,8,0"
-)
-xt "44000,1800,59000,2700"
-st "RESET_L : IN     std_logic  ;"
-)
-thePort (LogicalPort
-decl (Decl
-n "RESET_L"
-t "std_logic"
-o 1
-suid 1,0
-)
-)
-)
-*33 (CptPort
-uid 102,0
-ps "OnEdgeStrategy"
-shape (Triangle
-uid 103,0
-ro 90
-va (VaSet
-vasetType 1
-fg "0,65535,0"
-)
-xt "14250,7625,15000,8375"
-)
-tg (CPTG
-uid 104,0
-ps "CptPortTextPlaceStrategy"
-stg "VerticalLayoutStrategy"
-f (Text
-uid 105,0
-va (VaSet
-font "courier,8,0"
-)
-xt "16000,7550,17500,8450"
-st "clk"
-blo "16000,8250"
-tm "CptPortNameMgr"
-)
-)
-dt (MLText
-uid 106,0
+uid 125,0
 va (VaSet
 font "courier,8,0"
 )
 xt "44000,2700,58000,3600"
-st "clk     : IN     std_logic "
+st "ID_C_In : OUT    lc3b_word 
+"
+)
+thePort (LogicalPort
+m 1
+decl (Decl
+n "ID_C_In"
+t "lc3b_word"
+o 9
+suid 5,0
+)
+)
+)
+*33 (CptPort
+uid 126,0
+ps "OnEdgeStrategy"
+shape (Triangle
+uid 127,0
+ro 180
+va (VaSet
+vasetType 1
+fg "0,65535,0"
+)
+xt "15625,5250,16375,6000"
+)
+tg (CPTG
+uid 128,0
+ps "CptPortTextPlaceStrategy"
+stg "RightVerticalLayoutStrategy"
+f (Text
+uid 129,0
+ro 270
+va (VaSet
+font "courier,8,0"
+)
+xt "15550,7000,16450,10500"
+st "instOut"
+ju 2
+blo "16250,7000"
+tm "CptPortNameMgr"
+)
+)
+dt (MLText
+uid 130,0
+va (VaSet
+font "courier,8,0"
+)
+xt "44000,1800,59000,2700"
+st "instOut : IN     lc3b_word  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
-n "clk"
-t "std_logic"
-o 2
-suid 2,0
+n "instOut"
+t "lc3b_word"
+o 15
+suid 6,0
 )
 )
 )
@@ -512,7 +519,7 @@ fg "0,65535,0"
 lineColor "0,32896,0"
 lineWidth 2
 )
-xt "15000,6000,39000,26000"
+xt "15000,6000,23000,16000"
 )
 biTextGroup (BiTextGroup
 uid 10,0
@@ -523,18 +530,18 @@ uid 11,0
 va (VaSet
 font "courier,8,1"
 )
-xt "24750,15100,27750,16000"
+xt "16750,10100,19750,11000"
 st "ece411"
-blo "24750,15800"
+blo "16750,10800"
 )
 second (Text
 uid 12,0
 va (VaSet
 font "courier,8,1"
 )
-xt "24750,16000,28250,16900"
-st "mp3_CPU"
-blo "24750,16700"
+xt "16750,11000,21250,11900"
+st "ID_C_UNIT"
+blo "16750,11700"
 )
 )
 gi *34 (GenericInterface
@@ -547,7 +554,7 @@ uid 15,0
 va (VaSet
 font "courier,8,0"
 )
-xt "0,12000,10500,12900"
+xt "-8000,7000,2500,7900"
 st "Generic Declarations"
 )
 header "Generic Declarations"
@@ -558,10 +565,12 @@ elements [
 )
 portInstanceVisAsIs 1
 portInstanceVis (PortSigDisplay
-sIVOD 1
+sTC 0
+sF 0
 )
 portVis (PortSigDisplay
-sIVOD 1
+sTC 0
+sF 0
 )
 )
 *35 (Grouping
@@ -872,7 +881,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,49050,43200,49950"
+xt "32200,49050,45700,49950"
 st "
 %library/%unit/%view
 "
@@ -992,9 +1001,9 @@ tm "PanelText"
 )
 )
 parentGraphicsRef (HdmGraphicsRef
-libraryName ""
-entityName ""
-viewName ""
+libraryName "ece411"
+entityName "CU"
+viewName "struct.bd"
 )
 defaultSymbolBody (SymbolBody
 shape (Rectangle
@@ -1183,5 +1192,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 293,0
+lastUid 134,0
 )

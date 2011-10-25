@@ -8,88 +8,118 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -L ece411 -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.CU(struct) 
+# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.mp3_CPU(struct) 
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../std.standard
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.std_logic_1164(body)
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.numeric_std(body)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lc3b_types(body)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mp3_cpu(struct)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.cu(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_reg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_unit(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_unit(untitled)
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for PIPELINE_TEST 
-# ** Error: (vish-4008) Object '/mp3_cpu/clk' not found.
-# Error in macro ./CONTROL_UNIT_TEST.do line 16
-# ** Error: (vish-4008) Object '/mp3_cpu/clk' not found.
-# 
-#     while executing
-# "force -freeze /mp3_cpu/clk 0 -repeat 20"
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for PIPELINE_TEST 
-# ** Error: (vish-4014) No objects found matching '/mp3_cpu/reset_l'.
-# Error in macro ./CONTROL_UNIT_TEST.do line 11
-# (vish-4014) No objects found matching '/mp3_cpu/reset_l'.
-#     while executing
-# "add wave -hex /mp3_cpu/reset_l"
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for PIPELINE_TEST 
-# ** Error: (vish-4014) No objects found matching '/mp3_cpu/clk'.
-# Error in macro ./CONTROL_UNIT_TEST.do line 12
-# (vish-4014) No objects found matching '/mp3_cpu/clk'.
-#     while executing
-# "add wave -hex /mp3_cpu/clk"
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for PIPELINE_TEST 
-# ** Error: (vish-4008) Object '/mp3_cpu/clk' not found.
-# Error in macro ./CONTROL_UNIT_TEST.do line 16
-# ** Error: (vish-4008) Object '/mp3_cpu/clk' not found.
-# 
-#     while executing
-# "force -freeze /mp3_cpu/clk 0 -repeat 20"
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.magicmemory(awesome)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.exstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.idstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wordmux8(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.worthless(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.regextractor(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ifstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pc(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pcplus2(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(generatedinstance)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wbstage(generatedinstance)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
+do CONTROL_UNIT_TEST.do
 # --- Executing initialization force file for PIPELINE_TEST 
 # Control Unit signal generation... PCMuxSel, LoadPC 
-# /cu/cutest1a
-# /cu/cutest1b
+# /mp3_cpu/cutest1a
+# /mp3_cpu/cutest1b
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
 # PCMuxSel should be 0 and LoadPC should be 1 
-run 20
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 75 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 100 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
-run 20
+# ID_C_UNIT tests... 
+# Test ADD R7,R1,R7 inst will lead to ALUMuxSel = 000 
+# /mp3_cpu/ID_test1a
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
-run 25
-run 45
-run 50
-env IF_GUNIT
-# sim:/cu/if_gunit
-# hds_create_graphics_for_instance [env] DefaultView 
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for PIPELINE_TEST 
-# Control Unit signal generation... PCMuxSel, LoadPC 
-# /cu/cutest1a
-# /cu/cutest1b
-# PCMuxSel should be 0 and LoadPC should be 1 
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for PIPELINE_TEST 
-# Control Unit signal generation... PCMuxSel, LoadPC 
-# /cu/cutest1a
-# /cu/cutest1b
-# PCMuxSel should be 0 and LoadPC should be 1 
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for PIPELINE_TEST 
-# Control Unit signal generation... PCMuxSel, LoadPC 
-# /cu/cutest1a001
-# /cu/cutest1b001
-# PCMuxSel should be 0 and LoadPC should be 1 
-run 20
+# 0
+# 
+# ID_C_In should be 0000, this ALUMuxSel is 000, or the input from RegFileOutB 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 175 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 225 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# 0
+# 
+# EX_C_UNIT & EX_C_REG Tests... 
+# Test that ex_c_in is 0 for ADD and that it isn't outputed for a full cycle 
+# /mp3_cpu/EX_test1a
+# /mp3_cpu/EX_test1b
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 250 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 275 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 325 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 375 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# 0
+# 
+# ex_c_in should be 0xF000 and then 0x0000 after 1 clock cycle, and then back to 0xF000 after the next cycle 
