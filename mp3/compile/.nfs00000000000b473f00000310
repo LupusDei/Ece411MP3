@@ -1,0 +1,95 @@
+# //  ModelSim SE 6.1c Nov 17 2005 Linux 2.6.32-131.6.1.el6.x86_64
+# //
+# //  Copyright Mentor Graphics Corporation 2005
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -L ece411 -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.CU(struct) 
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# Loading /software/fpgadv72-x86_64/Modeltech/linux/../std.standard
+# Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.std_logic_1164(body)
+# Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.numeric_std(body)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lc3b_types(body)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.cu(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_unit(untitled)
+restart -f; do CONTROL_UNIT_TEST.do
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# --- Executing initialization force file for PIPELINE_TEST 
+# ** Error: (vish-4008) Object '/mp3_cpu/clk' not found.
+# Error in macro ./CONTROL_UNIT_TEST.do line 16
+# ** Error: (vish-4008) Object '/mp3_cpu/clk' not found.
+# 
+#     while executing
+# "force -freeze /mp3_cpu/clk 0 -repeat 20"
+restart -f; do CONTROL_UNIT_TEST.do
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# --- Executing initialization force file for PIPELINE_TEST 
+# ** Error: (vish-4014) No objects found matching '/mp3_cpu/reset_l'.
+# Error in macro ./CONTROL_UNIT_TEST.do line 11
+# (vish-4014) No objects found matching '/mp3_cpu/reset_l'.
+#     while executing
+# "add wave -hex /mp3_cpu/reset_l"
+restart -f; do CONTROL_UNIT_TEST.do
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# --- Executing initialization force file for PIPELINE_TEST 
+# ** Error: (vish-4014) No objects found matching '/mp3_cpu/clk'.
+# Error in macro ./CONTROL_UNIT_TEST.do line 12
+# (vish-4014) No objects found matching '/mp3_cpu/clk'.
+#     while executing
+# "add wave -hex /mp3_cpu/clk"
+restart -f; do CONTROL_UNIT_TEST.do
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# --- Executing initialization force file for PIPELINE_TEST 
+# ** Error: (vish-4008) Object '/mp3_cpu/clk' not found.
+# Error in macro ./CONTROL_UNIT_TEST.do line 16
+# ** Error: (vish-4008) Object '/mp3_cpu/clk' not found.
+# 
+#     while executing
+# "force -freeze /mp3_cpu/clk 0 -repeat 20"
+restart -f; do CONTROL_UNIT_TEST.do
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# --- Executing initialization force file for PIPELINE_TEST 
+# Control Unit signal generation... PCMuxSel, LoadPC 
+# /cu/cutest1a
+# /cu/cutest1b
+# 0
+# 
+# PCMuxSel should be 0 and LoadPC should be 1 
+run 20
+# 0
+# 
+run 20
+# 0
+# 
+run 25
+run 45
+run 50
+env IF_GUNIT
+# sim:/cu/if_gunit
+# hds_create_graphics_for_instance [env] DefaultView 
+restart -f; do CONTROL_UNIT_TEST.do
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# --- Executing initialization force file for PIPELINE_TEST 
+# Control Unit signal generation... PCMuxSel, LoadPC 
+# /cu/cutest1a
+# /cu/cutest1b
+# PCMuxSel should be 0 and LoadPC should be 1 
+restart -f; do CONTROL_UNIT_TEST.do
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# --- Executing initialization force file for PIPELINE_TEST 
+# Control Unit signal generation... PCMuxSel, LoadPC 
+# /cu/cutest1a
+# /cu/cutest1b
+# PCMuxSel should be 0 and LoadPC should be 1 
+restart -f; do CONTROL_UNIT_TEST.do
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+# --- Executing initialization force file for PIPELINE_TEST 
+# Control Unit signal generation... PCMuxSel, LoadPC 
+# /cu/cutest1a001
+# /cu/cutest1b001
+# PCMuxSel should be 0 and LoadPC should be 1 
+run 20
