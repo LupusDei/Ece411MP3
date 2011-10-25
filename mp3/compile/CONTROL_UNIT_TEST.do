@@ -1,4 +1,4 @@
-echo "--- Executing initialization force file for PIPELINE_TEST"
+echo "--- Executing initialization force file for CONTROL_UNIT_TEST"
 
 quietly WaveActivateNextPane {} 0
 delete wave *

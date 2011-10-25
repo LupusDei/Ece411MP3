@@ -204,7 +204,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "19:17:01"
+value "19:20:08"
 )
 (vvPair
 variable "unit"
@@ -295,8 +295,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,1800,32500,2700"
-st "ALUInA   : lc3b_word
-"
+st "ALUInA   : lc3b_word"
 )
 )
 *3 (PortIoIn
@@ -359,8 +358,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,2700,32500,3600"
-st "ALUInB   : lc3b_word
-"
+st "ALUInB   : lc3b_word"
 )
 )
 *5 (PortIoOut
@@ -422,8 +420,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,4500,32500,5400"
-st "ALUOut   : lc3b_word
-"
+st "ALUOut   : lc3b_word"
 )
 )
 *7 (PortIoIn
@@ -486,8 +483,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,3600,32500,4500"
-st "EX_C_In  : lc3b_word
-"
+st "EX_C_In  : lc3b_word"
 )
 )
 *9 (PortIoOut
@@ -549,8 +545,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,5400,32500,6300"
-st "EX_C_Out : lc3b_word
-"
+st "EX_C_Out : lc3b_word"
 )
 )
 *11 (Grouping
@@ -1260,8 +1255,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,7200,36500,8100"
-st "SIGNAL ALUOP    : LC3B_ALUOP
-"
+st "SIGNAL ALUOP    : LC3B_ALUOP"
 )
 )
 *36 (Wire
