@@ -83,8 +83,8 @@ run 20
 
 echo "EX tests"
 echo "Test1, ALUOut will have the sum of ALUInA and ALUInB"
-virtual signal {/pipeline/ALUOut == 21} ex_test1
-add wave -color white /pipeline/ex_test1
+virtual signal {/pipeline/ALUOut == 21} ex_test1a
+add wave -color white /pipeline/ex_test1a
 
 force /pipeline/ALUInA 0000000000001011 -freeze
 force /pipeline/ALUInB 0000000000001010 -freeze
@@ -94,3 +94,20 @@ run 40
 force /pipeline/EX_C_In 0000000000000011 -freeze
 run 40
 echo "ALUOut should be 21"
+
+echo "EX tests for AND"
+echo "Test1, ALUOut will have the and of ALUInA and ALUInB"
+virtual signal {/pipeline/ALUOut == 10} ex_test1b
+add wave -color white /pipeline/ex_test1b
+
+force /pipeline/ALUInA 0000000000001011 -freeze
+force /pipeline/ALUInB 0000000000001010 -freeze
+force /pipeline/EX_C_In 0000000000000001 -freeze
+run 40
+
+force /pipeline/EX_C_In 0000000000000010 -freeze
+run 40
+echo "ALUOut should be 10"
+
+
+

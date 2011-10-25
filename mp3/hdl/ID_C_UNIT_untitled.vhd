@@ -29,12 +29,18 @@ ARCHITECTURE untitled OF ID_C_UNIT IS
 signal pre_ID_C_In : lc3b_word;
 BEGIN
 	PROCESS(instOut)
+		variable opcode : LC3b_opcode;
 		BEGIN 
-			IF(instOut(15 downto 12) = "0001") THEN
-				pre_ID_C_IN <= "0000000000000000";	
-			else
-				pre_ID_C_IN <= "1111000000000000";
-			END IF; 
+			opcode := instOut(15 downto 12);
+			case opcode is
+				when "0001" =>
+					pre_ID_C_IN <= "0000000000000000";
+				when "0101" =>
+					pre_ID_C_IN <= "0000000000000001";
+			
+				when others =>
+					pre_ID_C_IN <= "1111000000000000";
+			END case;
 		END PROCESS;
 	ID_C_IN <= pre_ID_C_IN after delay_decode3;
 

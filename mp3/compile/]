@@ -39,7 +39,7 @@ echo "PCMuxSel should be 0 and LoadPC should be 1"
 
 run 50
 
-echo "ID_C_UNIT tests...ADD"
+echo "ID_C_UNIT tests..."
 echo "Test ADD R7,R1,R7 inst will lead to ALUMuxSel = 000"
 virtual signal {/mp3_cpu/id_c_in == 0  && /mp3_cpu/pcinstaddr == 2} ID_test1a
 add wave -color white ID_test1a
@@ -48,21 +48,21 @@ force /mp3_cpu/instOut 0001111001000111 -freeze
 run 10
 force /mp3_cpu/instOut 0000000000000000 -freeze
 run 10
-echo "ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB"
+echo "ID_C_In should be 0000, this ALUMuxSel is 000, or the input from RegFileOutB"
 
 force /mp3_cpu/pcinstaddr 0000000000000100 -freeze
 run 100
 
-echo "ID_C_UNIT tests...AND"
+echo "ID_C_UNIT tests..."
 echo "Test AND R5,R3,R2 inst will lead to ALUMuxSel = 001"
-virtual signal {/mp3_cpu/id_c_in == 1  && /mp3_cpu/pcinstaddr == 4} ID_test1b
+virtual signal {/mp3_cpu/id_c_in == 0  && /mp3_cpu/pcinstaddr == 4} ID_test1b
 add wave -color white ID_test1b
 
 force /mp3_cpu/instOut 0101010100110010 -freeze
 run 10
 force /mp3_cpu/instOut 0000000000000010 -freeze
 run 10
-echo "ID_C_In should be 0001, ALUMuxSel is 001, or the input from RegFileOutB"
+echo "ID_C_In should be 0000, this ALUMuxSel is 000, or the input from RegFileOutB"
 
 force /mp3_cpu/pcinstaddr 0000000000000100 -freeze
 run 100
@@ -85,25 +85,5 @@ force /mp3_cpu/instOut 1111000000000000 -freeze
 force /mp3_cpu/pcinstaddr 0000000000001000 -freeze
 run 50
 
-echo "ex_c_in should be 0xF000 and then 0x0001 after 1 clock cycle, and then back to 0xF000 after the next cycle"
-
-echo "EX_C_UNIT & EX_C_REG Tests...AND"
-echo "Test that ex_c_in is 1 for AND and that it isn't outputed for a full cycle"
-
-virtual signal {/mp3_cpu/id_c_in == 1 && /mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 8} EX_test2a
-virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 1 && /mp3_cpu/pcinstaddr == 8} EX_test2b
-add wave -color white EX_test2a
-add wave -color white EX_test2b
-
-force /mp3_cpu/instOut 0101000000000000 -freeze
-run 50
-force /mp3_cpu/instOut 1111000000000000 -freeze
-run 50
-force /mp3_cpu/instOut 1111000000000000 -freeze
-force /mp3_cpu/pcinstaddr 0000000000010000 -freeze
-run 50
-
 echo "ex_c_in should be 0xF000 and then 0x0000 after 1 clock cycle, and then back to 0xF000 after the next cycle"
-
-
 
