@@ -8,137 +8,176 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.Pipeline(struct) 
+# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.mp3_CPU(struct) 
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../std.standard
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.std_logic_1164(body)
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.numeric_std(body)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lc3b_types(body)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.exstage(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.worthless(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.idstage(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wordmux8(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.regextractor(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ifstage(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pc(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pcplus2(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(generatedinstance)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wbstage(generatedinstance)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
-do PIPELINE_TEST.do
-# --- Executing initialization force file for PIPELINE_TEST 
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lc3b_types(body)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mp3_cpu(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.cu(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ex_c_reg(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ex_c_unit(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.id_c_unit(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.if_c_unit(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_reg(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_unit(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.magicmemory(awesome)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pipeline(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.exstage(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ex_c_decode(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.worthless(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.idstage(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.id_c_decode(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wordmux8(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.regextractor(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ifstage(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.if_c_decode(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pc(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pcplus2(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.memstage(generatedinstance)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wbstage(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_decode(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
+do CONTROL_UNIT_TEST.do
+# --- Executing initialization force file for CONTROL_UNIT_TEST 
+# Control Unit signal generation... PCMuxSel, LoadPC 
+# /mp3_cpu/cutest1a
+# /mp3_cpu/cutest1b
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 0 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /pipeline/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /pipeline/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 6 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 6 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 7 ns  Iteration: 1  Instance: /pipeline/execution/exalu
+#    Time: 7 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# 0
+# 
+# 0
+# 
+# PCMuxSel should be 0 and LoadPC should be 1 
+# 0
+# 
+# ID_C_UNIT tests...ADD 
+# Test ADD R7,R1,R7 inst will lead to ALUMuxSel = 000 
+# /mp3_cpu/ID_test1
+# 0
+# 
+# 0
+# 
+# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
+# 0
+# 
+# Test AND R5,R3,R2 inst will lead to ALUMuxSel = 000 
+# /mp3_cpu/ID_test2
+# 0
+# 
+# 0
+# 
+# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
+# 0
+# 
+# EX_C_UNIT & EX_C_REG Tests... 
+# Test that ex_c_in is 0 for ADD and that it isn't outputed for a full cycle 
+# /mp3_cpu/EX_test1a
+# /mp3_cpu/EX_test1b
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# ex_c_in should be 0xF000 and then 0x0000 after 1 clock cycle, and then back to 0xF000 after the next cycle 
+# Test that ex_c_in is 1 for AND and that it isn't outputed for a full cycle 
+# /mp3_cpu/EX_test2a
+# /mp3_cpu/EX_test2b
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# ex_c_in should be 0xF000 and then 0x0001 after 1 clock cycle, and then back to 0xF000 after the next cycle 
+# WB_C_UNIT & WB_C_REG Tests... 
+# Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 2 full cycles.  The data shold skip the MEM stage for ADD 
+# /mp3_cpu/WB_test1a
+# /mp3_cpu/WB_test1b
+# /mp3_cpu/WB_test1c
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# wb_c_in should be 0xF000 for 2 cycles then 0x001B for 1 clock cycle, and then back to 0xF000 after the next cycle 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do CONTROL_UNIT_TEST.do
+# --- Executing initialization force file for CONTROL_UNIT_TEST 
+# Control Unit signal generation... PCMuxSel, LoadPC 
+# /mp3_cpu/cutest1a
+# /mp3_cpu/cutest1b
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 7 ns  Iteration: 1  Instance: /pipeline/execution/exalu
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 10 ns  Iteration: 0  Instance: /pipeline/ourregfile
-# Test setup.... preload R1, R6 
-# 0
-# 
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /pipeline/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /pipeline/ourregfile
-# 0
-# 
-# 0
-# 
-# 0
-# 
+#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /pipeline/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 70 ns  Iteration: 1  Instance: /pipeline/ourregfile
-# 0
-# 
-# 0
-# 
-# ID & Regfile communication tests. 
-# Test 1, test alu inputs from ID stage on ADD R7, R1,R6 
-# /pipeline/id_test1a
-# /pipeline/id_test1b
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 86 ns  Iteration: 0  Instance: /pipeline/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 87 ns  Iteration: 1  Instance: /pipeline/execution/exalu
-# 0
-# 
-# aluina should be 002A and aluinb should be 0025 
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 2  Instance: /pipeline/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 2  Instance: /pipeline/ourregfile
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 93 ns  Iteration: 0  Instance: /pipeline/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 97 ns  Iteration: 1  Instance: /pipeline/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 103 ns  Iteration: 0  Instance: /pipeline/execution/exalu
-# 0
-# 
-# IF tests 
-# Test1, the IF stage will increment the pc when the CU instructs it to 
-# /pipeline/if_test1a
-# /pipeline/if_test1b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 140 ns  Iteration: 2  Instance: /pipeline/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 140 ns  Iteration: 2  Instance: /pipeline/ourregfile
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# inst should be 7, nextPC should be 4 
-# 0
-# 
-# EX tests 
-# Test1, ALUOut will have the sum of ALUInA and ALUInB 
-# /pipeline/ex_test1a
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 222 ns  Iteration: 0  Instance: /pipeline/execution/exalu
-# 0
-# 
-# 0
-# 
-# ALUOut should be 21 
-# EX tests for AND 
-# Test1, ALUOut will have the and of ALUInA and ALUInB 
-# /pipeline/ex_test1b
-# 0
-# 
-# 0
-# 
-# ALUOut should be 10 
-env EX_decoder
-# sim:/pipeline/execution/ex_decoder
+#    Time: 7 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# PCMuxSel should be 0 and LoadPC should be 1 
+# ID_C_UNIT tests...ADD 
+# Test ADD R7,R1,R7 inst will lead to ALUMuxSel = 000 
+# /mp3_cpu/ID_test1
+# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
+# Test AND R5,R3,R2 inst will lead to ALUMuxSel = 000 
+# /mp3_cpu/ID_test2
+# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
+# EX_C_UNIT & EX_C_REG Tests... 
+# Test that ex_c_in is 0 for ADD and that it isn't outputed for a full cycle 
+# /mp3_cpu/EX_test1a
+# /mp3_cpu/EX_test1b
+# ex_c_in should be 0xF000 and then 0x0000 after 1 clock cycle, and then back to 0xF000 after the next cycle 
+# Test that ex_c_in is 1 for AND and that it isn't outputed for a full cycle 
+# /mp3_cpu/EX_test2a001
+# /mp3_cpu/EX_test2b
+# ex_c_in should be 0xF000 and then 0x0001 after 1 clock cycle, and then back to 0xF000 after the next cycle 
+# WB_C_UNIT & WB_C_REG Tests... 
+# Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 2 full cycles.  The data shold skip the MEM stage for ADD 
+# /mp3_cpu/WB_test1a
+# /mp3_cpu/WB_test1b
+# /mp3_cpu/WB_test1c
+# wb_c_in should be 0xF000 for 2 cycles then 0x001B for 1 clock cycle, and then back to 0xF000 after the next cycle 

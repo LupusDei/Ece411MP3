@@ -84,23 +84,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/struct.bd.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/struct.bd.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -116,11 +116,11 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/Pipeline"
 )
 (vvPair
 variable "date"
@@ -164,7 +164,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-16.ews.illinois.edu"
+value "gelib-057-26.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -173,6 +173,10 @@ value "VHDL"
 (vvPair
 variable "library"
 value "ece411"
+)
+(vvPair
+variable "library_downstream_HdsLintPlugin"
+value "$HDS_PROJECT_DIR/ece411/designcheck"
 )
 (vvPair
 variable "library_downstream_ModelSimCompiler"
@@ -196,11 +200,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/Pipeline/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -240,7 +244,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "00:16:25"
+value "20:07:16"
 )
 (vvPair
 variable "unit"
@@ -248,7 +252,7 @@ value "Pipeline"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -331,8 +335,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,8300,-22500,9200"
-st "RESET_L      : std_logic
-"
+st "RESET_L      : std_logic"
 )
 )
 *3 (Grouping
@@ -1033,8 +1036,9 @@ vasetType 1
 fg "49152,49152,49152"
 )
 xt "57250,22250,58750,23750"
-iconName "UnknownFile.png"
-iconMaskName "UnknownFile.msk"
+iconName "BlockDiagram.png"
+iconMaskName "BlockDiagram.msk"
+ftype 1
 )
 viewiconposition 0
 gi *33 (BdGenericInterface
@@ -1166,8 +1170,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,29900,-19000,30800"
-st "SIGNAL newPC        : lc3b_word
-"
+st "SIGNAL newPC        : lc3b_word"
 )
 )
 *40 (Net
@@ -1184,8 +1187,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,30800,-19000,31700"
-st "SIGNAL nextPC       : lc3b_word
-"
+st "SIGNAL nextPC       : lc3b_word"
 )
 )
 *41 (Net
@@ -1202,8 +1204,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,29000,-19000,29900"
-st "SIGNAL inst         : lc3b_word
-"
+st "SIGNAL inst         : lc3b_word"
 )
 )
 *42 (PortIoIn
@@ -1266,8 +1267,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,6500,-22500,7400"
-st "InstMemIn    : lc3b_word
-"
+st "InstMemIn    : lc3b_word"
 )
 )
 *44 (PortIoOut
@@ -1329,8 +1329,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,15500,-22500,16400"
-st "PCinstAddr   : lc3b_word
-"
+st "PCinstAddr   : lc3b_word"
 )
 )
 *46 (PortIoIn
@@ -1393,8 +1392,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,24500,-19500,25400"
-st "SIGNAL RA           : lc3b_reg
-"
+st "SIGNAL RA           : lc3b_reg"
 )
 )
 *48 (Net
@@ -1411,8 +1409,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,25400,-19500,26300"
-st "SIGNAL RB           : lc3b_reg
-"
+st "SIGNAL RB           : lc3b_reg"
 )
 )
 *49 (Net
@@ -1429,8 +1426,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,23600,-19000,24500"
-st "SIGNAL OutB         : lc3b_word
-"
+st "SIGNAL OutB         : lc3b_word"
 )
 )
 *50 (Net
@@ -1447,8 +1443,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,22700,-19000,23600"
-st "SIGNAL OutA         : lc3b_word
-"
+st "SIGNAL OutA         : lc3b_word"
 )
 )
 *51 (Net
@@ -1465,8 +1460,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,18200,-19000,19100"
-st "SIGNAL ALUInA       : lc3b_word
-"
+st "SIGNAL ALUInA       : lc3b_word"
 )
 )
 *52 (Net
@@ -1483,8 +1477,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,19100,-19000,20000"
-st "SIGNAL ALUInB       : lc3b_word
-"
+st "SIGNAL ALUInB       : lc3b_word"
 )
 )
 *53 (PortIoIn
@@ -1547,8 +1540,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,12800,-22500,13700"
-st "ID_C_Out     : lc3b_word
-"
+st "ID_C_Out     : lc3b_word"
 )
 )
 *55 (Net
@@ -1565,8 +1557,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,4700,-22500,5600"
-st "ID_C_In      : lc3b_word
-"
+st "ID_C_In      : lc3b_word"
 )
 )
 *56 (Net
@@ -1583,8 +1574,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,3800,-22500,4700"
-st "EX_C_In      : lc3b_word
-"
+st "EX_C_In      : lc3b_word"
 )
 )
 *57 (Net
@@ -1601,8 +1591,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,11900,-22500,12800"
-st "EX_C_Out     : lc3b_word
-"
+st "EX_C_Out     : lc3b_word"
 )
 )
 *58 (PortIoIn
@@ -1665,8 +1654,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,14600,-22500,15500"
-st "MEM_C_Out    : lc3b_word
-"
+st "MEM_C_Out    : lc3b_word"
 )
 )
 *60 (Net
@@ -1683,8 +1671,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,7400,-22500,8300"
-st "MEM_C_In     : lc3b_word
-"
+st "MEM_C_In     : lc3b_word"
 )
 )
 *61 (PortIoOut
@@ -1791,8 +1778,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,11000,-22500,11900"
-st "DataAddr     : lc3b_word
-"
+st "DataAddr     : lc3b_word"
 )
 )
 *64 (Net
@@ -1809,8 +1795,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,13700,-22500,14600"
-st "MEMWriteData : lc3b_word
-"
+st "MEMWriteData : lc3b_word"
 )
 )
 *65 (PortIoIn
@@ -1873,8 +1858,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,2900,-22500,3800"
-st "DataMemIn    : lc3b_word
-"
+st "DataMemIn    : lc3b_word"
 )
 )
 *67 (Net
@@ -1891,8 +1875,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,20000,-19000,20900"
-st "SIGNAL ALUOut       : lc3b_word
-"
+st "SIGNAL ALUOut       : lc3b_word"
 )
 )
 *68 (Net
@@ -1909,8 +1892,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,21800,-19000,22700"
-st "SIGNAL MEMDataOut   : lc3b_word
-"
+st "SIGNAL MEMDataOut   : lc3b_word"
 )
 )
 *69 (PortIoIn
@@ -1973,8 +1955,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,9200,-22500,10100"
-st "WB_C_In      : lc3b_word
-"
+st "WB_C_In      : lc3b_word"
 )
 )
 *71 (Net
@@ -1991,8 +1972,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,20900,-19500,21800"
-st "SIGNAL DR           : lc3b_reg
-"
+st "SIGNAL DR           : lc3b_reg"
 )
 )
 *72 (Net
@@ -2009,8 +1989,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,26300,-19000,27200"
-st "SIGNAL RegDataIn    : lc3b_word
-"
+st "SIGNAL RegDataIn    : lc3b_word"
 )
 )
 *73 (Net
@@ -2027,8 +2006,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,27200,-19000,28100"
-st "SIGNAL RegWrite     : std_logic
-"
+st "SIGNAL RegWrite     : std_logic"
 )
 )
 *74 (PortIoOut
@@ -2727,8 +2705,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,5600,-22500,6500"
-st "IF_C_In      : lc3b_word
-"
+st "IF_C_In      : lc3b_word"
 )
 )
 *93 (Net
@@ -2745,8 +2722,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,10100,-22500,11000"
-st "clk          : std_logic
-"
+st "clk          : std_logic"
 )
 )
 *94 (PortIoIn
@@ -2854,8 +2830,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,16400,-22500,17300"
-st "instOut      : lc3b_word
-"
+st "instOut      : lc3b_word"
 )
 )
 *97 (Net
@@ -2872,8 +2847,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,28100,-19000,29000"
-st "SIGNAL SrcData      : lc3b_word
-"
+st "SIGNAL SrcData      : lc3b_word"
 )
 )
 *98 (Wire
@@ -4676,13 +4650,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "1729,45,3013,948"
-viewArea "-22700,-9800,68546,53324"
+windowSize "1723,47,3007,950"
+viewArea "-22700,-9800,68546,50916"
 cachedDiagramExtent "-37000,-8300,65000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-76000,-51000"
 active 1
-lastUid 1563,0
+lastUid 1659,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

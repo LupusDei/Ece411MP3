@@ -24,7 +24,7 @@ ENTITY EX_C_REG IS
 
 -- Declarations
 
-END EX_C_REG ;
+END EX_C_REG;
 
 --
 ARCHITECTURE untitled OF EX_C_REG IS
@@ -36,7 +36,7 @@ BEGIN
 		EX_C_In <= mem(1) after delay_regfile_read;
 	END PROCESS EX_C_LEAVING;
 
-	EX_C_ENTERING : PROCESS(clk, ex_c, RESET_L, mem)
+	EX_C_ENTERING : PROCESS(clk, ex_c, RESET_L)
 	BEGIN
 		if RESET_L = '0' then
 			mem(0) <= "0000000000000000";
