@@ -5,11 +5,13 @@ delete wave *
 
 add wave -hex /pipeline/id_c_in
 add wave -hex /pipeline/ex_c_in
+add wave -hex /pipeline/wb_c_in
 add wave -hex /pipeline/inst
 add wave -hex /pipeline/aluina
 add wave -hex /pipeline/aluinb
 add wave -hex /pipeline/aluout
 add wave -hex /pipeline/regdatain
+add wave -hex /pipeline/pcinstaddr
 add wave /pipeline/dr
 add wave /pipeline/regwrite
 add wave /pipeline/ra
@@ -40,7 +42,8 @@ run 5
 force /pipeline/regwrite 1 -freeze
 run 20
 
-force /pipeline/regwrite 0 -freeze
+noforce /pipeline/regwrite
+noforce /pipeline/regdatain
 run 10
 
 echo "ID & Regfile communication tests."
@@ -83,8 +86,8 @@ run 20
 
 echo "EX tests"
 echo "Test1, ALUOut will have the sum of ALUInA and ALUInB"
-virtual signal {/pipeline/ALUOut == 21} ex_test1a
-add wave -color white /pipeline/ex_test1a
+virtual signal {/pipeline/ALUOut == 21} ex_test1
+add wave -color white /pipeline/ex_test1
 
 force /pipeline/ALUInA 0000000000001011 -freeze
 force /pipeline/ALUInB 0000000000001010 -freeze
@@ -95,10 +98,9 @@ force /pipeline/EX_C_In 0000000000000011 -freeze
 run 40
 echo "ALUOut should be 21"
 
-echo "EX tests for AND"
-echo "Test1, ALUOut will have the and of ALUInA and ALUInB"
-virtual signal {/pipeline/ALUOut == 10} ex_test1b
-add wave -color white /pipeline/ex_test1b
+echo "Test2, ALUOut will have the and of ALUInA and ALUInB"
+virtual signal {/pipeline/ALUOut == 10} ex_test2
+add wave -color white /pipeline/ex_test2
 
 force /pipeline/ALUInA 0000000000001011 -freeze
 force /pipeline/ALUInB 0000000000001010 -freeze
@@ -111,3 +113,25 @@ echo "ALUOut should be 10"
 
 
 
+echo "WB tests"
+echo "Test1, the Regfile will contain the value from the ALU for ADD isntructions"
+force /pipeline/pcinstaddr 0000000001000000 -freeze
+#/*The inst would be ADD R6, R1, R0  where R1 + R0 = 42*/
+virtual signal {/pipeline/dr == 6 && /pipeline/pcinstaddr == 64} wb_test1a
+virtual signal {/pipeline/regWrite == 1 && /pipeline/pcinstaddr == 64} wb_test1b
+virtual signal {/pipeline/RegDataIn == 42 && /pipeline/pcinstaddr == 64} wb_test1c
+virtual signal {/pipeline/ourregfile/ram(6) == 42 && /pipeline/pcinstaddr == 64} wb_test1d
+add wave -color white /pipeline/wb_test1a
+add wave -color white /pipeline/wb_test1b
+add wave -color white /pipeline/wb_test1c
+add wave -color white /pipeline/wb_test1d
+
+force /pipeline/ALUOut 0000000000101010 -freeze
+#/*wb_c_in is dr = 6, regwrite =1, WBMuxSel = 1*/
+force /pipeline/WB_C_In 0000000000011011 -freeze
+run 50
+
+force /pipeline/WB_C_In 0000000000000000 -freeze
+force /pipeline/pcinstaddr 0000000010000000 -freeze
+run 40
+echo "R6 & RegDataIn should be 42, and DR should be 6"
