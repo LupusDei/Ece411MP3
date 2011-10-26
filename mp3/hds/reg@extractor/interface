@@ -25,7 +25,7 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 3,0
+suid 6,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -67,13 +67,13 @@ tm "EolColHdrMgr"
 *14 (LogPort
 port (LogicalPort
 decl (Decl
-n "inst"
+n "instIn"
 t "lc3b_word"
-o 26
-suid 1,0
+o 14
+suid 4,0
 )
 )
-uid 66,0
+uid 129,0
 )
 *15 (LogPort
 port (LogicalPort
@@ -81,11 +81,11 @@ m 1
 decl (Decl
 n "RA"
 t "lc3b_reg"
-o 22
-suid 2,0
+o 9
+suid 5,0
 )
 )
-uid 68,0
+uid 131,0
 )
 *16 (LogPort
 port (LogicalPort
@@ -93,11 +93,11 @@ m 1
 decl (Decl
 n "RB"
 t "lc3b_reg"
-o 23
-suid 3,0
+o 10
+suid 6,0
 )
 )
-uid 70,0
+uid 133,0
 )
 ]
 )
@@ -153,19 +153,19 @@ uid 92,0
 litem &14
 pos 0
 dimension 20
-uid 67,0
+uid 130,0
 )
 *23 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 69,0
+uid 132,0
 )
 *24 (MRCItem
 litem &16
 pos 2
 dimension 20
-uid 71,0
+uid 134,0
 )
 ]
 )
@@ -244,23 +244,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/reg@extractor/interface.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/reg@extractor/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/reg@extractor/interface.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/reg@extractor/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -276,27 +276,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/reg@extractor"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/reg@extractor"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/regExtractor"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/regExtractor"
 )
 (vvPair
 variable "date"
-value "10/23/11"
+value "10/26/11"
 )
 (vvPair
 variable "day"
-value "Sun"
+value "Wed"
 )
 (vvPair
 variable "day_long"
-value "Sunday"
+value "Wednesday"
 )
 (vvPair
 variable "dd"
-value "23"
+value "26"
 )
 (vvPair
 variable "entity_name"
@@ -324,7 +324,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-12.ews.illinois.edu"
+value "gelib-057-14.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -333,6 +333,10 @@ value "VHDL"
 (vvPair
 variable "library"
 value "ece411"
+)
+(vvPair
+variable "library_downstream_HdsLintPlugin"
+value "$HDS_PROJECT_DIR/ece411/designcheck"
 )
 (vvPair
 variable "library_downstream_ModelSimCompiler"
@@ -356,11 +360,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/reg@extractor/interface"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/reg@extractor/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/regExtractor/interface"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/regExtractor/interface"
 )
 (vvPair
 variable "project_name"
@@ -400,7 +404,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "19:18:56"
+value "17:58:42"
 )
 (vvPair
 variable "unit"
@@ -408,7 +412,7 @@ value "regExtractor"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -435,138 +439,141 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *34 (CptPort
-uid 51,0
+uid 114,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 52,0
+uid 115,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "14250,10625,15000,11375"
+xt "14250,8625,15000,9375"
 )
 tg (CPTG
-uid 53,0
+uid 116,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 54,0
+uid 117,0
 va (VaSet
 font "courier,8,0"
 )
-xt "16000,10550,18000,11450"
-st "inst"
-blo "16000,11250"
+xt "16000,8550,19000,9450"
+st "instIn"
+blo "16000,9250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 55,0
+uid 118,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,1800,57500,2700"
-st "inst : IN     lc3b_word  ;"
+xt "44000,1800,58500,2700"
+st "instIn : IN     lc3b_word  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
-n "inst"
+n "instIn"
 t "lc3b_word"
-o 26
-suid 1,0
+o 14
+suid 4,0
 )
 )
 )
 *35 (CptPort
-uid 56,0
+uid 119,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 57,0
+uid 120,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "23000,7625,23750,8375"
+xt "23000,6625,23750,7375"
 )
 tg (CPTG
-uid 58,0
+uid 121,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 59,0
+uid 122,0
 va (VaSet
 font "courier,8,0"
 )
-xt "21000,7550,22000,8450"
+xt "21000,6550,22000,7450"
 st "RA"
 ju 2
-blo "22000,8250"
+blo "22000,7250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 60,0
+uid 123,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,2700,57000,3600"
-st "RA   : OUT    lc3b_reg  ;"
+xt "44000,2700,58000,3600"
+st "RA     : OUT    lc3b_reg  ;
+"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "RA"
 t "lc3b_reg"
-o 22
-suid 2,0
+o 9
+suid 5,0
 )
 )
 )
 *36 (CptPort
-uid 61,0
+uid 124,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 62,0
+uid 125,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "23000,10625,23750,11375"
+xt "23000,9625,23750,10375"
 )
 tg (CPTG
-uid 63,0
+uid 126,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 64,0
+uid 127,0
 va (VaSet
 font "courier,8,0"
 )
-xt "21000,10550,22000,11450"
+xt "21000,9550,22000,10450"
 st "RB"
 ju 2
-blo "22000,11250"
+blo "22000,10250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 65,0
+uid 128,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,3600,56000,4500"
-st "RB   : OUT    lc3b_reg "
+xt "44000,3600,57000,4500"
+st "RB     : OUT    lc3b_reg 
+"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "RB"
 t "lc3b_reg"
-o 23
-suid 3,0
+o 10
+suid 6,0
 )
 )
 )
@@ -579,8 +586,9 @@ fg "0,65535,0"
 lineColor "0,32896,0"
 lineWidth 2
 )
-xt "15000,6000,23000,16000"
+xt "15000,6000,23000,11000"
 )
+oxt "15000,6000,23000,16000"
 biTextGroup (BiTextGroup
 uid 10,0
 ps "CenterOffsetStrategy"
@@ -590,18 +598,18 @@ uid 11,0
 va (VaSet
 font "courier,8,1"
 )
-xt "15750,10100,18750,11000"
+xt "15750,7600,18750,8500"
 st "ece411"
-blo "15750,10800"
+blo "15750,8300"
 )
 second (Text
 uid 12,0
 va (VaSet
 font "courier,8,1"
 )
-xt "15750,11000,22250,11900"
+xt "15750,8500,22250,9400"
 st "regExtractor"
-blo "15750,11700"
+blo "15750,9200"
 )
 )
 gi *37 (GenericInterface
@@ -614,7 +622,7 @@ uid 15,0
 va (VaSet
 font "courier,8,0"
 )
-xt "-8000,7000,2500,7900"
+xt "-8000,4500,2500,5400"
 st "Generic Declarations"
 )
 header "Generic Declarations"
@@ -1252,5 +1260,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 101,0
+lastUid 134,0
 )

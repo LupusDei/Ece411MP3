@@ -29,6 +29,7 @@
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pcplus2(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.memstage(generatedinstance)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.transitionreg(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wbstage(struct)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_decode(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
@@ -50,19 +51,21 @@ do PIPELINE_TEST.do
 #    Time: 0 ns  Iteration: 1  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 2 ns  Iteration: 0  Instance: /pipeline/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 6 ns  Iteration: 0  Instance: /pipeline/execution/exalu
 # ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 6 ns  Iteration: 0  Instance: /pipeline/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 7 ns  Iteration: 1  Instance: /pipeline/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 7 ns  Iteration: 1  Instance: /pipeline/execution/exalu
+#    Time: 7 ns  Iteration: 0  Instance: /pipeline/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 10 ns  Iteration: 0  Instance: /pipeline/ourregfile
-# Test setup.... preload R1, R6 
+# Test setup.... preload R1 = 42,R2 = 8 R6 = 37 
 # 0
 # 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 17 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 17 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 17 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 17 ns  Iteration: 1  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 30 ns  Iteration: 1  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -81,64 +84,116 @@ do PIPELINE_TEST.do
 # 
 # 0
 # 
-# ID & Regfile communication tests. 
-# Test 1, test alu inputs from ID stage on ADD R7, R1,R6 
-# /pipeline/id_test1a
-# /pipeline/id_test1b
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 86 ns  Iteration: 0  Instance: /pipeline/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 87 ns  Iteration: 1  Instance: /pipeline/execution/exalu
 # 0
 # 
-# aluina should be 002A and aluinb should be 0025 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 2  Instance: /pipeline/ourregfile
+#    Time: 90 ns  Iteration: 1  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 90 ns  Iteration: 2  Instance: /pipeline/ourregfile
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 93 ns  Iteration: 0  Instance: /pipeline/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 97 ns  Iteration: 1  Instance: /pipeline/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 103 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+#    Time: 90 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # 0
 # 
 # IF tests 
 # Test1, the IF stage will increment the pc when the CU instructs it to 
 # /pipeline/if_test1a
 # /pipeline/if_test1b
+# 0
+# 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 140 ns  Iteration: 2  Instance: /pipeline/ourregfile
+#    Time: 120 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 140 ns  Iteration: 2  Instance: /pipeline/ourregfile
-# 0
-# 
-# 0
-# 
-# 0
-# 
-# 0
-# 
+#    Time: 130 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 140 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 160 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # 0
 # 
 # inst should be 7, nextPC should be 4 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 170 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 180 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ID & Regfile communication tests. 
+# Test 1, test alu inputs from ID stage on ADD R7, R1,R6 
+# /pipeline/id_test1a
+# /pipeline/id_test1b
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 190 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# aluina should be 002A and aluinb should be 0025 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 210 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 217 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 220 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 230 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 237 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 240 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # 0
 # 
 # EX tests 
 # Test1, ALUOut will have the sum of ALUInA and ALUInB 
 # /pipeline/ex_test1
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 222 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 250 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 260 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 270 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 280 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # 0
 # 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 290 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 310 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 320 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # 0
 # 
 # ALUOut should be 21 
 # Test2, ALUOut will have the and of ALUInA and ALUInB 
 # /pipeline/ex_test2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 330 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 360 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # 0
 # 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 370 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 390 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # 0
 # 
 # ALUOut should be 10 
@@ -153,3 +208,40 @@ do PIPELINE_TEST.do
 # 0
 # 
 # R6 & RegDataIn should be 42, and DR should be 6 
+# Full Instruction Tests 
+# ADD R7, R1, R2 :  R7 <= 42 + 8    Followed by a dummy instruction 
+# /pipeline/ADD_test1
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 

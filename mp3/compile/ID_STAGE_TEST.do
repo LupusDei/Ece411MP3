@@ -5,7 +5,7 @@ delete wave *
 
 add wave -hex /idstage/id_c_in
 add wave -hex /idstage/id_c_out
-add wave -hex /idstage/inst
+add wave -hex /idstage/instIn
 add wave -hex /idstage/aluina
 add wave -hex /idstage/aluinb
 add wave -hex /idstage/outa
@@ -22,10 +22,10 @@ add wave -color white /idstage/test1a
 add wave -color white /idstage/test1b
 
 run 10
-force /idstage/inst 0001111001000010 -freeze
+force /idstage/instIn 0001111001000010 -freeze
 run 10
 
-force /idstage/inst 0000000000000000 -freeze
+force /idstage/instIn 0000000000000000 -freeze
 echo "ra should be 001, rb should be 010"
 run 10
 
