@@ -29,6 +29,7 @@ echo "Full Instruction Tests"
 echo "ADD R7, R1, R2 :  R7 <= 42 + 8"
 force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(1) 0000000000101010
 force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(2) 0000000000001000
+force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(3) 0000000000000011
 force -freeze /mp3_cpu/reset_l 0
 run 50
 force -freeze /mp3_cpu/reset_l 1
@@ -41,9 +42,18 @@ run 250
 
 add wave -noupdate -divider -height 32 ANDTests
 
-echo "AND R6, R1, R2 :  R6 <= 101010 AND 00100  Followed by a dummy instruction"
+echo "AND R6, R1, R2 :  R6 <= 101010 AND 00100"
 virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(6) == 8 && /mp3_cpu/pcinstaddr == 10} AND_test1
 add wave -color white /mp3_cpu/AND_test1
+run 50
+
+run 50
+
+add wave -noupdate -divider -height 32 NOTTests
+
+echo "NOT R4, R3 : R4 <= NOT(011) Followed by a dummy instruction" 
+virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == -4 && /mp3_cpu/pcinstaddr == 12} NOT_test1
+add wave -color white /mp3_cpu/NOT_test1
 run 50
 
 run 50

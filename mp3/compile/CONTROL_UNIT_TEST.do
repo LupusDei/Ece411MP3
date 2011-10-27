@@ -93,6 +93,7 @@ run 44
 
 echo "ex_c_in should be 0xF000 and then 0x0000 after 1 clock cycle, and then back to 0xF000 after the next cycle"
 
+#/*Ex Test for AND*/
 echo "Test that ex_c_in is 1 for AND and that it isn't outputed for a full cycle"
 
 virtual signal {/mp3_cpu/id_c_in == 0 && /mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 16} EX_test2a
@@ -107,11 +108,30 @@ force /mp3_cpu/instOut 1111000000000000 -freeze
 force /mp3_cpu/pcinstaddr 0000000000010010 -freeze
 run 50
 force /mp3_cpu/instOut 1111000000000000 -freeze
-force /mp3_cpu/pcinstaddr 0000000000100000 -freeze
+force /mp3_cpu/pcinstaddr 0000000000011000 -freeze
 run 44
 
 echo "ex_c_in should be 0xF000 and then 0x0001 after 1 clock cycle, and then back to 0xF000 after the next cycle"
 
+#/*Ex Test for NOT*/
+echo "Test that ex_c_in is 2 for NOT and that it isn't outputed for a full cycle"
+
+virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 24} EX_test3a
+virtual signal {/mp3_cpu/ex_c_in == 2 && /mp3_cpu/pcinstaddr == 26} EX_test3b
+add wave -color white EX_test3a
+add wave -color white EX_test3b
+#/*it would take the inst 6ns to load after the rising edge of the clk */
+run 6
+force /mp3_cpu/instOut 1001010000111111 -freeze
+run 50
+force /mp3_cpu/instOut 1111000000000000 -freeze
+force /mp3_cpu/pcinstaddr 0000000000011010 -freeze
+run 50
+force /mp3_cpu/instOut 1111000000000000 -freeze
+force /mp3_cpu/pcinstaddr 0000000000100000 -freeze
+run 44
+
+echo "ex_c_in should be 0xF000 and then 0x0002 after 1 clock cycle, and then back to 0xF000 after the next cycle"
 
 echo "WB_C_UNIT & WB_C_REG Tests..."
 echo "Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 2 full cycles.  The data shold skip the MEM stage for ADD"
