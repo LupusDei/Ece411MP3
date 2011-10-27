@@ -8,75 +8,262 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.mp3_CPU(struct) 
+# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.Pipeline(struct) 
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../std.standard
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.std_logic_1164(body)
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.numeric_std(body)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lc3b_types(body)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mp3_cpu(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.cu(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ex_c_reg(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ex_c_unit(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.id_c_unit(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.if_c_unit(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_reg(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_unit(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.magicmemory(awesome)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pipeline(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.exstage(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ex_c_decode(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.worthless(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.idstage(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.id_c_decode(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wordmux8(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.regextractor(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ifstage(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.if_c_decode(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pc(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pcplus2(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.memstage(generatedinstance)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.transitionreg(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wbstage(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_decode(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
-do ACCEPTANCE_TEST.do
-# --- Executing initialization force file for the Acceptance Tests 
-# Full Instruction Tests 
-# ADD R7, R1, R2 :  R7 <= 42 + 8 
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lc3b_types(body)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.exstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.worthless(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.idstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wordmux8(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.regextractor(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ifstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pc(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pcplus2(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(generatedinstance)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wbstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
+do PIPELINE_TEST.do
+# --- Executing initialization force file for PIPELINE_TEST 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/execution/exalu
 # ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 0 ns  Iteration: 0  Instance: /pipeline/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /pipeline/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 2 ns  Iteration: 0  Instance: /pipeline/ourregfile
 # ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 7 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 7 ns  Iteration: 0  Instance: /pipeline/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# /mp3_cpu/ADD_test1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 10 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# Test setup.... preload R1 = 42,R2 = 8 R6 = 37 
 # 0
 # 
-# AND R6, R1, R2 :  R6 <= 101010 AND 00100  Followed by a dummy instruction 
-# /mp3_cpu/AND_test1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 17 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 17 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 17 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 17 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 90 ns  Iteration: 1  Instance: /pipeline/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# IF tests 
+# Test1, the IF stage will increment the pc when the CU instructs it to 
+# /pipeline/if_test1a
+# /pipeline/if_test1b
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 120 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 130 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 140 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 150 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 160 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# inst should be 7, nextPC should be 4 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 170 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 180 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ID & Regfile communication tests. 
+# Test 1, test alu inputs from ID stage on ADD R7, R1,R6 
+# /pipeline/id_test1a
+# /pipeline/id_test1b
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 190 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# aluina should be 002A and aluinb should be 0025 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 200 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 210 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 217 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 220 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 230 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 237 ns  Iteration: 0  Instance: /pipeline/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 240 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# EX tests 
+# Test1, ALUOut will have the sum of ALUInA and ALUInB 
+# /pipeline/ex_test1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 250 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 260 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 270 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 280 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 290 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 300 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 310 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 320 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ALUOut should be 21 
+# Test2, ALUOut will have the and of ALUInA and ALUInB 
+# /pipeline/ex_test2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 330 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 360 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 370 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 390 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ALUOut should be 10 
+# Test3, ALUOut will have the not of ALUInA 
+# /pipeline/ex_test3
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 410 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 420 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 430 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 440 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 450 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 460 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 470 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 480 ns  Iteration: 0  Instance: /pipeline/ourregfile
+# 0
+# 
+# ALUOut should be -11 
+# WB tests 
+# Test1, the Regfile will contain the value from the ALU for ADD isntructions 
+# /pipeline/wb_test1a
+# /pipeline/wb_test1b
+# /pipeline/wb_test1c
+# /pipeline/wb_test1d
+# 0
+# 
+# 0
+# 
+# R6 & RegDataIn should be 42, and DR should be 6 
+# Full Instruction Tests 
+# ADD R7, R1, R2 :  R7 <= 42 + 8    Followed by a dummy instruction 
+# /pipeline/ADD_test1
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
+# 0
+# 
 # 0
 # 
 # 0

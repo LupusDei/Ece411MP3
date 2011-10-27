@@ -117,7 +117,17 @@ force /pipeline/EX_C_In 0000000000000010 -freeze
 run 40
 echo "ALUOut should be 10"
 
+echo "Test3, ALUOut will have the not of ALUInA"
+virtual signal {/pipeline/ALUOut == -11} ex_test3
+add wave -color white /pipeline/ex_test3
 
+force /pipeline/ALUInA 0000000000001010 -freeze
+force /pipeline/EX_C_In 0000000000000010 -freeze
+run 40
+
+force /pipeline/EX_C_In 0000000000000011 -freeze
+run 40
+echo "ALUOut should be -11"
 
 echo "WB tests"
 echo "Test1, the Regfile will contain the value from the ALU for ADD isntructions"
