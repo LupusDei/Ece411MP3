@@ -28,12 +28,12 @@ END WB_C_REG ;
 
 --
 ARCHITECTURE untitled OF WB_C_REG IS
-TYPE WB_C_Mem IS ARRAY (2 DOWNTO 0) OF LC3B_WORD;
+TYPE WB_C_Mem IS ARRAY (1 DOWNTO 0) OF LC3B_WORD;
 SIGNAL mem : WB_C_Mem;
 BEGIN
 	WB_C_LEAVING : PROCESS(mem)
 	BEGIN
-		WB_C_In <= mem(2) after delay_regfile_read;
+		WB_C_In <= mem(1) after delay_regfile_read;
 	END PROCESS WB_C_LEAVING;
 
 	WB_C_ENTERING : PROCESS(clk, wb_c, RESET_L)
@@ -41,11 +41,9 @@ BEGIN
 		if RESET_L = '0' then
 			mem(0) <= "0000000000000000";
 			mem(1) <= "0000000000000000";
-			mem(2) <= "0000000000000000";
 		end if;
 
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-			mem(2) <= mem(1);
 			mem(1) <= mem(0);
 			mem(0) <= wb_c;
 		end if;

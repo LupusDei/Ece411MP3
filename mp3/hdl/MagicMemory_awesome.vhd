@@ -35,7 +35,26 @@ END MagicMemory ;
 
 --
 ARCHITECTURE awesome OF MagicMemory IS
+signal instruction : lc3b_word;
+signal im_resp : std_logic;
 BEGIN
-  
+	PROCESS (im_read_l, PCInstAddr)
+	Begin
+		if (im_read_l = '0') then
+			im_resp <= '1';
+			if (PCInstAddr = "0000000000000000") then
+					instruction <= "0001111001000010";
+			elsif (PCInstAddr = "0000000000000010") then
+					instruction <= "0101110001000010";
+			else
+					instruction <= "0000000000000000";
+			end if;
+		else
+			im_resp <= '0';
+		end if;
+	end process;
+
+  InstMemIn <= instruction after 3 ns;
+		im_resp_h <= im_resp after 3 ns;
 END ARCHITECTURE awesome;
 

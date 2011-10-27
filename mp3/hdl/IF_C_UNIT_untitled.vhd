@@ -34,16 +34,16 @@ signal pre_if_c_in : lc3b_word;
 BEGIN
   IF_CONTROL_PROCESS : PROCESS (CLK, RESET_L, im_resp_h, im_read_l)
     BEGIN
-	IF (RESET_L'EVENT AND (RESET_L = '1') AND (RESET_L'LAST_VALUE = '0')) THEN
-        	pre_read_out <= '0';
+	IF (RESET_L = '0') THEN
 		pre_if_c_in <= "0000000000000000";
+  pre_read_out <= '1';
 	else
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-	  		pre_read_out <= '0';
+	  pre_read_out <= '0';
 			pre_if_c_in <= "0000000000000000";
 		else
 			if ((im_resp_h = '1') and (im_read_l = '0')) then
-           			pre_read_out <= '1';
+    pre_read_out <= '1';
 				pre_if_c_in <= "0000000000000010"; --increment the pc
 			end if;
 		end if;
