@@ -166,14 +166,16 @@ run 44
 
 echo "ex_c_in should be 0xF000 and then 0x0002 after 1 clock cycle, and then back to 0xF000 after the next cycle"
 
-echo "WB_C_UNIT & WB_C_REG Tests..."
-echo "Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 2 full cycles.  The data shold skip the MEM stage for ADD"
+run 50
 
 add wave -noupdate -divider -height 32 WBTests
+echo "WB_C_UNIT & WB_C_REG Tests..."
+echo "Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 3 full cycles.  The data shold skip the MEM stage for ADD"
+
 virtual signal {/mp3_cpu/id_c_in == 0 && /mp3_cpu/wb_c_in == 61440 && /mp3_cpu/pcinstaddr == 32} WB_test1a
 virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 0 && /mp3_cpu/wb_c_in == 61440 && /mp3_cpu/pcinstaddr == 34} WB_test1b
 #/*wb_c_in should be 00...011011   or dr = r6, regwrite = 1, muxSel = 1*/
-virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/wb_c_in == 27 && /mp3_cpu/pcinstaddr == 36} WB_test1c
+virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/wb_c_in == 27 && /mp3_cpu/pcinstaddr == 38} WB_test1c
 add wave -color white WB_test1a
 add wave -color white WB_test1b
 add wave -color white WB_test1c
@@ -185,14 +187,39 @@ run 50
 force /mp3_cpu/instOut 1111000000000000 -freeze
 force /mp3_cpu/pcinstaddr 0000000000100010 -freeze
 run 50
-force /mp3_cpu/instOut 1111000000000000 -freeze
 force /mp3_cpu/pcinstaddr 0000000000100100 -freeze
 run 50
-force /mp3_cpu/instOut 1111000000000000 -freeze
+force /mp3_cpu/pcinstaddr 0000000000100110 -freeze
+run 50
 force /mp3_cpu/pcinstaddr 0000000001000000 -freeze
 run 44
 
-echo "wb_c_in should be 0xF000 for 2 cycles then 0x001B for 1 clock cycle, and then back to 0xF000 after the next cycle"
+echo "wb_c_in should be 0xF000 for 3 cycles then 0x001B for 1 clock cycle, and then back to 0xF000 after the next cycle"
+
+echo "Test2, make sure wb_c_in waits an extra cycle for ldr."
+virtual signal {/mp3_cpu/id_c_in == 6 && /mp3_cpu/wb_c_in == 61440 && /mp3_cpu/pcinstaddr == 64} WB_test2a
+virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 0 && /mp3_cpu/wb_c_in == 61440 && /mp3_cpu/pcinstaddr == 66} WB_test2b
+virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 61440 && /mp3_cpu/wb_c_in == 61440 && /mp3_cpu/pcinstaddr == 68} WB_test2c
+#/*wb_c_in should be 00...011110   or dr = r7, regwrite = 1, muxSel = 0*/
+virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/wb_c_in == 30 && /mp3_cpu/pcinstaddr == 70} WB_test2d
+add wave -color white WB_test2a
+add wave -color white WB_test2b
+add wave -color white WB_test2c
+add wave -color white WB_test2d
+#/*it would take the inst 6ns to load after the rising edge of the clk */
+run 6
+#/*LDR R7, R1, 7*/
+force /mp3_cpu/instOut 0110111001000111 -freeze
+run 50
+force /mp3_cpu/instOut 1111000000000000 -freeze
+force /mp3_cpu/pcinstaddr 0000000001000010 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000001000100 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000001000110 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000001001000 -freeze
+run 44
 
 
 #/***********************************************/
