@@ -9,8 +9,12 @@ add wave -hex /memstage/MEMDataOut
 add wave -hex /memstage/DataAddr
 add wave -hex /memstage/DataMemIn
 add wave -hex /memstage/MEM_C_In
+add wave -hex /memstage/MEM_C_OUT
+add wave -hex /memstage/MEM_C_In
 add wave /memstage/MEMWriteData
 
+force -freeze /memstage/clk 0 -repeat 50
+force -freeze /memstage/clk 1 25 -repeat 50
 
 echo "Test1, LDR should output the addr to memory, wait for a respsonce, and then output the result to the wbstage"
 virtual signal {/memstage/DataAddr == 39} test1a
@@ -45,3 +49,9 @@ run 10
 force -freeze /memstage/ALUResult 0000000000000000
 force -freeze /memstage/srcIn 0000000000000000
 run 30
+
+
+
+force -freeze /memstage/ALUResult 0000000000000111
+force -freeze /memstage/MEM_C_In 0000000010000111
+ run 60

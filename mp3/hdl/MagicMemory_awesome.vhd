@@ -66,6 +66,8 @@ BEGIN
 					instruction <= "1111000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000010000") then
 					instruction <= "0111001011000011"; -- str r1, r3, 3
+			elsif (PCInstAddr = "0000000000010010") then
+					instruction <= "0000101000000100"; -- brnp 4
 			else
 					instruction <= "0000000000000000";
 			end if;

@@ -30,8 +30,7 @@ END theNZP ;
 
 --
 ARCHITECTURE untitled OF theNZP IS
-BEGIN
-SIGNAL PRE_NZP : STD_LOGIC_VECTOR (2 DOWNTO 0);
+SIGNAL PRE_NZP : lc3b_cc;
 BEGIN
 	------------------------------
 	VHDL_NZP : PROCESS (CLK, GenCCout)

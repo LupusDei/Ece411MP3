@@ -6,7 +6,9 @@ delete wave *
 add wave -hex /mp3_cpu/if_c_in
 add wave -hex /mp3_cpu/id_c_in
 add wave -hex /mp3_cpu/ex_c_in
+add wave -hex /mp3_cpu/mem_c_in
 add wave -hex /mp3_cpu/wb_c_in
+add wave -hex /mp3_cpu/mem_c_out
 add wave -hex /mp3_cpu/im_resp_h
 add wave -hex /mp3_cpu/im_read_l
 add wave -hex /mp3_cpu/im_writeh_l
@@ -14,6 +16,7 @@ add wave -hex /mp3_cpu/im_writel_l
 add wave -hex /mp3_cpu/reset_l
 add wave -hex /mp3_cpu/clk
 add wave -hex /mp3_cpu/pcinstaddr
+add wave -hex /mp3_cpu/pipelinedatapath/newPC
 add wave -hex /mp3_cpu/instOut
 
 
@@ -223,7 +226,7 @@ run 44
 
 
 #/***********************************************/
-#/* Full CU tests for MEM instructions */
+#/* Full CU tests for instructions */
 echo "Testing full path for MEM instructions"
 add wave -noupdate -divider -height 32 FullInstTests
 #/*pc is 128*/
@@ -231,7 +234,8 @@ force /mp3_cpu/pcinstaddr 0000000010000000 -freeze
 #/*id_c_in is 6 for ALUMuxSel to be 110, or SEXT(offset 6) << 1*/
 virtual signal {/mp3_cpu/id_c_in == 6 && /mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 128} MEM_test1a
 virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 0 && /mp3_cpu/mem_c_in == 61440 && /mp3_cpu/pcinstaddr == 130} MEM_test1b
-virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/mem_c_in == 0 && /mp3_cpu/dm_read_l == 0 && /mp3_cpu/pcinstaddr == 132} MEM_test1c
+#/*mem_c_in should control the gencc*/
+virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/mem_c_in == 1 && /mp3_cpu/dm_read_l == 0 && /mp3_cpu/pcinstaddr == 132} MEM_test1c
 #/*wb_c_in should be 00...011110   or dr = r7, regwrite = 1, muxSel = 0*/
 virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/mem_c_in == 61440 && /mp3_cpu/dm_read_l == 1 && /mp3_cpu/wb_c_in == 30 && /mp3_cpu/pcinstaddr == 134} MEM_test1d
 add wave -color white MEM_test1a
@@ -276,5 +280,31 @@ run 50
 force /mp3_cpu/pcinstaddr 0000000010001110 -freeze
 run 50
 force /mp3_cpu/pcinstaddr 0000000010010000 -freeze
+run 44
+
+echo "Test 3, BRp 8"
+#/*for now, branch will occur in the mem stage*/
+virtual signal {/mp3_cpu/id_c_in == 0 && /mp3_cpu/pcinstaddr == 144} BR_test1a
+#/*mem_c_in is now 1000 0010. 1 for br instruction, 000 for dm read&writeh&l, then nzp positive check, then 0 for loadnzp */
+virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/mem_c_in == 130 && /mp3_cpu/if_c_in == 3 && /mp3_cpu/pcinstaddr == 148} BR_test1b
+add wave -color white BR_test1a
+add wave -color white BR_test1b
+
+run 6
+force /mp3_cpu/instOut 0000001000001000 -freeze
+force /mp3_cpu/pipelinedatapath/nextPCIn 0000000000001000 -freeze
+run 50
+#/*pc = 146*/
+force /mp3_cpu/pcinstaddr 0000000010010010 -freeze
+force /mp3_cpu/instOut 1111000000000000 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010010100 -freeze
+force /mp3_cpu/mem_c_out 0000000000000001 -freeze
+run 50
+noforce /mp3_cpu/pcinstaddr
+#/*pc = 150*/
+force /mp3_cpu/pcinstaddr 0000000010010110 -freeze
+run 50
+
 run 44
 

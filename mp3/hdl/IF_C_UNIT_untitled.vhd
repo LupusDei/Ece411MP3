@@ -16,6 +16,7 @@ USE ece411.LC3b_types.all;
 
 ENTITY IF_C_UNIT IS
    PORT( 
+      MEM_C_Out : IN     lc3b_word;
       RESET_L   : IN     std_logic;
       clk       : IN     std_logic;
       im_resp_h : IN     std_logic;
@@ -30,26 +31,33 @@ END IF_C_UNIT ;
 --
 ARCHITECTURE untitled OF IF_C_UNIT IS
 signal pre_read_out : std_logic;
-signal pre_if_c_in : lc3b_word;
+signal pre_load_pc : std_logic;
+signal pre_PCMuxSel : std_logic;
 BEGIN
   IF_CONTROL_PROCESS : PROCESS (CLK, RESET_L, im_resp_h, im_read_l)
     BEGIN
 	IF (RESET_L = '0') THEN
-		pre_if_c_in <= "0000000000000000";
   pre_read_out <= '1';
+  pre_load_pc <= '0';
+  pre_PCMuxSel <= '0';
 	else
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
 	  pre_read_out <= '0';
-			pre_if_c_in <= "0000000000000000";
+   pre_load_pc <= '0';
+   pre_PCMuxSel <= '0';
 		else
 			if ((im_resp_h = '1')) then
     pre_read_out <= '1';
-				pre_if_c_in <= "0000000000000010"; --increment the pc
+    pre_load_pc <= '1';
+			end if;
+			if (MEM_C_Out = "0000000000000001") then
+				pre_PCMuxSel <= '1';
+    pre_load_pc <= '1';
 			end if;
 		end if;
 	end if;
 	END PROCESS;
-	IF_C_In <= pre_if_c_in after delay_decode3;
+	IF_C_In <= "00000000000000" & pre_load_pc & pre_PCMuxSel after delay_decode3;
 	im_read_l <= pre_read_out after delay_decode3;
 END ARCHITECTURE untitled;
 

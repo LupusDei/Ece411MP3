@@ -26,6 +26,9 @@ add wave -hex /mp3_cpu/pipelinedatapath/aluResult
 add wave -hex /mp3_cpu/pipelinedatapath/RegDataIn
 add wave -hex /mp3_cpu/Pipelinedatapath/ourregfile/ram
 
+add wave /mp3_cpu/pipelinedatapath/memaccess/n
+add wave /mp3_cpu/pipelinedatapath/memaccess/z
+add wave /mp3_cpu/pipelinedatapath/memaccess/p
 
 force -freeze /mp3_cpu/clk 0 -repeat 50
 force -freeze /mp3_cpu/clk 1 25 -repeat 50
@@ -83,5 +86,12 @@ echo "STR r1, r3, 3 : MEM(0009) <= r1 followed by nothin"
 virtual signal {/mp3_cpu/datamemin == 42 && mp3_cpu/dm_resp_h == 1 && /mp3_cpu/pcinstaddr == 22} STR_test1
 add wave -color white /mp3_cpu/STR_test1
 run 50
+
+
+echo "BR np, 4   28 + 8 = 36"
+virtual signal {/mp3_cpu/pcinstaddr == 36} br_1
+add wave -color white /mp3_cpu/br_1
+run 50
+
 
 run 50

@@ -37,6 +37,7 @@
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wordmux8(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.regextractor(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.shift(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.add16(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_3(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ifstage(struct)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.if_c_decode(untitled)
@@ -44,11 +45,29 @@
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pcplus2(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.memstage(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.gencondcodes(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mem_c_decode(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.thenzp(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.thenzpsplit(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wanna_branch(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.transitionreg(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.transitionreg3(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wbstage(struct)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_decode(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.brreg(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
+do ACCEPTANCE_TEST.do
+# --- Executing initialization force file for the Acceptance Tests 
+# ** Error: (vish-4014) No objects found matching '/mp3_cpu/pipelinedatapath/memaccess/thenzp/ram'.
+# Error in macro ./ACCEPTANCE_TEST.do line 29
+# (vish-4014) No objects found matching '/mp3_cpu/pipelinedatapath/memaccess/thenzp/ram'.
+#     while executing
+# "add wave /mp3_cpu/pipelinedatapath/memaccess/thenzp/ram"
+force -freeze sim:/mp3_cpu/pipelinedatapath/memaccess/n 1 0
+force -freeze sim:/mp3_cpu/pipelinedatapath/memaccess/p 1 0
+force -freeze sim:/mp3_cpu/pipelinedatapath/memaccess/z 1 0
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
 do ACCEPTANCE_TEST.do
 # --- Executing initialization force file for the Acceptance Tests 
 # Full Instruction Tests 
@@ -121,6 +140,10 @@ do ACCEPTANCE_TEST.do
 # 2 NOPs should skoot on by 
 # STR r1, r3, 3 : MEM(0009) <= r1 followed by nothin 
 # /mp3_cpu/STR_test1
+# 0
+# 
+# BR np, 4   28 + 8 = 36 
+# /mp3_cpu/br_1
 # 0
 # 
 # 0

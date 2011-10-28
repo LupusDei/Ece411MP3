@@ -27,6 +27,7 @@ END ID_C_UNIT ;
 --
 ARCHITECTURE untitled OF ID_C_UNIT IS
 signal pre_ID_C_In : lc3b_word;
+signal pre_offsetMuxSel : std_logic;
 BEGIN
 	PROCESS(instOut)
 		variable opcode : LC3b_opcode;
@@ -49,6 +50,8 @@ BEGIN
 					pre_ID_C_IN <= "0000000000000110";
 				when "0111" =>
 					pre_ID_C_IN <= "0000000000001110";
+				when "0000" =>
+					pre_ID_C_IN <= "0000000000000000";
 				when others =>
 					pre_ID_C_IN <= "1111000000000000";
 			END case;
