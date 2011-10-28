@@ -194,3 +194,34 @@ run 44
 
 echo "wb_c_in should be 0xF000 for 2 cycles then 0x001B for 1 clock cycle, and then back to 0xF000 after the next cycle"
 
+
+#/***********************************************/
+#/* Full CU tests for MEM instructions */
+echo "Testing full path for MEM instructions"
+add wave -noupdate -divider -height 32 FullInstTests
+#/*pc is 128*/
+force /mp3_cpu/pcinstaddr 0000000010000000 -freeze
+#/*id_c_in is 6 for ALUMuxSel to be 110, or SEXT(offset 6) << 1*/
+virtual signal {/mp3_cpu/id_c_in == 6 && /mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 128} MEM_test1a
+virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 0 && /mp3_cpu/mem_c_in == 61440 && /mp3_cpu/pcinstaddr == 130} MEM_test1b
+virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/mem_c_in == 0 && /mp3_cpu/dm_read_l == 0 && /mp3_cpu/pcinstaddr == 132} MEM_test1c
+#/*wb_c_in should be 00...011110   or dr = r7, regwrite = 1, muxSel = 0*/
+virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/mem_c_in == 61440 && /mp3_cpu/dm_read_l == 1 && /mp3_cpu/wb_c_in == 30 && /mp3_cpu/pcinstaddr == 134} MEM_test1d
+add wave -color white MEM_test1a
+add wave -color white MEM_test1b
+add wave -color white MEM_test1c
+add wave -color white MEM_test1d
+
+run 6
+#/*LDR R7, R1, 7*/
+force /mp3_cpu/instOut 0110111001000111 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010000010 -freeze
+force /mp3_cpu/instOut 1111000000000000 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010000100 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010000110 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010001000 -freeze
+run 44

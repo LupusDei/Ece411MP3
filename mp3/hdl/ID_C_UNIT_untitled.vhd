@@ -36,17 +36,17 @@ BEGIN
 				when "0001" =>
 					if (instOut(5) = '0') then
 						pre_ID_C_IN <= "0000000000000000";
-					
-					else pre_ID_C_IN <= "0000000000000010";
-					
+					else 
+					 pre_ID_C_IN <= "0000000000000010";
 					end if;
 				when "0101" =>
 					if (instOut(5) = '0') then 
 						pre_ID_C_IN <= "0000000000000000";
-
-					else pre_ID_C_IN <= "0000000000000010";
-					
+					else 
+					 pre_ID_C_IN <= "0000000000000010";
 					end if;
+				when "0110" =>
+					pre_ID_C_IN <= "0000000000000110";
 				when others =>
 					pre_ID_C_IN <= "1111000000000000";
 			END case;

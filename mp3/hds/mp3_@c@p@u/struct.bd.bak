@@ -57,23 +57,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -89,27 +89,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_CPU"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_CPU"
 )
 (vvPair
 variable "date"
-value "10/24/11"
+value "10/28/11"
 )
 (vvPair
 variable "day"
-value "Mon"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Monday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "24"
+value "28"
 )
 (vvPair
 variable "entity_name"
@@ -148,6 +148,10 @@ variable "library"
 value "ece411"
 )
 (vvPair
+variable "library_downstream_HdsLintPlugin"
+value "$HDS_PROJECT_DIR/ece411/designcheck"
+)
+(vvPair
 variable "library_downstream_ModelSimCompiler"
 value "$HDS_PROJECT_DIR/compile"
 )
@@ -169,11 +173,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_CPU/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_CPU/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -213,7 +217,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "21:46:43"
+value "01:11:16"
 )
 (vvPair
 variable "unit"
@@ -221,7 +225,7 @@ value "mp3_CPU"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -266,7 +270,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,50050,45200,50950"
+xt "32200,50050,45700,50950"
 st "
 by %user on %dd %month %year
 "
@@ -1889,9 +1893,9 @@ uid 740,0
 bundleNetName "MemResponse"
 bundleContents [
 *64 (Wire
-uid 752,0
+uid 1132,0
 shape (OrthoPolyLine
-uid 753,0
+uid 1133,0
 sl 0
 va (VaSet
 vasetType 3
@@ -1907,15 +1911,14 @@ sat 32
 eat 32
 cm 0
 stc 0
-st 0
 sf 1
 si 0
 tg (WTG
-uid 754,0
+uid 1134,0
 ps "ConnStartEndStrategy"
-stg "STSignalDisplayStrategy"
+stg "VerticalLayoutStrategy"
 f (Text
-uid 755,0
+uid 1135,0
 sl 0
 va (VaSet
 font "courier,8,0"
@@ -1924,6 +1927,17 @@ xt "0,0,4500,900"
 st "im_resp_h"
 blo "0,700"
 tm "WireNameMgr"
+)
+s (Text
+uid 1136,0
+sl 0
+va (VaSet
+isHidden 1
+font "courier,8,0"
+)
+xt "0,900,4500,1800"
+blo "0,1600"
+tm "SignalTypeMgr"
 )
 )
 on *65 (Net
@@ -1953,9 +1967,9 @@ uid 758,0
 bundleNetName "MemControl"
 bundleContents [
 *67 (Wire
-uid 770,0
+uid 1117,0
 shape (OrthoPolyLine
-uid 771,0
+uid 1118,0
 sl 0
 va (VaSet
 vasetType 3
@@ -1971,15 +1985,14 @@ sat 32
 eat 32
 cm 0
 stc 0
-st 0
 sf 1
 si 0
 tg (WTG
-uid 772,0
+uid 1119,0
 ps "ConnStartEndStrategy"
-stg "STSignalDisplayStrategy"
+stg "VerticalLayoutStrategy"
 f (Text
-uid 773,0
+uid 1120,0
 sl 0
 va (VaSet
 font "courier,8,0"
@@ -1988,6 +2001,17 @@ xt "0,0,4500,900"
 st "im_read_l"
 blo "0,700"
 tm "WireNameMgr"
+)
+s (Text
+uid 1121,0
+sl 0
+va (VaSet
+isHidden 1
+font "courier,8,0"
+)
+xt "0,900,4500,1800"
+blo "0,1600"
+tm "SignalTypeMgr"
 )
 )
 on *68 (Net
@@ -2010,9 +2034,9 @@ st "SIGNAL im_read_l    : std_logic
 )
 )
 *69 (Wire
-uid 776,0
+uid 1122,0
 shape (OrthoPolyLine
-uid 777,0
+uid 1123,0
 sl 0
 va (VaSet
 vasetType 3
@@ -2028,15 +2052,14 @@ sat 32
 eat 32
 cm 0
 stc 0
-st 0
 sf 1
 si 0
 tg (WTG
-uid 778,0
+uid 1124,0
 ps "ConnStartEndStrategy"
-stg "STSignalDisplayStrategy"
+stg "VerticalLayoutStrategy"
 f (Text
-uid 779,0
+uid 1125,0
 sl 0
 va (VaSet
 font "courier,8,0"
@@ -2045,6 +2068,17 @@ xt "0,0,6000,900"
 st "im_writel_l"
 blo "0,700"
 tm "WireNameMgr"
+)
+s (Text
+uid 1126,0
+sl 0
+va (VaSet
+isHidden 1
+font "courier,8,0"
+)
+xt "0,900,4500,1800"
+blo "0,1600"
+tm "SignalTypeMgr"
 )
 )
 on *70 (Net
@@ -2067,9 +2101,9 @@ st "SIGNAL im_writel_l  : std_logic
 )
 )
 *71 (Wire
-uid 782,0
+uid 1127,0
 shape (OrthoPolyLine
-uid 783,0
+uid 1128,0
 sl 0
 va (VaSet
 vasetType 3
@@ -2085,15 +2119,14 @@ sat 32
 eat 32
 cm 0
 stc 0
-st 0
 sf 1
 si 0
 tg (WTG
-uid 784,0
+uid 1129,0
 ps "ConnStartEndStrategy"
-stg "STSignalDisplayStrategy"
+stg "VerticalLayoutStrategy"
 f (Text
-uid 785,0
+uid 1130,0
 sl 0
 va (VaSet
 font "courier,8,0"
@@ -2102,6 +2135,17 @@ xt "0,0,6000,900"
 st "im_writeh_l"
 blo "0,700"
 tm "WireNameMgr"
+)
+s (Text
+uid 1131,0
+sl 0
+va (VaSet
+isHidden 1
+font "courier,8,0"
+)
+xt "0,900,4500,1800"
+blo "0,1600"
+tm "SignalTypeMgr"
 )
 )
 on *72 (Net
@@ -2728,7 +2772,6 @@ tm "BundleContentsMgr"
 )
 bundleNet &63
 )
-&64
 *88 (Bundle
 uid 759,0
 shape (OrthoPolyLine
@@ -2777,13 +2820,14 @@ tm "BundleContentsMgr"
 )
 bundleNet &66
 )
-&67
-&69
-&71
 &37
 &39
 &41
 &43
+&67
+&69
+&71
+&64
 ]
 bg "65535,65535,65535"
 grid (Grid
@@ -2901,13 +2945,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "1594,2,2747,864"
-viewArea "-8874,-1760,72036,58531"
+windowSize "1594,10,2747,872"
+viewArea "-29867,-1800,51043,58491"
 cachedDiagramExtent "-26000,0,69000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-69000,0"
 active 1
-lastUid 916,0
+lastUid 1136,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -3968,7 +4012,7 @@ tm "BdDeclarativeTextMgr"
 )
 commonDM (CommonDM
 ldm (LogicalDM
-suid 25,0
+suid 29,0
 usingSuid 1
 emptyRow *121 (LEmptyRow
 )

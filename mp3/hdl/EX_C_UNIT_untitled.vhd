@@ -42,6 +42,9 @@ BEGIN
 				when "1001" =>
 				pre_EX_C <= "0000000000000010";
 				
+				when "0110" =>
+				pre_EX_C <= "0000000000000010";
+				
 				when others =>
 				pre_EX_C <= "1111000000000000";
 			END case; 

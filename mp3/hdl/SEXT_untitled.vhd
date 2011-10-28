@@ -1,9 +1,9 @@
 --
--- VHDL Architecture ece411.SEXT.untitled
+-- VHDL Architecture ECE411.SEXT.untitled
 --
 -- Created:
---          by - martin43.UNKNOWN (gelib-057-09.ews.illinois.edu)
---          at - 19:55:37 09/07/11
+--          by - martin43.UNKNOWN (gelib-057-16.ews.illinois.edu)
+--          at - 01:35:34 10/28/11
 --
 -- using Mentor Graphics HDL Designer(TM) 2005.3 (Build 75)
 --
@@ -14,20 +14,29 @@ USE ieee.NUMERIC_STD.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY mp2_SEXT IS
+ENTITY SEXT IS
    PORT( 
-      clk     : IN     std_logic;
-      imm5    : IN     LC3b_imm5;
-      SEXTout : OUT    LC3b_word
+      Instr11    : IN     lc3b_offset11;
+      Instr5     : IN     lc3b_imm5;
+      Instr6     : IN     lc3b_index6;
+      Instr9     : IN     lc3b_offset9;
+      Imm5       : OUT    LC3b_word;
+      Offset6    : OUT    LC3b_word;
+      PCOffset11 : OUT    LC3b_word;
+      PCOffset9  : OUT    LC3b_word
    );
 
 -- Declarations
 
-END mp2_SEXT ;
+END SEXT ;
 
 --
-ARCHITECTURE untitled OF mp2_SEXT IS
+ARCHITECTURE untitled OF SEXT IS
 BEGIN
-	SEXTout <= imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5 AFTER DELAY_MUX2;
+	Offset6 <= Instr6(5) & Instr6(5) & Instr6(5) & Instr6(5) & Instr6(5) & Instr6(5) & Instr6(5) & Instr6(5) & Instr6(5) & Instr6(5) & Instr6 AFTER DELAY_MUX2;
+	Imm5 <= Instr5(4) & Instr5(4) & Instr5(4) & Instr5(4) & Instr5(4) & Instr5(4) & Instr5(4) & Instr5(4) & Instr5(4) & Instr5(4) & Instr5(4) & Instr5 AFTER DELAY_MUX2;
+
+	PCOffset9 <= Instr9(8) & Instr9(8) & Instr9(8) & Instr9(8) & Instr9(8) & Instr9(8) & Instr9(8) & Instr9 AFTER DELAY_MUX2;
+	PCOffset11 <= Instr11(10) & Instr11(10) & Instr11(10) & Instr11(10) & Instr11(10) & Instr11 AFTER DELAY_MUX2;
 END ARCHITECTURE untitled;
 

@@ -21,11 +21,15 @@ ENTITY MagicMemory IS
       PCinstAddr   : IN     lc3b_word;
       RESET_L      : IN     std_logic;
       clk          : IN     std_logic;
+      dm_read_l    : IN     std_logic;
+      dm_writeh_l  : IN     std_logic;
+      dm_writel_l  : IN     std_logic;
       im_read_l    : IN     std_logic;
       im_writeh_l  : IN     std_logic;
       im_writel_l  : IN     std_logic;
       DataMemIn    : OUT    lc3b_word;
       InstMemIn    : OUT    lc3b_word;
+      dm_resp_h    : OUT    std_logic;
       im_resp_h    : OUT    std_logic
    );
 
