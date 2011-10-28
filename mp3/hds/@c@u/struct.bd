@@ -182,7 +182,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-16.ews.illinois.edu"
+value "gelib-057-32.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -262,7 +262,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "03:14:00"
+value "14:09:55"
 )
 (vvPair
 variable "unit"
@@ -353,7 +353,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,11400,-20000,12300"
-st "clk         : std_logic"
+st "clk         : std_logic
+"
 )
 )
 *3 (PortIoOut
@@ -415,7 +416,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,15000,-20000,15900"
-st "EX_C_In     : lc3b_word"
+st "EX_C_In     : lc3b_word
+"
 )
 )
 *5 (PortIoIn
@@ -478,7 +480,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,7800,-20000,8700"
-st "EX_C_Out    : lc3b_word"
+st "EX_C_Out    : lc3b_word
+"
 )
 )
 *7 (PortIoOut
@@ -540,7 +543,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,15900,-20000,16800"
-st "ID_C_In     : lc3b_word"
+st "ID_C_In     : lc3b_word
+"
 )
 )
 *9 (PortIoIn
@@ -603,7 +607,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,8700,-20000,9600"
-st "ID_C_Out    : lc3b_word"
+st "ID_C_Out    : lc3b_word
+"
 )
 )
 *11 (Net
@@ -620,7 +625,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,16800,-20000,17700"
-st "IF_C_In     : lc3b_word"
+st "IF_C_In     : lc3b_word
+"
 )
 )
 *12 (PortIoOut
@@ -682,7 +688,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,22200,-20000,23100"
-st "im_read_l   : std_logic"
+st "im_read_l   : std_logic
+"
 )
 )
 *14 (PortIoIn
@@ -745,7 +752,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,13200,-20000,14100"
-st "im_resp_h   : std_logic"
+st "im_resp_h   : std_logic
+"
 )
 )
 *16 (Net
@@ -762,7 +770,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,23100,-20000,24000"
-st "im_writeh_l : std_logic"
+st "im_writeh_l : std_logic
+"
 )
 )
 *17 (Net
@@ -779,7 +788,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,24000,-20000,24900"
-st "im_writel_l : std_logic"
+st "im_writel_l : std_logic
+"
 )
 )
 *18 (PortIoOut
@@ -841,7 +851,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,17700,-20000,18600"
-st "MEM_C_In    : lc3b_word"
+st "MEM_C_In    : lc3b_word
+"
 )
 )
 *20 (PortIoIn
@@ -904,7 +915,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,9600,-20000,10500"
-st "MEM_C_Out   : lc3b_word"
+st "MEM_C_Out   : lc3b_word
+"
 )
 )
 *22 (PortIoIn
@@ -967,7 +979,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,10500,-20000,11400"
-st "RESET_L     : std_logic"
+st "RESET_L     : std_logic
+"
 )
 )
 *24 (PortIoOut
@@ -1029,7 +1042,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,18600,-20000,19500"
-st "WB_C_In     : lc3b_word"
+st "WB_C_In     : lc3b_word
+"
 )
 )
 *26 (Blk
@@ -1187,16 +1201,16 @@ optionalChildren [
 uid 478,0
 sl 0
 ro 270
-xt "73500,9625,75000,10375"
+xt "72500,8625,74000,9375"
 )
 (Line
 uid 479,0
 sl 0
 ro 270
-xt "73000,10000,73500,10000"
+xt "72000,9000,72500,9000"
 pts [
-"73000,10000"
-"73500,10000"
+"72000,9000"
+"72500,9000"
 ]
 )
 ]
@@ -1212,9 +1226,9 @@ uid 481,0
 va (VaSet
 font "courier,8,0"
 )
-xt "76000,9500,82000,10400"
+xt "75000,8500,81000,9400"
 st "im_writel_l"
-blo "76000,10200"
+blo "75000,9200"
 tm "WireNameMgr"
 )
 )
@@ -1422,7 +1436,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,14100,-20000,15000"
-st "instOut     : lc3b_word"
+st "instOut     : lc3b_word
+"
 )
 )
 *41 (Blk
@@ -1635,7 +1650,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,25800,-16500,26700"
-st "SIGNAL ex_c        : lc3b_word"
+st "SIGNAL ex_c        : lc3b_word
+"
 )
 )
 *52 (Blk
@@ -1848,7 +1864,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,27600,-16500,28500"
-st "SIGNAL wb_c        : lc3b_word"
+st "SIGNAL wb_c        : lc3b_word
+"
 )
 )
 *63 (PortIoOut
@@ -1910,7 +1927,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,19500,-20000,20400"
-st "dm_read_l   : std_logic"
+st "dm_read_l   : std_logic
+"
 )
 )
 *65 (PortIoIn
@@ -1973,7 +1991,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,12300,-20000,13200"
-st "dm_resp_h   : std_logic"
+st "dm_resp_h   : std_logic
+"
 )
 )
 *67 (PortIoOut
@@ -1989,16 +2008,16 @@ optionalChildren [
 uid 1071,0
 sl 0
 ro 270
-xt "73500,1625,75000,2375"
+xt "71500,48625,73000,49375"
 )
 (Line
 uid 1072,0
 sl 0
 ro 270
-xt "73000,2000,73500,2000"
+xt "71000,49000,71500,49000"
 pts [
-"73000,2000"
-"73500,2000"
+"71000,49000"
+"71500,49000"
 ]
 )
 ]
@@ -2014,9 +2033,9 @@ uid 1074,0
 va (VaSet
 font "courier,8,0"
 )
-xt "76000,1500,82000,2400"
+xt "74000,48550,80000,49450"
 st "dm_writeh_l"
-blo "76000,2200"
+blo "74000,49250"
 tm "WireNameMgr"
 )
 )
@@ -2035,7 +2054,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,20400,-20000,21300"
-st "dm_writeh_l : std_logic"
+st "dm_writeh_l : std_logic
+"
 )
 )
 *69 (PortIoOut
@@ -2051,16 +2071,16 @@ optionalChildren [
 uid 1085,0
 sl 0
 ro 270
-xt "73500,3625,75000,4375"
+xt "71500,49625,73000,50375"
 )
 (Line
 uid 1086,0
 sl 0
 ro 270
-xt "73000,4000,73500,4000"
+xt "71000,50000,71500,50000"
 pts [
-"73000,4000"
-"73500,4000"
+"71000,50000"
+"71500,50000"
 ]
 )
 ]
@@ -2076,9 +2096,9 @@ uid 1088,0
 va (VaSet
 font "courier,8,0"
 )
-xt "76000,3500,82000,4400"
+xt "74000,49550,80000,50450"
 st "dm_writel_l"
-blo "76000,4200"
+blo "74000,50250"
 tm "WireNameMgr"
 )
 )
@@ -2097,7 +2117,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,21300,-20000,22200"
-st "dm_writel_l : std_logic"
+st "dm_writel_l : std_logic
+"
 )
 )
 *71 (Blk
@@ -2310,7 +2331,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-32000,26700,-16500,27600"
-st "SIGNAL mem_c       : lc3b_word"
+st "SIGNAL mem_c       : lc3b_word
+"
 )
 )
 *82 (Wire
@@ -2689,10 +2711,10 @@ uid 142,0
 va (VaSet
 vasetType 3
 )
-xt "63000,10000,73000,10000"
+xt "62000,9000,72000,9000"
 pts [
-"73000,10000"
-"63000,10000"
+"72000,9000"
+"62000,9000"
 ]
 )
 start &32
@@ -2711,9 +2733,9 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "72000,9100,78000,10000"
+xt "71000,8100,77000,9000"
 st "im_writel_l"
-blo "72000,9800"
+blo "71000,8800"
 tm "WireNameMgr"
 )
 )
@@ -3433,15 +3455,18 @@ uid 1076,0
 va (VaSet
 vasetType 3
 )
-xt "63000,2000,73000,2000"
+xt "53000,42000,71000,49000"
 pts [
-"63000,2000"
-"73000,2000"
+"53000,42000"
+"53000,49000"
+"71000,49000"
 ]
 )
+start &76
 end &67
-sat 16
+sat 2
 eat 32
+stc 0
 st 0
 sf 1
 si 0
@@ -3451,13 +3476,14 @@ ps "ConnStartEndStrategy"
 stg "STSignalDisplayStrategy"
 f (Text
 uid 1080,0
+ro 270
 va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "65000,1100,71000,2000"
+xt "52100,38000,53000,44000"
 st "dm_writeh_l"
-blo "65000,1800"
+blo "52800,44000"
 tm "WireNameMgr"
 )
 )
@@ -3470,15 +3496,18 @@ uid 1090,0
 va (VaSet
 vasetType 3
 )
-xt "63000,4000,73000,4000"
+xt "52000,42000,71000,50000"
 pts [
-"63000,4000"
-"73000,4000"
+"52000,42000"
+"52000,50000"
+"71000,50000"
 ]
 )
+start &76
 end &69
-sat 16
+sat 2
 eat 32
+stc 0
 st 0
 sf 1
 si 0
@@ -3488,13 +3517,14 @@ ps "ConnStartEndStrategy"
 stg "STSignalDisplayStrategy"
 f (Text
 uid 1094,0
+ro 270
 va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "65000,3100,71000,4000"
+xt "51100,38000,52000,44000"
 st "dm_writel_l"
-blo "65000,3800"
+blo "51800,44000"
 tm "WireNameMgr"
 )
 )
@@ -3774,13 +3804,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "1594,35,2874,863"
-viewArea "-13378,-4271,89151,59652"
+windowSize "1766,98,3046,926"
+viewArea "-13400,-1002,89129,60205"
 cachedDiagramExtent "-52000,0,82000,56450"
 hasePageBreakOrigin 1
-pageBreakOrigin "-77000,-51000"
+pageBreakOrigin "-77000,0"
 active 1
-lastUid 1162,0
+lastUid 1242,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

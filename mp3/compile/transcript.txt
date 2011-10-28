@@ -37,6 +37,7 @@
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wordmux8(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.regextractor(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.shift(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_3(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.ifstage(struct)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.if_c_decode(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pc(untitled)
@@ -44,6 +45,7 @@
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.memstage(struct)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.transitionreg(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.transitionreg3(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wbstage(struct)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_decode(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
@@ -66,18 +68,32 @@ do ACCEPTANCE_TEST.do
 #    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: INVALID ALU OPERATION (ALUOP).
 #    Time: 7 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 7 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 32 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 34 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 34 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ADD R7, R1, R2 :  R7 <= 42 + 8 
 # /mp3_cpu/ADD_test1
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 57 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 82 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 84 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 84 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 132 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
 # ADD R0, R1, 11 : R0 <= 53 
@@ -98,8 +114,13 @@ do ACCEPTANCE_TEST.do
 # /mp3_cpu/NOT_test1
 # 0
 # 
-# LDR r7, r2, 6 : r7 <= MEM(0012) followed by nothin 
+# LDR r7, r2, 6 : r7 <= MEM(0012) which is 600D 
 # /mp3_cpu/LDR_test1
+# 0
+# 
+# 2 NOPs should skoot on by 
+# STR r1, r3, 3 : MEM(0009) <= r1 followed by nothin 
+# /mp3_cpu/STR_test1
 # 0
 # 
 # 0

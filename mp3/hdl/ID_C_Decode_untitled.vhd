@@ -16,8 +16,9 @@ USE ece411.LC3b_types.all;
 
 ENTITY ID_C_Decode IS
    PORT( 
-      ID_C_In   : IN     lc3b_word;
-      ALUMuxSel : OUT    LC3b_8MUX_SEL
+      ID_C_In    : IN     lc3b_word;
+      ALUMuxSel  : OUT    LC3b_8MUX_SEL;
+      RegBMuxSel : OUT    STD_LOGIC
    );
 
 -- Declarations
@@ -28,5 +29,6 @@ END ID_C_Decode ;
 ARCHITECTURE untitled OF ID_C_Decode IS
 BEGIN
   ALUMuxSel <= ID_C_In(2 downto 0); 
+		RegBMuxSel <= ID_C_In(3);
 END ARCHITECTURE untitled;
 

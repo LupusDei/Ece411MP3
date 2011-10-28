@@ -252,3 +252,29 @@ force /mp3_cpu/pcinstaddr 0000000010000110 -freeze
 run 50
 force /mp3_cpu/pcinstaddr 0000000010001000 -freeze
 run 44
+
+
+echo "Test 2, STR R7, R2, 7"
+virtual signal {/mp3_cpu/id_c_in == 14 && /mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 136} MEM_test2a
+virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 0 && /mp3_cpu/mem_c_in == 61440 && /mp3_cpu/pcinstaddr == 138} MEM_test2b
+virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/mem_c_in == 0 && /mp3_cpu/dm_writel_l == 0 && /mp3_cpu/dm_writeh_l == 0 && /mp3_cpu/pcinstaddr == 140} MEM_test2c
+#/*wb_c_in is 28 since the dr is still set to 111*/
+virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/mem_c_in == 61440 && /mp3_cpu/dm_writel_l == 1 && /mp3_cpu/wb_c_in == 28 && /mp3_cpu/pcinstaddr == 142} MEM_test2d
+add wave -color white MEM_test2a
+add wave -color white MEM_test2b
+add wave -color white MEM_test2c
+add wave -color white MEM_test2d
+
+run 6
+force /mp3_cpu/instOut 0111111010000111 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010001010 -freeze
+force /mp3_cpu/instOut 1111000000000000 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010001100 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010001110 -freeze
+run 50
+force /mp3_cpu/pcinstaddr 0000000010010000 -freeze
+run 44
+

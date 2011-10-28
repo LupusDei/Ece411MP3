@@ -16,9 +16,10 @@ USE ece411.LC3b_types.all;
 
 ENTITY regExtractor IS
    PORT( 
-      instIn : IN     lc3b_word;
-      RA     : OUT    lc3b_reg;
-      RB     : OUT    lc3b_reg
+      instIn    : IN     lc3b_word;
+      RA        : OUT    lc3b_reg;
+      regBSel   : OUT    lc3b_reg;
+      srcRegSel : OUT    lc3b_reg
    );
 
 -- Declarations
@@ -29,6 +30,7 @@ END regExtractor ;
 ARCHITECTURE untitled OF regExtractor IS
 BEGIN
   RA <= instIn(8 downto 6); 
-  RB <= instIn(2 downto 0); 
+  regBSel <= instIn(2 downto 0); 
+  srcRegSel <= instIn(11 downto 9); 
 END ARCHITECTURE untitled;
 

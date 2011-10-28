@@ -60,6 +60,12 @@ BEGIN
 					instruction <= "1001100011111111";
 			elsif (PCInstAddr = "0000000000001010") then
 					instruction <= "0110111010000110"; -- ldr r7, r2, 6
+			elsif (PCInstAddr = "0000000000001100") then
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000000001110") then
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000000010000") then
+					instruction <= "0111001011000011"; -- str r1, r3, 3
 			else
 					instruction <= "0000000000000000";
 			end if;
@@ -68,7 +74,7 @@ BEGIN
 		end if;
 	end process inst_stuff;
 
-	data_stuff : PROCESS (dm_read_l, DataAddr)
+	data_stuff : PROCESS (dm_read_l, DataAddr, MEMWriteData)
 	begin
 		if (dm_read_l = '0') then
 			dm_resp <= '1';
@@ -78,7 +84,14 @@ BEGIN
 				magic_data <= "0000101110101101"; --0BAD
 			end if;
 		else
-			dm_resp <= '0';
+			if (dm_writeh_l = '0' or dm_writel_l = '0') then
+				if (DataAddr = "0000000000001001") then
+					dm_resp <= '1';
+					magic_data <= MEMWriteData;
+				end if;
+			else
+			 dm_resp <= '0';
+			end if;
 		end if;
 	end process data_stuff;
   InstMemIn <= instruction after 3 ns;

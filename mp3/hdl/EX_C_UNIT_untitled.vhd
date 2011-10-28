@@ -44,7 +44,8 @@ BEGIN
 				
 				when "0110" =>
 				pre_EX_C <= "0000000000000000";
-				
+				when "0111" =>
+				pre_EX_C <= "0000000000000000";
 				when others =>
 				pre_EX_C <= "1111000000000000";
 			END case; 

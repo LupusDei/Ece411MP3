@@ -50,6 +50,9 @@ BEGIN
 				when "0110" =>
 					pre_WBMuxSel <= '0';
 					pre_RegWrite <= '1';
+				when "0111" =>
+					pre_WBMuxSel <= '0';
+					pre_RegWrite <= '0';
 				when others =>
 					inactive <= "1111";
 					pre_DR <= "000";

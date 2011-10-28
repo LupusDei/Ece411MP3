@@ -47,6 +47,8 @@ BEGIN
 					end if;
 				when "0110" =>
 					pre_ID_C_IN <= "0000000000000110";
+				when "0111" =>
+					pre_ID_C_IN <= "0000000000001110";
 				when others =>
 					pre_ID_C_IN <= "1111000000000000";
 			END case;

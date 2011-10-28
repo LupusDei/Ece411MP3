@@ -14,8 +14,11 @@ add wave -hex /mp3_cpu/im_resp_h
 add wave -hex /mp3_cpu/im_read_l
 add wave -hex /mp3_cpu/dm_resp_h
 add wave -hex /mp3_cpu/dm_read_l
-add wave -hex /mp3_cpu/pipelinedatapath/memaccess/dataaddr
+add wave -hex /mp3_cpu/dm_writeh_l
+add wave -hex /mp3_cpu/dm_writel_l
+add wave -hex /mp3_cpu/dataaddr
 add wave -hex /mp3_cpu/datamemin
+add wave -hex /mp3_cpu/MEMWriteData
 add wave -hex /mp3_cpu/pcinstaddr
 add wave -hex /mp3_cpu/instMemIn
 add wave -hex /mp3_cpu/instOut
@@ -67,9 +70,18 @@ virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == -4 && /mp3_cpu/pc
 add wave -color white /mp3_cpu/NOT_test1
 run 50
 
-echo "LDR r7, r2, 6 : r7 <= MEM(0012) followed by nothin"
+echo "LDR r7, r2, 6 : r7 <= MEM(0012) which is 600D"
 virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 24589 && /mp3_cpu/pcinstaddr == 20} LDR_test1
 add wave -color white /mp3_cpu/LDR_test1
+run 50
+
+echo "2 NOPs should skoot on by"
+
+echo "STR r1, r3, 3 : MEM(0009) <= r1 followed by nothin"
+#/*our magic memory takes the mem to be written and out puts it as datamemin so we can test*/
+#/*it should be steady 2 cycles early, since we are checking data in the memstage*/
+virtual signal {/mp3_cpu/datamemin == 42 && mp3_cpu/dm_resp_h == 1 && /mp3_cpu/pcinstaddr == 22} STR_test1
+add wave -color white /mp3_cpu/STR_test1
 run 50
 
 run 50
