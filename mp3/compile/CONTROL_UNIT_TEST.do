@@ -28,13 +28,14 @@ add wave -color white cutest1a
 add wave -color white cutest1b
 
 force /mp3_cpu/reset_l 0 -freeze
-run 10
+run 24
 force /mp3_cpu/reset_l 1 -freeze
-
+run 1
+run 15
 force /mp3_cpu/im_resp_h 1 -freeze 
 run 10
 force /mp3_cpu/im_resp_h 0 -freeze 
-run 50
+run 25
 
 echo "PCMuxSel should be 0 and LoadPC should be 1"
 
@@ -116,16 +117,17 @@ echo "ex_c_in should be 0xF000 and then 0x0001 after 1 clock cycle, and then bac
 #/*Ex Test for NOT*/
 echo "Test that ex_c_in is 2 for NOT and that it isn't outputed for a full cycle"
 
-virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 24} EX_test3a
-virtual signal {/mp3_cpu/ex_c_in == 2 && /mp3_cpu/pcinstaddr == 26} EX_test3b
+virtual signal {/mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 26} EX_test3a
+virtual signal {/mp3_cpu/ex_c_in == 2 && /mp3_cpu/pcinstaddr == 28} EX_test3b
 add wave -color white EX_test3a
 add wave -color white EX_test3b
 #/*it would take the inst 6ns to load after the rising edge of the clk */
 run 6
 force /mp3_cpu/instOut 1001010000111111 -freeze
+force /mp3_cpu/pcinstaddr 0000000000011010 -freeze
 run 50
 force /mp3_cpu/instOut 1111000000000000 -freeze
-force /mp3_cpu/pcinstaddr 0000000000011010 -freeze
+force /mp3_cpu/pcinstaddr 0000000000011100 -freeze
 run 50
 force /mp3_cpu/instOut 1111000000000000 -freeze
 force /mp3_cpu/pcinstaddr 0000000000100000 -freeze

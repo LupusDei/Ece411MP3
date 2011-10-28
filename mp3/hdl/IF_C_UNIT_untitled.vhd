@@ -42,7 +42,7 @@ BEGIN
 	  pre_read_out <= '0';
 			pre_if_c_in <= "0000000000000000";
 		else
-			if ((im_resp_h = '1') and (im_read_l = '0')) then
+			if ((im_resp_h = '1')) then
     pre_read_out <= '1';
 				pre_if_c_in <= "0000000000000010"; --increment the pc
 			end if;
