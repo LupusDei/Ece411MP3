@@ -34,10 +34,19 @@ BEGIN
 			opcode := instOut(15 downto 12);
 			case opcode is
 				when "0001" =>
-					pre_ID_C_IN <= "0000000000000000";
+					if (instOut(5) = '0') then
+						pre_ID_C_IN <= "0000000000000000";
+					
+					else pre_ID_C_IN <= "0000000000000010";
+					
+					end if;
 				when "0101" =>
-					pre_ID_C_IN <= "0000000000000000";
-			
+					if (instOut(5) = '0') then 
+						pre_ID_C_IN <= "0000000000000000";
+
+					else pre_ID_C_IN <= "0000000000000010";
+					
+					end if;
 				when others =>
 					pre_ID_C_IN <= "1111000000000000";
 			END case;

@@ -153,8 +153,8 @@ uid 1808,0
 )
 (Instance
 name "SEXTa"
-duLibraryName "ece411"
-duName "SEXT"
+duLibraryName "ECE411"
+duName "mp2_SEXT"
 elements [
 ]
 mwi 0
@@ -306,23 +306,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/mp2/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/mp2/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/mp2/hds/@datapath/struct.bd.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@datapath/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/mp2/hds/@datapath/struct.bd.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@datapath/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/mp2/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -338,15 +338,15 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/mp2/hds/@datapath"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@datapath"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/mp2/hds/Datapath"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Datapath"
 )
 (vvPair
 variable "date"
-value "09/15/11"
+value "10/27/11"
 )
 (vvPair
 variable "day"
@@ -358,7 +358,7 @@ value "Thursday"
 )
 (vvPair
 variable "dd"
-value "15"
+value "27"
 )
 (vvPair
 variable "entity_name"
@@ -386,7 +386,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-06.ews.illinois.edu"
+value "gelib-057-15.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -406,7 +406,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "09"
+value "10"
 )
 (vvPair
 variable "module_name"
@@ -414,23 +414,23 @@ value "Datapath"
 )
 (vvPair
 variable "month"
-value "Sep"
+value "Oct"
 )
 (vvPair
 variable "month_long"
-value "September"
+value "October"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/mp2/hds/@datapath/struct.bd"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@datapath/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/mp2/hds/Datapath/struct.bd"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Datapath/struct.bd"
 )
 (vvPair
 variable "project_name"
-value "ece411"
+value "ece411_mp3"
 )
 (vvPair
 variable "series"
@@ -466,7 +466,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "01:14:33"
+value "21:00:16"
 )
 (vvPair
 variable "unit"
@@ -474,7 +474,7 @@ value "Datapath"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -5073,7 +5073,7 @@ va (VaSet
 font "courier,8,1"
 )
 xt "19250,41650,22250,42550"
-st "ece411"
+st "ECE411"
 blo "19250,42350"
 tm "BdLibraryNameMgr"
 )
@@ -5082,8 +5082,8 @@ uid 1970,0
 va (VaSet
 font "courier,8,1"
 )
-xt "19250,42550,21250,43450"
-st "SEXT"
+xt "19250,42550,23250,43450"
+st "mp2_SEXT"
 blo "19250,43250"
 tm "BlkNameMgr"
 )
@@ -13110,7 +13110,7 @@ exportStdPackageRefs 1
 hasePageBreakOrigin 1
 pageBreakOrigin "-75000,-16000"
 active 1
-lastUid 3320,0
+lastUid 3530,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

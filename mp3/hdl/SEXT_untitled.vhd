@@ -14,7 +14,7 @@ USE ieee.NUMERIC_STD.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY SEXT IS
+ENTITY mp2_SEXT IS
    PORT( 
       clk     : IN     std_logic;
       imm5    : IN     LC3b_imm5;
@@ -23,10 +23,10 @@ ENTITY SEXT IS
 
 -- Declarations
 
-END SEXT ;
+END mp2_SEXT ;
 
 --
-ARCHITECTURE untitled OF SEXT IS
+ARCHITECTURE untitled OF mp2_SEXT IS
 BEGIN
 	SEXTout <= imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5(4) & imm5 AFTER DELAY_MUX2;
 END ARCHITECTURE untitled;

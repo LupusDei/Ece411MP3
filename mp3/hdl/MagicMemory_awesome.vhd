@@ -44,9 +44,13 @@ BEGIN
 			im_resp <= '1';
 			if (PCInstAddr = "0000000000000000") then
 					instruction <= "0001111001000010";
-			elsif (PCInstAddr = "0000000000000010") then
-					instruction <= "0101110001000010";
+			elsif (PCInstAddr = "0000000000000010") then 
+					instruction <= "0001000001101011";
 			elsif (PCInstAddr = "0000000000000100") then
+					instruction <= "0101110001000010";
+			elsif (PCInstAddr = "0000000000000110") then 
+					instruction <= "0101101010100101"; 
+			elsif (PCInstAddr = "0000000000001000") then
 					instruction <= "1001100011111111";
 			else
 					instruction <= "0000000000000000";

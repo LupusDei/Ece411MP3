@@ -70,7 +70,7 @@ m 1
 decl (Decl
 n "ADDRESS"
 t "LC3b_word"
-o 3
+o 19
 suid 406,0
 )
 )
@@ -81,7 +81,7 @@ port (LogicalPort
 decl (Decl
 n "DATAIN"
 t "LC3b_word"
-o 9
+o 4
 suid 407,0
 )
 )
@@ -93,7 +93,7 @@ m 1
 decl (Decl
 n "DATAOUT"
 t "LC3b_word"
-o 10
+o 24
 suid 408,0
 )
 )
@@ -104,7 +104,7 @@ port (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 1
+o 14
 suid 409,0
 )
 )
@@ -116,7 +116,7 @@ m 1
 decl (Decl
 n "ADDR_0"
 t "std_logic"
-o 35
+o 20
 suid 410,0
 )
 )
@@ -127,7 +127,7 @@ port (LogicalPort
 decl (Decl
 n "ALUMuxSel"
 t "LC3b_8Mux_Sel"
-o 4
+o 1
 suid 411,0
 )
 )
@@ -138,7 +138,7 @@ port (LogicalPort
 decl (Decl
 n "ALUop"
 t "LC3b_aluop"
-o 5
+o 2
 suid 412,0
 )
 )
@@ -149,7 +149,7 @@ port (LogicalPort
 decl (Decl
 n "ByteExtSel"
 t "std_logic"
-o 34
+o 3
 suid 413,0
 )
 )
@@ -161,7 +161,7 @@ m 1
 decl (Decl
 n "CheckN"
 t "std_logic"
-o 6
+o 21
 suid 414,0
 )
 )
@@ -173,7 +173,7 @@ m 1
 decl (Decl
 n "CheckP"
 t "std_logic"
-o 7
+o 22
 suid 415,0
 )
 )
@@ -185,7 +185,7 @@ m 1
 decl (Decl
 n "CheckZ"
 t "std_logic"
-o 8
+o 23
 suid 416,0
 )
 )
@@ -196,7 +196,7 @@ port (LogicalPort
 decl (Decl
 n "clk"
 t "std_logic"
-o 30
+o 18
 suid 417,0
 )
 )
@@ -208,7 +208,7 @@ m 1
 decl (Decl
 n "IMMEDIATE"
 t "std_logic"
-o 11
+o 25
 suid 418,0
 )
 )
@@ -220,7 +220,7 @@ m 1
 decl (Decl
 n "JSRR"
 t "std_logic"
-o 12
+o 26
 suid 419,0
 )
 )
@@ -231,7 +231,7 @@ port (LogicalPort
 decl (Decl
 n "LoadIR"
 t "std_logic"
-o 13
+o 5
 suid 420,0
 )
 )
@@ -242,7 +242,7 @@ port (LogicalPort
 decl (Decl
 n "LoadMar"
 t "std_logic"
-o 15
+o 7
 suid 421,0
 )
 )
@@ -253,7 +253,7 @@ port (LogicalPort
 decl (Decl
 n "LoadMDR"
 t "std_logic"
-o 14
+o 6
 suid 422,0
 )
 )
@@ -264,7 +264,7 @@ port (LogicalPort
 decl (Decl
 n "LoadNZP"
 t "std_logic"
-o 16
+o 8
 suid 423,0
 )
 )
@@ -275,7 +275,7 @@ port (LogicalPort
 decl (Decl
 n "LoadPC"
 t "std_logic"
-o 17
+o 9
 suid 424,0
 )
 )
@@ -286,7 +286,7 @@ port (LogicalPort
 decl (Decl
 n "MARMuxSel"
 t "LC3b_4Mux_Sel"
-o 18
+o 10
 suid 425,0
 )
 )
@@ -297,7 +297,7 @@ port (LogicalPort
 decl (Decl
 n "MDRMuxSel"
 t "std_logic"
-o 19
+o 11
 suid 426,0
 )
 )
@@ -309,7 +309,7 @@ m 1
 decl (Decl
 n "n"
 t "std_logic"
-o 31
+o 29
 suid 427,0
 )
 )
@@ -321,7 +321,7 @@ m 1
 decl (Decl
 n "Opcode"
 t "LC3b_opcode"
-o 24
+o 27
 suid 428,0
 )
 )
@@ -333,7 +333,7 @@ m 1
 decl (Decl
 n "p"
 t "std_logic"
-o 32
+o 30
 suid 429,0
 )
 )
@@ -344,7 +344,7 @@ port (LogicalPort
 decl (Decl
 n "PCMuxSel"
 t "LC3b_8Mux_Sel"
-o 25
+o 12
 suid 430,0
 )
 )
@@ -355,7 +355,7 @@ port (LogicalPort
 decl (Decl
 n "R7Sel_H"
 t "std_logic"
-o 26
+o 13
 suid 431,0
 )
 )
@@ -366,7 +366,7 @@ port (LogicalPort
 decl (Decl
 n "RegWrite"
 t "std_logic"
-o 28
+o 16
 suid 432,0
 )
 )
@@ -377,7 +377,7 @@ port (LogicalPort
 decl (Decl
 n "RFMuxSel"
 t "LC3b_4Mux_Sel"
-o 27
+o 15
 suid 433,0
 )
 )
@@ -389,7 +389,7 @@ m 1
 decl (Decl
 n "SHIFTop"
 t "lc3b_shftop"
-o 36
+o 28
 suid 434,0
 )
 )
@@ -400,7 +400,7 @@ port (LogicalPort
 decl (Decl
 n "StoreSR"
 t "std_logic"
-o 29
+o 17
 suid 435,0
 )
 )
@@ -412,7 +412,7 @@ m 1
 decl (Decl
 n "z"
 t "std_logic"
-o 33
+o 31
 suid 436,0
 )
 )
@@ -470,49 +470,49 @@ uid 246,0
 )
 *50 (MRCItem
 litem &14
-pos 0
+pos 1
 dimension 20
 uid 3492,0
 )
 *51 (MRCItem
 litem &15
-pos 1
+pos 3
 dimension 20
 uid 3494,0
 )
 *52 (MRCItem
 litem &16
-pos 2
+pos 4
 dimension 20
 uid 3496,0
 )
 *53 (MRCItem
 litem &17
-pos 3
+pos 5
 dimension 20
 uid 3498,0
 )
 *54 (MRCItem
 litem &18
-pos 4
+pos 0
 dimension 20
 uid 3500,0
 )
 *55 (MRCItem
 litem &19
-pos 5
+pos 6
 dimension 20
 uid 3502,0
 )
 *56 (MRCItem
 litem &20
-pos 6
+pos 7
 dimension 20
 uid 3504,0
 )
 *57 (MRCItem
 litem &21
-pos 7
+pos 2
 dimension 20
 uid 3506,0
 )
@@ -731,23 +731,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/mp2.2/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/mp2.2/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/mp2.2/hds/@datapath/interface.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@datapath/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/mp2.2/hds/@datapath/interface.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@datapath/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/mp2.2/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -763,27 +763,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/mp2.2/hds/@datapath"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@datapath"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/mp2.2/hds/Datapath"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Datapath"
 )
 (vvPair
 variable "date"
-value "09/30/11"
+value "10/27/11"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "30"
+value "27"
 )
 (vvPair
 variable "entity_name"
@@ -811,7 +811,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-28.ews.illinois.edu"
+value "gelib-057-15.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -831,7 +831,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "09"
+value "10"
 )
 (vvPair
 variable "module_name"
@@ -839,23 +839,23 @@ value "Datapath"
 )
 (vvPair
 variable "month"
-value "Sep"
+value "Oct"
 )
 (vvPair
 variable "month_long"
-value "September"
+value "October"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/mp2.2/hds/@datapath/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@datapath/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/mp2.2/hds/Datapath/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Datapath/interface"
 )
 (vvPair
 variable "project_name"
-value "ece411"
+value "ece411_mp3"
 )
 (vvPair
 variable "series"
@@ -891,7 +891,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "20:28:45"
+value "21:00:17"
 )
 (vvPair
 variable "unit"
@@ -899,7 +899,7 @@ value "Datapath"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -966,7 +966,7 @@ m 1
 decl (Decl
 n "ADDRESS"
 t "LC3b_word"
-o 3
+o 19
 suid 406,0
 )
 )
@@ -1011,7 +1011,7 @@ thePort (LogicalPort
 decl (Decl
 n "DATAIN"
 t "LC3b_word"
-o 9
+o 4
 suid 407,0
 )
 )
@@ -1057,7 +1057,7 @@ m 1
 decl (Decl
 n "DATAOUT"
 t "LC3b_word"
-o 10
+o 24
 suid 408,0
 )
 )
@@ -1104,7 +1104,7 @@ thePort (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 1
+o 14
 suid 409,0
 )
 )
@@ -1151,7 +1151,7 @@ m 1
 decl (Decl
 n "ADDR_0"
 t "std_logic"
-o 35
+o 20
 suid 410,0
 )
 )
@@ -1196,7 +1196,7 @@ thePort (LogicalPort
 decl (Decl
 n "ALUMuxSel"
 t "LC3b_8Mux_Sel"
-o 4
+o 1
 suid 411,0
 )
 )
@@ -1241,7 +1241,7 @@ thePort (LogicalPort
 decl (Decl
 n "ALUop"
 t "LC3b_aluop"
-o 5
+o 2
 suid 412,0
 )
 )
@@ -1286,7 +1286,7 @@ thePort (LogicalPort
 decl (Decl
 n "ByteExtSel"
 t "std_logic"
-o 34
+o 3
 suid 413,0
 )
 )
@@ -1333,7 +1333,7 @@ m 1
 decl (Decl
 n "CheckN"
 t "std_logic"
-o 6
+o 21
 suid 414,0
 )
 )
@@ -1380,7 +1380,7 @@ m 1
 decl (Decl
 n "CheckP"
 t "std_logic"
-o 7
+o 22
 suid 415,0
 )
 )
@@ -1427,7 +1427,7 @@ m 1
 decl (Decl
 n "CheckZ"
 t "std_logic"
-o 8
+o 23
 suid 416,0
 )
 )
@@ -1472,7 +1472,7 @@ thePort (LogicalPort
 decl (Decl
 n "clk"
 t "std_logic"
-o 30
+o 18
 suid 417,0
 )
 )
@@ -1519,7 +1519,7 @@ m 1
 decl (Decl
 n "IMMEDIATE"
 t "std_logic"
-o 11
+o 25
 suid 418,0
 )
 )
@@ -1566,7 +1566,7 @@ m 1
 decl (Decl
 n "JSRR"
 t "std_logic"
-o 12
+o 26
 suid 419,0
 )
 )
@@ -1611,7 +1611,7 @@ thePort (LogicalPort
 decl (Decl
 n "LoadIR"
 t "std_logic"
-o 13
+o 5
 suid 420,0
 )
 )
@@ -1656,7 +1656,7 @@ thePort (LogicalPort
 decl (Decl
 n "LoadMar"
 t "std_logic"
-o 15
+o 7
 suid 421,0
 )
 )
@@ -1701,7 +1701,7 @@ thePort (LogicalPort
 decl (Decl
 n "LoadMDR"
 t "std_logic"
-o 14
+o 6
 suid 422,0
 )
 )
@@ -1746,7 +1746,7 @@ thePort (LogicalPort
 decl (Decl
 n "LoadNZP"
 t "std_logic"
-o 16
+o 8
 suid 423,0
 )
 )
@@ -1791,7 +1791,7 @@ thePort (LogicalPort
 decl (Decl
 n "LoadPC"
 t "std_logic"
-o 17
+o 9
 suid 424,0
 )
 )
@@ -1836,7 +1836,7 @@ thePort (LogicalPort
 decl (Decl
 n "MARMuxSel"
 t "LC3b_4Mux_Sel"
-o 18
+o 10
 suid 425,0
 )
 )
@@ -1881,7 +1881,7 @@ thePort (LogicalPort
 decl (Decl
 n "MDRMuxSel"
 t "std_logic"
-o 19
+o 11
 suid 426,0
 )
 )
@@ -1928,7 +1928,7 @@ m 1
 decl (Decl
 n "n"
 t "std_logic"
-o 31
+o 29
 suid 427,0
 )
 )
@@ -1975,7 +1975,7 @@ m 1
 decl (Decl
 n "Opcode"
 t "LC3b_opcode"
-o 24
+o 27
 suid 428,0
 )
 )
@@ -2022,7 +2022,7 @@ m 1
 decl (Decl
 n "p"
 t "std_logic"
-o 32
+o 30
 suid 429,0
 )
 )
@@ -2067,7 +2067,7 @@ thePort (LogicalPort
 decl (Decl
 n "PCMuxSel"
 t "LC3b_8Mux_Sel"
-o 25
+o 12
 suid 430,0
 )
 )
@@ -2112,7 +2112,7 @@ thePort (LogicalPort
 decl (Decl
 n "R7Sel_H"
 t "std_logic"
-o 26
+o 13
 suid 431,0
 )
 )
@@ -2157,7 +2157,7 @@ thePort (LogicalPort
 decl (Decl
 n "RegWrite"
 t "std_logic"
-o 28
+o 16
 suid 432,0
 )
 )
@@ -2202,7 +2202,7 @@ thePort (LogicalPort
 decl (Decl
 n "RFMuxSel"
 t "LC3b_4Mux_Sel"
-o 27
+o 15
 suid 433,0
 )
 )
@@ -2249,7 +2249,7 @@ m 1
 decl (Decl
 n "SHIFTop"
 t "lc3b_shftop"
-o 36
+o 28
 suid 434,0
 )
 )
@@ -2294,7 +2294,7 @@ thePort (LogicalPort
 decl (Decl
 n "StoreSR"
 t "std_logic"
-o 29
+o 17
 suid 435,0
 )
 )
@@ -2341,7 +2341,7 @@ m 1
 decl (Decl
 n "z"
 t "std_logic"
-o 33
+o 31
 suid 436,0
 )
 )
@@ -3029,5 +3029,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 3552,0
+lastUid 3564,0
 )

@@ -402,23 +402,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@d@stage/interface.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@d@stage/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@d@stage/interface.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@d@stage/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -434,27 +434,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@d@stage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@d@stage"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/IDStage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IDStage"
 )
 (vvPair
 variable "date"
-value "10/26/11"
+value "10/27/11"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "26"
+value "27"
 )
 (vvPair
 variable "entity_name"
@@ -482,7 +482,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-14.ews.illinois.edu"
+value "gelib-057-15.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -518,11 +518,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@d@stage/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@d@stage/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/IDStage/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IDStage/interface"
 )
 (vvPair
 variable "project_name"
@@ -562,7 +562,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "17:58:42"
+value "21:04:37"
 )
 (vvPair
 variable "unit"
@@ -570,7 +570,7 @@ value "IDStage"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -630,8 +630,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,6300,59500,7200"
-st "ALUInA   : OUT    lc3b_word  ;
-"
+st "ALUInA   : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
@@ -677,8 +676,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,7200,59500,8100"
-st "ALUInB   : OUT    lc3b_word  ;
-"
+st "ALUInB   : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
@@ -725,8 +723,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,1800,59500,2700"
-st "ID_C_In  : IN     lc3b_word  ;
-"
+st "ID_C_In  : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -771,8 +768,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,8100,59500,9000"
-st "ID_C_Out : OUT    lc3b_word  ;
-"
+st "ID_C_Out : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
@@ -817,8 +813,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,4500,59500,5400"
-st "instIn   : IN     lc3b_word  ;
-"
+st "instIn   : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -863,8 +858,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,10800,59500,11700"
-st "instOut  : OUT    lc3b_word  ;
-"
+st "instOut  : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
@@ -909,8 +903,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,11700,58500,12600"
-st "newPC    : OUT    lc3b_word 
-"
+st "newPC    : OUT    lc3b_word "
 )
 thePort (LogicalPort
 m 1
@@ -955,8 +948,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,5400,59500,6300"
-st "nextPCin : IN     lc3b_word  ;
-"
+st "nextPCin : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1000,8 +992,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,2700,59500,3600"
-st "OutA     : IN     lc3b_word  ;
-"
+st "OutA     : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1045,8 +1036,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,3600,59500,4500"
-st "OutB     : IN     lc3b_word  ;
-"
+st "OutB     : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1091,8 +1081,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,9000,59000,9900"
-st "RA       : OUT    lc3b_reg  ;
-"
+st "RA       : OUT    lc3b_reg  ;"
 )
 thePort (LogicalPort
 m 1
@@ -1138,8 +1127,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,9900,59000,10800"
-st "RB       : OUT    lc3b_reg  ;
-"
+st "RB       : OUT    lc3b_reg  ;"
 )
 thePort (LogicalPort
 m 1
@@ -1236,7 +1224,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,50050,45700,50950"
+xt "32200,50050,45200,50950"
 st "
 by %user on %dd %month %year
 "
@@ -1833,5 +1821,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 476,0
+lastUid 668,0
 )

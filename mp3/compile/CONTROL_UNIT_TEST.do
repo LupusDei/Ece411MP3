@@ -21,6 +21,8 @@ force -freeze /mp3_cpu/clk 0 -repeat 50
 force -freeze /mp3_cpu/clk 1 25 -repeat 50
 force -freeze /mp3_cpu/im_resp_h 0
 
+force /mp3_cpu/instOut 0000000000000000 -freeze
+
 echo "Control Unit signal generation... PCMuxSel, LoadPC" 
 virtual signal {/mp3_cpu/im_read_l == 0 && /mp3_cpu/pcinstaddr == 0} cutest1a
 virtual signal {/mp3_cpu/IF_C_In == 2} cutest1b
@@ -39,8 +41,9 @@ run 25
 
 echo "PCMuxSel should be 0 and LoadPC should be 1"
 
-run 50
+run 100
 
+add wave -noupdate -divider -height 32 ADDTests
 echo "ID_C_UNIT tests...ADD"
 echo "Test ADD R7,R1,R7 inst will lead to ALUMuxSel = 000"
 virtual signal {/mp3_cpu/id_c_in == 0  && /mp3_cpu/pcinstaddr == 2} ID_test1
@@ -53,10 +56,26 @@ run 10
 echo "ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB"
 
 force /mp3_cpu/pcinstaddr 0000000000000100 -freeze
+run 50
+
+echo "ID_C_UNIT tests...ADD Immediate"
+echo "Test ADD R7, R1, 3 inst will lead to ALUMuxSel = 010"
+virtual signal {/mp3_cpu/id_c_in == 2 && /mp3_cpu/pcinstaddr == 4} IDI_test1
+add wave -color white IDI_test1
+
+force /mp3_cpu/instOut 0001111001100011 -freeze
+run 10
+force /mp3_cpu/instOut 0000000000000000 -freeze
+run 10
+
+echo "ID_C_In should be 0002, ALUMuxSel is 010, or Imm5"
+
+force /mp3_cpu/pcinstaddr 0000000000000110 -freeze
 run 100
 
+add wave -noupdate -divider -height 32 ANDTests 
 echo "Test AND R5,R3,R2 inst will lead to ALUMuxSel = 000"
-virtual signal {/mp3_cpu/id_c_in == 0  && /mp3_cpu/pcinstaddr == 4} ID_test2
+virtual signal {/mp3_cpu/id_c_in == 0  && /mp3_cpu/pcinstaddr == 6} ID_test2
 add wave -color white ID_test2
 
 force /mp3_cpu/instOut 0101101011000010 -freeze
@@ -66,19 +85,31 @@ run 10
 echo "ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB"
 
 force /mp3_cpu/pcinstaddr 0000000000001000 -freeze
+run 50
 
+echo "Test AND R5, R3, 4 inst will lead to ALUMuxSel = 010"
+virtual signal {/mp3_cpu/id_c_in == 2 && /mp3_cpu/pcinstaddr == 8} IDI_test2
+add wave -color white IDI_test2
 
+force /mp3_cpu/instOut 0101101011100100 -freeze
+run 10
+force /mp3_cpu/instOut 0000000000000000 -freeze
+run 10
+echo "ID_C_In should be 0002, ALUMuxSel is 002, or Imm5"
+
+force /mp3_cpu/pcinstaddr 0000000000001010 -freeze
 noforce /mp3_cpu/clk
 force -freeze /mp3_cpu/clk 0
 run 100
 
+add wave -noupdate -divider -height 32 EXTests
 echo "EX_C_UNIT & EX_C_REG Tests..."
 echo "Test that ex_c_in is 0 for ADD and that it isn't outputed for a full cycle"
 force -freeze /mp3_cpu/clk 1 -repeat 50
 force -freeze /mp3_cpu/clk 0 25 -repeat 50
 
-virtual signal {/mp3_cpu/id_c_in == 0 && /mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 8} EX_test1a
-virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 0 && /mp3_cpu/pcinstaddr == 10} EX_test1b
+virtual signal {/mp3_cpu/id_c_in == 0 && /mp3_cpu/ex_c_in == 61440 && /mp3_cpu/pcinstaddr == 10} EX_test1a
+virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 0 && /mp3_cpu/pcinstaddr == 12} EX_test1b
 add wave -color white EX_test1a
 add wave -color white EX_test1b
 #/*it would take the inst 6ns to load after the rising edge of the clk */
@@ -86,7 +117,7 @@ run 6
 force /mp3_cpu/instOut 0001000000000000 -freeze
 run 50
 force /mp3_cpu/instOut 1111000000000000 -freeze
-force /mp3_cpu/pcinstaddr 0000000000001010 -freeze
+force /mp3_cpu/pcinstaddr 0000000000001100 -freeze
 run 50
 force /mp3_cpu/instOut 1111000000000000 -freeze
 force /mp3_cpu/pcinstaddr 0000000000010000 -freeze
@@ -138,6 +169,7 @@ echo "ex_c_in should be 0xF000 and then 0x0002 after 1 clock cycle, and then bac
 echo "WB_C_UNIT & WB_C_REG Tests..."
 echo "Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 2 full cycles.  The data shold skip the MEM stage for ADD"
 
+add wave -noupdate -divider -height 32 WBTests
 virtual signal {/mp3_cpu/id_c_in == 0 && /mp3_cpu/wb_c_in == 61440 && /mp3_cpu/pcinstaddr == 32} WB_test1a
 virtual signal {/mp3_cpu/id_c_in == 61440 && /mp3_cpu/ex_c_in == 0 && /mp3_cpu/wb_c_in == 61440 && /mp3_cpu/pcinstaddr == 34} WB_test1b
 #/*wb_c_in should be 00...011011   or dr = r6, regwrite = 1, muxSel = 1*/

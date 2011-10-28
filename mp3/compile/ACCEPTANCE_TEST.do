@@ -39,20 +39,28 @@ add wave -color white /mp3_cpu/ADD_test1
 
 run 250
 
-
+echo "ADD R0, R1, 11 : R0 <= 53"
+virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(0) == 53 && /mp3_cpu/pcinstaddr == 10} ADD_test2
+add wave -color white /mp3_cpu/ADD_test2
+run 50
 add wave -noupdate -divider -height 32 ANDTests
 
 echo "AND R6, R1, R2 :  R6 <= 101010 AND 00100"
-virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(6) == 8 && /mp3_cpu/pcinstaddr == 10} AND_test1
+virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(6) == 8 && /mp3_cpu/pcinstaddr == 12} AND_test1
 add wave -color white /mp3_cpu/AND_test1
 run 50
 
 run 50
 
+echo "AND R5, R2, 5 : R5 <= 0"
+virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(5) == 0 && /mp3_cpu/pcinstaddr == 14} AND_test2
+add wave -color white /mp3_cpu/AND_test2
+run 50
+ 
 add wave -noupdate -divider -height 32 NOTTests
 
 echo "NOT R4, R3 : R4 <= NOT(011) Followed by a dummy instruction" 
-virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == -4 && /mp3_cpu/pcinstaddr == 12} NOT_test1
+virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == -4 && /mp3_cpu/pcinstaddr == 16} NOT_test1
 add wave -color white /mp3_cpu/NOT_test1
 run 50
 
