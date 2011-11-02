@@ -33,6 +33,6 @@ BEGIN
 	DestReg <= MEM_C_In(3 downto 1);
 	loadNZP <= MEM_C_In(0);
 	GENMuxSel <= MEM_C_In(9);
-	brInst <= MEM_C_In(8);
+	brInst <= MEM_C_In(7);
 END ARCHITECTURE untitled;
 

@@ -9,6 +9,14 @@ add wave -hex /mp3_cpu/if_c_in
 add wave -hex /mp3_cpu/id_c_in
 add wave -hex /mp3_cpu/ex_c_in
 add wave -hex /mp3_cpu/mem_c_in
+add wave -hex /mp3_cpu/mem_c_out
+add wave -hex /mp3_cpu/pipelinedatapath/memaccess/DestReg
+add wave -hex /mp3_cpu/pipelinedatapath/memaccess/loadNZP
+add wave -hex /mp3_cpu/pipelinedatapath/memaccess/brInst
+add wave -hex /mp3_cpu/pipelinedatapath/decode/B
+add wave -hex /mp3_cpu/pipelinedatapath/decode/instIn
+add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/pcmuxsel
+add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/newpcin
 add wave -hex /mp3_cpu/wb_c_in
 add wave -hex /mp3_cpu/im_resp_h
 add wave -hex /mp3_cpu/im_read_l
@@ -87,11 +95,11 @@ virtual signal {/mp3_cpu/datamemin == 42 && mp3_cpu/dm_resp_h == 1 && /mp3_cpu/p
 add wave -color white /mp3_cpu/STR_test1
 run 50
 
-
-echo "BR np, 4   28 + 8 = 36"
-virtual signal {/mp3_cpu/pcinstaddr == 36} br_1
+#/*it is 20 because it comes from fetch reg which stores PC + 2 ; we consider pcinstaddr in ID stage for branch instead of when we write to the register, as for other instructions*/
+echo "BR np, 8   20 + 16 = 36"
+virtual signal {/mp3_cpu/pcinstaddr == 26} br_1
+virtual signal {/mp3_cpu/pcinstaddr == 36} br_2
 add wave -color white /mp3_cpu/br_1
-run 50
-
-
-run 50
+add wave -color white /mp3_cpu/br_2
+run 100
+run 100

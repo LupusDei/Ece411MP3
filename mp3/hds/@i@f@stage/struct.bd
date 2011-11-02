@@ -75,23 +75,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/struct.bd.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/struct.bd.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -107,27 +107,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/IFStage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IFStage"
 )
 (vvPair
 variable "date"
-value "10/28/11"
+value "10/29/11"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Sat"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Saturday"
 )
 (vvPair
 variable "dd"
-value "28"
+value "29"
 )
 (vvPair
 variable "entity_name"
@@ -155,7 +155,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-32.ews.illinois.edu"
+value "siebl-0216-10.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -191,11 +191,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/struct.bd"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/IFStage/struct.bd"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IFStage/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -235,7 +235,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "17:40:32"
+value "02:01:45"
 )
 (vvPair
 variable "unit"
@@ -243,7 +243,7 @@ value "IFStage"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -325,8 +325,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,6200,34500,7100"
-st "inst       : lc3b_word
-"
+st "inst       : lc3b_word"
 )
 )
 *3 (PortIoIn
@@ -389,8 +388,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,1700,34500,2600"
-st "InstMemIn  : lc3b_word
-"
+st "InstMemIn  : lc3b_word"
 )
 )
 *5 (PortIoOut
@@ -497,8 +495,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,5300,34500,6200"
-st "PCinstAddr : lc3b_word
-"
+st "PCinstAddr : lc3b_word"
 )
 )
 *8 (Grouping
@@ -523,7 +520,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "24200,50050,37200,50950"
+xt "24200,50050,37700,50950"
 st "
 by %user on %dd %month %year
 "
@@ -1210,8 +1207,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,7100,34500,8000"
-st "nextPC     : lc3b_word
-"
+st "nextPC     : lc3b_word"
 )
 )
 *33 (Blk
@@ -1326,8 +1322,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,3500,34500,4400"
-st "clk        : std_logic
-"
+st "clk        : std_logic"
 )
 )
 *39 (Net
@@ -1344,8 +1339,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,8900,38000,9800"
-st "SIGNAL PCMuxOut   : LC3b_word
-"
+st "SIGNAL PCMuxOut   : LC3b_word"
 )
 )
 *40 (Net
@@ -1362,8 +1356,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,10700,38000,11600"
-st "SIGNAL loadPC     : std_logic
-"
+st "SIGNAL loadPC     : std_logic"
 )
 )
 *41 (Blk
@@ -1524,8 +1517,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,800,34500,1700"
-st "IF_C_In    : lc3b_word
-"
+st "IF_C_In    : lc3b_word"
 )
 )
 *48 (Net
@@ -1542,8 +1534,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,9800,38000,10700"
-st "SIGNAL PCMuxSel   : std_logic
-"
+st "SIGNAL PCMuxSel   : std_logic"
 )
 )
 *49 (PortIoIn
@@ -1652,8 +1643,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,2600,34500,3500"
-st "RESET_L    : std_logic
-"
+st "RESET_L    : std_logic"
 )
 )
 *52 (SaComponent
@@ -1878,8 +1868,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "23000,4400,34500,5300"
-st "newPCIn    : lc3b_word
-"
+st "newPCIn    : lc3b_word"
 )
 )
 *60 (Wire
@@ -2006,9 +1995,9 @@ uid 230,0
 va (VaSet
 vasetType 3
 )
-xt "-5000,36000,-1000,36000"
+xt "-8000,36000,-1000,36000"
 pts [
-"-5000,36000"
+"-8000,36000"
 "-3000,36000"
 "-1000,36000"
 ]
@@ -2028,9 +2017,9 @@ uid 236,0
 va (VaSet
 font "courier,8,0"
 )
-xt "-9000,37100,-3500,38000"
+xt "-12000,37100,-6500,38000"
 st "PCinstAddr"
-blo "-9000,37800"
+blo "-12000,37800"
 tm "WireNameMgr"
 )
 )
@@ -2547,13 +2536,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "1594,190,2627,1036"
+windowSize "881,191,1914,1037"
 viewArea "-23800,-4700,69303,69898"
-cachedDiagramExtent "-9000,-1000,61000,51000"
+cachedDiagramExtent "-12000,-1000,61000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-77000,-51000"
 active 1
-lastUid 760,0
+lastUid 794,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

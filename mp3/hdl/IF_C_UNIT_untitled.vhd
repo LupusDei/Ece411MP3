@@ -45,9 +45,9 @@ BEGIN
 	  pre_read_out <= '0';
    pre_load_pc <= '0';
    pre_PCMuxSel <= '0';
-		else
+--		else
 			if ((im_resp_h = '1')) then
-    pre_read_out <= '1';
+--    pre_read_out <= '1';
     pre_load_pc <= '1';
 			end if;
 			if (MEM_C_Out = "0000000000000001") then
@@ -58,6 +58,7 @@ BEGIN
 	end if;
 	END PROCESS;
 	IF_C_In <= "00000000000000" & pre_load_pc & pre_PCMuxSel after delay_decode3;
-	im_read_l <= pre_read_out after delay_decode3;
+--	im_read_l <= pre_read_out after delay_decode3;
+	im_read_l <= '0' after delay_decode3;
 END ARCHITECTURE untitled;
 

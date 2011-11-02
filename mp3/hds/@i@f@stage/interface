@@ -330,23 +330,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/interface.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/interface.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -362,27 +362,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/IFStage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IFStage"
 )
 (vvPair
 variable "date"
-value "10/28/11"
+value "10/29/11"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Sat"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Saturday"
 )
 (vvPair
 variable "dd"
-value "28"
+value "29"
 )
 (vvPair
 variable "entity_name"
@@ -410,7 +410,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-32.ews.illinois.edu"
+value "siebl-0216-10.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -446,11 +446,11 @@ value "October"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@i@f@stage/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@i@f@stage/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/IFStage/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IFStage/interface"
 )
 (vvPair
 variable "project_name"
@@ -490,7 +490,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "17:40:32"
+value "02:01:45"
 )
 (vvPair
 variable "unit"
@@ -498,7 +498,7 @@ value "IFStage"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -557,8 +557,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,4500,60500,5400"
-st "clk        : IN     std_logic  ;
-"
+st "clk        : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -604,8 +603,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,1800,60500,2700"
-st "IF_C_In    : IN     lc3b_word  ;
-"
+st "IF_C_In    : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -650,8 +648,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,7200,60500,8100"
-st "inst       : OUT    lc3b_word  ;
-"
+st "inst       : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
@@ -698,8 +695,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,2700,60500,3600"
-st "InstMemIn  : IN     lc3b_word  ;
-"
+st "InstMemIn  : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -744,8 +740,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,5400,60500,6300"
-st "newPCIn    : IN     lc3b_word  ;
-"
+st "newPCIn    : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -790,8 +785,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,8100,59500,9000"
-st "nextPC     : OUT    lc3b_word 
-"
+st "nextPC     : OUT    lc3b_word "
 )
 thePort (LogicalPort
 m 1
@@ -837,8 +831,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,6300,60500,7200"
-st "PCinstAddr : OUT    lc3b_word  ;
-"
+st "PCinstAddr : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
@@ -883,8 +876,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,3600,60500,4500"
-st "RESET_L    : IN     std_logic  ;
-"
+st "RESET_L    : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1577,5 +1569,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 798,0
+lastUid 810,0
 )
