@@ -449,23 +449,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@p3_@cache/symbol.sb.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@p3_@cache/symbol.sb.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@p3_@cache/symbol.sb.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@p3_@cache/symbol.sb.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -481,27 +481,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@p3_@cache"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@p3_@cache"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/MP3_Cache"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/MP3_Cache"
 )
 (vvPair
 variable "date"
-value "11/02/11"
+value "11/04/11"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "02"
+value "04"
 )
 (vvPair
 variable "entity_name"
@@ -529,7 +529,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "siebl-0216-08.ews.illinois.edu"
+value "gelib-057-29.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -565,11 +565,11 @@ value "November"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@p3_@cache/symbol.sb"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@p3_@cache/symbol.sb"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/MP3_Cache/symbol.sb"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/MP3_Cache/symbol.sb"
 )
 (vvPair
 variable "project_name"
@@ -609,7 +609,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "22:22:27"
+value "15:43:59"
 )
 (vvPair
 variable "unit"
@@ -617,7 +617,7 @@ value "MP3_Cache"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -676,8 +676,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,1800,61500,2700"
-st "DataAddr     : IN     lc3b_word  ;
-"
+st "DataAddr     : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -722,8 +721,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,11700,61500,12600"
-st "DataMemIn    : OUT    lc3b_word  ;
-"
+st "DataMemIn    : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
@@ -768,8 +766,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,4500,61500,5400"
-st "dM_READ_L    : IN     std_logic  ;
-"
+st "dM_READ_L    : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -814,8 +811,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,13500,61500,14400"
-st "dm_resp_h    : OUT    std_logic  ;
-"
+st "dm_resp_h    : OUT    std_logic  ;"
 )
 thePort (LogicalPort
 m 1
@@ -860,8 +856,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,5400,61500,6300"
-st "dM_WRITEH_L  : IN     std_logic  ;
-"
+st "dM_WRITEH_L  : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -905,8 +900,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,6300,61500,7200"
-st "dm_writel_l  : IN     std_logic  ;
-"
+st "dm_writel_l  : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -950,8 +944,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,8100,61500,9000"
-st "im_read_l    : IN     std_logic  ;
-"
+st "im_read_l    : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -996,8 +989,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,14400,60500,15300"
-st "im_resp_h    : OUT    std_logic 
-"
+st "im_resp_h    : OUT    std_logic "
 )
 thePort (LogicalPort
 m 1
@@ -1042,8 +1034,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,7200,61500,8100"
-st "iM_WRITEH_L  : IN     std_logic  ;
-"
+st "iM_WRITEH_L  : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1087,8 +1078,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,9000,61500,9900"
-st "im_writel_l  : IN     std_logic  ;
-"
+st "im_writel_l  : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1133,8 +1123,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,12600,61500,13500"
-st "InstMemIn    : OUT    lc3b_word  ;
-"
+st "InstMemIn    : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
@@ -1179,8 +1168,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,9900,61500,10800"
-st "memwritedata : IN     lc3b_word  ;
-"
+st "memwritedata : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1224,8 +1212,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,10800,61500,11700"
-st "pcinstaddr   : IN     lc3b_word  ;
-"
+st "pcinstaddr   : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1269,8 +1256,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,3600,61500,4500"
-st "clk          : IN     std_logic  ;
-"
+st "clk          : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -1314,8 +1300,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,2700,61500,3600"
-st "RESET_L      : IN     std_logic  ;
-"
+st "RESET_L      : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
@@ -2009,6 +1994,6 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 327,0
+lastUid 339,0
 okToSyncOnLoad 1
 )

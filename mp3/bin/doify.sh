@@ -24,8 +24,8 @@ fi
 
 #this is an example of how setting up multiple DRAMS might look
 #DEFAULT_MEMPATHS="/mp1_cpu/idram/vhdl_memory,/mp1_cpu/ddram/vhdl_memory"
-DEFAULT_MEMPATHS="/mp3_cpu/U_0/vhdl_memory"
-DEFAULT_COMPILEPATH="$HOME/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile"
+DEFAULT_MEMPATHS="/mp3_cpu/L1Cache/IPRAM/vhdl_memory, /mp3_cpu/L1Cache/DPRAM/vhdl_memory"
+DEFAULT_COMPILEPATH="$HOME/ece411/Ece411MP3/mp3/compile"
 
 NAME=${1%\.*}			
 MEMPATHS=${2:-$DEFAULT_MEMPATHS}

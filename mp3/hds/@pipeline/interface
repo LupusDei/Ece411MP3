@@ -69,7 +69,7 @@ port (LogicalPort
 decl (Decl
 n "CLK"
 t "std_logic"
-o 15
+o 1
 suid 159,0
 )
 )
@@ -80,7 +80,7 @@ port (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 1
+o 6
 suid 160,0
 )
 )
@@ -92,7 +92,7 @@ m 1
 decl (Decl
 n "dataaddr"
 t "lc3b_word"
-o 2
+o 13
 suid 161,0
 )
 )
@@ -103,7 +103,7 @@ port (LogicalPort
 decl (Decl
 n "datamemin"
 t "lc3b_word"
-o 3
+o 8
 suid 162,0
 )
 )
@@ -114,7 +114,7 @@ port (LogicalPort
 decl (Decl
 n "EX_C_In"
 t "lc3b_word"
-o 4
+o 2
 suid 163,0
 )
 )
@@ -126,7 +126,7 @@ m 1
 decl (Decl
 n "EX_C_Out"
 t "lc3b_word"
-o 11
+o 10
 suid 164,0
 )
 )
@@ -137,7 +137,7 @@ port (LogicalPort
 decl (Decl
 n "ID_C_In"
 t "lc3b_word"
-o 6
+o 3
 suid 165,0
 )
 )
@@ -149,7 +149,7 @@ m 1
 decl (Decl
 n "ID_C_Out"
 t "lc3b_word"
-o 12
+o 11
 suid 166,0
 )
 )
@@ -160,7 +160,7 @@ port (LogicalPort
 decl (Decl
 n "IF_C_In"
 t "lc3b_word"
-o 14
+o 4
 suid 167,0
 )
 )
@@ -171,7 +171,7 @@ port (LogicalPort
 decl (Decl
 n "instmemin"
 t "lc3b_word"
-o 8
+o 9
 suid 168,0
 )
 )
@@ -183,7 +183,7 @@ m 1
 decl (Decl
 n "instOut"
 t "lc3b_word"
-o 20
+o 14
 suid 169,0
 )
 )
@@ -194,7 +194,7 @@ port (LogicalPort
 decl (Decl
 n "MEM_C_In"
 t "lc3b_word"
-o 9
+o 5
 suid 170,0
 )
 )
@@ -206,7 +206,7 @@ m 1
 decl (Decl
 n "MEM_C_Out"
 t "lc3b_word"
-o 13
+o 12
 suid 171,0
 )
 )
@@ -218,7 +218,7 @@ m 1
 decl (Decl
 n "memwritedata"
 t "lc3b_word"
-o 11
+o 15
 suid 172,0
 )
 )
@@ -230,7 +230,7 @@ m 1
 decl (Decl
 n "pcinstaddr"
 t "lc3b_word"
-o 12
+o 16
 suid 173,0
 )
 )
@@ -241,7 +241,7 @@ port (LogicalPort
 decl (Decl
 n "WB_C_In"
 t "lc3b_word"
-o 13
+o 7
 suid 174,0
 )
 )
@@ -470,23 +470,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/interface.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/interface.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -502,27 +502,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/Pipeline"
 )
 (vvPair
 variable "date"
-value "10/29/11"
+value "11/04/11"
 )
 (vvPair
 variable "day"
-value "Sat"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Saturday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "29"
+value "04"
 )
 (vvPair
 variable "entity_name"
@@ -550,7 +550,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "siebl-0216-10.ews.illinois.edu"
+value "gelib-057-29.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -570,7 +570,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "10"
+value "11"
 )
 (vvPair
 variable "module_name"
@@ -578,19 +578,19 @@ value "Pipeline"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Nov"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "November"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@pipeline/interface"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@pipeline/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline/interface"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/Pipeline/interface"
 )
 (vvPair
 variable "project_name"
@@ -630,7 +630,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "01:18:58"
+value "15:59:46"
 )
 (vvPair
 variable "unit"
@@ -638,7 +638,7 @@ value "Pipeline"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -706,7 +706,7 @@ thePort (LogicalPort
 decl (Decl
 n "CLK"
 t "std_logic"
-o 15
+o 1
 suid 159,0
 )
 )
@@ -753,7 +753,7 @@ thePort (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 1
+o 6
 suid 160,0
 )
 )
@@ -800,7 +800,7 @@ m 1
 decl (Decl
 n "dataaddr"
 t "lc3b_word"
-o 2
+o 13
 suid 161,0
 )
 )
@@ -845,7 +845,7 @@ thePort (LogicalPort
 decl (Decl
 n "datamemin"
 t "lc3b_word"
-o 3
+o 8
 suid 162,0
 )
 )
@@ -890,7 +890,7 @@ thePort (LogicalPort
 decl (Decl
 n "EX_C_In"
 t "lc3b_word"
-o 4
+o 2
 suid 163,0
 )
 )
@@ -937,7 +937,7 @@ m 1
 decl (Decl
 n "EX_C_Out"
 t "lc3b_word"
-o 11
+o 10
 suid 164,0
 )
 )
@@ -982,7 +982,7 @@ thePort (LogicalPort
 decl (Decl
 n "ID_C_In"
 t "lc3b_word"
-o 6
+o 3
 suid 165,0
 )
 )
@@ -1029,7 +1029,7 @@ m 1
 decl (Decl
 n "ID_C_Out"
 t "lc3b_word"
-o 12
+o 11
 suid 166,0
 )
 )
@@ -1074,7 +1074,7 @@ thePort (LogicalPort
 decl (Decl
 n "IF_C_In"
 t "lc3b_word"
-o 14
+o 4
 suid 167,0
 )
 )
@@ -1119,7 +1119,7 @@ thePort (LogicalPort
 decl (Decl
 n "instmemin"
 t "lc3b_word"
-o 8
+o 9
 suid 168,0
 )
 )
@@ -1166,7 +1166,7 @@ m 1
 decl (Decl
 n "instOut"
 t "lc3b_word"
-o 20
+o 14
 suid 169,0
 )
 )
@@ -1211,7 +1211,7 @@ thePort (LogicalPort
 decl (Decl
 n "MEM_C_In"
 t "lc3b_word"
-o 9
+o 5
 suid 170,0
 )
 )
@@ -1258,7 +1258,7 @@ m 1
 decl (Decl
 n "MEM_C_Out"
 t "lc3b_word"
-o 13
+o 12
 suid 171,0
 )
 )
@@ -1305,7 +1305,7 @@ m 1
 decl (Decl
 n "memwritedata"
 t "lc3b_word"
-o 11
+o 15
 suid 172,0
 )
 )
@@ -1352,7 +1352,7 @@ m 1
 decl (Decl
 n "pcinstaddr"
 t "lc3b_word"
-o 12
+o 16
 suid 173,0
 )
 )
@@ -1397,7 +1397,7 @@ thePort (LogicalPort
 decl (Decl
 n "WB_C_In"
 t "lc3b_word"
-o 13
+o 7
 suid 174,0
 )
 )
@@ -2085,5 +2085,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 1538,0
+lastUid 1550,0
 )

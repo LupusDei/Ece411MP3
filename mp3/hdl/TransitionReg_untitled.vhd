@@ -36,8 +36,8 @@ BEGIN
 	-------------------------------------------------------------------
 	READ : PROCESS (RAM)
 	BEGIN
-		o1 <= RAM(0) AFTER DELAY_REGFILE_READ;
-		o2 <= RAM(1) AFTER DELAY_REGFILE_READ;
+		o1 <= RAM(0) AFTER DELAY_REG;
+		o2 <= RAM(1) AFTER DELAY_REG;
 	END PROCESS READ;
 	-------------------------------------------------------------------
 	WRITE: PROCESS(CLK, d1, d2, RESET_L)

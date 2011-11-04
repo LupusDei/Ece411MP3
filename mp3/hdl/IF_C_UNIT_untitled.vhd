@@ -45,9 +45,9 @@ BEGIN
 	  pre_read_out <= '0';
    pre_load_pc <= '0';
    pre_PCMuxSel <= '0';
---		else
+	else
 			if ((im_resp_h = '1')) then
---    pre_read_out <= '1';
+    pre_read_out <= '1';
     pre_load_pc <= '1';
 			end if;
 			if (MEM_C_Out = "0000000000000001") then
