@@ -16,8 +16,8 @@ USE ece411.LC3b_types.all;
 
 ENTITY WB_C_REG IS
    PORT( 
+      CLK     : IN     std_logic;
       RESET_L : IN     std_logic;
-      clk     : IN     std_logic;
       wb_c    : IN     lc3b_word;
       WB_C_In : OUT    lc3b_word
    );

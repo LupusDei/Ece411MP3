@@ -16,9 +16,9 @@ USE ece411.LC3b_types.all;
 
 ENTITY IF_C_UNIT IS
    PORT( 
+      CLK       : IN     std_logic;
       MEM_C_Out : IN     lc3b_word;
       RESET_L   : IN     std_logic;
-      clk       : IN     std_logic;
       im_resp_h : IN     std_logic;
       IF_C_In   : OUT    lc3b_word;
       im_read_l : INOUT  std_logic

@@ -27,6 +27,7 @@ END EX_C_UNIT ;
 --
 ARCHITECTURE untitled OF EX_C_UNIT IS
 signal pre_EX_C : lc3b_word;
+signal reg_write : std_logic;
 BEGIN
 	PROCESS(instOut)
 	variable opcode : LC3b_opcode;
@@ -34,22 +35,46 @@ BEGIN
 			opcode := instOut(15 downto 12);
 			case opcode is
 				when "0001" =>
-				 pre_EX_C <= "0000000000000000";
+					reg_write <= '1';
+					pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
 			
 				when "0101" =>
-				 pre_EX_C <= "0000000000000001";
+					reg_write <= '1';
+				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000001";
 
 				when "1001" =>
-				 pre_EX_C <= "0000000000000010";
+					reg_write <= '1';
+				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000010";
 				
 				when "0110" =>
-				 pre_EX_C <= "0000000000000000";
+					reg_write <= '1';
+				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
+
+				when "0010" =>
+					reg_write <= '1';
+				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
+
+				when "1010" =>
+					reg_write <= '1';
+				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
+
+				when "1110" =>
+					reg_write <= '1';
+				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
+
+				when "1101" =>
+					reg_write <= '1';
+				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
+
 				when "0111" =>
-				 pre_EX_C <= "0000000000000000";
+				 	pre_EX_C <= "0000000000000000";
+
 				when "0000" =>
-				 pre_EX_C <= "0000000000000000";
+				 	pre_EX_C <= "0000000000000000";
+
 				when others =>
-				pre_EX_C <= "1111000000000000";
+					pre_EX_C <= "1110000000000000";
+
 			END case; 
 		END PROCESS;
 	EX_C <= pre_EX_C after delay_decode3;

@@ -16,15 +16,15 @@ USE ece411.LC3b_types.all;
 
 ENTITY EX_C_REG IS
    PORT( 
+      CLK     : IN     std_logic;
       RESET_L : IN     std_logic;
-      clk     : IN     std_logic;
       ex_c    : IN     lc3b_word;
       EX_C_In : OUT    lc3b_word
    );
 
 -- Declarations
 
-END EX_C_REG;
+END EX_C_REG ;
 
 --
 ARCHITECTURE untitled OF EX_C_REG IS

@@ -16,8 +16,8 @@ USE ece411.LC3b_types.all;
 
 ENTITY MEM_C_REG IS
    PORT( 
+      CLK         : IN     std_logic;
       RESET_L     : IN     std_logic;
-      clk         : IN     std_logic;
       mem_c       : IN     lc3b_word;
       MEM_C_In    : OUT    lc3b_word;
       dm_read_l   : OUT    std_logic;

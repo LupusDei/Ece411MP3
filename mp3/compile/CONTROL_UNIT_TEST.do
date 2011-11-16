@@ -18,7 +18,9 @@ add wave -hex /mp3_cpu/clk
 add wave -hex /mp3_cpu/pcinstaddr
 add wave -hex /mp3_cpu/pipelinedatapath/newPC
 add wave -hex /mp3_cpu/instOut
-
+add wave -hex /mp3_cpu/forwardA
+add wave -hex /mp3_cpu/forwardB
+add wave -hex /mp3_cpu/id_c_out
 
 force -freeze /mp3_cpu/clk 0 -repeat 50
 force -freeze /mp3_cpu/clk 1 25 -repeat 50
@@ -308,3 +310,57 @@ run 50
 
 run 44
 
+
+add wave -noupdate -divider -height 32 ForwardingUnitTests
+
+echo "Test Forwarding Unit"
+echo "Test forwarding Signal A"
+virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 150} Forward_test1a 
+virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 154} Forward_test1b
+add wave -color white Forward_test1a 
+add wave -color white Forward_test1b
+
+run 6
+force /mp3_cpu/instOut 0001001010000011 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010011000 -freeze
+force /mp3_cpu/instOut 0001010001000000 -freeze
+force /mp3_cpu/id_c_out 0000000001001000 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010011010 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010011100 -freeze
+
+run 44
+
+echo "Test Forwarding Signal B"
+virtual signal {/mp3_cpu/forwardB == 0 && /mp3_cpu/pcinstaddr == 156} Forward_test2a
+virtual signal {/mp3_cpu/forwardB == 1 && /mp3_cpu/pcinstaddr == 160} Forward_test2b
+virtual signal {/mp3_cpu/forwardB == 2 && /mp3_cpu/pcinstaddr == 162} Forward_test2c
+add wave -color white Forward_test2a
+add wave -color white Forward_test2b
+add wave -color white Forward_test2c
+
+run 6
+force /mp3_cpu/instOut 0001001010000011 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010011110 -freeze
+force /mp3_cpu/instOut 0001010000000001 -freeze
+force /mp3_cpu/id_c_out 0000000000001001 -freeze
+
+
+#/*pc = 160*/
+run 50
+force /mp3_cpu/pcinstaddr 0000000010100000 -freeze
+force /mp3_cpu/instOut 0001010000000001 -freeze
+force /mp3_cpu/id_c_out 0000000000001001 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010100010 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010100100 -freeze
