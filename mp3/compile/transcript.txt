@@ -61,6 +61,7 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_decode(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.worthless(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux4_16(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.idstage(struct)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.createsrcreg(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_decode(untitled)
@@ -190,9 +191,13 @@ do CONTROL_UNIT_TEST.do
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 4 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 7 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 4 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 24 ns  Iteration: 3  Instance: /mp3_cpu/l1cache/dpram
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -201,6 +206,18 @@ do CONTROL_UNIT_TEST.do
 # 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 30 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 32 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -363,7 +380,7 @@ do CONTROL_UNIT_TEST.do
 # 0
 # 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1362 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 1366 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1410 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -469,9 +486,9 @@ do CONTROL_UNIT_TEST.do
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1916 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1916 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 1931 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -533,17 +550,15 @@ do CONTROL_UNIT_TEST.do
 # 
 # 0
 # 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
 # Test Forwarding Signal B 
 # /mp3_cpu/Forward_test2a
 # /mp3_cpu/Forward_test2b
-# 0
-# 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
 # 0
@@ -552,12 +567,6 @@ do CONTROL_UNIT_TEST.do
 #    Time: 2660 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
-# 0
-# 
-# Test Forwarding Unit for Loads and Stores 
-# Test for loads 
-# /mp3_cpu/Forward_test3a
-# /mp3_cpu/Forward_test3b
 # 0
 # 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -574,8 +583,6 @@ do CONTROL_UNIT_TEST.do
 #    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# 0
-# 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 2762 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -584,1447 +591,127 @@ do CONTROL_UNIT_TEST.do
 #    Time: 2766 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
 # 0
 # 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2812 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
+# Test Forwarding Unit for Loads and Stores 
+# Test for loads 
+# /mp3_cpu/Forward_test3a
+# /mp3_cpu/Forward_test3b
+# /mp3_cpu/Forward_test3c
 # 0
 # 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2866 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# 0
+# 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 2905 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 2905 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2916 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2960 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2960 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2960 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2960 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2960 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2960 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2966 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2990 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2990 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2990 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3006 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3055 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3055 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
 # Test for stores 
 # /mp3_cpu/Forward_test4a
 # /mp3_cpu/Forward_test4b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2906 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+# 0
+# 
+# 0
+# 
 # 0
 # 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2940 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2956 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 3216 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # 0
 # 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2990 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3006 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# 0
-# 
+#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 3260 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 3260 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 3260 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
+#    Time: 3260 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
+#    Time: 3260 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
+#    Time: 3260 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# 0
-# 
+#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3066 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3090 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+#    Time: 3266 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3105 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 3290 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3105 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 3305 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3305 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3306 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3340 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3356 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3360 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3360 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3362 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3362 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
 # Test for 3 consecutive instructions 
 # /mp3_cpu/Forward_test5a
 # /mp3_cpu/Forward_test5b
 # /mp3_cpu/Forward_test5c
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3106 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# 0
-# 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3140 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3156 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# 0
-# 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3190 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3206 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3210 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3210 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# 0
-# 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3212 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3212 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# 0
-# 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
 # 0
 # 
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for CONTROL_UNIT_TEST 
-# Control Unit signal generation... PCMuxSel, LoadPC 
-# /mp3_cpu/cutest1a
-# /mp3_cpu/cutest1b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 7 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 24 ns  Iteration: 3  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 24 ns  Iteration: 3  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# PCMuxSel should be 0 and LoadPC should be 1 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 132 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 132 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ID_C_UNIT tests...ADD 
-# Test ADD R7,R1,R7 inst will lead to ALUMuxSel = 000 
-# /mp3_cpu/ID_test1
-# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
-# ID_C_UNIT tests...ADD Immediate 
-# Test ADD R7, R1, 3 inst will lead to ALUMuxSel = 010 
-# /mp3_cpu/IDI_test1
-# ID_C_In should be 0002, ALUMuxSel is 010, or Imm5 
-# Test AND R5,R3,R2 inst will lead to ALUMuxSel = 000 
-# /mp3_cpu/ID_test2
-# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
-# Test AND R5, R3, 4 inst will lead to ALUMuxSel = 010 
-# /mp3_cpu/IDI_test2
-# ID_C_In should be 0002, ALUMuxSel is 002, or Imm5 
-# EX_C_UNIT & EX_C_REG Tests... 
-# Test that ex_c_in is 0 for ADD and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test1a
-# /mp3_cpu/EX_test1b
-# ex_c_in should be 0xF000 and then 0x0000 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test that ex_c_in is 1 for AND and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test2a
-# /mp3_cpu/EX_test2b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 710 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 710 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 712 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 712 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 810 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ex_c_in should be 0xF000 and then 0x0001 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test that ex_c_in is 2 for NOT and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test3a
-# /mp3_cpu/EX_test3b
-# ex_c_in should be 0xF000 and then 0x0002 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1010 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1055 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1055 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# WB_C_UNIT & WB_C_REG Tests... 
-# Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 3 full cycles.  The data shold skip the MEM stage for ADD 
-# /mp3_cpu/WB_test1a
-# /mp3_cpu/WB_test1b
-# /mp3_cpu/WB_test1c
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1060 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# wb_c_in should be 0xF000 for 3 cycles then 0x001B for 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test2, make sure wb_c_in waits an extra cycle for ldr. 
-# /mp3_cpu/WB_test2a
-# /mp3_cpu/WB_test2b
-# /mp3_cpu/WB_test2c
-# /mp3_cpu/WB_test2d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1310 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1312 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1312 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1362 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1457 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1457 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1461 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dpram
-# Testing full path for MEM instructions 
-# /mp3_cpu/MEM_test1a
-# /mp3_cpu/MEM_test1b
-# /mp3_cpu/MEM_test1c
-# /mp3_cpu/MEM_test1d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1610 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1612 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1612 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1666 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1681 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1681 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1705 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1707 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# Test 2, STR R7, R2, 7 
-# /mp3_cpu/MEM_test2a
-# /mp3_cpu/MEM_test2b
-# /mp3_cpu/MEM_test2c
-# /mp3_cpu/MEM_test2d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1916 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1931 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1931 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1955 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1957 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1963 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1963 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1981 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1981 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2005 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2005 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dpram
-# Test 3, BRp 8 
-# /mp3_cpu/BR_test1a
-# /mp3_cpu/BR_test1b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2060 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2160 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2162 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2162 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test Forwarding Unit for ADD 
-# Test forwarding Signal A 
-# /mp3_cpu/Forward_test1a
-# /mp3_cpu/Forward_test1b
-# Test Forwarding Signal B 
-# /mp3_cpu/Forward_test2a
-# /mp3_cpu/Forward_test2b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2660 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test Forwarding Unit for Loads and Stores 
-# Test for loads 
-# /mp3_cpu/Forward_test3a
-# /mp3_cpu/Forward_test3b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2762 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2762 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2766 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2812 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2866 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# Test for stores 
-# /mp3_cpu/Forward_test4a
-# /mp3_cpu/Forward_test4b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2906 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2940 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2956 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2990 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3006 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3066 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3090 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3105 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3105 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test for 3 consecutive instructions 
-# /mp3_cpu/Forward_test5a
-# /mp3_cpu/Forward_test5b
-# /mp3_cpu/Forward_test5c001
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3106 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3140 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3156 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3190 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3206 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3210 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3210 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3212 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3212 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for CONTROL_UNIT_TEST 
-# Control Unit signal generation... PCMuxSel, LoadPC 
-# /mp3_cpu/cutest1a
-# /mp3_cpu/cutest1b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 7 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 24 ns  Iteration: 3  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 24 ns  Iteration: 3  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# PCMuxSel should be 0 and LoadPC should be 1 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 132 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 132 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ID_C_UNIT tests...ADD 
-# Test ADD R7,R1,R7 inst will lead to ALUMuxSel = 000 
-# /mp3_cpu/ID_test1
-# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
-# ID_C_UNIT tests...ADD Immediate 
-# Test ADD R7, R1, 3 inst will lead to ALUMuxSel = 010 
-# /mp3_cpu/IDI_test1
-# ID_C_In should be 0002, ALUMuxSel is 010, or Imm5 
-# Test AND R5,R3,R2 inst will lead to ALUMuxSel = 000 
-# /mp3_cpu/ID_test2
-# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
-# Test AND R5, R3, 4 inst will lead to ALUMuxSel = 010 
-# /mp3_cpu/IDI_test2
-# ID_C_In should be 0002, ALUMuxSel is 002, or Imm5 
-# EX_C_UNIT & EX_C_REG Tests... 
-# Test that ex_c_in is 0 for ADD and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test1a
-# /mp3_cpu/EX_test1b
-# ex_c_in should be 0xF000 and then 0x0000 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test that ex_c_in is 1 for AND and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test2a
-# /mp3_cpu/EX_test2b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 710 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 710 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 712 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 712 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 810 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ex_c_in should be 0xF000 and then 0x0001 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test that ex_c_in is 2 for NOT and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test3a
-# /mp3_cpu/EX_test3b
-# ex_c_in should be 0xF000 and then 0x0002 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1010 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1055 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1055 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# WB_C_UNIT & WB_C_REG Tests... 
-# Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 3 full cycles.  The data shold skip the MEM stage for ADD 
-# /mp3_cpu/WB_test1a
-# /mp3_cpu/WB_test1b
-# /mp3_cpu/WB_test1c
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1060 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# wb_c_in should be 0xF000 for 3 cycles then 0x001B for 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test2, make sure wb_c_in waits an extra cycle for ldr. 
-# /mp3_cpu/WB_test2a
-# /mp3_cpu/WB_test2b
-# /mp3_cpu/WB_test2c
-# /mp3_cpu/WB_test2d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1310 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1312 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1312 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1362 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1457 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1457 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1461 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dpram
-# Testing full path for MEM instructions 
-# /mp3_cpu/MEM_test1a
-# /mp3_cpu/MEM_test1b
-# /mp3_cpu/MEM_test1c
-# /mp3_cpu/MEM_test1d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1610 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1612 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1612 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1666 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1681 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1681 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1705 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1707 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# Test 2, STR R7, R2, 7 
-# /mp3_cpu/MEM_test2a
-# /mp3_cpu/MEM_test2b
-# /mp3_cpu/MEM_test2c
-# /mp3_cpu/MEM_test2d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1916 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1931 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1931 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1955 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1957 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1963 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1963 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1981 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1981 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2005 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2005 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dpram
-# Test 3, BRp 8 
-# /mp3_cpu/BR_test1a
-# /mp3_cpu/BR_test1b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2060 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2160 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2162 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2162 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test Forwarding Unit for ADD 
-# Test forwarding Signal A 
-# /mp3_cpu/Forward_test1a
-# /mp3_cpu/Forward_test1b
-# Test Forwarding Signal B 
-# /mp3_cpu/Forward_test2a
-# /mp3_cpu/Forward_test2b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2660 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test Forwarding Unit for Loads and Stores 
-# Test for loads 
-# /mp3_cpu/Forward_test3a
-# /mp3_cpu/Forward_test3b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2762 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2762 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2766 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2812 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2866 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# Test for stores 
-# /mp3_cpu/Forward_test4a
-# /mp3_cpu/Forward_test4b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2906 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2940 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2956 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2990 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3006 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3066 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3090 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3105 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3105 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test for 3 consecutive instructions 
-# /mp3_cpu/Forward_test5a
-# /mp3_cpu/Forward_test5b
-# /mp3_cpu/Forward_test5c002
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3106 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3140 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3156 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3190 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3206 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3210 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3210 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3212 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3212 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-restart -f; do CONTROL_UNIT_TEST.do
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# --- Executing initialization force file for CONTROL_UNIT_TEST 
-# Control Unit signal generation... PCMuxSel, LoadPC 
-# /mp3_cpu/cutest1a
-# /mp3_cpu/cutest1b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/icache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/icache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 7 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 24 ns  Iteration: 3  Instance: /mp3_cpu/l1cache/dpram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 24 ns  Iteration: 3  Instance: /mp3_cpu/l1cache/ipram
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 30 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 32 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# PCMuxSel should be 0 and LoadPC should be 1 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 82 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 130 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 132 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 132 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ID_C_UNIT tests...ADD 
-# Test ADD R7,R1,R7 inst will lead to ALUMuxSel = 000 
-# /mp3_cpu/ID_test1
-# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
-# ID_C_UNIT tests...ADD Immediate 
-# Test ADD R7, R1, 3 inst will lead to ALUMuxSel = 010 
-# /mp3_cpu/IDI_test1
-# ID_C_In should be 0002, ALUMuxSel is 010, or Imm5 
-# Test AND R5,R3,R2 inst will lead to ALUMuxSel = 000 
-# /mp3_cpu/ID_test2
-# ID_C_In should be 0000, ALUMuxSel is 000, or the input from RegFileOutB 
-# Test AND R5, R3, 4 inst will lead to ALUMuxSel = 010 
-# /mp3_cpu/IDI_test2
-# ID_C_In should be 0002, ALUMuxSel is 002, or Imm5 
-# EX_C_UNIT & EX_C_REG Tests... 
-# Test that ex_c_in is 0 for ADD and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test1a
-# /mp3_cpu/EX_test1b
-# ex_c_in should be 0xF000 and then 0x0000 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test that ex_c_in is 1 for AND and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test2a
-# /mp3_cpu/EX_test2b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 710 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 710 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 712 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 712 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 810 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ex_c_in should be 0xF000 and then 0x0001 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test that ex_c_in is 2 for NOT and that it isn't outputed for a full cycle 
-# /mp3_cpu/EX_test3a
-# /mp3_cpu/EX_test3b
-# ex_c_in should be 0xF000 and then 0x0002 after 1 clock cycle, and then back to 0xF000 after the next cycle 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1010 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1055 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1055 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# WB_C_UNIT & WB_C_REG Tests... 
-# Test that wb_c_in has the correct DR, RegWrite signal, and WBMuxSel for ADD and that it isn't outputed for 3 full cycles.  The data shold skip the MEM stage for ADD 
-# /mp3_cpu/WB_test1a
-# /mp3_cpu/WB_test1b
-# /mp3_cpu/WB_test1c
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1060 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# wb_c_in should be 0xF000 for 3 cycles then 0x001B for 1 clock cycle, and then back to 0xF000 after the next cycle 
-# Test2, make sure wb_c_in waits an extra cycle for ldr. 
-# /mp3_cpu/WB_test2a
-# /mp3_cpu/WB_test2b
-# /mp3_cpu/WB_test2c
-# /mp3_cpu/WB_test2d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1310 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1312 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1312 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1362 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1410 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1457 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1457 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1461 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dpram
-# Testing full path for MEM instructions 
-# /mp3_cpu/MEM_test1a
-# /mp3_cpu/MEM_test1b
-# /mp3_cpu/MEM_test1c
-# /mp3_cpu/MEM_test1d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1610 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1612 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1612 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1660 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1666 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1681 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1681 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1705 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1707 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# Test 2, STR R7, R2, 7 
-# /mp3_cpu/MEM_test2a
-# /mp3_cpu/MEM_test2b
-# /mp3_cpu/MEM_test2c
-# /mp3_cpu/MEM_test2d
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1910 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1912 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1916 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1931 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1931 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1955 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1957 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1963 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1963 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1981 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1981 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2005 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2005 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dpram
-# Test 3, BRp 8 
-# /mp3_cpu/BR_test1a
-# /mp3_cpu/BR_test1b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2060 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2160 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2162 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2162 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test Forwarding Unit for ADD 
-# Test forwarding Signal A 
-# /mp3_cpu/Forward_test1a
-# /mp3_cpu/Forward_test1b
-# Test Forwarding Signal B 
-# /mp3_cpu/Forward_test2a
-# /mp3_cpu/Forward_test2b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2555 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2660 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test Forwarding Unit for Loads and Stores 
-# Test for loads 
-# /mp3_cpu/Forward_test3a
-# /mp3_cpu/Forward_test3b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2760 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2762 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2762 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2766 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2812 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2855 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2860 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2866 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2890 ns  Iteration: 1  Instance: /mp3_cpu/l1cache/dcache/alru
-# Test for stores 
-# /mp3_cpu/Forward_test4a
-# /mp3_cpu/Forward_test4b
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2906 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2940 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2956 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2990 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3006 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3012 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way0/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3060 ns  Iteration: 2  Instance: /mp3_cpu/l1cache/dcache/way1/adataarray
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3066 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3090 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3105 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3105 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# Test for 3 consecutive instructions 
-# /mp3_cpu/Forward_test5a
-# /mp3_cpu/Forward_test5b
-# /mp3_cpu/Forward_test5c003
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3106 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3140 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3156 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3190 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3206 ns  Iteration: 0  Instance: /mp3_cpu/l1cache/dcache/alru
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3210 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3210 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3212 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3212 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3260 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3262 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# The connection to HDS has been closed 
+# 0
+# 
+# 0
+# 
+# 0
+# 

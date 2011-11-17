@@ -34,14 +34,15 @@ signal pre_GENMuxSel : std_logic;
 signal pre_dm_read_l : std_logic;
 signal pre_dm_writel_l : std_logic;
 signal pre_dm_writeh_l : std_logic;
-signal dest_reg : lc3b_reg;
 signal dest : lc3b_reg;
 signal reg_write : std_logic;
 BEGIN
 	PROCESS(instOut)
 		variable opcode : LC3b_opcode;
+		variable dest_reg : lc3b_reg;
 		BEGIN 	
 			opcode := instOut(15 downto 12);
+			dest_reg := instOut(11 downto 9);
 			pre_dm_read_l <= '1';
 			pre_dm_writel_l <= '1';
 			pre_dm_writeh_l <= '1';
@@ -50,7 +51,6 @@ BEGIN
 	  		pre_GENMuxSel <= '0';
 	  		pre_loadNZP <= '0';
 			pre_checkNZP <= "000";
-			dest_reg <= instOut(11 downto 9);
 			case opcode is
 				when "0001" =>
 	    				pre_loadNZP <= '1';
@@ -80,6 +80,7 @@ BEGIN
 					reg_write <= '0';
 				when others =>
 					inactive <= "1111";
+					dest <= "000";	
 	    				pre_brInst <= '0';
 		  			pre_checkNZP <= "000";
 	    				pre_loadNZP <= '0';

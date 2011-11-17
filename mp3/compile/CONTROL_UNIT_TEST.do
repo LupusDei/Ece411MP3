@@ -18,8 +18,8 @@ add wave -hex /mp3_cpu/clk
 add wave -hex /mp3_cpu/pcinstaddr
 add wave -hex /mp3_cpu/pipelinedatapath/newPC
 add wave -hex /mp3_cpu/instOut
-add wave -hex /mp3_cpu/forwardA
-add wave -hex /mp3_cpu/forwardB
+add wave -hex /mp3_cpu/controlunit/forwardA
+add wave -hex /mp3_cpu/controlunit/forwardB
 add wave -hex /mp3_cpu/id_c_out
 
 force -freeze /mp3_cpu/clk 0 -repeat 50
@@ -315,126 +315,150 @@ add wave -noupdate -divider -height 32 ForwardingUnitTests
 
 echo "Test Forwarding Unit for ADD"
 echo "Test forwarding Signal A"
-virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 150} Forward_test1a 
-virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 154} Forward_test1b
+virtual signal {/mp3_cpu/controlunit/forwardA == 0 && /mp3_cpu/pcinstaddr == 152} Forward_test1a 
+virtual signal {/mp3_cpu/controlunit/forwardA == 1 && /mp3_cpu/pcinstaddr == 154} Forward_test1b
 add wave -color white Forward_test1a 
 add wave -color white Forward_test1b
 
+#/*add r4, r2, r0*/
 run 6
-force /mp3_cpu/instOut 0001100010000000 -freeze
-
-run 50
+#/*pc = 152*/
 force /mp3_cpu/pcinstaddr 0000000010011000 -freeze
+force /mp3_cpu/instOut 0001100010000000 -freeze
+force /mp3_cpu/id_c_out 0000000010001000 -freeze
+
+#/*add r2, r4, r0*/
+run 50
+force /mp3_cpu/pcinstaddr 0000000010011010 -freeze
 force /mp3_cpu/instOut 0001010100000000 -freeze
 force /mp3_cpu/id_c_out 0000000100001000 -freeze
 
-run 50
-force /mp3_cpu/pcinstaddr 0000000010011010 -freeze
 
 run 50
 force /mp3_cpu/pcinstaddr 0000000010011100 -freeze
 
 run 44
 
+run 100
+
 echo "Test Forwarding Signal B"
-virtual signal {/mp3_cpu/forwardB == 0 && /mp3_cpu/pcinstaddr == 156} Forward_test2a
-virtual signal {/mp3_cpu/forwardB == 1 && /mp3_cpu/pcinstaddr == 160} Forward_test2b
+virtual signal {/mp3_cpu/controlunit/forwardA == 0 && /mp3_cpu/controlunit/forwardB == 0 && /mp3_cpu/pcinstaddr == 158} Forward_test2a
+virtual signal {/mp3_cpu/controlunit/forwardB == 1 && /mp3_cpu/pcinstaddr == 160} Forward_test2b
 add wave -color white Forward_test2a
 add wave -color white Forward_test2b
 
 run 6
-force /mp3_cpu/instOut 0001001000000011 -freeze
-
-run 50
+#/*pc = 158*/
 force /mp3_cpu/pcinstaddr 0000000010011110 -freeze
-force /mp3_cpu/instOut 0001010000000001 -freeze
-force /mp3_cpu/id_c_out 0000000000001001 -freeze
+#/*add r1, r0, r3*/
+force /mp3_cpu/instOut 0001001000000011 -freeze
+force /mp3_cpu/id_c_out 0000001000001011 -freeze
 
-
-#/*pc = 160*/
 run 50
 force /mp3_cpu/pcinstaddr 0000000010100000 -freeze
+#/*add r2, r0, r1*/
+force /mp3_cpu/instOut 0001010000000001 -freeze
+force /mp3_cpu/id_c_out 0000000000001001 -freeze
 
 run 50
 force /mp3_cpu/pcinstaddr 0000000010100010 -freeze
 
 run 44
 
+run 100
+
 echo "Test Forwarding Unit for Loads and Stores"
 echo "Test for loads"
-virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 162} Forward_test3a
-virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 166} Forward_test3b
+virtual signal {/mp3_cpu/controlunit/forwardA == 0 && /mp3_cpu/pcinstaddr == 164} Forward_test3a
+virtual signal {/mp3_cpu/controlunit/forwardA == 1 && /mp3_cpu/pcinstaddr == 166} Forward_test3b
+virtual signal {/mp3_cpu/controlunit/forwardA == 2 && /mp3_cpu/controlunit/forwardB == 2 && /mp3_cpu/pcinstaddr == 168} Forward_test3c
 add wave -color white Forward_test3a
 add wave -color white Forward_test3b
+add wave -color white Forward_test3c
 
 run 6
+#/*pc = 164*/
+force /mp3_cpu/pcinstaddr 0000000010100100 -freeze
+#/*add r5, r0, r0*/
 force /mp3_cpu/instOut 0001101000000000 -freeze
+force /mp3_cpu/id_c_out 0000000000001000 -freeze
 
 run 50
-force /mp3_cpu/pcinstaddr 0000000010100100 -freeze
+force /mp3_cpu/pcinstaddr 0000000010100110 -freeze
+#/*ld r2, r5, 0*/
 force /mp3_cpu/instOut 0110010101000000 -freeze
 force /mp3_cpu/id_c_out 0000000101000000 -freeze
 
 run 50
-force /mp3_cpu/pcinstaddr 0000000010100110 -freeze
+force /mp3_cpu/pcinstaddr 0000000010101000 -freeze
+#/*add r3, r5, r5*/
+force /mp3_cpu/instOut 0001011101000101 -freeze
+force /mp3_cpu/id_c_out 0000000101001101 -freeze
 
 run 50
-force /mp3_cpu/pcinstaddr 0000000010101000 -freeze
-
+#/*pc = 170*/
+force /mp3_cpu/pcinstaddr 0000000010101010 -freeze
 run 44
 
+run 100
+
 echo "Test for stores"
-virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 168} Forward_test4a
-virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 172} Forward_test4b
+virtual signal {/mp3_cpu/controlunit/forwardA == 0 && /mp3_cpu/pcinstaddr == 172} Forward_test4a
+virtual signal {/mp3_cpu/controlunit/forwardA == 1 && /mp3_cpu/pcinstaddr == 174} Forward_test4b
 add wave -color white Forward_test4a
 add wave -color white Forward_test4b
 
 run 6
+force /mp3_cpu/pcinstaddr 0000000010101100 -freeze
+#/*add r7, r0, r0*/
 force /mp3_cpu/instOut 0001111000000000 -freeze
+force /mp3_cpu/id_c_out 0000000000001000 -freeze
 
 run 50
-force /mp3_cpu/pcinstaddr 0000000010101010 -freeze
+force /mp3_cpu/pcinstaddr 0000000010101110 -freeze
+#/*st r2, r7, 0*/
 force /mp3_cpu/instOut 0110010111000000 -freeze
 force /mp3_cpu/id_c_out 0000000111010000 -freeze
 
 run 50
-force /mp3_cpu/pcinstaddr 0000000010101100 -freeze
-
-run 50
-force /mp3_cpu/pcinstaddr 0000000010101110 -freeze
+#/*pc = 176*/
+force /mp3_cpu/pcinstaddr 0000000010110000 -freeze
 
 run 44
 
+force /mp3_cpu/instOut 0000000000000000 -freeze
+run 150
+
 echo "Test for 3 consecutive instructions"
-virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 174} Forward_test5a
-virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 178} Forward_test5b
-virtual signal {/mp3_cpu/forwardA == 2 && /mp3_cpu/pcinstaddr == 182} Forward_test5c
+virtual signal {/mp3_cpu/controlunit/forwardA == 0 && /mp3_cpu/pcinstaddr == 178} Forward_test5a
+virtual signal {/mp3_cpu/controlunit/forwardA == 1 && /mp3_cpu/pcinstaddr == 180} Forward_test5b
+virtual signal {/mp3_cpu/controlunit/forwardB == 1 && /mp3_cpu/controlunit/forwardA == 2 && /mp3_cpu/pcinstaddr == 182} Forward_test5c
 
 add wave -color white Forward_test5a
 add wave -color white Forward_test5b
 add wave -color white Forward_test5c
 
 run 6
+#/*pc = 178*/
+force /mp3_cpu/pcinstaddr 0000000010110010 -freeze
+#/*ADD R3, R2, R1*/
 force /mp3_cpu/instOut 0001011010000001 -freeze
+force /mp3_cpu/id_c_out 0000000010001001 -freeze
 
 run 50
-force /mp3_cpu/pcinstaddr 0000000010110000 -freeze
+force /mp3_cpu/pcinstaddr 0000000010110100 -freeze
+#/*ADD R5, R3, R4*/
 force /mp3_cpu/instOut 0001101011000100 -freeze
 force /mp3_cpu/id_c_out 0000000011001100 -freeze
 
 run 50
-force /mp3_cpu/pcinstaddr 0000000010110010 -freeze
-
-run 50
-force /mp3_cpu/pcinstaddr 0000000010110100 -freeze
+force /mp3_cpu/pcinstaddr 0000000010110110 -freeze
+#/*ADD R6, R3, R5*/
 force /mp3_cpu/instOut 0001110011000101 -freeze
 force /mp3_cpu/id_c_out 0000000011001101 -freeze
 
 run 50
-force /mp3_cpu/pcinstaddr 0000000010110100 -freeze
-
-run 50
-force /mp3_cpu/pcinstaddr 0000000010110110 -freeze
+force /mp3_cpu/pcinstaddr 0000000010111000 -freeze
 
 run 44
 

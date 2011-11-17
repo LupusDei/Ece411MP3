@@ -44,7 +44,7 @@ BEGIN
 	idbaseRegSt <= id_c_out(8 downto 6);
 	exdestReg <= ex_c_in(11 downto 9);
 	memdestReg <= mem_c_in(11 downto 9);
-	PROCESS(ex_c_in, id_c_out, mem_c_in)
+	PROCESS(ex_c_in, id_c_out, mem_c_in, srcBits, idsrcReg1, idsrcReg2, idsrcRegSt, idbaseRegSt, exdestReg, memdestReg)
 	BEGIN
 		forwardA <= "00";
 		forwardB <= "00";

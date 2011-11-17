@@ -17,7 +17,9 @@ USE ece411.LC3b_types.all;
 ENTITY EX_C_Decode IS
    PORT( 
       EX_C_In : IN     lc3b_word;
-      ALUOP   : OUT    LC3B_ALUOP
+      ALUOP   : OUT    LC3B_ALUOP;
+      fwdA    : OUT    std_logic_vector (1 DOWNTO 0);
+      fwdB    : OUT    std_logic_vector (1 DOWNTO 0)
    );
 
 -- Declarations
@@ -28,5 +30,7 @@ END EX_C_Decode ;
 ARCHITECTURE untitled OF EX_C_Decode IS
 BEGIN
 	ALUOP <= EX_C_IN(2 downto 0);
+	fwdA <= EX_C_IN(6 downto 5);
+	fwdB <= EX_C_IN(4 downto 3);
 END ARCHITECTURE untitled;
 

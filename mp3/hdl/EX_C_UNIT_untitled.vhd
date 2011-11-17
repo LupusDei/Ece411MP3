@@ -16,8 +16,10 @@ USE ece411.LC3b_types.all;
 
 ENTITY EX_C_UNIT IS
    PORT( 
-      instOut : IN     lc3b_word;
-      ex_c    : OUT    lc3b_word
+      forwardA : IN     std_logic_vector (1 DOWNTO 0);
+      forwardB : IN     std_logic_vector (1 DOWNTO 0);
+      instOut  : IN     lc3b_word;
+      ex_c     : OUT    lc3b_word
    );
 
 -- Declarations
@@ -26,58 +28,52 @@ END EX_C_UNIT ;
 
 --
 ARCHITECTURE untitled OF EX_C_UNIT IS
+signal dr : lc3b_reg;
+signal ALUop : lc3b_aluop;
 signal pre_EX_C : lc3b_word;
 signal reg_write : std_logic;
 BEGIN
-	PROCESS(instOut)
+	PROCESS(instOut, forwardA, forwardB)
 	variable opcode : LC3b_opcode;
 		BEGIN 	
 			opcode := instOut(15 downto 12);
+			dr <= instOut(11 downto 9);
 			case opcode is
 				when "0001" =>
 					reg_write <= '1';
-					pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
-			
+					ALUop <= "000";
 				when "0101" =>
 					reg_write <= '1';
-				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000001";
-
+					ALUop <= "001";
 				when "1001" =>
 					reg_write <= '1';
-				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000010";
-				
+					ALUop <= "010";
 				when "0110" =>
 					reg_write <= '1';
-				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
-
+					ALUop <= "000";
 				when "0010" =>
 					reg_write <= '1';
-				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
-
+					ALUop <= "000";
 				when "1010" =>
 					reg_write <= '1';
-				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
-
+					ALUop <= "000";
 				when "1110" =>
 					reg_write <= '1';
-				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
-
+					ALUop <= "000";
 				when "1101" =>
 					reg_write <= '1';
-				 	pre_EX_C <= "000" & reg_write & instOut(11 downto 9) & "000000000";
-
+					ALUop <= "000";
 				when "0111" =>
-				 	pre_EX_C <= "0000000000000000";
-
+					reg_write <= '0';
+					ALUop <= "000";
 				when "0000" =>
-				 	pre_EX_C <= "0000000000000000";
-
+					reg_write <= '0';
+					ALUop <= "000";
 				when others =>
-					pre_EX_C <= "1110000000000000";
-
+					reg_write <= '0';
+					ALUop <= "000";
 			END case; 
 		END PROCESS;
-	EX_C <= pre_EX_C after delay_decode3;
-
+			EX_C <= "000" & reg_write & dr & "00" & forwardA & forwardB & ALUop after delay_decode3;
 END ARCHITECTURE untitled;
 
