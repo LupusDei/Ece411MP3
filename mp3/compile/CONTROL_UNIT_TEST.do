@@ -313,7 +313,7 @@ run 44
 
 add wave -noupdate -divider -height 32 ForwardingUnitTests
 
-echo "Test Forwarding Unit"
+echo "Test Forwarding Unit for ADD"
 echo "Test forwarding Signal A"
 virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 150} Forward_test1a 
 virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 154} Forward_test1b
@@ -321,12 +321,12 @@ add wave -color white Forward_test1a
 add wave -color white Forward_test1b
 
 run 6
-force /mp3_cpu/instOut 0001001010000011 -freeze
+force /mp3_cpu/instOut 0001100010000000 -freeze
 
 run 50
 force /mp3_cpu/pcinstaddr 0000000010011000 -freeze
-force /mp3_cpu/instOut 0001010001000000 -freeze
-force /mp3_cpu/id_c_out 0000000001001000 -freeze
+force /mp3_cpu/instOut 0001010100000000 -freeze
+force /mp3_cpu/id_c_out 0000000100001000 -freeze
 
 run 50
 force /mp3_cpu/pcinstaddr 0000000010011010 -freeze
@@ -339,13 +339,11 @@ run 44
 echo "Test Forwarding Signal B"
 virtual signal {/mp3_cpu/forwardB == 0 && /mp3_cpu/pcinstaddr == 156} Forward_test2a
 virtual signal {/mp3_cpu/forwardB == 1 && /mp3_cpu/pcinstaddr == 160} Forward_test2b
-virtual signal {/mp3_cpu/forwardB == 2 && /mp3_cpu/pcinstaddr == 162} Forward_test2c
 add wave -color white Forward_test2a
 add wave -color white Forward_test2b
-add wave -color white Forward_test2c
 
 run 6
-force /mp3_cpu/instOut 0001001010000011 -freeze
+force /mp3_cpu/instOut 0001001000000011 -freeze
 
 run 50
 force /mp3_cpu/pcinstaddr 0000000010011110 -freeze
@@ -356,11 +354,87 @@ force /mp3_cpu/id_c_out 0000000000001001 -freeze
 #/*pc = 160*/
 run 50
 force /mp3_cpu/pcinstaddr 0000000010100000 -freeze
-force /mp3_cpu/instOut 0001010000000001 -freeze
-force /mp3_cpu/id_c_out 0000000000001001 -freeze
 
 run 50
 force /mp3_cpu/pcinstaddr 0000000010100010 -freeze
 
+run 44
+
+echo "Test Forwarding Unit for Loads and Stores"
+echo "Test for loads"
+virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 162} Forward_test3a
+virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 166} Forward_test3b
+add wave -color white Forward_test3a
+add wave -color white Forward_test3b
+
+run 6
+force /mp3_cpu/instOut 0001101000000000 -freeze
+
 run 50
 force /mp3_cpu/pcinstaddr 0000000010100100 -freeze
+force /mp3_cpu/instOut 0110010101000000 -freeze
+force /mp3_cpu/id_c_out 0000000101000000 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010100110 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010101000 -freeze
+
+run 44
+
+echo "Test for stores"
+virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 168} Forward_test4a
+virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 172} Forward_test4b
+add wave -color white Forward_test4a
+add wave -color white Forward_test4b
+
+run 6
+force /mp3_cpu/instOut 0001111000000000 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010101010 -freeze
+force /mp3_cpu/instOut 0110010111000000 -freeze
+force /mp3_cpu/id_c_out 0000000111010000 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010101100 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010101110 -freeze
+
+run 44
+
+echo "Test for 3 consecutive instructions"
+virtual signal {/mp3_cpu/forwardA == 0 && /mp3_cpu/pcinstaddr == 174} Forward_test5a
+virtual signal {/mp3_cpu/forwardA == 1 && /mp3_cpu/pcinstaddr == 178} Forward_test5b
+virtual signal {/mp3_cpu/forwardA == 2 && /mp3_cpu/pcinstaddr == 182} Forward_test5c
+
+add wave -color white Forward_test5a
+add wave -color white Forward_test5b
+add wave -color white Forward_test5c
+
+run 6
+force /mp3_cpu/instOut 0001011010000001 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010110000 -freeze
+force /mp3_cpu/instOut 0001101011000100 -freeze
+force /mp3_cpu/id_c_out 0000000011001100 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010110010 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010110100 -freeze
+force /mp3_cpu/instOut 0001110011000101 -freeze
+force /mp3_cpu/id_c_out 0000000011001101 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010110100 -freeze
+
+run 50
+force /mp3_cpu/pcinstaddr 0000000010110110 -freeze
+
+run 44
+
