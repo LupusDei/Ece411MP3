@@ -525,23 +525,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@c@u/interface.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@c@u/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@c@u/interface.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@c@u/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -557,11 +557,11 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@c@u"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@c@u"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/CU"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/CU"
 )
 (vvPair
 variable "date"
@@ -605,7 +605,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-28.ews.illinois.edu"
+value "gelib-057-20.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -641,11 +641,11 @@ value "November"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@c@u/interface"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@c@u/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/CU/interface"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/CU/interface"
 )
 (vvPair
 variable "project_name"
@@ -685,7 +685,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "18:14:59"
+value "23:39:00"
 )
 (vvPair
 variable "unit"
@@ -693,7 +693,7 @@ value "CU"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -1667,7 +1667,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,50050,45200,50950"
+xt "32200,50050,45700,50950"
 st "
 by %user on %dd %month %year
 "
@@ -2264,5 +2264,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 1991,0
+lastUid 2063,0
 )

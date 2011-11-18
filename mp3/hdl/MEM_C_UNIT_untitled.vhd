@@ -39,10 +39,8 @@ signal reg_write : std_logic;
 BEGIN
 	PROCESS(instOut)
 		variable opcode : LC3b_opcode;
-		variable dest_reg : lc3b_reg;
 		BEGIN 	
 			opcode := instOut(15 downto 12);
-			dest_reg := instOut(11 downto 9);
 			pre_dm_read_l <= '1';
 			pre_dm_writel_l <= '1';
 			pre_dm_writeh_l <= '1';
@@ -51,27 +49,25 @@ BEGIN
 	  		pre_GENMuxSel <= '0';
 	  		pre_loadNZP <= '0';
 			pre_checkNZP <= "000";
+			dest <= instOut(11 downto 9);
 			case opcode is
 				when "0001" =>
 	    				pre_loadNZP <= '1';
-					dest <= dest_reg;	
 					reg_write <= '1';		
 				when "0101" =>
 				    	pre_loadNZP <= '1';
-					dest <= dest_reg;
 					reg_write <= '1'; 
 				when "1001" =>
 				    	pre_loadNZP <= '1';
-					dest <= dest_reg;
 					reg_write <= '1'; 
 				when "0110" => 
 	    				pre_loadNZP <= '1';
 					pre_dm_read_l <= '0';
-					dest <= dest_reg;
 					reg_write <= '1';
 				when "0111" =>
 				 	pre_dm_writel_l <= '0';
 				 	pre_dm_writeh_l <= '0';
+					dest <= "000";	
 					reg_write <= '0';
 				when "0000" =>
 					pre_brInst <= '1';

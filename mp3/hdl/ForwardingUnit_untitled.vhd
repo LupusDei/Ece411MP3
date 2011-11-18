@@ -50,41 +50,43 @@ BEGIN
 		forwardA <= "00";
 		forwardB <= "00";
 		storeSel <= "00";
-		if(ex_c_in(12) = '1' or mem_c_in(12) = '1') then 
-			if(srcBits = "01") then
+		if(srcBits = "01") then -- ADD/AND
+			if (mem_c_in(12) = '1') then
 				if(idsrcReg1 = memdestReg) then 
 					forwardA <= "10";
 				end if;
-				if(idsrcReg1 = exdestReg) then 
-					forwardA <= "01";
-				end if; 
 				if(idsrcReg2 = memdestReg) then
 					forwardB <= "10";
 				end if; 
+			end if; 
+			if (ex_c_in(12) = '1') then
+				if(idsrcReg1 = exdestReg) then 
+					forwardA <= "01";
+				end if;
 				if(idsrcReg2 = exdestReg) then
 					forwardB <= "01";
 				end if; 
-			elsif(srcBits = "00") then
-				if(idsrcReg1 = memdestReg) then 
-					forwardA <= "10";
-				end if;
-				if(idsrcReg1 = exdestReg) then
-					forwardA <= "01";
-				end if;
-			elsif(srcBits = "10") then
-				if(idbaseRegSt = memdestReg) then 
-					forwardA <= "10";
-				end if;
-				if(idbaseRegSt = exdestReg) then
-					forwardA <= "01";
-				end if;
-				if(idsrcRegSt = memdestReg) then	
-					storeSel <= "10";      	 
-				end if;                        
-			 	if(idsrcRegSt = exdestReg) then
-					storeSel <= "01";
-				end if; 
+			end if; 
+		elsif(srcBits = "00") then
+			if(idsrcReg1 = memdestReg and mem_c_in(12) = '1') then 
+				forwardA <= "10";
 			end if;
+			if(idsrcReg1 = exdestReg and ex_c_in(12) = '1') then
+				forwardA <= "01";
+			end if;
+		elsif(srcBits = "10") then
+			if(idbaseRegSt = memdestReg and mem_c_in(12) = '1') then 
+				forwardA <= "10";
+			end if;
+			if(idbaseRegSt = exdestReg and ex_c_in(12) = '1') then
+				forwardA <= "01";
+			end if;
+			if(idsrcRegSt = memdestReg and mem_c_in(12) = '1') then	
+				storeSel <= "10";      	 
+			end if;                        
+		 	if(idsrcRegSt = exdestReg and ex_c_in(12) = '1') then
+				storeSel <= "01";
+			end if; 
 		end if;
 	END PROCESS;
 END ARCHITECTURE untitled;
