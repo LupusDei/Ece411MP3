@@ -19,6 +19,7 @@ ENTITY brReg IS
       CLK     : IN     std_logic;
       RESET_L : IN     std_logic;
       newPC   : IN     lc3b_word;
+      stall   : IN     std_logic;
       newPCIn : OUT    lc3b_word
    );
 
@@ -37,7 +38,7 @@ BEGIN
 		newPCIn <= RAM(2) AFTER DELAY_REGFILE_READ;
 	END PROCESS READ;
 	-------------------------------------------------------------------
-	WRITE: PROCESS(CLK, newPC, RESET_L)
+	WRITE: PROCESS(CLK, newPC, RESET_L, stall)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -47,7 +48,7 @@ BEGIN
 			RAM(2) <= "0000000000000000";
 		END IF;
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK
-		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
 			RAM(2) <= RAM(1);
 			RAM(1) <= RAM(0);
 			RAM(0) <= newPC;

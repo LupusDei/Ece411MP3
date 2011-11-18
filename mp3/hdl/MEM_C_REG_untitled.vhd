@@ -19,10 +19,11 @@ ENTITY MEM_C_REG IS
       CLK         : IN     std_logic;
       RESET_L     : IN     std_logic;
       mem_c       : IN     lc3b_word;
+      stall       : IN     std_logic;
       MEM_C_In    : OUT    lc3b_word;
-      dm_read_l   : OUT    std_logic;
-      dm_writeh_l : OUT    std_logic;
-      dm_writel_l : OUT    std_logic
+      dm_read_l   : OUT    std_logic := '1';
+      dm_writeh_l : OUT    std_logic := '1';
+      dm_writel_l : OUT    std_logic := '1'
    );
 
 -- Declarations
@@ -39,19 +40,19 @@ BEGIN
 	BEGIN
 		control := mem(1);
 		MEM_C_In <= control(15 downto 7) & "000" & control(3 downto 0) after delay_regfile_read;
-		dm_writeh_l <= control(6) after delay_regfile_read;
-		dm_writel_l <= control(5) after delay_regfile_read;
-		dm_read_l <= control(4) after delay_regfile_read;
+		dm_writeh_l <= control(6) after delay_reg;
+		dm_writel_l <= control(5) after delay_reg;
+		dm_read_l <= control(4) after delay_reg;
 	END PROCESS MEM_C_LEAVING;
 
-	MEM_C_ENTERING : PROCESS(clk, mem_c, RESET_L)
+	MEM_C_ENTERING : PROCESS(clk, mem_c, RESET_L, stall)
 	BEGIN
 		if RESET_L = '0' then
 			mem(0) <= "0000000001110000";
 			mem(1) <= "0000000001110000";
 		end if;
 
-		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
 			mem(1) <= mem(0);
 			mem(0) <= mem_c;
 		end if;

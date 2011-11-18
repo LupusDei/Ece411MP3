@@ -18,6 +18,7 @@ ENTITY TransitionReg IS
    PORT( 
       RESET_L : IN     std_logic;
       clk     : IN     std_logic;
+      stall   : IN     std_logic;
       d1      : IN     lc3b_word;
       d2      : IN     lc3b_word;
       o1      : OUT    lc3b_word;
@@ -40,7 +41,7 @@ BEGIN
 		o2 <= RAM(1) AFTER DELAY_REG;
 	END PROCESS READ;
 	-------------------------------------------------------------------
-	WRITE: PROCESS(CLK, d1, d2, RESET_L)
+	WRITE: PROCESS(CLK, d1, d2, RESET_L, stall)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -49,7 +50,7 @@ BEGIN
 			RAM(1) <= "0000000000000000";
 		END IF;
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK
-		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
 			RAM(0) <= d1;
 			RAM(1) <= d2;
 		END IF;

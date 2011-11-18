@@ -18,6 +18,7 @@ ENTITY WB_C_REG IS
    PORT( 
       CLK     : IN     std_logic;
       RESET_L : IN     std_logic;
+      stall   : IN     std_logic;
       wb_c    : IN     lc3b_word;
       WB_C_In : OUT    lc3b_word
    );
@@ -36,7 +37,7 @@ BEGIN
 		WB_C_In <= mem(2) after delay_regfile_read;
 	END PROCESS WB_C_LEAVING;
 
-	WB_C_ENTERING : PROCESS(clk, wb_c, RESET_L)
+	WB_C_ENTERING : PROCESS(clk, wb_c, RESET_L, stall)
 	BEGIN
 		if RESET_L = '0' then
 			mem(0) <= "0000000000000000";
@@ -44,7 +45,7 @@ BEGIN
 			mem(2) <= "0000000000000000";
 		end if;
 
-		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
 			mem(2) <= mem(1);
 			mem(1) <= mem(0);
 			mem(0) <= wb_c;

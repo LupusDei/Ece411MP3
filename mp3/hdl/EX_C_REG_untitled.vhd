@@ -19,6 +19,7 @@ ENTITY EX_C_REG IS
       CLK     : IN     std_logic;
       RESET_L : IN     std_logic;
       ex_c    : IN     lc3b_word;
+      stall   : IN     std_logic;
       EX_C_In : OUT    lc3b_word
    );
 
@@ -36,13 +37,13 @@ BEGIN
 		EX_C_In <= mem(0) after delay_regfile_read;
 	END PROCESS EX_C_LEAVING;
 
-	EX_C_ENTERING : PROCESS(clk, ex_c, RESET_L)
+	EX_C_ENTERING : PROCESS(clk, ex_c, RESET_L, stall)
 	BEGIN
 		if RESET_L = '0' then
 			mem(0) <= "0000000000000000";
 		end if;
 
-		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
 			mem(0) <= ex_c;
 		end if;
 	END PROCESS EX_C_ENTERING;

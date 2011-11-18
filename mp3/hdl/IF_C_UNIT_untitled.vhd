@@ -20,6 +20,7 @@ ENTITY IF_C_UNIT IS
       MEM_C_Out : IN     lc3b_word;
       RESET_L   : IN     std_logic;
       im_resp_h : IN     std_logic;
+      stall     : IN     std_logic;
       IF_C_In   : OUT    lc3b_word;
       im_read_l : INOUT  std_logic
    );
@@ -34,7 +35,7 @@ signal pre_read_out : std_logic;
 signal pre_load_pc : std_logic;
 signal pre_PCMuxSel : std_logic;
 BEGIN
-  IF_CONTROL_PROCESS : PROCESS (CLK, RESET_L, im_resp_h, im_read_l)
+  IF_CONTROL_PROCESS : PROCESS (CLK, RESET_L, im_resp_h, im_read_l, stall)
     BEGIN
 	IF (RESET_L = '0') THEN
   pre_read_out <= '1';
@@ -55,6 +56,9 @@ BEGIN
     pre_load_pc <= '1';
 			end if;
 		end if;
+	end if;
+	if (stall = '1') then
+		pre_load_pc <= '0';
 	end if;
 	END PROCESS;
 	IF_C_In <= "00000000000000" & pre_load_pc & pre_PCMuxSel after delay_decode3;

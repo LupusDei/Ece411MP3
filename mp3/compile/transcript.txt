@@ -23,6 +23,7 @@
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.if_c_unit(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mem_c_reg(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mem_c_unit(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.staller(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_reg(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wb_c_unit(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.writehigh(untitled)
@@ -91,11 +92,7 @@
 # Loading /home/martin43/ece411/Ece411MP3/mp3/compile.brreg(untitled)
 # Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
 do stallwave.do
-restart -f; do stallling_test.do; run 2000
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# Cannot open macro file: stallling_test.do
-restart -f; do stalling_test.do; run 2000
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do stalling_test.do
 # --- Executing initialization force file for ../testcode/stalling_test.asm --- 
 # Resetting processor for 5 ns. 
 # Initializing the processor. 
@@ -239,6 +236,7 @@ restart -f; do stalling_test.do; run 2000
 # 0
 # 
 # Done loading ../testcode/stalling_test.asm program code. 
+run 2000
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 30 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -276,29 +274,18 @@ restart -f; do stalling_test.do; run 2000
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 630 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1030 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 1630 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1032 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 1632 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1032 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 1632 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1100 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1100 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1130 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1830 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1832 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1832 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1880 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 1730 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # 0
 # 
-restart -f; do stalling_test.do; run 2000
+restart -f
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do stalling_test.do
 # --- Executing initialization force file for ../testcode/stalling_test.asm --- 
 # Resetting processor for 5 ns. 
 # Initializing the processor. 
@@ -440,6 +427,7 @@ restart -f; do stalling_test.do; run 2000
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 7 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
 # Done loading ../testcode/stalling_test.asm program code. 
+run 3000
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 30 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -476,19 +464,3 @@ restart -f; do stalling_test.do; run 2000
 #    Time: 132 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 630 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1030 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1032 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1032 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1130 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1830 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1832 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1832 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1880 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
