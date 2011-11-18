@@ -458,10 +458,12 @@ force /mp3_cpu/pcinstaddr 0000000010110110 -freeze
 force /mp3_cpu/instOut 0001110011000101 -freeze
 force /mp3_cpu/id_c_out 0000000011001101 -freeze
 
-run 50
-force /mp3_cpu/pcinstaddr 0000000010111000 -freeze
 
 run 44
+
+force /mp3_cpu/instOut 0000000000000000 -freeze
+force /mp3_cpu/id_c_out 0000000000000000 -freeze
+run 100
 
 echo "Test for Store Source Register Forwarding Ex"
 virtual signal {/mp3_cpu/controlunit/storeSel == 0 && /mp3_cpu/pcinstaddr == 184} Forward_test6a
@@ -473,20 +475,22 @@ add wave -color white Forward_test6b
 #/*add r1, r2, r3*/
 #/*pc = 184*/
 run 6
+force /mp3_cpu/pcinstaddr 0000000010111000 -freeze
 force /mp3_cpu/instOut 0001001010000011 -freeze
 force /mp3_cpu/id_c_out 0000000010001011 -freeze
 
+run 50
 #/*str r1, r4, 12*/
 #/*pc = 186*/
-run 50
 force /mp3_cpu/pcinstaddr 0000000010111010 -freeze
 force /mp3_cpu/instOut	0111001100001100 -freeze
 force /mp3_cpu/id_c_out 0000001100010000 -freeze
 
-run 50
-force /mp3_cpu/pcinstaddr 0000000010111100 -freeze
-
 run 44
+
+force /mp3_cpu/instOut 0000000000000000 -freeze
+force /mp3_cpu/id_c_out 0000000000000000 -freeze
+run 100
 
 echo "Test for Store Source Register Forwarding Mem"
 virtual signal {/mp3_cpu/controlunit/storeSel == 0 && /mp3_cpu/pcinstaddr == 188} Forward_test7a
@@ -498,6 +502,7 @@ add wave -color white Forward_test7b
 #/*add r1, r2, r3*/
 #/*pc = 188*/
 run 6
+force /mp3_cpu/pcinstaddr 0000000010111100 -freeze
 force /mp3_cpu/instOut 0001001010000011 -freeze
 force /mp3_cpu/id_c_out 0000000010001011 -freeze
 
