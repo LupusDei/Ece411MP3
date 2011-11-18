@@ -18,6 +18,7 @@ ENTITY IF_C_Decode IS
    PORT( 
       IF_C_In  : IN     lc3b_word;
       PCMuxSel : OUT    std_logic;
+      jmp_sel  : OUT    lc3b_4mux_sel;
       loadPC   : OUT    std_logic
    );
 
@@ -31,5 +32,6 @@ ARCHITECTURE untitled OF IF_C_Decode IS
 BEGIN
   PCMuxSel <= IF_C_In(0);
 		loadPC <= IF_C_In(1);
+		jmp_sel <= IF_C_In(3 downto 2);
 END ARCHITECTURE untitled;
 

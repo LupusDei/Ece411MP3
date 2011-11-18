@@ -25,7 +25,7 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 2,0
+suid 4,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -70,22 +70,22 @@ m 1
 decl (Decl
 n "nextPC"
 t "lc3b_word"
-o 28
-suid 1,0
+o 8
+suid 3,0
 )
 )
-uid 61,0
+uid 117,0
 )
 *15 (LogPort
 port (LogicalPort
 decl (Decl
-n "PCinstAddr"
+n "pcinstaddr"
 t "lc3b_word"
-o 13
-suid 2,0
+o 9
+suid 4,0
 )
 )
-uid 63,0
+uid 119,0
 )
 ]
 )
@@ -141,13 +141,13 @@ uid 85,0
 litem &14
 pos 0
 dimension 20
-uid 62,0
+uid 118,0
 )
 *22 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 64,0
+uid 120,0
 )
 ]
 )
@@ -266,19 +266,19 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/PCPlus2"
 )
 (vvPair
 variable "date"
-value "10/22/11"
+value "11/18/11"
 )
 (vvPair
 variable "day"
-value "Sat"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Saturday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "22"
+value "18"
 )
 (vvPair
 variable "entity_name"
@@ -306,7 +306,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-32.ews.illinois.edu"
+value "gelib-057-20.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -317,12 +317,16 @@ variable "library"
 value "ece411"
 )
 (vvPair
+variable "library_downstream_HdsLintPlugin"
+value "$HDS_PROJECT_DIR/ece411/designcheck"
+)
+(vvPair
 variable "library_downstream_ModelSimCompiler"
 value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "10"
+value "11"
 )
 (vvPair
 variable "module_name"
@@ -330,11 +334,11 @@ value "PCPlus2"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Nov"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "November"
 )
 (vvPair
 variable "p"
@@ -382,7 +386,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "16:46:13"
+value "12:21:24"
 )
 (vvPair
 variable "unit"
@@ -417,92 +421,94 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *32 (CptPort
-uid 51,0
+uid 107,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 52,0
+uid 108,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "27000,11625,27750,12375"
+xt "27000,7625,27750,8375"
 )
 tg (CPTG
-uid 53,0
+uid 109,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 54,0
+uid 110,0
 va (VaSet
 font "courier,8,0"
 )
-xt "23000,11550,26000,12450"
+xt "23000,7550,26000,8450"
 st "nextPC"
 ju 2
-blo "26000,12250"
+blo "26000,8250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 55,0
+uid 111,0
 va (VaSet
 font "courier,8,0"
 )
 xt "44000,2700,59500,3600"
-st "nextPC     : OUT    lc3b_word "
+st "nextPC     : OUT    lc3b_word 
+"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "nextPC"
 t "lc3b_word"
-o 28
-suid 1,0
+o 8
+suid 3,0
 )
 )
 )
 *33 (CptPort
-uid 56,0
+uid 112,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 57,0
+uid 113,0
 ro 90
 va (VaSet
 vasetType 1
 fg "0,65535,0"
 )
-xt "14250,11625,15000,12375"
+xt "14250,7625,15000,8375"
 )
 tg (CPTG
-uid 58,0
+uid 114,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 59,0
+uid 115,0
 va (VaSet
 font "courier,8,0"
 )
-xt "16000,11550,21500,12450"
-st "PCinstAddr"
-blo "16000,12250"
+xt "16000,7550,21500,8450"
+st "pcinstaddr"
+blo "16000,8250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 60,0
+uid 116,0
 va (VaSet
 font "courier,8,0"
 )
 xt "44000,1800,60500,2700"
-st "PCinstAddr : IN     lc3b_word  ;"
+st "pcinstaddr : IN     lc3b_word  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
-n "PCinstAddr"
+n "pcinstaddr"
 t "lc3b_word"
-o 13
-suid 2,0
+o 9
+suid 4,0
 )
 )
 )
@@ -515,8 +521,9 @@ fg "0,65535,0"
 lineColor "0,32896,0"
 lineWidth 2
 )
-xt "15000,6000,27000,20000"
+xt "15000,6000,27000,10000"
 )
+oxt "15000,6000,27000,20000"
 biTextGroup (BiTextGroup
 uid 10,0
 ps "CenterOffsetStrategy"
@@ -526,18 +533,18 @@ uid 11,0
 va (VaSet
 font "courier,8,1"
 )
-xt "19250,12100,22250,13000"
+xt "19250,7100,22250,8000"
 st "ece411"
-blo "19250,12800"
+blo "19250,7800"
 )
 second (Text
 uid 12,0
 va (VaSet
 font "courier,8,1"
 )
-xt "19250,13000,22750,13900"
+xt "19250,8000,22750,8900"
 st "PCPlus2"
-blo "19250,13700"
+blo "19250,8700"
 )
 )
 gi *34 (GenericInterface
@@ -550,7 +557,7 @@ uid 15,0
 va (VaSet
 font "courier,8,0"
 )
-xt "-6000,9000,4500,9900"
+xt "-6000,4000,4500,4900"
 st "Generic Declarations"
 )
 header "Generic Declarations"
@@ -1188,5 +1195,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 94,0
+lastUid 120,0
 )

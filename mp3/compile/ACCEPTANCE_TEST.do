@@ -103,8 +103,8 @@ add wave -color white /mp3_cpu/br_1
 add wave -color white /mp3_cpu/br_2
 run 50
 
-echo "LEA R5, 8 -- R5 <= pc = 36 + 2 + 16 = 54 "
-virtual signal {/mp3_cpu/pcinstaddr == 46 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(5) == 54} LEA_1
+echo "LEA R7, 10 -- R5 <= pc = 36 + 2 + 20 = 58"
+virtual signal {/mp3_cpu/pcinstaddr == 46 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 58} LEA_1
 add wave -color white /mp3_cpu/LEA_1
 run 50
 
@@ -122,4 +122,16 @@ virtual signal {/mp3_cpu/pcinstaddr == 52 && /mp3_cpu/Pipelinedatapath/ourregfil
 add wave -color white /mp3_cpu/RSHFA
 
 run 200
+
+echo "RET ; PC <= R7 = 58"
+virtual signal {/mp3_cpu/pcinstaddr == 58} RET
+add wave -color white /mp3_cpu/RET
+
+run 150
+
+echo "JSR 1; PC <= 58 + 2 + 8 = 68"
+virtual signal {/mp3_cpu/pcinstaddr == 68} JSR
+add wave -color white /mp3_cpu/JSR
+
 run 100
+ 

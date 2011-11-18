@@ -19,7 +19,8 @@ ENTITY ID_C_Decode IS
       ID_C_In    : IN     lc3b_word;
       ALUMuxSel  : OUT    LC3b_8MUX_SEL;
       InAMuxSel  : OUT    std_logic;
-      RegBMuxSel : OUT    STD_LOGIC
+      RegBMuxSel : OUT    STD_LOGIC;
+      jsrSel     : OUT    std_logic
    );
 
 -- Declarations
@@ -32,5 +33,6 @@ BEGIN
   ALUMuxSel <= ID_C_In(2 downto 0); 
 		RegBMuxSel <= ID_C_In(3);
 		InAMuxSel <= ID_C_In(4);
+		jsrSel <= ID_C_In(5);
 END ARCHITECTURE untitled;
 

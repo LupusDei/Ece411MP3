@@ -71,13 +71,32 @@ BEGIN
 			elsif (PCInstAddr = "0000000000010010") then
 					instruction <= "0000101000001000"; -- brnp 8
 			elsif (PCInstAddr = "0000000000100100") then --pc = 36
-					instruction <= "1110101000001000"; -- lea r5, 8
+					instruction <= "1110111000001010"; -- lea r7, 10
 			elsif (PCInstAddr = "0000000000100110") then --pc = 38
 					instruction <= "1101100011000010"; -- lshf r4, r3, 2
 			elsif (PCInstAddr = "0000000000101000") then --pc = 40
 					instruction <= "1101100100010010"; -- rshfl r4, r4, 2
 			elsif (PCInstAddr = "0000000000101010") then --pc = 42
 					instruction <= "1101100001110011"; -- rshfa r4, r1, 3
+			elsif (PCInstAddr = "0000000000101100") then
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000000101110") then
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000000110000") then
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000000110010") then
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000000110100") then --pc = 52
+					instruction <= "1100000111000000"; --RET
+			elsif (PCInstAddr = "0000000000110110") then
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000000111000") then
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000000111010") then -- pc = 58
+					instruction <= "0100100000000100"; --JSR 4
+			elsif (PCInstAddr = "0000000001000100") then  --pc = 68
+					instruction <= "1111000000000000"; -- NOP
+			
 			else
 					instruction <= "0000000000000000";
 			end if;

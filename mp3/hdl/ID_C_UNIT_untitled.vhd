@@ -17,7 +17,9 @@ USE ece411.LC3b_types.all;
 ENTITY ID_C_UNIT IS
    PORT( 
       instOut : IN     lc3b_word;
-      ID_C_In : OUT    lc3b_word
+      ID_C_In : OUT    lc3b_word;
+      JMP     : OUT    std_logic;
+      JSR     : OUT    std_logic
    );
 
 -- Declarations
@@ -35,12 +37,18 @@ BEGIN
 		variable RegBMuxSel : std_logic;
 		variable InAMuxSel : std_logic;
 		variable inactive : std_logic;
+		variable pre_jmp : std_logic;
+		variable pre_jsr : std_logic;
+		variable isJSR : std_logic;
 		BEGIN 
 			opcode := instOut(15 downto 12);
 			ALUMuxSel := "000";
 			RegBMuxSel := '0';
 			InAMuxSel := '0';
 			inactive := '0';
+			pre_jmp := '0';
+			isJSR := '0';
+			pre_jsr := '0';
 			case opcode is
 				when "0000" =>
 					ALUMuxSel := "000";
@@ -63,12 +71,19 @@ BEGIN
 				when "0111" =>
 					ALUMuxSel := "110";
 					RegBMuxSel := '1';
+				when "1100" =>
+					pre_jmp := '1';
+				when "0100" =>
+					pre_jsr := '1';
+					isJSR := '1';
 				when "1110" =>
 					InAMuxSel := '1';
 				when others =>
 					inactive := '1';
 			END case;
-					pre_ID_C_IN <= inactive & "000" & "0000" & "000" & InAMuxSel & RegBMuxSel & ALUMuxSel;
+					pre_ID_C_IN <= inactive & "000" & "0000" & "00" & isJSR & InAMuxSel & RegBMuxSel & ALUMuxSel;
+					jmp <= pre_jmp after delay_decode3;
+					jsr <= pre_jsr after delay_decode3;
 		END PROCESS;
 	ID_C_IN <= pre_ID_C_IN after delay_decode3;
 

@@ -16,11 +16,11 @@ USE ece411.LC3b_types.all;
 
 ENTITY PC IS
    PORT( 
-      PCMuxOut   : IN     LC3b_word;
+      CLK        : IN     std_logic;
+      F          : IN     LC3B_WORD;
       RESET_L    : IN     std_logic;
-      clk        : IN     std_logic;
       loadPC     : IN     std_logic;
-      PCinstAddr : OUT    lc3b_word
+      pcinstaddr : OUT    lc3b_word
    );
 
 -- Declarations
@@ -31,13 +31,13 @@ END PC ;
 ARCHITECTURE untitled OF PC IS
 signal pre_out : LC3b_word;
   BEGIN
-    PROCESS (clk, RESET_L, PCMuxOut)
+    PROCESS (clk, RESET_L, F)
     BEGIN
     if RESET_L = '0' then
      pre_out <= (others => '0');
     elsif clk'event and clk = '1' then
      if (loadPC = '1') then
-      pre_out <= PCMuxOut;
+      pre_out <= F;
      end if;
     end if;
     end process;

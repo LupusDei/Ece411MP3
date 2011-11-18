@@ -16,7 +16,7 @@ USE ece411.LC3b_types.all;
 
 ENTITY PCPlus2 IS
    PORT( 
-      PCinstAddr : IN     lc3b_word;
+      pcinstaddr : IN     lc3b_word;
       nextPC     : OUT    lc3b_word
    );
 
