@@ -84,23 +84,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@e@x@stage/struct.bd.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@e@x@stage/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@e@x@stage/struct.bd.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@e@x@stage/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -116,27 +116,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@e@x@stage"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@e@x@stage"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/EXStage"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/EXStage"
 )
 (vvPair
 variable "date"
-value "11/17/11"
+value "11/18/11"
 )
 (vvPair
 variable "day"
-value "Thu"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Thursday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "17"
+value "18"
 )
 (vvPair
 variable "entity_name"
@@ -164,7 +164,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-28.ews.illinois.edu"
+value "gelib-057-20.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -200,11 +200,11 @@ value "November"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@e@x@stage/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/@e@x@stage/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/EXStage/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/EXStage/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -244,7 +244,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "18:18:57"
+value "04:11:10"
 )
 (vvPair
 variable "unit"
@@ -252,7 +252,7 @@ value "EXStage"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -484,7 +484,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "28200,59050,41200,59950"
+xt "28200,59050,41700,59950"
 st "
 by %user on %dd %month %year
 "
@@ -3524,6 +3524,7 @@ tm "WireNameMgr"
 s (Text
 uid 703,0
 va (VaSet
+isHidden 1
 font "courier,8,0"
 )
 xt "8000,23000,12500,23900"
@@ -4230,13 +4231,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "-6,27,1606,1179"
-viewArea "-26900,-17300,102277,76537"
+windowSize "1867,70,2961,757"
+viewArea "-12392,7066,68611,55240"
 cachedDiagramExtent "-11500,-10000,67000,60000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-76000,-51000"
 active 1
-lastUid 905,0
+lastUid 937,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0

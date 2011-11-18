@@ -31,30 +31,44 @@ signal pre_offsetMuxSel : std_logic;
 BEGIN
 	PROCESS(instOut)
 		variable opcode : LC3b_opcode;
+		variable ALUMuxSel : LC3b_reg;
+		variable RegBMuxSel : std_logic;
+		variable InAMuxSel : std_logic;
+		variable inactive : std_logic;
 		BEGIN 
 			opcode := instOut(15 downto 12);
+			ALUMuxSel := "000";
+			RegBMuxSel := '0';
+			InAMuxSel := '0';
+			inactive := '0';
 			case opcode is
+				when "0000" =>
+					ALUMuxSel := "000";
 				when "0001" =>
 					if (instOut(5) = '0') then
-						pre_ID_C_IN <= "0000000000000000";
+						ALUMuxSel := "000";
 					else 
-					 pre_ID_C_IN <= "0000000000000010";
+						ALUMuxSel := "010";
 					end if;
 				when "0101" =>
 					if (instOut(5) = '0') then 
-						pre_ID_C_IN <= "0000000000000000";
+						ALUMuxSel := "000";
 					else 
-					 pre_ID_C_IN <= "0000000000000010";
+						ALUMuxSel := "010";
 					end if;
+				when "1101" =>
+					ALUMuxSel := "111";
 				when "0110" =>
-					pre_ID_C_IN <= "0000000000000110";
+					ALUMuxSel := "110";
 				when "0111" =>
-					pre_ID_C_IN <= "0000000000001110";
-				when "0000" =>
-					pre_ID_C_IN <= "0000000000000000";
+					ALUMuxSel := "110";
+					RegBMuxSel := '1';
+				when "1110" =>
+					InAMuxSel := '1';
 				when others =>
-					pre_ID_C_IN <= "1111000000000000";
+					inactive := '1';
 			END case;
+					pre_ID_C_IN <= inactive & "000" & "0000" & "000" & InAMuxSel & RegBMuxSel & ALUMuxSel;
 		END PROCESS;
 	ID_C_IN <= pre_ID_C_IN after delay_decode3;
 

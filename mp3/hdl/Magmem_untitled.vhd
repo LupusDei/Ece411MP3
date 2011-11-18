@@ -30,6 +30,8 @@ ENTITY Magmem IS
       DataMemIn    : OUT    lc3b_word;
       InstMemIn    : OUT    lc3b_word;
       dm_resp_h    : OUT    std_logic;
+      imiss        : OUT    std_logic;
+      dmiss        : OUT    std_logic;
       im_resp_h    : OUT    std_logic
    );
 
@@ -68,6 +70,14 @@ BEGIN
 					instruction <= "0111001011000011"; -- str r1, r3, 3
 			elsif (PCInstAddr = "0000000000010010") then
 					instruction <= "0000101000001000"; -- brnp 8
+			elsif (PCInstAddr = "0000000000100100") then --pc = 36
+					instruction <= "1110101000001000"; -- lea r5, 8
+			elsif (PCInstAddr = "0000000000100110") then --pc = 38
+					instruction <= "1101100011000010"; -- lshf r4, r3, 2
+			elsif (PCInstAddr = "0000000000101000") then --pc = 40
+					instruction <= "1101100100010010"; -- rshfl r4, r4, 2
+			elsif (PCInstAddr = "0000000000101010") then --pc = 42
+					instruction <= "1101100001110011"; -- rshfa r4, r1, 3
 			else
 					instruction <= "0000000000000000";
 			end if;

@@ -29,13 +29,13 @@ END brReg ;
 
 --
 ARCHITECTURE untitled OF brReg IS
-TYPE RAMMEMORY IS ARRAY (2 DOWNTO 0) OF LC3B_WORD;
+TYPE RAMMEMORY IS ARRAY (1 DOWNTO 0) OF LC3B_WORD;
 SIGNAL RAM : RAMMEMORY;
 BEGIN
 	-------------------------------------------------------------------
 	READ : PROCESS (RAM)
 	BEGIN
-		newPCIn <= RAM(2) AFTER DELAY_REGFILE_READ;
+		newPCIn <= RAM(1) AFTER DELAY_REGFILE_READ;
 	END PROCESS READ;
 	-------------------------------------------------------------------
 	WRITE: PROCESS(CLK, newPC, RESET_L, stall)
@@ -45,11 +45,9 @@ BEGIN
 		IF (RESET_L = '0') THEN
 			RAM(0) <= "0000000000000000";
 			RAM(1) <= "0000000000000000";
-			RAM(2) <= "0000000000000000";
 		END IF;
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
-			RAM(2) <= RAM(1);
 			RAM(1) <= RAM(0);
 			RAM(0) <= newPC;
 		END IF;

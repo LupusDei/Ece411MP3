@@ -10,6 +10,7 @@ add wave -hex /mp3_cpu/id_c_in
 add wave -hex /mp3_cpu/ex_c_in
 add wave -hex /mp3_cpu/mem_c_in
 add wave -hex /mp3_cpu/mem_c_out
+add wave -hex /mp3_cpu/wb_c_in
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/DestReg
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/loadNZP
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/brInst
@@ -17,7 +18,6 @@ add wave -hex /mp3_cpu/pipelinedatapath/decode/B
 add wave -hex /mp3_cpu/pipelinedatapath/decode/instIn
 add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/pcmuxsel
 add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/newpcin
-add wave -hex /mp3_cpu/wb_c_in
 add wave -hex /mp3_cpu/im_resp_h
 add wave -hex /mp3_cpu/im_read_l
 add wave -hex /mp3_cpu/dm_resp_h
@@ -60,8 +60,8 @@ echo "ADD R0, R1, 11 : R0 <= 53"
 virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(0) == 53 && /mp3_cpu/pcinstaddr == 12} ADD_test2
 add wave -color white /mp3_cpu/ADD_test2
 run 50
-add wave -noupdate -divider -height 32 ANDTests
 
+add wave -noupdate -divider -height 32 ANDTests
 echo "AND R6, R1, R2 :  R6 <= 101010 AND 00100"
 virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(6) == 8 && /mp3_cpu/pcinstaddr == 14} AND_test1
 add wave -color white /mp3_cpu/AND_test1
@@ -97,9 +97,29 @@ run 50
 
 #/*it is 20 because it comes from fetch reg which stores PC + 2 ; we consider pcinstaddr in ID stage for branch instead of when we write to the register, as for other instructions*/
 echo "BR np, 8   20 + 16 = 36"
-virtual signal {/mp3_cpu/pcinstaddr == 26} br_1
+virtual signal {/mp3_cpu/pcinstaddr == 24} br_1
 virtual signal {/mp3_cpu/pcinstaddr == 36} br_2
 add wave -color white /mp3_cpu/br_1
 add wave -color white /mp3_cpu/br_2
-run 100
+run 50
+
+echo "LEA R5, 8 -- R5 <= pc = 36 + 2 + 16 = 54 "
+virtual signal {/mp3_cpu/pcinstaddr == 46 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(5) == 54} LEA_1
+add wave -color white /mp3_cpu/LEA_1
+run 50
+
+add wave -noupdate -divider -height 32 SHFTests
+echo "LSHF R4, R3, 2  ;  R4 <= 3 << 2 = 12"
+virtual signal {/mp3_cpu/pcinstaddr == 48 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == 12} LSHF
+add wave -color white /mp3_cpu/LSHF
+run 50
+echo "RSHFL R4, R4, 2  ;  R4 <= 12 >> 2 = 3"
+virtual signal {/mp3_cpu/pcinstaddr == 50 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == 3} RSHFL
+add wave -color white /mp3_cpu/RSHFL
+run 50
+echo "RSHFA R4, R1, 3  ;  R4 <= 42 >> 3 = 5"
+virtual signal {/mp3_cpu/pcinstaddr == 52 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == 5} RSHFA
+add wave -color white /mp3_cpu/RSHFA
+
+run 200
 run 100

@@ -59,11 +59,19 @@ BEGIN
 					reg_write <= '1';
 					ALUop <= "000";
 				when "1110" =>
+					ALUop <= "011";
 					reg_write <= '1';
-					ALUop <= "000";
 				when "1101" =>
 					reg_write <= '1';
-					ALUop <= "000";
+					if (instOut(4) = '0') then 
+						ALUop <= "100";
+					else 
+						if (instOut(5) = '0') then
+							ALUop <= "110";
+						else
+							ALUop <= "111";
+						end if;
+					end if;
 				when "0111" =>
 					reg_write <= '0';
 					ALUop <= "000";

@@ -244,7 +244,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "18:17:35"
+value "18:18:57"
 )
 (vvPair
 variable "unit"
@@ -334,8 +334,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-2800,33000,-1900"
-st "ALUOut    : lc3b_word
-"
+st "ALUOut    : lc3b_word"
 )
 )
 *3 (PortIoIn
@@ -398,8 +397,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-6400,33000,-5500"
-st "EX_C_In   : lc3b_word
-"
+st "EX_C_In   : lc3b_word"
 )
 )
 *5 (PortIoOut
@@ -461,8 +459,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-1900,33000,-1000"
-st "EX_C_Out  : lc3b_word
-"
+st "EX_C_Out  : lc3b_word"
 )
 )
 *7 (Grouping
@@ -1173,8 +1170,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,800,37000,1700"
-st "SIGNAL ALUOP     : LC3B_ALUOP
-"
+st "SIGNAL ALUOP     : LC3B_ALUOP"
 )
 )
 *32 (SaComponent
@@ -1399,8 +1395,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-4600,33000,-3700"
-st "inA       : lc3b_word
-"
+st "inA       : lc3b_word"
 )
 )
 *40 (PortIoIn
@@ -1463,8 +1458,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-3700,33000,-2800"
-st "inB       : lc3b_word
-"
+st "inB       : lc3b_word"
 )
 )
 *42 (PortIoOut
@@ -1526,8 +1520,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-1000,33000,-100"
-st "Src       : lc3b_word
-"
+st "Src       : lc3b_word"
 )
 )
 *44 (PortIoIn
@@ -1590,8 +1583,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-5500,33000,-4600"
-st "SrcRegIn  : lc3b_word
-"
+st "SrcRegIn  : lc3b_word"
 )
 )
 *46 (Net
@@ -1609,8 +1601,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,4400,46000,5300"
-st "SIGNAL fwdA      : std_logic_vector(1 DOWNTO 0)
-"
+st "SIGNAL fwdA      : std_logic_vector(1 DOWNTO 0)"
 )
 )
 *47 (Net
@@ -1628,8 +1619,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,5300,46000,6200"
-st "SIGNAL fwdB      : std_logic_vector(1 DOWNTO 0)
-"
+st "SIGNAL fwdB      : std_logic_vector(1 DOWNTO 0)"
 )
 )
 *48 (SaComponent
@@ -2342,8 +2332,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,2600,36500,3500"
-st "SIGNAL aluInA    : LC3B_WORD
-"
+st "SIGNAL aluInA    : LC3B_WORD"
 )
 )
 *69 (Net
@@ -2360,8 +2349,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,3500,36500,4400"
-st "SIGNAL aluInB    : LC3B_WORD
-"
+st "SIGNAL aluInB    : LC3B_WORD"
 )
 )
 *70 (PortIoIn
@@ -2424,8 +2412,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-7300,33000,-6400"
-st "ALUresult : lc3b_word
-"
+st "ALUresult : lc3b_word"
 )
 )
 *72 (PortIoIn
@@ -2488,8 +2475,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,-8200,33000,-7300"
-st "ALUdata   : lc3b_word
-"
+st "ALUdata   : lc3b_word"
 )
 )
 *74 (SaComponent
@@ -2851,8 +2837,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,1700,36500,2600"
-st "SIGNAL F         : LC3B_WORD
-"
+st "SIGNAL F         : LC3B_WORD"
 )
 )
 *85 (Net
@@ -2870,8 +2855,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "22000,6200,46000,7100"
-st "SIGNAL strSel    : STD_LOGIC_VECTOR(1 DOWNTO 0)
-"
+st "SIGNAL strSel    : STD_LOGIC_VECTOR(1 DOWNTO 0)"
 )
 )
 *86 (Wire
@@ -4247,7 +4231,7 @@ tm "BdCompilerDirectivesTextMgr"
 associable 1
 )
 windowSize "-6,27,1606,1179"
-viewArea "-26900,-17300,102277,73933"
+viewArea "-26900,-17300,102277,76537"
 cachedDiagramExtent "-11500,-10000,67000,60000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-76000,-51000"
