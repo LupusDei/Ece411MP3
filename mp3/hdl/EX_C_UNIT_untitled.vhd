@@ -19,6 +19,7 @@ ENTITY EX_C_UNIT IS
       forwardA : IN     std_logic_vector (1 DOWNTO 0);
       forwardB : IN     std_logic_vector (1 DOWNTO 0);
       instOut  : IN     lc3b_word;
+      storeSel : IN     std_logic_vector (1 DOWNTO 0);
       ex_c     : OUT    lc3b_word
    );
 
@@ -33,7 +34,7 @@ signal ALUop : lc3b_aluop;
 signal pre_EX_C : lc3b_word;
 signal reg_write : std_logic;
 BEGIN
-	PROCESS(instOut, forwardA, forwardB)
+	PROCESS(instOut, storeSel, forwardA, forwardB)
 	variable opcode : LC3b_opcode;
 		BEGIN 	
 			opcode := instOut(15 downto 12);
@@ -74,6 +75,6 @@ BEGIN
 					ALUop <= "000";
 			END case; 
 		END PROCESS;
-			EX_C <= "000" & reg_write & dr & "00" & forwardA & forwardB & ALUop after delay_decode3;
+			EX_C <= "000" & reg_write & dr & storeSel & forwardA & forwardB & ALUop after delay_decode3;
 END ARCHITECTURE untitled;
 

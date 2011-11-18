@@ -19,8 +19,9 @@ ENTITY ForwardingUnit IS
       EX_C_In  : IN     lc3b_word;
       ID_C_Out : IN     lc3b_word;
       MEM_C_In : IN     lc3b_word;
-      forwardA : OUT    std_logic_vector(1 downto 0);
-      forwardB : OUT    std_logic_vector(1 downto 0)
+      forwardA : OUT    std_logic_vector (1 DOWNTO 0);
+      forwardB : OUT    std_logic_vector (1 DOWNTO 0);
+      storeSel : OUT    std_logic_vector (1 DOWNTO 0)
    );
 
 -- Declarations
@@ -48,6 +49,7 @@ BEGIN
 	BEGIN
 		forwardA <= "00";
 		forwardB <= "00";
+		storeSel <= "00";
 		if(ex_c_in(12) = '1' or mem_c_in(12) = '1') then 
 			if(srcBits = "01") then
 				if(idsrcReg1 = memdestReg) then 
@@ -76,9 +78,14 @@ BEGIN
 				if(idbaseRegSt = exdestReg) then
 					forwardA <= "01";
 				end if;
-				 
-			end if; 
-		end if; 
+				if(idsrcRegSt = memdestReg) then	
+					storeSel <= "10";      	 
+				end if;                        
+			 	if(idsrcRegSt = exdestReg) then
+					storeSel <= "01";
+				end if; 
+			end if;
+		end if;
 	END PROCESS;
 END ARCHITECTURE untitled;
 

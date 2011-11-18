@@ -20,7 +20,7 @@ add wave -hex /mp3_cpu/pipelinedatapath/newPC
 add wave -hex /mp3_cpu/instOut
 add wave -hex /mp3_cpu/controlunit/forwardA
 add wave -hex /mp3_cpu/controlunit/forwardB
-add wave -hex /mp3_cpu/controlunit/storeSel
+add wave -hex /mp3_cpu/controlunit/strSel
 add wave -hex /mp3_cpu/id_c_out
 
 force -freeze /mp3_cpu/clk 0 -repeat 50
@@ -464,8 +464,8 @@ force /mp3_cpu/pcinstaddr 0000000010111000 -freeze
 run 44
 
 echo "Test for Store Source Register Forwarding Ex"
-virtual signal {/mp3_cpu/controlunit/storeSel == 0 && /mp3_cpu/pcinstaddr == 184} Forward_test6a
-virtual signal {/mp3_cpu/controlunit/storeSel == 1 && /mp3_cpu/pcinstaddr == 186} Forward_test6b
+virtual signal {/mp3_cpu/controlunit/strSel == 0 && /mp3_cpu/pcinstaddr == 184} Forward_test6a
+virtual signal {/mp3_cpu/controlunit/strSel == 1 && /mp3_cpu/pcinstaddr == 186} Forward_test6b
 
 add wave -color white Forward_test6a
 add wave -color white Forward_test6b
@@ -489,8 +489,8 @@ force /mp3_cpu/pcinstaddr 0000000010111100 -freeze
 run 44
 
 echo "Test for Store Source Register Forwarding Mem"
-virtual signal {/mp3_cpu/controlunit/storeSel == 0 && /mp3_cpu/pcinstaddr == 188} Forward_test7a
-virtual signal {/mp3_cpu/controlunit/storeSel == 2 && /mp3_cpu/pcinstaddr == 192} Forward_test7b
+virtual signal {/mp3_cpu/controlunit/strSel == 0 && /mp3_cpu/pcinstaddr == 188} Forward_test7a
+virtual signal {/mp3_cpu/controlunit/strSel == 1 && /mp3_cpu/pcinstaddr == 190} Forward_test7b
 
 add wave -color white Forward_test7a
 add wave -color white Forward_test7b
@@ -508,13 +508,7 @@ force /mp3_cpu/pcinstaddr 0000000010111110 -freeze
 force /mp3_cpu/instOut	0110011100001100 -freeze
 force /mp3_cpu/id_c_out 0000000100000000 -freeze
 
-#/*str r1, r7, 0*/
 run 50
-force /mp3_cpu/pcinstaddr 0000000011000000 -freeze
-force /mp3_cpu/instOut  0111001111000000 -freeze
-force /mp3_cpu/id_c_out 0000001111010000 -freeze
-
-run 50
-force /mp3_cpu/pcinstaddr 0000000011000010 -freeze
+force /mp3_cpu/pcinstaddr 0000000010111100 -freeze
 
 run 44
