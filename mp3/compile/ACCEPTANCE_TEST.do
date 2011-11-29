@@ -133,5 +133,14 @@ echo "JSR 1; PC <= 58 + 2 + 8 = 68"
 virtual signal {/mp3_cpu/pcinstaddr == 68} JSR
 add wave -color white /mp3_cpu/JSR
 
+echo "STB R3, R2,7;  MEM(R2 + 7) <= R3(7:0);  starts at pc=68"
+virtual signal {/mp3_cpu/pcinstaddr == 74 && /mp3_cpu/datamemin == 7 && /mp3_cpu/dm_resp_h == 1} stb
+add wave -color white /mp3_cpu/stb
+run 200
+
 run 100
- 
+
+echo "JSRR R2; PC <= R2"
+virtual signal {/mp3_cpu/pcinstaddr == 8} jsrr
+add wave -color white /mp3_cpu/jsrr
+run 200  
