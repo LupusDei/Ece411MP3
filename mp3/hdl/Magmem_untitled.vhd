@@ -96,6 +96,15 @@ BEGIN
 					instruction <= "0100100000000100"; --JSR 4
 			elsif (PCInstAddr = "0000000001000100") then  --pc = 68
 					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001000110") then  --pc = 70
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001001000") then  --pc = 72
+					instruction <= "1111000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001001010") then  --pc = 74
+					instruction <= "1111000000000000"; -- NOP
+
+			elsif (PCInstAddr = "0000000001001100") then --pc = 76
+					instruction <= "0100000010000000"; -- jsrr r2
 			
 			else
 					instruction <= "0000000000000000";

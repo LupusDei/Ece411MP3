@@ -74,8 +74,11 @@ BEGIN
 				when "1100" =>
 					pre_jmp := '1';
 				when "0100" =>
-					pre_jsr := '1';
-					isJSR := '1';
+					if(instOut(11) = '1') then
+						pre_jsr := '1';
+						isJSR := '1';
+					else pre_jmp := '1';
+					end if;
 				when "1110" =>
 					InAMuxSel := '1';
 				when others =>
