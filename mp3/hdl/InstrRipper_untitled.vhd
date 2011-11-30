@@ -16,12 +16,13 @@ USE ece411.LC3b_types.all;
 
 ENTITY InstrRipper IS
    PORT( 
-      instIn  : IN     lc3b_word;
-      Instr11 : OUT    lc3b_offset11;
-      Instr5  : OUT    lc3b_imm5;
-      Instr6  : OUT    lc3b_index6;
-      Instr9  : OUT    lc3b_offset9;
-      imm4    : OUT    LC3b_word
+      instIn      : IN     lc3b_word;
+      Instr11     : OUT    lc3b_offset11;
+      Instr5      : OUT    lc3b_imm5;
+      Instr6      : OUT    lc3b_index6;
+      Instr9      : OUT    lc3b_offset9;
+      imm4        : OUT    LC3b_word;
+      trapvector8 : OUT    lc3b_word
    );
 
 -- Declarations
@@ -36,5 +37,6 @@ BEGIN
 	Instr5 <= instIn(4 downto 0); 
 	Instr6 <= instIn(5 downto 0);
 	Instr9 <= instIn(8 downto 0);
+	trapvector8 <= "00000000" & instIn(7 downto 0);	
 END ARCHITECTURE untitled;
 

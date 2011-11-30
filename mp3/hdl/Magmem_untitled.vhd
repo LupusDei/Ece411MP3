@@ -57,15 +57,15 @@ BEGIN
 			elsif (PCInstAddr = "0000000000000100") then
 					instruction <= "0101110001000010";
 			elsif (PCInstAddr = "0000000000000110") then 
-					instruction <= "0101101001100111"; 
+					instruction <= "0101110001100111"; 
 			elsif (PCInstAddr = "0000000000001000") then
 					instruction <= "1001100011111111";
 			elsif (PCInstAddr = "0000000000001010") then
 					instruction <= "0110111010000110"; -- ldr r7, r2, 6
 			elsif (PCInstAddr = "0000000000001100") then
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000001110") then
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000010000") then
 					instruction <= "0111001011000011"; -- str r1, r3, 3
 			elsif (PCInstAddr = "0000000000010010") then
@@ -79,33 +79,49 @@ BEGIN
 			elsif (PCInstAddr = "0000000000101010") then --pc = 42
 					instruction <= "1101100001110011"; -- rshfa r4, r1, 3
 			elsif (PCInstAddr = "0000000000101100") then
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000101110") then
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000110000") then
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000110010") then
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000110100") then --pc = 52
 					instruction <= "1100000111000000"; --RET
 			elsif (PCInstAddr = "0000000000110110") then
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000111000") then
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000000111010") then -- pc = 58
 					instruction <= "0100100000000100"; --JSR 4
 			elsif (PCInstAddr = "0000000001000100") then  --pc = 68
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001000110") then  --pc = 70
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001001000") then  --pc = 72
-					instruction <= "1111000000000000"; -- NOP
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001001010") then  --pc = 74
-					instruction <= "1111000000000000"; -- NOP
-
+					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001001100") then --pc = 76
-					instruction <= "0100000010000000"; -- jsrr r2
-			
+					instruction <= "0100000101000000"; -- jsrr r5
+			elsif (PCInstAddr = "0000000001001110") then  --pc = 78
+					instruction <= "0000000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001010000") then  --pc = 80
+					instruction <= "0000000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001010010") then  --pc = 82
+					instruction <= "0000000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001010100") then  --pc = 84
+					instruction <= "0000000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001010110") then  --pc = 86
+					instruction <= "0111011101000010"; -- str r3, r5, 2
+			elsif (PCInstAddr = "0000000001011000") then  --pc = 88
+					instruction <= "0000000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001011010") then  --pc = 90
+					instruction <= "0000000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001011100") then  --pc = 92
+					instruction <= "0000000000000000"; -- NOP
+			elsif (PCInstAddr = "0000000001011110") then  --pc = 94
+					instruction <= "1111000000101100"; -- NOP
 			else
 					instruction <= "0000000000000000";
 			end if;
@@ -125,7 +141,7 @@ BEGIN
 			end if;
 		else
 			if (dm_writeh_l = '0' or dm_writel_l = '0') then
-				if (DataAddr = "0000000000001001") then
+				if (DataAddr = "0000000000001001" or DataAddr = "0000000001011000") then
 					dm_resp <= '1';
 					magic_data <= MEMWriteData;
 				end if;

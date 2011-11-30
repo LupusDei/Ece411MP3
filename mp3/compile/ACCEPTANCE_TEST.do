@@ -46,6 +46,7 @@ echo "Full Instruction Tests"
 force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(1) 0000000000101010
 force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(2) 0000000000001000
 force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(3) 0000000000000011
+force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(5) 0000000001010100 
 force -freeze /mp3_cpu/reset_l 0
 run 50
 force -freeze /mp3_cpu/reset_l 1
@@ -69,8 +70,8 @@ run 50
 
 run 50
 
-echo "AND R5, R1, 7 : R5 <= 2"
-virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(5) == 2 && /mp3_cpu/pcinstaddr == 16} AND_test2
+echo "AND R6, R1, 7 : R6 <= 2"
+virtual signal {/mp3_cpu/Pipelinedatapath/ourregfile/ram(6) == 2 && /mp3_cpu/pcinstaddr == 16} AND_test2
 add wave -color white /mp3_cpu/AND_test2
 run 50
  
@@ -140,7 +141,19 @@ run 200
 
 run 100
 
-echo "JSRR R2; PC <= R2"
-virtual signal {/mp3_cpu/pcinstaddr == 8} jsrr
+echo "JSRR R5; PC <= R5"
+virtual signal {/mp3_cpu/pcinstaddr == 84} jsrr
 add wave -color white /mp3_cpu/jsrr
-run 200  
+run 200
+
+echo "STR r3, r5, 2 : MEM(88) <= 3"
+virtual signal {/mp3_cpu/datamemin == 3 && mp3_cpu/dm_resp_h == 1 && /mp3_cpu/pcinstaddr == 92} STR_test2
+add wave -color white /mp3_cpu/STR_test2
+run 200
+
+echo "TRAP x44; PC <= MEM(88)"
+#/*This is not a valid test for TRAP at all*/
+virtual signal {/mp3_cpu/pcinstaddr == 3} trap 
+add wave -color white /mp3_cpu/trap
+run 200 
+  

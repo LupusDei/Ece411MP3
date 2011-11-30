@@ -19,7 +19,8 @@ ENTITY ID_C_UNIT IS
       instOut : IN     lc3b_word;
       ID_C_In : OUT    lc3b_word;
       JMP     : OUT    std_logic;
-      JSR     : OUT    std_logic
+      JSR     : OUT    std_logic;
+      TRAP    : OUT    std_logic
    );
 
 -- Declarations
@@ -39,6 +40,7 @@ BEGIN
 		variable inactive : std_logic;
 		variable pre_jmp : std_logic;
 		variable pre_jsr : std_logic;
+		variable pre_trap : std_logic;
 		variable isJSR : std_logic;
 		BEGIN 
 			opcode := instOut(15 downto 12);
@@ -81,12 +83,15 @@ BEGIN
 					end if;
 				when "1110" =>
 					InAMuxSel := '1';
+				when "1111" =>
+					pre_trap := '1';
 				when others =>
 					inactive := '1';
 			END case;
 					pre_ID_C_IN <= inactive & "000" & "0000" & "00" & isJSR & InAMuxSel & RegBMuxSel & ALUMuxSel;
 					jmp <= pre_jmp after delay_decode3;
 					jsr <= pre_jsr after delay_decode3;
+					trap <= pre_trap after delay_decode3;
 		END PROCESS;
 	ID_C_IN <= pre_ID_C_IN after delay_decode3;
 
