@@ -1,4 +1,4 @@
-# //  ModelSim SE 6.1c Nov 17 2005 Linux 2.6.32-131.12.1.el6.x86_64
+# //  ModelSim SE 6.1c Nov 17 2005 Linux 2.6.32-131.6.1.el6.x86_64
 # //
 # //  Copyright Mentor Graphics Corporation 2005
 # //              All Rights Reserved.
@@ -55,6 +55,7 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzp(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzpsplit(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wanna_branch(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.r7register(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg3(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wbstage(struct)
@@ -160,11 +161,12 @@ do ACCEPTANCE_TEST.do
 # /mp3_cpu/jsrr
 # 0
 # 
-# STR r3, r5, 2 : MEM(88) <= 3 
-# /mp3_cpu/STR_test2
+# TRAP x44; PC <= MEM(64) 
+# /mp3_cpu/trap1a
 # 0
 # 
-# TRAP x44; PC <= MEM(88) 
-# /mp3_cpu/trap
+# TRAP x44; R7 <= PC 
+# /mp3_cpu/trap1b
 # 0
 # 
+# The connection to HDS has been closed 

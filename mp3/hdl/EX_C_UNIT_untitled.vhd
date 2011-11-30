@@ -78,6 +78,8 @@ BEGIN
 				when "0000" =>
 					reg_write <= '0';
 					ALUop <= "000";
+				when "1111" =>
+					ALUop <= "011";
 				when others =>
 					reg_write <= '0';
 					ALUop <= "000";

@@ -21,7 +21,6 @@ ENTITY IF_C_UNIT IS
       JSR       : IN     std_logic;
       MEM_C_Out : IN     lc3b_word;
       RESET_L   : IN     std_logic;
-      TRAP      : IN     std_logic;
       im_resp_h : IN     std_logic;
       stall     : IN     std_logic;
       IF_C_In   : OUT    lc3b_word;
@@ -39,7 +38,7 @@ signal pre_load_pc : std_logic;
 signal pre_PCMuxSel : std_logic;
 signal jmp_sel : std_logic_vector(1 downto 0);
 BEGIN
-  IF_CONTROL_PROCESS : PROCESS (CLK, RESET_L, im_resp_h, im_read_l, stall, JMP, JSR, TRAP)
+  IF_CONTROL_PROCESS : PROCESS (CLK, RESET_L, im_resp_h, im_read_l, stall, JMP, JSR, MEM_C_Out)
     BEGIN
   	jmp_sel <= "00";
 	IF (RESET_L = '0') THEN
@@ -68,7 +67,7 @@ BEGIN
 				jmp_sel <= "10";
 				pre_load_pc <= '1';
 			end if;	
-			if(TRAP = '1') then
+			if(MEM_C_Out(1) = '1') then
 				jmp_sel <= "11";
 				pre_load_pc <= '1';
 			end if;

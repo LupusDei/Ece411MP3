@@ -16,10 +16,11 @@ USE ece411.LC3b_types.all;
 
 ENTITY WB_C_Decode IS
    PORT( 
-      WB_C_In  : IN     lc3b_word;
-      DR       : OUT    lc3b_reg;
-      RegWrite : OUT    std_logic;
-      WBMuxSel : OUT    STD_LOGIC
+      WB_C_In      : IN     lc3b_word;
+      DR           : OUT    lc3b_reg;
+      RegWrite     : OUT    std_logic;
+      WBMuxSel     : OUT    STD_LOGIC;
+      WBTrapMuxSEL : OUT    STD_LOGIC
    );
 
 -- Declarations
@@ -32,5 +33,6 @@ BEGIN
 	DR <= WB_C_IN(4 downto 2);
 	RegWrite <= WB_C_IN(1);
 	WBMuxSel <= WB_C_IN(0);
+	WBTrapMuxSel <= WB_C_IN(5);
 END ARCHITECTURE untitled;
 

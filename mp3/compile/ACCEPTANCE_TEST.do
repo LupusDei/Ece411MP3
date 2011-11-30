@@ -11,11 +11,15 @@ add wave -hex /mp3_cpu/ex_c_in
 add wave -hex /mp3_cpu/mem_c_in
 add wave -hex /mp3_cpu/mem_c_out
 add wave -hex /mp3_cpu/wb_c_in
+add wave -hex /mp3_cpu/pipelinedatapath/aluina
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/DestReg
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/loadNZP
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/brInst
 add wave -hex /mp3_cpu/pipelinedatapath/decode/B
+add wave -hex /mp3_cpu/pipelinedatapath/decode/trapvect8
+add wave -hex /mp3_cpu/pipelinedatapath/memdataout
 add wave -hex /mp3_cpu/pipelinedatapath/decode/instIn
+add wave -hex /mp3_cpu/pipelinedatapath/SrcIn
 add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/pcmuxsel
 add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/newpcin
 add wave -hex /mp3_cpu/im_resp_h
@@ -146,14 +150,14 @@ virtual signal {/mp3_cpu/pcinstaddr == 84} jsrr
 add wave -color white /mp3_cpu/jsrr
 run 200
 
-echo "STR r3, r5, 2 : MEM(88) <= 3"
-virtual signal {/mp3_cpu/datamemin == 3 && mp3_cpu/dm_resp_h == 1 && /mp3_cpu/pcinstaddr == 92} STR_test2
-add wave -color white /mp3_cpu/STR_test2
-run 200
-
-echo "TRAP x44; PC <= MEM(88)"
+echo "TRAP x44; PC <= MEM(64)"
 #/*This is not a valid test for TRAP at all*/
-virtual signal {/mp3_cpu/pcinstaddr == 3} trap 
-add wave -color white /mp3_cpu/trap
+virtual signal {/mp3_cpu/pcinstaddr == 4} trap1a
+add wave -color white /mp3_cpu/trap1a
+run 200 
+
+echo "TRAP x44; R7 <= PC"
+virtual signal {/mp3_cpu/pcinstaddr == 6 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 88} trap1b 
+add wave -color white /mp3_cpu/trap1b
 run 200 
   

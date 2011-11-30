@@ -16,11 +16,12 @@ USE ece411.LC3b_types.all;
 
 ENTITY mem_C_decode IS
    PORT( 
-      MEM_C_In  : IN     lc3b_word;
-      DestReg   : OUT    lc3b_cc;
-      GENMuxSel : OUT    STD_LOGIC;
-      brInst    : OUT    std_logic;
-      loadNZP   : OUT    std_logic
+      MEM_C_In    : IN     lc3b_word;
+      DestReg     : OUT    lc3b_cc;
+      GENMuxSel   : OUT    STD_LOGIC;
+      TrapDecider : OUT    std_logic;
+      brInst      : OUT    std_logic;
+      loadNZP     : OUT    std_logic
    );
 
 -- Declarations
@@ -34,5 +35,6 @@ BEGIN
 	loadNZP <= MEM_C_In(0);
 	GENMuxSel <= MEM_C_In(9);
 	brInst <= MEM_C_In(7);
+	TrapDecider <= MEM_C_In(8);
 END ARCHITECTURE untitled;
 

@@ -25,7 +25,7 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 2,0
+suid 10,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -69,11 +69,11 @@ port (LogicalPort
 decl (Decl
 n "instOut"
 t "lc3b_word"
-o 8
-suid 1,0
+o 10
+suid 9,0
 )
 )
-uid 61,0
+uid 183,0
 )
 *15 (LogPort
 port (LogicalPort
@@ -81,11 +81,11 @@ m 1
 decl (Decl
 n "mem_c"
 t "lc3b_word"
-o 22
-suid 2,0
+o 26
+suid 10,0
 )
 )
-uid 63,0
+uid 185,0
 )
 ]
 )
@@ -141,13 +141,13 @@ uid 85,0
 litem &14
 pos 0
 dimension 20
-uid 62,0
+uid 184,0
 )
 *22 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 64,0
+uid 186,0
 )
 ]
 )
@@ -226,23 +226,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@e@m_@c_@u@n@i@t/interface.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@e@m_@c_@u@n@i@t/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@e@m_@c_@u@n@i@t/interface.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@e@m_@c_@u@n@i@t/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -258,27 +258,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@e@m_@c_@u@n@i@t"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@e@m_@c_@u@n@i@t"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/MEM_C_UNIT"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/MEM_C_UNIT"
 )
 (vvPair
 variable "date"
-value "10/28/11"
+value "11/30/11"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Wed"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Wednesday"
 )
 (vvPair
 variable "dd"
-value "28"
+value "30"
 )
 (vvPair
 variable "entity_name"
@@ -306,7 +306,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-16.ews.illinois.edu"
+value "gelib-057-24.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -326,7 +326,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "10"
+value "11"
 )
 (vvPair
 variable "module_name"
@@ -334,19 +334,19 @@ value "MEM_C_UNIT"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Nov"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "November"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@e@m_@c_@u@n@i@t/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@e@m_@c_@u@n@i@t/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/MEM_C_UNIT/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/MEM_C_UNIT/interface"
 )
 (vvPair
 variable "project_name"
@@ -386,7 +386,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "03:06:20"
+value "03:41:21"
 )
 (vvPair
 variable "unit"
@@ -394,7 +394,7 @@ value "MEM_C_UNIT"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -421,10 +421,10 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *32 (CptPort
-uid 51,0
+uid 173,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 52,0
+uid 174,0
 ro 180
 va (VaSet
 vasetType 1
@@ -433,11 +433,11 @@ fg "0,65535,0"
 xt "15625,5250,16375,6000"
 )
 tg (CPTG
-uid 53,0
+uid 175,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 54,0
+uid 176,0
 ro 270
 va (VaSet
 font "courier,8,0"
@@ -450,27 +450,28 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 55,0
+uid 177,0
 va (VaSet
 font "courier,8,0"
 )
 xt "44000,1800,59000,2700"
-st "instOut : IN     lc3b_word  ;"
+st "instOut : IN     lc3b_word  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
 n "instOut"
 t "lc3b_word"
-o 8
-suid 1,0
+o 10
+suid 9,0
 )
 )
 )
 *33 (CptPort
-uid 56,0
+uid 178,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 57,0
+uid 179,0
 ro 180
 va (VaSet
 vasetType 1
@@ -479,11 +480,11 @@ fg "0,65535,0"
 xt "18625,16000,19375,16750"
 )
 tg (CPTG
-uid 58,0
+uid 180,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 59,0
+uid 181,0
 ro 270
 va (VaSet
 font "courier,8,0"
@@ -495,20 +496,21 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 60,0
+uid 182,0
 va (VaSet
 font "courier,8,0"
 )
 xt "44000,2700,58000,3600"
-st "mem_c   : OUT    lc3b_word "
+st "mem_c   : OUT    lc3b_word 
+"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "mem_c"
 t "lc3b_word"
-o 22
-suid 2,0
+o 26
+suid 10,0
 )
 )
 )
@@ -597,7 +599,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,50050,45700,50950"
+xt "32200,50050,45200,50950"
 st "
 by %user on %dd %month %year
 "
@@ -1194,5 +1196,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 94,0
+lastUid 186,0
 )

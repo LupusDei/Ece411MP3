@@ -69,7 +69,7 @@ port (LogicalPort
 decl (Decl
 n "ALUresult"
 t "lc3b_word"
-o 21
+o 1
 suid 58,0
 )
 )
@@ -78,9 +78,9 @@ uid 669,0
 *15 (LogPort
 port (LogicalPort
 decl (Decl
-n "CLK"
+n "clk"
 t "std_logic"
-o 1
+o 5
 suid 59,0
 )
 )
@@ -90,9 +90,9 @@ uid 671,0
 port (LogicalPort
 m 1
 decl (Decl
-n "dataaddr"
+n "DataAddr"
 t "lc3b_word"
-o 13
+o 6
 suid 60,0
 )
 )
@@ -101,9 +101,9 @@ uid 673,0
 *17 (LogPort
 port (LogicalPort
 decl (Decl
-n "datamemin"
+n "DataMemIn"
 t "lc3b_word"
-o 8
+o 2
 suid 61,0
 )
 )
@@ -114,7 +114,7 @@ port (LogicalPort
 decl (Decl
 n "MEM_C_In"
 t "lc3b_word"
-o 5
+o 3
 suid 62,0
 )
 )
@@ -126,7 +126,7 @@ m 1
 decl (Decl
 n "MEM_C_Out"
 t "lc3b_word"
-o 12
+o 9
 suid 63,0
 )
 )
@@ -138,7 +138,7 @@ m 1
 decl (Decl
 n "MEMDataOut"
 t "lc3b_word"
-o 24
+o 7
 suid 64,0
 )
 )
@@ -148,9 +148,9 @@ uid 681,0
 port (LogicalPort
 m 1
 decl (Decl
-n "memwritedata"
+n "MEMWriteData"
 t "lc3b_word"
-o 15
+o 8
 suid 65,0
 )
 )
@@ -161,7 +161,7 @@ port (LogicalPort
 decl (Decl
 n "SrcIn"
 t "lc3b_word"
-o 32
+o 4
 suid 66,0
 )
 )
@@ -219,55 +219,55 @@ uid 71,0
 )
 *28 (MRCItem
 litem &14
-pos 0
+pos 7
 dimension 20
 uid 670,0
 )
 *29 (MRCItem
 litem &15
-pos 1
+pos 8
 dimension 20
 uid 672,0
 )
 *30 (MRCItem
 litem &16
-pos 2
+pos 4
 dimension 20
 uid 674,0
 )
 *31 (MRCItem
 litem &17
-pos 3
+pos 2
 dimension 20
 uid 676,0
 )
 *32 (MRCItem
 litem &18
-pos 4
+pos 5
 dimension 20
 uid 678,0
 )
 *33 (MRCItem
 litem &19
-pos 5
+pos 6
 dimension 20
 uid 680,0
 )
 *34 (MRCItem
 litem &20
-pos 6
+pos 3
 dimension 20
 uid 682,0
 )
 *35 (MRCItem
 litem &21
-pos 7
+pos 0
 dimension 20
 uid 684,0
 )
 *36 (MRCItem
 litem &22
-pos 8
+pos 1
 dimension 20
 uid 686,0
 )
@@ -348,23 +348,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@e@m@stage/interface.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@e@m@stage/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@e@m@stage/interface.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@e@m@stage/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -380,27 +380,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@e@m@stage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@e@m@stage"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/MEMStage"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/MEMStage"
 )
 (vvPair
 variable "date"
-value "11/04/11"
+value "11/30/11"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Wed"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Wednesday"
 )
 (vvPair
 variable "dd"
-value "04"
+value "30"
 )
 (vvPair
 variable "entity_name"
@@ -428,7 +428,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-29.ews.illinois.edu"
+value "gelib-057-24.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -464,11 +464,11 @@ value "November"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/@m@e@m@stage/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/@m@e@m@stage/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/MEMStage/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/MEMStage/interface"
 )
 (vvPair
 variable "project_name"
@@ -508,7 +508,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "15:59:46"
+value "03:50:57"
 )
 (vvPair
 variable "unit"
@@ -516,7 +516,7 @@ value "MEMStage"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -575,14 +575,13 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,1800,61500,2700"
-st "ALUresult    : IN     lc3b_word  ;
-"
+st "ALUresult    : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "ALUresult"
 t "lc3b_word"
-o 21
+o 1
 suid 58,0
 )
 )
@@ -609,7 +608,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "20550,13500,21450,15000"
-st "CLK"
+st "clk"
 blo "21250,15000"
 tm "CptPortNameMgr"
 )
@@ -619,15 +618,14 @@ uid 633,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,2700,61500,3600"
-st "CLK          : IN     std_logic  ;
-"
+xt "44000,5400,61500,6300"
+st "clk          : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
-n "CLK"
+n "clk"
 t "std_logic"
-o 1
+o 5
 suid 59,0
 )
 )
@@ -654,7 +652,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "19550,7000,20450,11000"
-st "dataaddr"
+st "DataAddr"
 ju 2
 blo "20250,7000"
 tm "CptPortNameMgr"
@@ -665,16 +663,15 @@ uid 638,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,8100,61500,9000"
-st "dataaddr     : OUT    lc3b_word  ;
-"
+xt "44000,6300,61500,7200"
+st "DataAddr     : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
-n "dataaddr"
+n "DataAddr"
 t "lc3b_word"
-o 13
+o 6
 suid 60,0
 )
 )
@@ -702,7 +699,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "16550,7000,17450,11500"
-st "datamemin"
+st "DataMemIn"
 ju 2
 blo "17250,7000"
 tm "CptPortNameMgr"
@@ -713,15 +710,14 @@ uid 643,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,5400,61500,6300"
-st "datamemin    : IN     lc3b_word  ;
-"
+xt "44000,2700,61500,3600"
+st "DataMemIn    : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
-n "datamemin"
+n "DataMemIn"
 t "lc3b_word"
-o 8
+o 2
 suid 61,0
 )
 )
@@ -761,14 +757,13 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,3600,61500,4500"
-st "MEM_C_In     : IN     lc3b_word  ;
-"
+st "MEM_C_In     : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "MEM_C_In"
 t "lc3b_word"
-o 5
+o 3
 suid 62,0
 )
 )
@@ -806,16 +801,15 @@ uid 653,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,7200,61500,8100"
-st "MEM_C_Out    : OUT    lc3b_word  ;
-"
+xt "44000,9000,60500,9900"
+st "MEM_C_Out    : OUT    lc3b_word "
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "MEM_C_Out"
 t "lc3b_word"
-o 12
+o 9
 suid 63,0
 )
 )
@@ -853,16 +847,15 @@ uid 658,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,6300,61500,7200"
-st "MEMDataOut   : OUT    lc3b_word  ;
-"
+xt "44000,7200,61500,8100"
+st "MEMDataOut   : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "MEMDataOut"
 t "lc3b_word"
-o 24
+o 7
 suid 64,0
 )
 )
@@ -889,7 +882,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "20550,7000,21450,13500"
-st "memwritedata"
+st "MEMWriteData"
 ju 2
 blo "21250,7000"
 tm "CptPortNameMgr"
@@ -900,16 +893,15 @@ uid 663,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,9000,60500,9900"
-st "memwritedata : OUT    lc3b_word 
-"
+xt "44000,8100,61500,9000"
+st "MEMWriteData : OUT    lc3b_word  ;"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
-n "memwritedata"
+n "MEMWriteData"
 t "lc3b_word"
-o 15
+o 8
 suid 65,0
 )
 )
@@ -947,14 +939,13 @@ va (VaSet
 font "courier,8,0"
 )
 xt "44000,4500,61500,5400"
-st "SrcIn        : IN     lc3b_word  ;
-"
+st "SrcIn        : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "SrcIn"
 t "lc3b_word"
-o 32
+o 4
 suid 66,0
 )
 )
@@ -1044,7 +1035,7 @@ fg "0,0,32768"
 bg "0,0,32768"
 font "courier,8,0"
 )
-xt "32200,50050,45700,50950"
+xt "32200,50050,45200,50950"
 st "
 by %user on %dd %month %year
 "
@@ -1641,5 +1632,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 686,0
+lastUid 758,0
 )

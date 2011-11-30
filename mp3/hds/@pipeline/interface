@@ -103,7 +103,7 @@ port (LogicalPort
 decl (Decl
 n "datamemin"
 t "lc3b_word"
-o 8
+o 9
 suid 178,0
 )
 )
@@ -171,7 +171,7 @@ port (LogicalPort
 decl (Decl
 n "instmemin"
 t "lc3b_word"
-o 9
+o 10
 suid 184,0
 )
 )
@@ -239,9 +239,9 @@ uid 1676,0
 *29 (LogPort
 port (LogicalPort
 decl (Decl
-n "stall"
+n "STALL"
 t "std_logic"
-o 10
+o 7
 suid 190,0
 )
 )
@@ -252,7 +252,7 @@ port (LogicalPort
 decl (Decl
 n "WB_C_In"
 t "lc3b_word"
-o 7
+o 8
 suid 191,0
 )
 )
@@ -527,19 +527,19 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline"
 )
 (vvPair
 variable "date"
-value "11/18/11"
+value "11/30/11"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Wed"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Wednesday"
 )
 (vvPair
 variable "dd"
-value "18"
+value "30"
 )
 (vvPair
 variable "entity_name"
@@ -567,7 +567,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-20.ews.illinois.edu"
+value "gelib-057-24.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -647,7 +647,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "14:52:47"
+value "05:31:16"
 )
 (vvPair
 variable "unit"
@@ -851,14 +851,14 @@ uid 1582,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,8100,61500,9000"
+xt "44000,9000,61500,9900"
 st "datamemin    : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "datamemin"
 t "lc3b_word"
-o 8
+o 9
 suid 178,0
 )
 )
@@ -1119,14 +1119,14 @@ uid 1612,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,9000,61500,9900"
+xt "44000,9900,61500,10800"
 st "instmemin    : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "instmemin"
 t "lc3b_word"
-o 9
+o 10
 suid 184,0
 )
 )
@@ -1381,7 +1381,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "16000,12550,18500,13450"
-st "stall"
+st "STALL"
 blo "16000,13250"
 tm "CptPortNameMgr"
 )
@@ -1391,14 +1391,14 @@ uid 1642,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,9900,61500,10800"
-st "stall        : IN     std_logic  ;"
+xt "44000,7200,61500,8100"
+st "STALL        : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
-n "stall"
+n "STALL"
 t "std_logic"
-o 10
+o 7
 suid 190,0
 )
 )
@@ -1435,14 +1435,14 @@ uid 1647,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,7200,61500,8100"
+xt "44000,8100,61500,9000"
 st "WB_C_In      : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "WB_C_In"
 t "lc3b_word"
-o 7
+o 8
 suid 191,0
 )
 )
@@ -2130,5 +2130,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 1813,0
+lastUid 1897,0
 )
