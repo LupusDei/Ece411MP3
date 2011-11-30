@@ -20,6 +20,7 @@ add wave -hex /mp3_cpu/pipelinedatapath/decode/trapvect8
 add wave -hex /mp3_cpu/pipelinedatapath/memdataout
 add wave -hex /mp3_cpu/pipelinedatapath/decode/instIn
 add wave -hex /mp3_cpu/pipelinedatapath/SrcIn
+add wave -hex /mp3_cpu/pipelinedatapath/PCValue
 add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/pcmuxsel
 add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/newpcin
 add wave -hex /mp3_cpu/im_resp_h

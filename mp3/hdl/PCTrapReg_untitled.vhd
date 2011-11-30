@@ -1,9 +1,9 @@
 --
--- VHDL Architecture ece411.R7Register.untitled
+-- VHDL Architecture ece411.PCTrapReg.untitled
 --
 -- Created:
 --          by - bhatia9.UNKNOWN (gelib-057-24.ews.illinois.edu)
---          at - 04:54:40 11/30/11
+--          at - 06:01:17 11/30/11
 --
 -- using Mentor Graphics HDL Designer(TM) 2005.3 (Build 75)
 --
@@ -14,28 +14,28 @@ USE ieee.NUMERIC_STD.all;
 LIBRARY ece411;
 USE ece411.LC3b_types.all;
 
-ENTITY R7Register IS
+ENTITY PCTrapReg IS
    PORT( 
       CLK     : IN     std_logic;
       RESET_L : IN     std_logic;
       STALL   : IN     std_logic;
       SrcIn   : IN     lc3b_word;
-      PCvalue : OUT    lc3b_word
+      PCValue : OUT    lc3b_word
    );
 
 -- Declarations
 
-END R7Register ;
+END PCTrapReg ;
 
 --
-ARCHITECTURE untitled OF R7Register IS
-TYPE RAMMEMORY IS ARRAY (2 DOWNTO 0) OF LC3B_WORD;
+ARCHITECTURE untitled OF PCTrapReg IS
+TYPE RAMMEMORY IS ARRAY (1 DOWNTO 0) OF LC3B_WORD;
 SIGNAL RAM : RAMMEMORY;
 BEGIN
 	-------------------------------------------------------------------
 	READ : PROCESS (RAM)
 	BEGIN
-		PCvalue <= RAM(2) AFTER DELAY_REGFILE_READ;
+		PCValue <= RAM(1) AFTER DELAY_REGFILE_READ;
 	END PROCESS READ;
 	-------------------------------------------------------------------
 	WRITE: PROCESS(CLK, SrcIn, RESET_L, stall)
@@ -45,11 +45,9 @@ BEGIN
 		IF (RESET_L = '0') THEN
 			RAM(0) <= "0000000000000000";
 			RAM(1) <= "0000000000000000";
-			RAM(2) <= "0000000000000000";
 		END IF;
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
-			RAM(2) <= RAM(1);
 			RAM(1) <= RAM(0);
 			RAM(0) <= SrcIn;
 		END IF;
