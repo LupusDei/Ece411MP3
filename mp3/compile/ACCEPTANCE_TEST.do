@@ -52,7 +52,7 @@ echo "Full Instruction Tests"
 force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(1) 0000000000101010
 force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(2) 0000000000001000
 force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(3) 0000000000000011
-force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(5) 0000000001010100 
+force -freeze /mp3_cpu/Pipelinedatapath/ourregfile/ram(5) 0000000101010100 
 force -freeze /mp3_cpu/reset_l 0
 run 50
 force -freeze /mp3_cpu/reset_l 1
@@ -140,16 +140,17 @@ echo "JSR 1; PC <= 58 + 2 + 8 = 68"
 virtual signal {/mp3_cpu/pcinstaddr == 68} JSR
 add wave -color white /mp3_cpu/JSR
 
-echo "STB R3, R2,7;  MEM(R2 + 7) <= R3(7:0);  starts at pc=68"
-virtual signal {/mp3_cpu/pcinstaddr == 74 && /mp3_cpu/datamemin == 7 && /mp3_cpu/dm_resp_h == 1} stb
+echo "STB R5, R2,7;  MEM(R2 + 7) <= R5(7:0);  starts at pc=68"
+virtual signal {/mp3_cpu/pcinstaddr == 74 && /mp3_cpu/datamemin == 84 && /mp3_cpu/dm_resp_h == 1} stb
 add wave -color white /mp3_cpu/stb
 run 200
 
 run 100
 
 echo "JSRR R5; PC <= R5"
-virtual signal {/mp3_cpu/pcinstaddr == 84} jsrr
+virtual signal {/mp3_cpu/pcinstaddr == 340} jsrr
 add wave -color white /mp3_cpu/jsrr
+run 200
 run 200
 
 echo "TRAP x44; PC <= MEM(64)"
@@ -159,12 +160,12 @@ add wave -color white /mp3_cpu/trap1a
 run 50 
 
 echo "TRAP x44; R7 <= PC"
-virtual signal {/mp3_cpu/pcinstaddr == 162 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 88} trap1b 
+virtual signal {/mp3_cpu/pcinstaddr == 162 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 344} trap1b 
 add wave -color white /mp3_cpu/trap1b
 run 50 
 
-echo "RET - PC <= R7 (88)"
-virtual signal {/mp3_cpu/pcinstaddr == 88 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 88} ret2 
+echo "RET - PC <= R7 (344)"
+virtual signal {/mp3_cpu/pcinstaddr == 344 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 344} ret2 
 add wave -color white /mp3_cpu/ret2
 
 run 200

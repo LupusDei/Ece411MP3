@@ -72,6 +72,10 @@ BEGIN
 	   			 	pre_loadNZP <= '1';
 				 	pre_dm_read_l <= '0';
 					reg_write <= '1';
+				when "0011" =>
+					pre_dm_writel_l <= '0';
+					dest <= "000";
+					reg_write <= '0';
 				when "0111" =>
 				 	pre_dm_writel_l <= '0';
 				 	pre_dm_writeh_l <= '0';

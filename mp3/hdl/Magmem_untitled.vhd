@@ -95,7 +95,7 @@ BEGIN
 			elsif (PCInstAddr = "0000000000111010") then -- pc = 58
 					instruction <= "0100100000000100"; --JSR 4
 			elsif (PCInstAddr = "0000000001000100") then  --pc = 68
-					instruction <= "0011011010000111"; -- stb r3, r2, 7
+					instruction <= "0011101010000111"; -- stb r5, r2, 7
 			elsif (PCInstAddr = "0000000001000110") then  --pc = 70
 					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001001000") then  --pc = 72
@@ -112,7 +112,7 @@ BEGIN
 					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001010100") then  --pc = 84
 					instruction <= "0000000000000000"; -- NOP
-			elsif (PCInstAddr = "0000000001010110") then  --pc = 86
+			elsif (PCInstAddr = "0000000101010110") then  --pc = 342
 					instruction <= "1111000000100000"; -- TRAP 32
 			elsif (PCInstAddr = "0000000010100010") then  --pc = 160
 					instruction <= "1100000111000000"; --RET
@@ -136,14 +136,18 @@ BEGIN
 				magic_data <= "0000101110101101"; --0BAD
 			end if;
 		else
-			if (dm_writeh_l = '0' or dm_writel_l = '0') then
-				if (DataAddr = "0000000000001001" or DataAddr = "0000000001011000") then
+				if (DataAddr = "0000000000001001" or DataAddr = "0000000001011000" or DataAddr = "0000000000001111") then
 					dm_resp <= '1';
-					magic_data <= MEMWriteData;
+					if (dm_writeh_l = '0' and dm_writel_l = '0') then
+						magic_data <= MEMWriteData;
+					elsif (dm_writeh_l = '0') then 
+						magic_data <= MEMWriteData(15 downto 8) & "00000000";
+					elsif (dm_writel_l = '0') then
+						magic_data <= "00000000" & MEMWriteData(7 downto 0);
+					else
+			 			dm_resp <= '0';
+					end if;
 				end if;
-			else
-			 dm_resp <= '0';
-			end if;
 		end if;
 	end process data_stuff;
   InstMemIn <= instruction after 3 ns;

@@ -60,6 +60,9 @@ BEGIN
 					else 
 						ALUMuxSel := "010";
 					end if;
+				when "0011" =>
+					ALUMuxSel := "101";
+					RegBMuxSel := '1';
 				when "0101" =>
 					if (instOut(5) = '0') then 
 						ALUMuxSel := "000";
