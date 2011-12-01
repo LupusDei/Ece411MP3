@@ -55,7 +55,6 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzp(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzpsplit(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wanna_branch(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pctrapreg(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg3(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wbstage(struct)
@@ -169,10 +168,7 @@ do ACCEPTANCE_TEST.do
 # /mp3_cpu/trap1b
 # 0
 # 
-env EXReg
-# sim:/mp3_cpu/pipelinedatapath/exreg
-# hds_create_graphics_for_instance [env] DefaultView 
-env PCHolder
-# sim:/mp3_cpu/pipelinedatapath/pcholder
-env EXReg
-# sim:/mp3_cpu/pipelinedatapath/exreg
+# RET - PC <= R7 (88) 
+# /mp3_cpu/ret2
+# 0
+# 

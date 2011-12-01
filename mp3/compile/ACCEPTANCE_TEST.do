@@ -154,12 +154,21 @@ run 200
 
 echo "TRAP x44; PC <= MEM(64)"
 #/*This is not a valid test for TRAP at all*/
-virtual signal {/mp3_cpu/pcinstaddr == 4} trap1a
+virtual signal {/mp3_cpu/pcinstaddr == 160} trap1a
 add wave -color white /mp3_cpu/trap1a
-run 200 
+run 50 
 
 echo "TRAP x44; R7 <= PC"
-virtual signal {/mp3_cpu/pcinstaddr == 6 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 88} trap1b 
+virtual signal {/mp3_cpu/pcinstaddr == 162 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 88} trap1b 
 add wave -color white /mp3_cpu/trap1b
-run 200 
+run 50 
+
+echo "RET - PC <= R7 (88)"
+virtual signal {/mp3_cpu/pcinstaddr == 88 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 88} ret2 
+add wave -color white /mp3_cpu/ret2
+
+run 200
+
+
+
   

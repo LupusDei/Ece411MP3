@@ -137,7 +137,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-24.ews.illinois.edu"
+value "gelib-057-28.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -217,7 +217,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "06:06:59"
+value "21:57:10"
 )
 (vvPair
 variable "unit"
@@ -307,7 +307,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,1400,36000,2300"
-st "DR           : lc3b_reg"
+st "DR           : lc3b_reg
+"
 )
 )
 *3 (PortIoOut
@@ -414,7 +415,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,3200,36500,4100"
-st "RegWrite     : std_logic"
+st "RegWrite     : std_logic
+"
 )
 )
 *6 (PortIoIn
@@ -477,7 +479,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,500,36500,1400"
-st "WB_C_In      : lc3b_word"
+st "WB_C_In      : lc3b_word
+"
 )
 )
 *8 (Grouping
@@ -1185,7 +1188,7 @@ uid 236,0
 decl (Decl
 n "WBMuxSel"
 t "STD_LOGIC"
-o 9
+o 8
 suid 8,0
 )
 declText (MLText
@@ -1194,7 +1197,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,5000,40000,5900"
-st "SIGNAL WBMuxSel     : STD_LOGIC"
+st "SIGNAL WBMuxSel     : STD_LOGIC
+"
 )
 )
 *33 (PortIoIn
@@ -1257,7 +1261,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,-2200,36500,-1300"
-st "ALUdata      : lc3b_word"
+st "ALUdata      : lc3b_word
+"
 )
 )
 *35 (PortIoIn
@@ -1320,7 +1325,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,-1300,36500,-400"
-st "MEMData      : lc3b_word"
+st "MEMData      : lc3b_word
+"
 )
 )
 *37 (SaComponent
@@ -1598,7 +1604,7 @@ uid 407,0
 decl (Decl
 n "WBTrapMuxSEL"
 t "STD_LOGIC"
-o 10
+o 9
 suid 14,0
 )
 declText (MLText
@@ -1607,7 +1613,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,5900,40000,6800"
-st "SIGNAL WBTrapMuxSEL : STD_LOGIC"
+st "SIGNAL WBTrapMuxSEL : STD_LOGIC
+"
 )
 )
 *46 (Net
@@ -1615,7 +1622,7 @@ uid 420,0
 decl (Decl
 n "preRegDataIn"
 t "lc3b_word"
-o 11
+o 10
 suid 16,0
 )
 declText (MLText
@@ -1624,7 +1631,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,6800,40000,7700"
-st "SIGNAL preRegDataIn : lc3b_word"
+st "SIGNAL preRegDataIn : lc3b_word
+"
 )
 )
 *47 (Net
@@ -1641,7 +1649,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,2300,36500,3200"
-st "RegDataIn    : lc3b_word"
+st "RegDataIn    : lc3b_word
+"
 )
 )
 *48 (PortIoIn
@@ -1692,10 +1701,11 @@ tm "WireNameMgr"
 )
 *49 (Net
 uid 482,0
+lang 2
 decl (Decl
 n "PCValue"
 t "lc3b_word"
-o 11
+o 3
 suid 19,0
 )
 declText (MLText
@@ -1704,7 +1714,8 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24000,-400,36500,500"
-st "PCValue      : lc3b_word"
+st "PCValue      : lc3b_word
+"
 )
 )
 *50 (Wire
@@ -2132,6 +2143,7 @@ start &48
 end &39
 sat 32
 eat 32
+stc 0
 sf 1
 si 0
 tg (WTG
@@ -2152,10 +2164,10 @@ tm "WireNameMgr"
 s (Text
 uid 481,0
 va (VaSet
+isHidden 1
 font "courier,8,0"
 )
 xt "34000,28000,38500,28900"
-st "lc3b_word"
 blo "34000,28700"
 tm "SignalTypeMgr"
 )
@@ -2285,7 +2297,7 @@ cachedDiagramExtent "-1500,-4000,60000,51000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-9000,-51000"
 active 1
-lastUid 483,0
+lastUid 505,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -3426,7 +3438,7 @@ m 4
 decl (Decl
 n "WBMuxSel"
 t "STD_LOGIC"
-o 9
+o 8
 suid 8,0
 )
 )
@@ -3460,7 +3472,7 @@ m 4
 decl (Decl
 n "WBTrapMuxSEL"
 t "STD_LOGIC"
-o 10
+o 9
 suid 14,0
 )
 )
@@ -3472,7 +3484,7 @@ m 4
 decl (Decl
 n "preRegDataIn"
 t "lc3b_word"
-o 11
+o 10
 suid 16,0
 )
 )
@@ -3492,10 +3504,11 @@ uid 426,0
 )
 *114 (LeafLogPort
 port (LogicalPort
+lang 2
 decl (Decl
 n "PCValue"
 t "lc3b_word"
-o 11
+o 3
 suid 19,0
 )
 )

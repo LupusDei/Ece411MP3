@@ -95,7 +95,7 @@ BEGIN
 			elsif (PCInstAddr = "0000000000111010") then -- pc = 58
 					instruction <= "0100100000000100"; --JSR 4
 			elsif (PCInstAddr = "0000000001000100") then  --pc = 68
-					instruction <= "0000000000000000"; -- NOP
+					instruction <= "0011011010000111"; -- stb r3, r2, 7
 			elsif (PCInstAddr = "0000000001000110") then  --pc = 70
 					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001001000") then  --pc = 72
@@ -113,7 +113,9 @@ BEGIN
 			elsif (PCInstAddr = "0000000001010100") then  --pc = 84
 					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001010110") then  --pc = 86
-					instruction <= "1111000000100000"; -- NOP
+					instruction <= "1111000000100000"; -- TRAP 32
+			elsif (PCInstAddr = "0000000010100010") then  --pc = 160
+					instruction <= "1100000111000000"; --RET
 			else
 					instruction <= "0000000000000000";
 			end if;
@@ -129,7 +131,7 @@ BEGIN
 			if (DataAddr = "0000000000010100") then
 				magic_data <= "0110000000001101"; --600D
 			elsif (DataAddr = "0000000001000000") then
-				magic_data <= "0000000000000100"; --0004 just some random value to check for trap
+				magic_data <= "0000000010100000"; --00A0 (160) just some random value to check for trap
 			else
 				magic_data <= "0000101110101101"; --0BAD
 			end if;
