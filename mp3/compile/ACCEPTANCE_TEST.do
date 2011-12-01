@@ -23,6 +23,7 @@ add wave -hex /mp3_cpu/pipelinedatapath/SrcIn
 add wave -hex /mp3_cpu/pipelinedatapath/PCValue
 add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/pcmuxsel
 add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/newpcin
+add wave -hex /mp3_cpu/pipelinedatapath/instructionfetch/newpc
 add wave -hex /mp3_cpu/im_resp_h
 add wave -hex /mp3_cpu/im_read_l
 add wave -hex /mp3_cpu/dm_resp_h

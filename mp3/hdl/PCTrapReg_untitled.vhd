@@ -19,7 +19,7 @@ ENTITY PCTrapReg IS
       CLK     : IN     std_logic;
       RESET_L : IN     std_logic;
       STALL   : IN     std_logic;
-      SrcIn   : IN     lc3b_word;
+      Src     : IN     lc3b_word;
       PCValue : OUT    lc3b_word
    );
 
@@ -38,7 +38,7 @@ BEGIN
 		PCValue <= RAM(1) AFTER DELAY_REGFILE_READ;
 	END PROCESS READ;
 	-------------------------------------------------------------------
-	WRITE: PROCESS(CLK, SrcIn, RESET_L, stall)
+	WRITE: PROCESS(CLK, Src, RESET_L, stall)
 	-------------------------------------------------------------------
 	BEGIN
 		-- ON RESET, CLEAR THE REGISTER FILE CONTENTS
@@ -49,7 +49,7 @@ BEGIN
 		-- WRITE VALUE TO REGISTER FILE ON RISING EDGE OF CLOCK
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
 			RAM(1) <= RAM(0);
-			RAM(0) <= SrcIn;
+			RAM(0) <= Src;
 		END IF;
 	END PROCESS WRITE;
 END ARCHITECTURE untitled;

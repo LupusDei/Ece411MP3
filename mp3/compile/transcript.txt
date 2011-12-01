@@ -169,9 +169,10 @@ do ACCEPTANCE_TEST.do
 # /mp3_cpu/trap1b
 # 0
 # 
+env EXReg
+# sim:/mp3_cpu/pipelinedatapath/exreg
+# hds_create_graphics_for_instance [env] DefaultView 
 env PCHolder
 # sim:/mp3_cpu/pipelinedatapath/pcholder
-env WBReg
-# sim:/mp3_cpu/pipelinedatapath/wbreg
 env EXReg
 # sim:/mp3_cpu/pipelinedatapath/exreg
