@@ -18,8 +18,8 @@ ENTITY brReg IS
    PORT( 
       CLK     : IN     std_logic;
       RESET_L : IN     std_logic;
-      STALL   : IN     std_logic;
       newPC   : IN     lc3b_word;
+      stall   : IN     std_logic;
       newPCIn : OUT    lc3b_word
    );
 

@@ -169,19 +169,19 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/Pipeline"
 )
 (vvPair
 variable "date"
-value "11/30/11"
+value "12/02/11"
 )
 (vvPair
 variable "day"
-value "Wed"
+value "Fri"
 )
 (vvPair
 variable "day_long"
-value "Wednesday"
+value "Friday"
 )
 (vvPair
 variable "dd"
-value "30"
+value "02"
 )
 (vvPair
 variable "entity_name"
@@ -209,7 +209,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-28.ews.illinois.edu"
+value "siebl-0216-08.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -229,7 +229,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "11"
+value "12"
 )
 (vvPair
 variable "module_name"
@@ -237,11 +237,11 @@ value "Pipeline"
 )
 (vvPair
 variable "month"
-value "Nov"
+value "Dec"
 )
 (vvPair
 variable "month_long"
-value "November"
+value "December"
 )
 (vvPair
 variable "p"
@@ -289,7 +289,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "22:13:35"
+value "22:59:09"
 )
 (vvPair
 variable "unit"
@@ -1114,7 +1114,7 @@ uid 210,0
 decl (Decl
 n "newPC"
 t "lc3b_word"
-o 40
+o 41
 suid 5,0
 )
 declText (MLText
@@ -1131,7 +1131,7 @@ uid 212,0
 decl (Decl
 n "nextPC"
 t "lc3b_word"
-o 42
+o 43
 suid 6,0
 )
 declText (MLText
@@ -1148,7 +1148,7 @@ uid 214,0
 decl (Decl
 n "inst"
 t "lc3b_word"
-o 38
+o 39
 suid 7,0
 )
 declText (MLText
@@ -1219,7 +1219,7 @@ uid 232,0
 va (VaSet
 font "courier,8,0"
 )
-xt "-35000,11000,-22500,11900"
+xt "-35000,10100,-22500,11000"
 st "instmemin    : lc3b_word"
 )
 )
@@ -1336,7 +1336,7 @@ uid 306,0
 decl (Decl
 n "RA"
 t "lc3b_reg"
-o 27
+o 29
 suid 18,0
 )
 declText (MLText
@@ -1353,7 +1353,7 @@ uid 308,0
 decl (Decl
 n "RB"
 t "lc3b_reg"
-o 28
+o 30
 suid 19,0
 )
 declText (MLText
@@ -1370,7 +1370,7 @@ uid 332,0
 decl (Decl
 n "OutB"
 t "lc3b_word"
-o 26
+o 27
 suid 22,0
 )
 declText (MLText
@@ -1387,7 +1387,7 @@ uid 334,0
 decl (Decl
 n "OutA"
 t "lc3b_word"
-o 25
+o 26
 suid 23,0
 )
 declText (MLText
@@ -1404,7 +1404,7 @@ uid 358,0
 decl (Decl
 n "ALUInA"
 t "LC3B_WORD"
-o 35
+o 18
 suid 26,0
 )
 declText (MLText
@@ -1421,7 +1421,7 @@ uid 360,0
 decl (Decl
 n "ALUInB"
 t "lc3b_word"
-o 18
+o 19
 suid 27,0
 )
 declText (MLText
@@ -1586,7 +1586,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "43000,10550,47000,11450"
-st "MEM_C_In"
+st "Mem_C_In"
 ju 2
 blo "47000,11250"
 tm "WireNameMgr"
@@ -1596,7 +1596,7 @@ tm "WireNameMgr"
 *54 (Net
 uid 428,0
 decl (Decl
-n "MEM_C_Out"
+n "Mem_C_Out"
 t "lc3b_word"
 o 13
 suid 35,0
@@ -1607,13 +1607,13 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,13700,-22500,14600"
-st "MEM_C_Out    : lc3b_word"
+st "Mem_C_Out    : lc3b_word"
 )
 )
 *55 (Net
 uid 430,0
 decl (Decl
-n "MEM_C_In"
+n "Mem_C_In"
 t "lc3b_word"
 o 5
 suid 36,0
@@ -1624,7 +1624,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-35000,6500,-22500,7400"
-st "MEM_C_In     : lc3b_word"
+st "Mem_C_In     : lc3b_word"
 )
 )
 *56 (PortIoOut
@@ -1810,7 +1810,7 @@ uid 482,0
 va (VaSet
 font "courier,8,0"
 )
-xt "-35000,10100,-22500,11000"
+xt "-35000,9200,-22500,10100"
 st "datamemin    : lc3b_word"
 )
 )
@@ -1819,7 +1819,7 @@ uid 494,0
 decl (Decl
 n "ALUOut"
 t "lc3b_word"
-o 19
+o 20
 suid 44,0
 )
 declText (MLText
@@ -1836,7 +1836,7 @@ uid 518,0
 decl (Decl
 n "MEMDataOut"
 t "lc3b_word"
-o 24
+o 25
 suid 47,0
 )
 declText (MLText
@@ -1907,7 +1907,7 @@ uid 538,0
 va (VaSet
 font "courier,8,0"
 )
-xt "-35000,9200,-22500,10100"
+xt "-35000,8300,-22500,9200"
 st "WB_C_In      : lc3b_word"
 )
 )
@@ -1916,7 +1916,7 @@ uid 572,0
 decl (Decl
 n "DR"
 t "lc3b_reg"
-o 22
+o 23
 suid 54,0
 )
 declText (MLText
@@ -1933,7 +1933,7 @@ uid 574,0
 decl (Decl
 n "RegDataIn"
 t "lc3b_word"
-o 29
+o 31
 suid 55,0
 )
 declText (MLText
@@ -1950,7 +1950,7 @@ uid 576,0
 decl (Decl
 n "RegWrite"
 t "std_logic"
-o 30
+o 32
 suid 56,0
 )
 declText (MLText
@@ -2091,7 +2091,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "53000,4550,57500,5450"
-st "MEM_C_Out"
+st "Mem_C_Out"
 blo "53000,5250"
 tm "WireNameMgr"
 )
@@ -2791,7 +2791,7 @@ uid 1846,0
 decl (Decl
 n "nextPCin"
 t "lc3b_word"
-o 43
+o 44
 suid 68,0
 )
 declText (MLText
@@ -2808,7 +2808,7 @@ uid 1848,0
 decl (Decl
 n "instIn"
 t "lc3b_word"
-o 39
+o 40
 suid 69,0
 )
 declText (MLText
@@ -2825,7 +2825,7 @@ uid 1920,0
 decl (Decl
 n "inA"
 t "lc3b_word"
-o 36
+o 37
 suid 72,0
 )
 declText (MLText
@@ -2842,7 +2842,7 @@ uid 1922,0
 decl (Decl
 n "inB"
 t "lc3b_word"
-o 37
+o 38
 suid 73,0
 )
 declText (MLText
@@ -2859,7 +2859,7 @@ uid 1976,0
 decl (Decl
 n "Src"
 t "lc3b_word"
-o 31
+o 33
 suid 74,0
 )
 declText (MLText
@@ -2876,7 +2876,7 @@ uid 2018,0
 decl (Decl
 n "ALUresult"
 t "lc3b_word"
-o 21
+o 22
 suid 79,0
 )
 declText (MLText
@@ -2893,7 +2893,7 @@ uid 2020,0
 decl (Decl
 n "SrcIn"
 t "lc3b_word"
-o 32
+o 34
 suid 80,0
 )
 declText (MLText
@@ -2910,7 +2910,7 @@ uid 2209,0
 decl (Decl
 n "MEMData"
 t "lc3b_word"
-o 23
+o 24
 suid 85,0
 )
 declText (MLText
@@ -2927,7 +2927,7 @@ uid 2211,0
 decl (Decl
 n "ALUdata"
 t "lc3b_word"
-o 20
+o 21
 suid 86,0
 )
 declText (MLText
@@ -3042,7 +3042,7 @@ uid 2592,0
 decl (Decl
 n "SrcRegData"
 t "lc3b_word"
-o 33
+o 35
 suid 89,0
 )
 declText (MLText
@@ -3059,7 +3059,7 @@ uid 2594,0
 decl (Decl
 n "SrcRegIn"
 t "lc3b_word"
-o 34
+o 36
 suid 90,0
 )
 declText (MLText
@@ -3176,7 +3176,7 @@ uid 2756,0
 decl (Decl
 n "newPCIn"
 t "lc3b_word"
-o 41
+o 42
 suid 94,0
 )
 declText (MLText
@@ -3227,7 +3227,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-8500,39550,-6000,40450"
-st "STALL"
+st "stall"
 ju 2
 blo "-6000,40250"
 tm "WireNameMgr"
@@ -3237,7 +3237,7 @@ tm "WireNameMgr"
 *115 (Net
 uid 3204,0
 decl (Decl
-n "STALL"
+n "stall"
 t "std_logic"
 o 10
 suid 97,0
@@ -3247,8 +3247,8 @@ uid 3205,0
 va (VaSet
 font "courier,8,0"
 )
-xt "-35000,8300,-22500,9200"
-st "STALL        : std_logic"
+xt "-35000,11000,-22500,11900"
+st "stall        : std_logic"
 )
 )
 *116 (SaComponent
@@ -4817,7 +4817,7 @@ lang 2
 decl (Decl
 n "PCValue"
 t "lc3b_word"
-o 45
+o 28
 suid 120,0
 )
 declText (MLText
@@ -5696,7 +5696,7 @@ isHidden 1
 font "courier,8,0"
 )
 xt "46100,14500,47000,18500"
-st "MEM_C_In"
+st "Mem_C_In"
 blo "46800,18500"
 tm "WireNameMgr"
 )
@@ -5746,7 +5746,7 @@ isHidden 1
 font "courier,8,0"
 )
 xt "49100,2000,50000,6500"
-st "MEM_C_Out"
+st "Mem_C_Out"
 blo "49800,6500"
 tm "WireNameMgr"
 )
@@ -5969,7 +5969,6 @@ vasetType 3
 xt "53000,18000,55250,18000"
 pts [
 "53000,18000"
-"54000,18000"
 "55250,18000"
 ]
 )
@@ -5988,11 +5987,12 @@ stg "VerticalLayoutStrategy"
 f (Text
 uid 505,0
 va (VaSet
+isHidden 1
 font "courier,8,0"
 )
-xt "51000,17100,56500,18000"
+xt "52000,17100,57500,18000"
 st "MEMDataOut"
-blo "51000,17800"
+blo "52000,17800"
 tm "WireNameMgr"
 )
 s (Text
@@ -6001,8 +6001,8 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "51000,18000,55500,18900"
-blo "51000,18700"
+xt "52000,18000,56500,18900"
+blo "52000,18700"
 tm "SignalTypeMgr"
 )
 )
@@ -7620,7 +7620,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "5100,28500,6000,31000"
-st "STALL"
+st "stall"
 blo "5800,31000"
 tm "WireNameMgr"
 )
@@ -7667,7 +7667,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "24100,23500,25000,26000"
-st "STALL"
+st "stall"
 blo "24800,26000"
 tm "WireNameMgr"
 )
@@ -7703,7 +7703,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "42100,22500,43000,25000"
-st "STALL"
+st "stall"
 blo "42800,25000"
 tm "WireNameMgr"
 )
@@ -7741,7 +7741,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "59100,21500,60000,24000"
-st "STALL"
+st "stall"
 blo "59800,24000"
 tm "WireNameMgr"
 )
@@ -7777,7 +7777,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "4100,10500,5000,13000"
-st "STALL"
+st "stall"
 blo "4800,13000"
 tm "WireNameMgr"
 )
@@ -8060,6 +8060,7 @@ blo "53000,14800"
 tm "WireNameMgr"
 )
 s (Text
+uid 4940,0
 va (VaSet
 font "courier,8,0"
 )
@@ -8187,13 +8188,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "-6,27,1606,1179"
-viewArea "-32800,-20894,86654,63472"
+windowSize "247,26,1859,1178"
+viewArea "-32800,-24082,86654,60284"
 cachedDiagramExtent "-37000,-8300,765000,257450"
 hasePageBreakOrigin 1
 pageBreakOrigin "-76000,-51000"
 active 1
-lastUid 4789,0
+lastUid 5123,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -9254,7 +9255,7 @@ tm "BdDeclarativeTextMgr"
 )
 commonDM (CommonDM
 ldm (LogicalDM
-suid 121,0
+suid 122,0
 usingSuid 1
 emptyRow *274 (LEmptyRow
 )
@@ -9310,7 +9311,7 @@ m 4
 decl (Decl
 n "newPC"
 t "lc3b_word"
-o 40
+o 41
 suid 5,0
 )
 )
@@ -9322,7 +9323,7 @@ m 4
 decl (Decl
 n "nextPC"
 t "lc3b_word"
-o 42
+o 43
 suid 6,0
 )
 )
@@ -9334,7 +9335,7 @@ m 4
 decl (Decl
 n "inst"
 t "lc3b_word"
-o 38
+o 39
 suid 7,0
 )
 )
@@ -9369,7 +9370,7 @@ m 4
 decl (Decl
 n "RA"
 t "lc3b_reg"
-o 27
+o 29
 suid 18,0
 )
 )
@@ -9381,7 +9382,7 @@ m 4
 decl (Decl
 n "RB"
 t "lc3b_reg"
-o 28
+o 30
 suid 19,0
 )
 )
@@ -9393,7 +9394,7 @@ m 4
 decl (Decl
 n "OutB"
 t "lc3b_word"
-o 26
+o 27
 suid 22,0
 )
 )
@@ -9405,7 +9406,7 @@ m 4
 decl (Decl
 n "OutA"
 t "lc3b_word"
-o 25
+o 26
 suid 23,0
 )
 )
@@ -9417,7 +9418,7 @@ m 4
 decl (Decl
 n "ALUInA"
 t "LC3B_WORD"
-o 35
+o 18
 suid 26,0
 )
 )
@@ -9429,7 +9430,7 @@ m 4
 decl (Decl
 n "ALUInB"
 t "lc3b_word"
-o 18
+o 19
 suid 27,0
 )
 )
@@ -9485,7 +9486,7 @@ uid 606,0
 port (LogicalPort
 m 1
 decl (Decl
-n "MEM_C_Out"
+n "Mem_C_Out"
 t "lc3b_word"
 o 13
 suid 35,0
@@ -9496,7 +9497,7 @@ uid 608,0
 *304 (LeafLogPort
 port (LogicalPort
 decl (Decl
-n "MEM_C_In"
+n "Mem_C_In"
 t "lc3b_word"
 o 5
 suid 36,0
@@ -9545,7 +9546,7 @@ m 4
 decl (Decl
 n "ALUOut"
 t "lc3b_word"
-o 19
+o 20
 suid 44,0
 )
 )
@@ -9557,7 +9558,7 @@ m 4
 decl (Decl
 n "MEMDataOut"
 t "lc3b_word"
-o 24
+o 25
 suid 47,0
 )
 )
@@ -9580,7 +9581,7 @@ m 4
 decl (Decl
 n "DR"
 t "lc3b_reg"
-o 22
+o 23
 suid 54,0
 )
 )
@@ -9592,7 +9593,7 @@ m 4
 decl (Decl
 n "RegDataIn"
 t "lc3b_word"
-o 29
+o 31
 suid 55,0
 )
 )
@@ -9604,7 +9605,7 @@ m 4
 decl (Decl
 n "RegWrite"
 t "std_logic"
-o 30
+o 32
 suid 56,0
 )
 )
@@ -9650,7 +9651,7 @@ m 4
 decl (Decl
 n "nextPCin"
 t "lc3b_word"
-o 43
+o 44
 suid 68,0
 )
 )
@@ -9662,7 +9663,7 @@ m 4
 decl (Decl
 n "instIn"
 t "lc3b_word"
-o 39
+o 40
 suid 69,0
 )
 )
@@ -9674,7 +9675,7 @@ m 4
 decl (Decl
 n "inA"
 t "lc3b_word"
-o 36
+o 37
 suid 72,0
 )
 )
@@ -9686,7 +9687,7 @@ m 4
 decl (Decl
 n "inB"
 t "lc3b_word"
-o 37
+o 38
 suid 73,0
 )
 )
@@ -9698,7 +9699,7 @@ m 4
 decl (Decl
 n "Src"
 t "lc3b_word"
-o 31
+o 33
 suid 74,0
 )
 )
@@ -9710,7 +9711,7 @@ m 4
 decl (Decl
 n "ALUresult"
 t "lc3b_word"
-o 21
+o 22
 suid 79,0
 )
 )
@@ -9722,7 +9723,7 @@ m 4
 decl (Decl
 n "SrcIn"
 t "lc3b_word"
-o 32
+o 34
 suid 80,0
 )
 )
@@ -9734,7 +9735,7 @@ m 4
 decl (Decl
 n "MEMData"
 t "lc3b_word"
-o 23
+o 24
 suid 85,0
 )
 )
@@ -9746,7 +9747,7 @@ m 4
 decl (Decl
 n "ALUdata"
 t "lc3b_word"
-o 20
+o 21
 suid 86,0
 )
 )
@@ -9758,7 +9759,7 @@ m 4
 decl (Decl
 n "SrcRegData"
 t "lc3b_word"
-o 33
+o 35
 suid 89,0
 )
 )
@@ -9770,7 +9771,7 @@ m 4
 decl (Decl
 n "SrcRegIn"
 t "lc3b_word"
-o 34
+o 36
 suid 90,0
 )
 )
@@ -9782,7 +9783,7 @@ m 4
 decl (Decl
 n "newPCIn"
 t "lc3b_word"
-o 41
+o 42
 suid 94,0
 )
 )
@@ -9791,7 +9792,7 @@ uid 2758,0
 *329 (LeafLogPort
 port (LogicalPort
 decl (Decl
-n "STALL"
+n "stall"
 t "std_logic"
 o 10
 suid 97,0
@@ -9806,7 +9807,7 @@ m 4
 decl (Decl
 n "PCValue"
 t "lc3b_word"
-o 45
+o 28
 suid 120,0
 )
 )

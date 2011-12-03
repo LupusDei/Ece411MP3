@@ -25,7 +25,7 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 12,0
+suid 18,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -67,35 +67,35 @@ tm "EolColHdrMgr"
 *14 (LogPort
 port (LogicalPort
 decl (Decl
-n "clk"
+n "CLK"
 t "std_logic"
-o 18
-suid 7,0
+o 2
+suid 13,0
 )
 )
-uid 165,0
+uid 219,0
 )
 *15 (LogPort
 port (LogicalPort
 decl (Decl
 n "GenCCout"
 t "lc3b_cc"
-o 9
-suid 8,0
+o 15
+suid 14,0
 )
 )
-uid 167,0
+uid 221,0
 )
 *16 (LogPort
 port (LogicalPort
 decl (Decl
 n "loadNZP"
 t "std_logic"
-o 10
-suid 9,0
+o 21
+suid 15,0
 )
 )
-uid 169,0
+uid 223,0
 )
 *17 (LogPort
 port (LogicalPort
@@ -103,11 +103,11 @@ m 1
 decl (Decl
 n "n"
 t "std_logic"
-o 11
-suid 10,0
+o 22
+suid 16,0
 )
 )
-uid 171,0
+uid 225,0
 )
 *18 (LogPort
 port (LogicalPort
@@ -115,11 +115,11 @@ m 1
 decl (Decl
 n "p"
 t "std_logic"
-o 13
-suid 11,0
+o 23
+suid 17,0
 )
 )
-uid 173,0
+uid 227,0
 )
 *19 (LogPort
 port (LogicalPort
@@ -127,11 +127,11 @@ m 1
 decl (Decl
 n "z"
 t "std_logic"
-o 12
-suid 12,0
+o 25
+suid 18,0
 )
 )
-uid 175,0
+uid 229,0
 )
 ]
 )
@@ -187,37 +187,37 @@ uid 113,0
 litem &14
 pos 0
 dimension 20
-uid 166,0
+uid 220,0
 )
 *26 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 168,0
+uid 222,0
 )
 *27 (MRCItem
 litem &16
 pos 2
 dimension 20
-uid 170,0
+uid 224,0
 )
 *28 (MRCItem
 litem &17
 pos 3
 dimension 20
-uid 172,0
+uid 226,0
 )
 *29 (MRCItem
 litem &18
 pos 4
 dimension 20
-uid 174,0
+uid 228,0
 )
 *30 (MRCItem
 litem &19
 pos 5
 dimension 20
-uid 176,0
+uid 230,0
 )
 ]
 )
@@ -296,23 +296,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/the@n@z@p/interface.info"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/the@n@z@p/interface.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/the@n@z@p/interface.user"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/the@n@z@p/interface.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -328,27 +328,27 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/the@n@z@p"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/the@n@z@p"
 )
 (vvPair
 variable "d_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/theNZP"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/theNZP"
 )
 (vvPair
 variable "date"
-value "10/28/11"
+value "12/01/11"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Thu"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Thursday"
 )
 (vvPair
 variable "dd"
-value "28"
+value "01"
 )
 (vvPair
 variable "entity_name"
@@ -376,7 +376,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-32.ews.illinois.edu"
+value "gelib-057-19.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -396,7 +396,7 @@ value "$HDS_PROJECT_DIR/compile"
 )
 (vvPair
 variable "mm"
-value "10"
+value "12"
 )
 (vvPair
 variable "module_name"
@@ -404,19 +404,19 @@ value "theNZP"
 )
 (vvPair
 variable "month"
-value "Oct"
+value "Dec"
 )
 (vvPair
 variable "month_long"
-value "October"
+value "December"
 )
 (vvPair
 variable "p"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/the@n@z@p/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/the@n@z@p/interface"
 )
 (vvPair
 variable "p_logical"
-value "/home/martin43/ece411/Ece411MP3/mp3/hds/theNZP/interface"
+value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/theNZP/interface"
 )
 (vvPair
 variable "project_name"
@@ -456,7 +456,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "17:49:39"
+value "23:10:08"
 )
 (vvPair
 variable "unit"
@@ -464,7 +464,7 @@ value "theNZP"
 )
 (vvPair
 variable "user"
-value "martin43"
+value "bhatia9"
 )
 (vvPair
 variable "version"
@@ -491,10 +491,10 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *40 (CptPort
-uid 135,0
+uid 189,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 136,0
+uid 190,0
 ro 90
 va (VaSet
 vasetType 1
@@ -503,40 +503,43 @@ fg "0,65535,0"
 xt "14250,6625,15000,7375"
 )
 tg (CPTG
-uid 137,0
+uid 191,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 138,0
+uid 192,0
 va (VaSet
 font "courier,8,0"
 )
 xt "16000,6550,17500,7450"
-st "clk"
+st "CLK"
 blo "16000,7250"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 139,0
+uid 193,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,1800,59500,2700"
+st "CLK      : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
-n "clk"
+n "CLK"
 t "std_logic"
-o 18
-suid 7,0
+o 2
+suid 13,0
 )
 )
 )
 *41 (CptPort
-uid 140,0
+uid 194,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 141,0
+uid 195,0
 ro 90
 va (VaSet
 vasetType 1
@@ -545,11 +548,11 @@ fg "0,65535,0"
 xt "14250,10625,15000,11375"
 )
 tg (CPTG
-uid 142,0
+uid 196,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 143,0
+uid 197,0
 va (VaSet
 font "courier,8,0"
 )
@@ -560,25 +563,28 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 144,0
+uid 198,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,2700,58500,3600"
+st "GenCCout : IN     lc3b_cc  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
 n "GenCCout"
 t "lc3b_cc"
-o 9
-suid 8,0
+o 15
+suid 14,0
 )
 )
 )
 *42 (CptPort
-uid 145,0
+uid 199,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 146,0
+uid 200,0
 ro 90
 va (VaSet
 vasetType 1
@@ -587,11 +593,11 @@ fg "0,65535,0"
 xt "14250,8625,15000,9375"
 )
 tg (CPTG
-uid 147,0
+uid 201,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 148,0
+uid 202,0
 va (VaSet
 font "courier,8,0"
 )
@@ -602,25 +608,28 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 149,0
+uid 203,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,3600,59500,4500"
+st "loadNZP  : IN     std_logic  ;
+"
 )
 thePort (LogicalPort
 decl (Decl
 n "loadNZP"
 t "std_logic"
-o 10
-suid 9,0
+o 21
+suid 15,0
 )
 )
 )
 *43 (CptPort
-uid 150,0
+uid 204,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 151,0
+uid 205,0
 ro 90
 va (VaSet
 vasetType 1
@@ -629,11 +638,11 @@ fg "0,65535,0"
 xt "23000,7625,23750,8375"
 )
 tg (CPTG
-uid 152,0
+uid 206,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 153,0
+uid 207,0
 va (VaSet
 font "courier,8,0"
 )
@@ -645,26 +654,29 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 154,0
+uid 208,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,4500,59500,5400"
+st "n        : OUT    std_logic  ;
+"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "n"
 t "std_logic"
-o 11
-suid 10,0
+o 22
+suid 16,0
 )
 )
 )
 *44 (CptPort
-uid 155,0
+uid 209,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 156,0
+uid 210,0
 ro 90
 va (VaSet
 vasetType 1
@@ -673,11 +685,11 @@ fg "0,65535,0"
 xt "23000,9625,23750,10375"
 )
 tg (CPTG
-uid 157,0
+uid 211,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 158,0
+uid 212,0
 va (VaSet
 font "courier,8,0"
 )
@@ -689,26 +701,29 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 159,0
+uid 213,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,5400,59500,6300"
+st "p        : OUT    std_logic  ;
+"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "p"
 t "std_logic"
-o 13
-suid 11,0
+o 23
+suid 17,0
 )
 )
 )
 *45 (CptPort
-uid 160,0
+uid 214,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 161,0
+uid 215,0
 ro 90
 va (VaSet
 vasetType 1
@@ -717,11 +732,11 @@ fg "0,65535,0"
 xt "23000,8625,23750,9375"
 )
 tg (CPTG
-uid 162,0
+uid 216,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 163,0
+uid 217,0
 va (VaSet
 font "courier,8,0"
 )
@@ -733,18 +748,21 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 164,0
+uid 218,0
 va (VaSet
 font "courier,8,0"
 )
+xt "44000,6300,58500,7200"
+st "z        : OUT    std_logic 
+"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "z"
 t "std_logic"
-o 12
-suid 12,0
+o 25
+suid 18,0
 )
 )
 )
@@ -1430,5 +1448,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 176,0
+lastUid 230,0
 )

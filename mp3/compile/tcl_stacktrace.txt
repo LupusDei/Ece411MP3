@@ -1,0 +1,7 @@
+Fri Dec 02 03:23:45 CST 2011
+Trace back: invalid command name ".dataflow.pw.df.c"
+    while executing
+".dataflow.pw.df.c center_objects {{net /mp3_cpu/dm_resp_h}}"
+    ("after" script)
+  2: ::tkerror {invalid command name ".dataflow.pw.df.c"}
+  1: ::bgerror {invalid command name ".dataflow.pw.df.c"}

@@ -35,6 +35,7 @@ signal pre_dm_read_l : std_logic;
 signal pre_dm_writel_l : std_logic;
 signal pre_dm_writeh_l : std_logic;
 signal dest : lc3b_reg;
+signal is_byte : std_logic;
 signal reg_write : std_logic;
 signal pre_trap : std_logic;
 BEGIN
@@ -46,6 +47,8 @@ BEGIN
 			pre_dm_writel_l <= '1';
 			pre_dm_writeh_l <= '1';
 			pre_trap <= '0';
+			is_byte <= '0';
+			is_byte <= '0';
 			inactive <= "0000"; --only becomes inactive if the opcode isn't recognized... mostly for testing purposes
 	  pre_brInst <= '0';
 	  pre_GENMuxSel <= '0';
@@ -68,14 +71,19 @@ BEGIN
 				when "1101" =>
 				 	pre_loadNZP <= '1';
 					reg_write <= '1'; 
+				when "0010" => 
+	   			 	pre_loadNZP <= '1';
+				 	pre_dm_read_l <= '0';
+					reg_write <= '1';
+					is_byte <= '1';
 				when "0110" => 
 	   			 	pre_loadNZP <= '1';
 				 	pre_dm_read_l <= '0';
 					reg_write <= '1';
 				when "0011" =>
-					pre_dm_writel_l <= '0';
 					dest <= "000";
 					reg_write <= '0';
+					is_byte <= '1';
 				when "0111" =>
 				 	pre_dm_writel_l <= '0';
 				 	pre_dm_writeh_l <= '0';
@@ -98,6 +106,6 @@ BEGIN
 					reg_write <= '0';
 			END case; 
 	END PROCESS;
-	MEM_C <= "000" & reg_write & dest & pre_trap & pre_brInst & pre_dm_writeh_l & pre_dm_writel_l & pre_dm_read_l & pre_checkNZP & pre_loadNZP after delay_decode3;
+	MEM_C <= "00" & is_byte & reg_write & dest & pre_trap & pre_brInst & pre_dm_writeh_l & pre_dm_writel_l & pre_dm_read_l & pre_checkNZP & pre_loadNZP after delay_decode3;
 END ARCHITECTURE untitled;
 

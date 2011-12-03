@@ -15,6 +15,7 @@ add wave -hex /mp3_cpu/pipelinedatapath/aluina
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/DestReg
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/loadNZP
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/brInst
+add wave -hex /mp3_cpu/pipelinedatapath/memaccess/prememwritedata
 add wave -hex /mp3_cpu/pipelinedatapath/decode/B
 add wave -hex /mp3_cpu/pipelinedatapath/decode/trapvect8
 add wave -hex /mp3_cpu/pipelinedatapath/memdataout
@@ -30,6 +31,9 @@ add wave -hex /mp3_cpu/dm_resp_h
 add wave -hex /mp3_cpu/dm_read_l
 add wave -hex /mp3_cpu/dm_writeh_l
 add wave -hex /mp3_cpu/dm_writel_l
+add wave -hex /mp3_cpu/ControlUnit/predm_writel_l
+add wave -hex /mp3_cpu/ControlUnit/is_odd
+add wave -hex /mp3_cpu/ControlUnit/is_byte
 add wave -hex /mp3_cpu/dataaddr
 add wave -hex /mp3_cpu/datamemin
 add wave -hex /mp3_cpu/MEMWriteData
@@ -138,11 +142,11 @@ run 150
 
 echo "JSR 1; PC <= 58 + 2 + 8 = 68"
 virtual signal {/mp3_cpu/pcinstaddr == 68} JSR
-add wave -color white /mp3_cpu/JSR
+add wave -color white /mp3_cpu/JSR 
 
 echo "STB R5, R2,7;  MEM(R2 + 7) <= R5(7:0);  starts at pc=68"
-virtual signal {/mp3_cpu/pcinstaddr == 74 && /mp3_cpu/datamemin == 84 && /mp3_cpu/dm_resp_h == 1} stb
-add wave -color white /mp3_cpu/stb
+virtual signal {/mp3_cpu/pcinstaddr == 74 && /mp3_cpu/datamemin(15:8) == 84 && /mp3_cpu/dm_resp_h == 1} stb1
+add wave -color white /mp3_cpu/stb1
 run 200
 
 run 100
@@ -171,5 +175,17 @@ add wave -color white /mp3_cpu/ret2
 run 200
 
 
+echo "STB R5, R2, 30; MEM(38) <= R5(7:0); starts at 346"
+virtual signal {/mp3_cpu/pcinstaddr == 352 && /mp3_cpu/datamemin(7:0) == 84 && /mp3_cpu/dm_resp_h == 1} stb2
+add wave -color white /mp3_cpu/stb2
+run 200
 
-  
+echo "LDB R6, R2, 9; R6 <= MEM(15); starts at 352" 
+virtual signal {/mp3_cpu/pcinstaddr == 360 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(6) == 60} ldb1
+add wave -color white /mp3_cpu/ldb1
+run 200
+
+echo "LDB R6, R2, 30; R6 <= MEM(38); starts at 354"
+virtual signal {/mp3_cpu/pcinstaddr == 362 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(6) == 84} ldb2
+add wave -color white /mp3_cpu/ldb2
+run 200 

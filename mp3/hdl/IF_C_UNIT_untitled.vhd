@@ -19,7 +19,7 @@ ENTITY IF_C_UNIT IS
       CLK       : IN     std_logic;
       JMP       : IN     std_logic;
       JSR       : IN     std_logic;
-      MEM_C_Out : IN     lc3b_word;
+      Mem_C_Out : IN     lc3b_word;
       RESET_L   : IN     std_logic;
       im_resp_h : IN     std_logic;
       stall     : IN     std_logic;

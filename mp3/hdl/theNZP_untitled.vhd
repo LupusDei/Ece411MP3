@@ -16,8 +16,8 @@ USE ece411.LC3b_types.all;
 
 ENTITY theNZP IS
    PORT( 
+      CLK      : IN     std_logic;
       GenCCout : IN     lc3b_cc;
-      clk      : IN     std_logic;
       loadNZP  : IN     std_logic;
       n        : OUT    std_logic;
       p        : OUT    std_logic;

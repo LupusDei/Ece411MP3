@@ -96,26 +96,18 @@ BEGIN
 					instruction <= "0100100000000100"; --JSR 4
 			elsif (PCInstAddr = "0000000001000100") then  --pc = 68
 					instruction <= "0011101010000111"; -- stb r5, r2, 7
-			elsif (PCInstAddr = "0000000001000110") then  --pc = 70
-					instruction <= "0000000000000000"; -- NOP
-			elsif (PCInstAddr = "0000000001001000") then  --pc = 72
-					instruction <= "0000000000000000"; -- NOP
-			elsif (PCInstAddr = "0000000001001010") then  --pc = 74
-					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000001001100") then --pc = 76
 					instruction <= "0100000101000000"; -- jsrr r5
-			elsif (PCInstAddr = "0000000001001110") then  --pc = 78
-					instruction <= "0000000000000000"; -- NOP
-			elsif (PCInstAddr = "0000000001010000") then  --pc = 80
-					instruction <= "0000000000000000"; -- NOP
-			elsif (PCInstAddr = "0000000001010010") then  --pc = 82
-					instruction <= "0000000000000000"; -- NOP
-			elsif (PCInstAddr = "0000000001010100") then  --pc = 84
-					instruction <= "0000000000000000"; -- NOP
 			elsif (PCInstAddr = "0000000101010110") then  --pc = 342
 					instruction <= "1111000000100000"; -- TRAP 32
 			elsif (PCInstAddr = "0000000010100010") then  --pc = 160
 					instruction <= "1100000111000000"; --RET
+			elsif (PCInstAddr = "0000000101011010") then  --pc = 346
+					instruction <= "0011101010011110"; -- stb r5, r2, 30
+			elsif (PCInstAddr = "0000000101100000") then  --pc = 352
+					instruction <= "0010110010001001"; -- ldb r6, r2, 9
+			elsif (PCInstAddr = "0000000101100010") then  --pc = 354
+					instruction <= "0010110010011110"; -- ldb r6, r2, 30
 			else
 					instruction <= "0000000000000000";
 			end if;
@@ -124,7 +116,7 @@ BEGIN
 		end if;
 	end process inst_stuff;
 
-	data_stuff : PROCESS (dm_read_l, DataAddr, MEMWriteData)
+	data_stuff : PROCESS (dm_read_l, DataAddr, MEMWriteData, dm_writeh_l, dm_writel_l)
 	begin
 		if (dm_read_l = '0') then
 			dm_resp <= '1';
@@ -132,18 +124,22 @@ BEGIN
 				magic_data <= "0110000000001101"; --600D
 			elsif (DataAddr = "0000000001000000") then
 				magic_data <= "0000000010100000"; --00A0 (160) just some random value to check for trap
+			elsif (DataAddr = "0000000000010001") then
+				magic_data <= "0011110000000000"; --3D00 random value to check for LDB
+			elsif (DataAddr = "0000000000100110") then 
+				magic_data <= "0000000101010100";
 			else
 				magic_data <= "0000101110101101"; --0BAD
 			end if;
 		else
-				if (DataAddr = "0000000000001001" or DataAddr = "0000000001011000" or DataAddr = "0000000000001111") then
+				if (DataAddr = "0000000000001001" or DataAddr = "0000000001011000" or DataAddr = "0000000000001111" or DataAddr = "0000000000100110") then
 					dm_resp <= '1';
 					if (dm_writeh_l = '0' and dm_writel_l = '0') then
 						magic_data <= MEMWriteData;
-					elsif (dm_writeh_l = '0') then 
-						magic_data <= MEMWriteData(15 downto 8) & "00000000";
 					elsif (dm_writel_l = '0') then
-						magic_data <= "00000000" & MEMWriteData(7 downto 0);
+						magic_data <= magic_data(15 downto 8) & MEMWriteData(7 downto 0);
+					elsif (dm_writeh_l = '0') then 
+						magic_data <= MEMWriteData(15 downto 8) & magic_data(7 downto 0);
 					else
 			 			dm_resp <= '0';
 					end if;

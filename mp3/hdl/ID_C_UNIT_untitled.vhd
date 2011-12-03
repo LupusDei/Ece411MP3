@@ -71,6 +71,8 @@ BEGIN
 					end if;
 				when "1101" =>
 					ALUMuxSel := "111";
+				when "0010" =>
+					ALUMuxSel := "101";
 				when "0110" =>
 					ALUMuxSel := "110";
 				when "0111" =>

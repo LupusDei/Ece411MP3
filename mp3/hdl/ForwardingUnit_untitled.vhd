@@ -18,7 +18,7 @@ ENTITY ForwardingUnit IS
    PORT( 
       EX_C_In  : IN     lc3b_word;
       ID_C_Out : IN     lc3b_word;
-      MEM_C_In : IN     lc3b_word;
+      Mem_C_In : IN     lc3b_word;
       forwardA : OUT    std_logic_vector (1 DOWNTO 0);
       forwardB : OUT    std_logic_vector (1 DOWNTO 0);
       storeSel : OUT    std_logic_vector (1 DOWNTO 0)
@@ -53,7 +53,7 @@ BEGIN
 		if(srcBits = "01") then -- ADD/AND
 			if (mem_c_in(12) = '1') then
 				if(idsrcReg1 = memdestReg) then 
-					forwardA <= "10";
+					forwardA <= "10" ;
 				end if;
 				if(idsrcReg2 = memdestReg) then
 					forwardB <= "10";

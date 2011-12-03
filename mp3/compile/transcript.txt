@@ -1,4 +1,4 @@
-# //  ModelSim SE 6.1c Nov 17 2005 Linux 2.6.32-131.17.1.el6.x86_64
+# //  ModelSim SE 6.1c Nov 17 2005 Linux 2.6.32-131.6.1.el6.x86_64
 # //
 # //  Copyright Mentor Graphics Corporation 2005
 # //              All Rights Reserved.
@@ -24,8 +24,10 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_reg(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_unit(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.staller(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.stripper(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_reg(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.setdmwrites(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writehigh(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.magmem(awesome)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
@@ -51,7 +53,10 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pcplus2(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(struct)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gencondcodes(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lastbitstb(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.shiftbytedata(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.srcregshifter(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzp(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzpsplit(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wanna_branch(untitled)
@@ -63,10 +68,6 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
 do ACCEPTANCE_TEST.do
 # --- Executing initialization force file for the Acceptance Tests 
-# ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
-# File in use by: bhatia9  Hostname: gelib-057-26.ews.illinois.edu  ProcessID: 20703
-#           Attempting to use alternate file "./wlft1jCZ28".
-# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlft1jCZ28 instead.
 # Full Instruction Tests 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
@@ -155,7 +156,7 @@ do ACCEPTANCE_TEST.do
 # JSR 1; PC <= 58 + 2 + 8 = 68 
 # /mp3_cpu/JSR
 # STB R5, R2,7;  MEM(R2 + 7) <= R5(7:0);  starts at pc=68 
-# /mp3_cpu/stb
+# /mp3_cpu/stb1
 # 0
 # 
 # 0
@@ -178,87 +179,15 @@ do ACCEPTANCE_TEST.do
 # /mp3_cpu/ret2
 # 0
 # 
-env U_0
-# sim:/mp3_cpu/u_0
-env U_0
-# sim:/mp3_cpu/u_0
-# hds_restart 
-restart -force
-# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mp3_cpu(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.magmem(awesome)
-# ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
-# File in use by: bhatia9  Hostname: gelib-057-26.ews.illinois.edu  ProcessID: 20703
-#           Attempting to use alternate file "./wlftlnqACX".
-# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftlnqACX instead.
-do ACCEPTANCE_TEST.do
-# --- Executing initialization force file for the Acceptance Tests 
-# Full Instruction Tests 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 4 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 4 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 7 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ADD R7, R1, R2 :  R7 <= 42 + 8 
-# /mp3_cpu/ADD_test1
-# ADD R0, R1, 11 : R0 <= 53 
-# /mp3_cpu/ADD_test2
-# AND R6, R1, R2 :  R6 <= 101010 AND 00100 
-# /mp3_cpu/AND_test1
-# AND R6, R1, 7 : R6 <= 2 
-# /mp3_cpu/AND_test2
-# NOT R4, R3 : R4 <= NOT(011) 
-# /mp3_cpu/NOT_test1
-# LDR r7, r2, 6 : r7 <= MEM(0012) which is 600D 
-# /mp3_cpu/LDR_test1
-# 2 NOPs should skoot on by 
-# STR r1, r3, 3 : MEM(0009) <= r1 followed by nothin 
-# /mp3_cpu/STR_test1
-# BR np, 8   20 + 16 = 36 
-# /mp3_cpu/br_1
-# /mp3_cpu/br_2
-# LEA R7, 10 -- R5 <= pc = 36 + 2 + 20 = 58 
-# /mp3_cpu/LEA_1
-# LSHF R4, R3, 2  ;  R4 <= 3 << 2 = 12 
-# /mp3_cpu/LSHF
-# RSHFL R4, R4, 2  ;  R4 <= 12 >> 2 = 3 
-# /mp3_cpu/RSHFL
-# RSHFA R4, R1, 3  ;  R4 <= 42 >> 3 = 5 
-# /mp3_cpu/RSHFA
-# RET ; PC <= R7 = 58 
-# /mp3_cpu/RET
-# JSR 1; PC <= 58 + 2 + 8 = 68 
-# /mp3_cpu/JSR
-# STB R5, R2,7;  MEM(R2 + 7) <= R5(7:0);  starts at pc=68 
-# /mp3_cpu/stb
-# JSRR R5; PC <= R5 
-# /mp3_cpu/jsrr
-# TRAP x44; PC <= MEM(64) 
-# /mp3_cpu/trap1a
-# TRAP x44; R7 <= PC 
-# /mp3_cpu/trap1b
-# RET - PC <= R7 (344) 
-# /mp3_cpu/ret2
+# STB R5, R2, 30; MEM(38) <= R5(7:0); starts at 346 
+# /mp3_cpu/stb2
+# 0
+# 
+# LDB R6, R2, 9; R6 <= MEM(15); starts at 352 
+# /mp3_cpu/ldb1
+# 0
+# 
+# LDB R6, R2, 30; R6 <= MEM(38); starts at 354 
+# /mp3_cpu/ldb2
+# 0
+# 
