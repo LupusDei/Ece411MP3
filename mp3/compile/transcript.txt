@@ -22,13 +22,19 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_unit(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_unit(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_reg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_reg2(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_unit2(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.staller(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.stripper(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_reg(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.bubbler(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.parsememcin2(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.setdmwrites(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writehigh(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_1(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.magmem(awesome)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.exstage(struct)
@@ -45,12 +51,12 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.regextractor(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.shift(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.add16(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_3(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ifstage(struct)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_decode(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pc(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pcplus2(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gen_nops(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(struct)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gencondcodes(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lastbitstb(untitled)
@@ -191,3 +197,8 @@ do ACCEPTANCE_TEST.do
 # /mp3_cpu/ldb2
 # 0
 # 
+# LDI R7, R2, 14; R7 <= MEM(MEM(36); starts at 356 
+# /mp3_cpu/ldi1
+# /mp3_cpu/ldi2
+env MEM_creg
+# sim:/mp3_cpu/controlunit/mem_creg

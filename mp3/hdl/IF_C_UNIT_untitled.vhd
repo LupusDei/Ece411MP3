@@ -22,6 +22,7 @@ ENTITY IF_C_UNIT IS
       Mem_C_Out : IN     lc3b_word;
       RESET_L   : IN     std_logic;
       im_resp_h : IN     std_logic;
+      kill      : IN     std_logic;
       stall     : IN     std_logic;
       IF_C_In   : OUT    lc3b_word;
       im_read_l : INOUT  std_logic
@@ -73,7 +74,7 @@ BEGIN
 			end if;
 		end if;
 	end if;
-	if (stall = '1') then
+	if (stall = '1' or kill = '1') then
 		pre_load_pc <= '0';
 	end if;
 	END PROCESS;

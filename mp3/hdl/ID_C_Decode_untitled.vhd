@@ -20,6 +20,7 @@ ENTITY ID_C_Decode IS
       ALUMuxSel  : OUT    LC3b_8MUX_SEL;
       InAMuxSel  : OUT    std_logic;
       RegBMuxSel : OUT    STD_LOGIC;
+      is_ldi     : OUT    std_logic;
       jsrSel     : OUT    std_logic;
       trapSel    : OUT    STD_LOGIC
    );
@@ -36,5 +37,6 @@ BEGIN
 		InAMuxSel <= ID_C_In(4);
 		jsrSel <= ID_C_In(5);
 		trapSel <= ID_C_In(6);
+		is_ldi <= ID_C_In(7);
 END ARCHITECTURE untitled;
 

@@ -69,7 +69,7 @@ port (LogicalPort
 decl (Decl
 n "ALUresult"
 t "lc3b_word"
-o 22
+o 1
 suid 150,0
 )
 )
@@ -80,7 +80,7 @@ port (LogicalPort
 decl (Decl
 n "CLK"
 t "std_logic"
-o 1
+o 2
 suid 151,0
 )
 )
@@ -92,7 +92,7 @@ m 1
 decl (Decl
 n "dataaddr"
 t "lc3b_word"
-o 14
+o 8
 suid 152,0
 )
 )
@@ -103,7 +103,7 @@ port (LogicalPort
 decl (Decl
 n "datamemin"
 t "lc3b_word"
-o 8
+o 5
 suid 153,0
 )
 )
@@ -114,7 +114,7 @@ port (LogicalPort
 decl (Decl
 n "Mem_C_In"
 t "lc3b_word"
-o 5
+o 3
 suid 154,0
 )
 )
@@ -126,7 +126,7 @@ m 1
 decl (Decl
 n "Mem_C_Out"
 t "lc3b_word"
-o 13
+o 7
 suid 155,0
 )
 )
@@ -138,7 +138,7 @@ m 1
 decl (Decl
 n "MEMDataOut"
 t "lc3b_word"
-o 25
+o 6
 suid 156,0
 )
 )
@@ -150,7 +150,7 @@ m 1
 decl (Decl
 n "memwritedata"
 t "lc3b_word"
-o 16
+o 9
 suid 157,0
 )
 )
@@ -161,7 +161,7 @@ port (LogicalPort
 decl (Decl
 n "SrcIn"
 t "lc3b_word"
-o 34
+o 4
 suid 158,0
 )
 )
@@ -388,19 +388,19 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/MEMStage"
 )
 (vvPair
 variable "date"
-value "12/02/11"
+value "12/03/11"
 )
 (vvPair
 variable "day"
-value "Fri"
+value "Sat"
 )
 (vvPair
 variable "day_long"
-value "Friday"
+value "Saturday"
 )
 (vvPair
 variable "dd"
-value "02"
+value "03"
 )
 (vvPair
 variable "entity_name"
@@ -428,7 +428,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "siebl-0216-08.ews.illinois.edu"
+value "siebl-0216-13.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -508,7 +508,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "22:59:09"
+value "23:52:31"
 )
 (vvPair
 variable "unit"
@@ -582,7 +582,7 @@ thePort (LogicalPort
 decl (Decl
 n "ALUresult"
 t "lc3b_word"
-o 22
+o 1
 suid 150,0
 )
 )
@@ -627,7 +627,7 @@ thePort (LogicalPort
 decl (Decl
 n "CLK"
 t "std_logic"
-o 1
+o 2
 suid 151,0
 )
 )
@@ -674,7 +674,7 @@ m 1
 decl (Decl
 n "dataaddr"
 t "lc3b_word"
-o 14
+o 8
 suid 152,0
 )
 )
@@ -721,7 +721,7 @@ thePort (LogicalPort
 decl (Decl
 n "datamemin"
 t "lc3b_word"
-o 8
+o 5
 suid 153,0
 )
 )
@@ -768,7 +768,7 @@ thePort (LogicalPort
 decl (Decl
 n "Mem_C_In"
 t "lc3b_word"
-o 5
+o 3
 suid 154,0
 )
 )
@@ -815,7 +815,7 @@ m 1
 decl (Decl
 n "Mem_C_Out"
 t "lc3b_word"
-o 13
+o 7
 suid 155,0
 )
 )
@@ -862,7 +862,7 @@ m 1
 decl (Decl
 n "MEMDataOut"
 t "lc3b_word"
-o 25
+o 6
 suid 156,0
 )
 )
@@ -909,7 +909,7 @@ m 1
 decl (Decl
 n "memwritedata"
 t "lc3b_word"
-o 16
+o 9
 suid 157,0
 )
 )
@@ -954,7 +954,7 @@ thePort (LogicalPort
 decl (Decl
 n "SrcIn"
 t "lc3b_word"
-o 34
+o 4
 suid 158,0
 )
 )
@@ -1641,5 +1641,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 1750,0
+lastUid 1762,0
 )

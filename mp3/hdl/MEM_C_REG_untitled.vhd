@@ -20,8 +20,8 @@ ENTITY MEM_C_REG IS
       RESET_L        : IN     std_logic;
       mem_c          : IN     lc3b_word;
       stall          : IN     std_logic;
-      Mem_C_In       : OUT    lc3b_word;
-      dm_read_l      : OUT    std_logic;
+      preMem_C_In    : OUT    lc3b_word;
+      predm_read_l   : OUT    std_logic;
       predm_writeh_l : OUT    std_logic;
       predm_writel_l : OUT    std_logic
    );
@@ -39,10 +39,10 @@ BEGIN
 	variable control : lc3b_word;
 	BEGIN
 		control := mem(1);
-		MEM_C_In <= control(15 downto 7) & "000" & control(3 downto 0) after delay_regfile_read;
+		preMEM_C_In <= control(15 downto 7) & "000" & control(3 downto 0) after delay_regfile_read;
 		predm_writeh_l <= control(6) after delay_reg;
 		predm_writel_l <= control(5) after delay_reg;
-		dm_read_l <= control(4) after delay_reg;
+		predm_read_l <= control(4) after delay_reg;
 	END PROCESS MEM_C_LEAVING;
 
 	MEM_C_ENTERING : PROCESS(clk, mem_c, RESET_L, stall)

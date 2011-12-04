@@ -16,12 +16,12 @@ USE ece411.LC3b_types.all;
 
 ENTITY setdmwrites IS
    PORT( 
-      is_byte        : IN     std_logic;
-      is_odd         : IN     std_logic;
-      predm_writeh_l : IN     std_logic;
-      predm_writel_l : IN     std_logic;
-      dm_writeh_l    : OUT    std_logic;
-      dm_writel_l    : OUT    std_logic
+      is_byte           : IN     std_logic;
+      is_odd            : IN     std_logic;
+      predm_writeh_l    : IN     std_logic;
+      predm_writel_l    : IN     std_logic;
+      beforedm_writeh_l : OUT    std_logic;
+      beforedm_writel_l : OUT    std_logic
    );
 
 -- Declarations
@@ -42,8 +42,8 @@ BEGIN
 		elsif(is_byte = '1') then
 			tempdm_writel_l := '0';	
 		end if;
-	dm_writeh_l <= tempdm_writeh_l after delay_mux2;
-	dm_writel_l <= tempdm_writel_l after delay_mux2;
+	beforedm_writeh_l <= tempdm_writeh_l after delay_mux2;
+	beforedm_writel_l <= tempdm_writel_l after delay_mux2;
 	END PROCESS;
 END ARCHITECTURE untitled;
 

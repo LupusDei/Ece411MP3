@@ -72,10 +72,17 @@ BEGIN
 					pre_WBTrapMuxSel <= '0';
 					pre_RegWrite <= '0';
 				when "0000" =>
-					pre_WBMuxSel <= '0';
-					pre_WBTrapMuxSel <= '0';
-					pre_RegWrite <= '0';
-					pre_DR <= "000";
+					if(pre_DR = "000") then
+						pre_WBMuxSel <= '0';
+						pre_WBTrapMuxSel <= '0';
+						pre_RegWrite <= '1';
+					
+					else 
+						pre_WBMuxSel <= '0';
+						pre_WBTrapMuxSel <= '0';
+						pre_RegWrite <= '0';
+						pre_DR <= "000";
+					end if;
 				when "1111" =>
 					pre_WBMuxSel <= '0';
 					pre_WBTrapMuxSel <= '1';

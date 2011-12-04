@@ -22,6 +22,7 @@ ENTITY mem_C_decode IS
       TrapDecider : OUT    std_logic;
       brInst      : OUT    std_logic;
       is_byte     : OUT    std_logic;
+      isldisti    : OUT    STD_LOGIC;
       loadNZP     : OUT    std_logic
    );
 
@@ -38,5 +39,6 @@ BEGIN
 	brInst <= MEM_C_In(7);
 	TrapDecider <= MEM_C_In(8);
 	is_byte <= MEM_C_In(13);
+	isldisti <= MEM_C_In(14);
 END ARCHITECTURE untitled;
 

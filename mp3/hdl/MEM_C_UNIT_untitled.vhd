@@ -41,8 +41,10 @@ signal pre_trap : std_logic;
 BEGIN
 	PROCESS(instOut)
 		variable opcode : LC3b_opcode;
+		variable count : integer;
 		BEGIN 	
 			opcode := instOut(15 downto 12);
+			count := 1;
 			pre_dm_read_l <= '1';
 			pre_dm_writel_l <= '1';
 			pre_dm_writeh_l <= '1';
@@ -80,6 +82,11 @@ BEGIN
 	   			 	pre_loadNZP <= '1';
 				 	pre_dm_read_l <= '0';
 					reg_write <= '1';
+				when "1010" =>
+	   			 	pre_loadNZP <= '1';
+				 	pre_dm_read_l <= '0';
+					reg_write <= '1';
+					
 				when "0011" =>
 					dest <= "000";
 					reg_write <= '0';

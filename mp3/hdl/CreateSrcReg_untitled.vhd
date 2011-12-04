@@ -17,6 +17,7 @@ USE ece411.LC3b_types.all;
 ENTITY CreateSrcReg IS
    PORT( 
       instIn   : IN     lc3b_word;
+      is_ldi   : IN     std_logic;
       ID_C_Out : OUT    lc3b_word
    );
 
@@ -27,7 +28,7 @@ END CreateSrcReg ;
 --
 ARCHITECTURE untitled OF CreateSrcReg IS
 	BEGIN
-		PROCESS (instIn)
+		PROCESS (instIn, is_ldi)
 			variable opcode : lc3b_opcode;
 			variable preID_C_Out : LC3b_word;
 		BEGIN
@@ -44,7 +45,7 @@ ARCHITECTURE untitled OF CreateSrcReg IS
 			when "0010" =>		
 				preID_C_Out := "0000000" & instIn(8 downto 6) & "000000";
 			when "1010" =>		
-				preID_C_Out := "0000000" & instIn(8 downto 6) & "000000";
+				preID_C_Out := "000" & is_ldi & "000" & instIn(8 downto 6) & "000000";
 			when "0110" =>		 
 				preID_C_Out := "0000000" & instIn(8 downto 6) & "000000";
 			when "1001" =>		

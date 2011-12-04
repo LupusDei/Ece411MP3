@@ -108,6 +108,10 @@ BEGIN
 					instruction <= "0010110010001001"; -- ldb r6, r2, 9
 			elsif (PCInstAddr = "0000000101100010") then  --pc = 354
 					instruction <= "0010110010011110"; -- ldb r6, r2, 30
+			elsif (PCInstAddr = "0000000101100100") then  --pc = 356
+					instruction <= "1010111010001110"; -- ldi r7, r2, 14 
+			elsif (PCInstAddr = "0000000101100110") then  --pc = 358
+					instruction <= "0001110010000100"; -- add r6, r2, r4 dummy instruction 
 			else
 					instruction <= "0000000000000000";
 			end if;
@@ -128,6 +132,12 @@ BEGIN
 				magic_data <= "0011110000000000"; --3D00 random value to check for LDB
 			elsif (DataAddr = "0000000000100110") then 
 				magic_data <= "0000000101010100";
+			elsif (DataAddr = "0000000001000100") then 
+				magic_data <= "0000000000010100";
+			elsif (DataAddr = "0000000000100100") then
+				magic_data <= "0000000001010010";
+			elsif (DataAddr = "0000000001010010") then
+				magic_data <= "0000000010000000";	
 			else
 				magic_data <= "0000101110101101"; --0BAD
 			end if;
