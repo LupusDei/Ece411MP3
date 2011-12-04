@@ -41,6 +41,6 @@ BEGIN
 			regwrite <= '1';
 		end if;
 	END PROCESS;
-	mem_c2 <= '0' & check & '0' & regwrite & "0000000" & predmread_l & "0000";
+	mem_c2 <= '0' & check & '0' & regwrite & "0000000" & predmread_l & "0000" after 4 ns;
 END ARCHITECTURE untitled;
 

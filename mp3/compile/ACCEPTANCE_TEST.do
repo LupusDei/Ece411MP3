@@ -21,6 +21,7 @@ add wave -hex /mp3_cpu/pipelinedatapath/memaccess/prememwritedata
 add wave -hex /mp3_cpu/pipelinedatapath/decode/B
 add wave -hex /mp3_cpu/pipelinedatapath/decode/trapvect8
 add wave -hex /mp3_cpu/pipelinedatapath/memdataout
+add wave -hex /mp3_cpu/pipelinedatapath/memdata
 add wave -hex /mp3_cpu/pipelinedatapath/decode/instIn
 add wave -hex /mp3_cpu/pipelinedatapath/SrcIn
 add wave -hex /mp3_cpu/pipelinedatapath/PCValue

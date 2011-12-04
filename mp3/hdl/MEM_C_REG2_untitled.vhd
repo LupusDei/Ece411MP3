@@ -33,11 +33,11 @@ END MEM_C_REG2 ;
 ARCHITECTURE untitled OF MEM_C_REG2 IS
 TYPE MEM_C_Mem IS ARRAY (1 DOWNTO 0) OF LC3B_WORD;
 SIGNAL mem : MEM_C_Mem;
-signal control : lc3b_word;
 BEGIN
 	MEM_C_LEAVING : PROCESS(mem)
+	variable control : lc3b_word;
 	BEGIN
-		control <= mem(1);
+		control := mem(1);
 		preMEM_C_In2 <= control(15 downto 7) & "000" & control(3 downto 0) after delay_regfile_read;
 		predm_write2h_l <= control(6) after delay_reg;
 		predm_write2l_l <= control(5) after delay_reg;
