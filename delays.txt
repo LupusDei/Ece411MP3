@@ -1,0 +1,12 @@
+LRU:
+	LRU_UNIT:
+LRUReg3bit8  - 7ns from new index
+compare3bits - 3ns + 7 => 10ns
+LRUplusone   - 5ns + 10 => 15ns
+newLUMux     - 2ns + 15 => 17ns
+winMux       - 2ns + 17 => 19ns
+winner       - 3ns + 7ns => 10ns
+________________ 19ns after new index or a hit, all values are steady
+
+LRUOut       - 10ns (winner) + 3ns (encoder) => 13ns
+40ns for a complete Read - from new LuOuts to the wayLRUReg writes
