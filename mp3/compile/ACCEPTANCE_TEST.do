@@ -18,6 +18,7 @@ add wave -hex /mp3_cpu/pipelinedatapath/memaccess/brInst
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/isldisti
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/predataaddr
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/prememwritedata
+add wave -hex /mp3_cpu/pipelinedatapath/memaccess/muxsel
 add wave -hex /mp3_cpu/pipelinedatapath/decode/B
 add wave -hex /mp3_cpu/pipelinedatapath/decode/trapvect8
 add wave -hex /mp3_cpu/pipelinedatapath/memdataout
@@ -201,8 +202,10 @@ add wave -color white /mp3_cpu/ldb2
 run 200
 
 echo "LDI R7, R2, 14; R7 <= MEM(MEM(36); starts at 356"
-virtual signal {/mp3_cpu/pcinstaddr == 364 && /mp3_cpu/datamemin == 98} ldi1
+virtual signal {/mp3_cpu/pcinstaddr == 360 && /mp3_cpu/datamemin == 82} ldi1
 add wave -color white /mp3_cpu/ldi1
+run 200
 	
-virtual signal {/mp3_cpu/pcinstaddr == 366 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 128} ldi2
+virtual signal {/mp3_cpu/pcinstaddr == 364 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 128} ldi2
 add wave -color white /mp3_cpu/ldi2	
+run 200

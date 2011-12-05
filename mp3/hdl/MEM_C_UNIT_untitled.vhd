@@ -85,7 +85,7 @@ BEGIN
 				when "1010" =>
 	   			 	pre_loadNZP <= '1';
 				 	pre_dm_read_l <= '0';
-					reg_write <= '1';
+					reg_write <= '0';
 					
 				when "0011" =>
 					dest <= "000";

@@ -16,11 +16,11 @@ USE ece411.LC3b_types.all;
 
 ENTITY WB_C_REG IS
    PORT( 
-      CLK     : IN     std_logic;
-      RESET_L : IN     std_logic;
-      stall   : IN     std_logic;
-      wb_c    : IN     lc3b_word;
-      WB_C_In : OUT    lc3b_word
+      CLK        : IN     std_logic;
+      RESET_L    : IN     std_logic;
+      preWB_C_in : IN     lc3b_word;
+      stall      : IN     std_logic;
+      WB_C_In    : OUT    lc3b_word
    );
 
 -- Declarations
@@ -37,18 +37,18 @@ BEGIN
 		WB_C_In <= mem(2) after delay_regfile_read;
 	END PROCESS WB_C_LEAVING;
 
-	WB_C_ENTERING : PROCESS(clk, wb_c, RESET_L, stall)
+	WB_C_ENTERING : PROCESS(clk, prewb_c_in, RESET_L, stall)
 	BEGIN
 		if RESET_L = '0' then
 			mem(0) <= "0000000000000000";
 			mem(1) <= "0000000000000000";
 			mem(2) <= "0000000000000000";
 		end if;
-
+		
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
 			mem(2) <= mem(1);
 			mem(1) <= mem(0);
-			mem(0) <= wb_c;
+			mem(0) <= prewb_c_in;
 		end if;
 	END PROCESS WB_C_ENTERING;
 END ARCHITECTURE untitled;

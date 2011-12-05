@@ -31,12 +31,14 @@ signal inactive : lc3b_nibble;
 signal pre_WBMuxSel : std_logic;
 signal pre_RegWrite : std_logic;
 signal pre_WBTrapMuxSel : std_logic;
+signal pre_isldisti : std_logic;
 BEGIN
 	Process(instOut)
 	variable opcode : LC3b_opcode;
 		BEGIN 	
 			opcode := instOut(15 downto 12);
 			pre_DR <= instOut(11 downto 9);
+			pre_isldisti <= '0';
 			inactive <= "0000"; --only becomes inactive if the opcode isn't recognized... mostly for testing purposes
 			case opcode is
 				when "0001" =>
@@ -71,18 +73,16 @@ BEGIN
 					pre_WBMuxSel <= '0';
 					pre_WBTrapMuxSel <= '0';
 					pre_RegWrite <= '0';
+				when "1010" =>
+					pre_WBMuxSel <= '0';
+					pre_WBTrapMuxSel <= '0';
+					pre_RegWrite <= '0';
+					pre_isldisti <= '1';
 				when "0000" =>
-					if(pre_DR = "000") then
-						pre_WBMuxSel <= '0';
-						pre_WBTrapMuxSel <= '0';
-						pre_RegWrite <= '1';
-					
-					else 
-						pre_WBMuxSel <= '0';
-						pre_WBTrapMuxSel <= '0';
-						pre_RegWrite <= '0';
-						pre_DR <= "000";
-					end if;
+					pre_WBMuxSel <= '0';
+					pre_WBTrapMuxSel <= '0';
+					pre_RegWrite <= '0';
+					pre_DR <= "000";
 				when "1111" =>
 					pre_WBMuxSel <= '0';
 					pre_WBTrapMuxSel <= '1';
@@ -94,8 +94,9 @@ BEGIN
 					pre_WBMuxSel <= '0';
 					pre_WBTrapMuxSel <= '0';
 					pre_RegWrite <= '0';
+					pre_isldisti <= '0';
 			END case; 
 		END PROCESS;
-	wb_c <= inactive & "000000" & pre_WBTrapMuxSel & pre_DR & pre_RegWrite & pre_WBMuxSel after delay_decode3;
+	wb_c <= inactive & pre_isldisti & "00000" & pre_WBTrapMuxSel & pre_DR & pre_RegWrite & pre_WBMuxSel after delay_decode3;
 END ARCHITECTURE untitled;
 

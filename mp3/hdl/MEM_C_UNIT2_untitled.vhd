@@ -26,21 +26,18 @@ END MEM_C_UNIT2 ;
 
 --
 ARCHITECTURE untitled OF MEM_C_UNIT2 IS
-	signal check : std_logic;
-	signal regwrite : std_logic;
-	signal predmread_l : std_logic;
 BEGIN
 	PROCESS(instOut)
+	variable check : std_logic;
+	variable predmread_l : std_logic;
 	BEGIN
-		check <= '0';
-		predmread_l <= '1';
-		regwrite <= '0';
+		check := '0';
+		predmread_l := '1';
 		if(instOut = "0000000000000001") then
-			check <= '1';
-			predmread_l <= '0';
-			regwrite <= '1';
+			check := '1';
+			predmread_l := '0';
 		end if;
+	mem_c2 <= '0' & check & "000000000" & predmread_l & "0000" after 4 ns;
 	END PROCESS;
-	mem_c2 <= '0' & check & '0' & regwrite & "0000000" & predmread_l & "0000" after 4 ns;
 END ARCHITECTURE untitled;
 

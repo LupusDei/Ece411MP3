@@ -19,7 +19,7 @@ ENTITY shiftbytedata IS
       is_byte       : IN     std_logic;
       lastbit       : IN     std_logic;
       preMEMDataOut : IN     lc3b_word;
-      MEMDataOut    : OUT    lc3b_word
+      memdataout    : OUT    lc3b_word
    );
 
 -- Declarations
