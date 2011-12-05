@@ -57,23 +57,23 @@ VExpander (VariableExpander
 vvMap [
 (vvPair
 variable "HDLDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hdl"
+value "/home/martin43/ece411/Ece411MP3/mp3/hdl"
 )
 (vvPair
 variable "HDSDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "SideDataDesignDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.info"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.info"
 )
 (vvPair
 variable "SideDataUserDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.user"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd.user"
 )
 (vvPair
 variable "SourceDir"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds"
 )
 (vvPair
 variable "appl"
@@ -89,11 +89,11 @@ value "%(unit)_config"
 )
 (vvPair
 variable "d"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u"
 )
 (vvPair
 variable "d_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_CPU"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_CPU"
 )
 (vvPair
 variable "date"
@@ -137,7 +137,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-01.ews.illinois.edu"
+value "gelib-057-19.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -173,11 +173,11 @@ value "December"
 )
 (vvPair
 variable "p"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_@c@p@u/struct.bd"
 )
 (vvPair
 variable "p_logical"
-value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_CPU/struct.bd"
+value "/home/martin43/ece411/Ece411MP3/mp3/hds/mp3_CPU/struct.bd"
 )
 (vvPair
 variable "project_name"
@@ -217,7 +217,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "02:16:50"
+value "12:09:40"
 )
 (vvPair
 variable "unit"
@@ -225,7 +225,7 @@ value "mp3_CPU"
 )
 (vvPair
 variable "user"
-value "bhatia9"
+value "martin43"
 )
 (vvPair
 variable "version"
@@ -592,7 +592,7 @@ fg "39936,56832,65280"
 lineColor "0,0,32768"
 lineWidth 2
 )
-xt "32000,12000,40000,55000"
+xt "32000,12000,40000,30000"
 )
 oxt "31000,12000,39000,22000"
 ttg (MlTextGroup
@@ -656,7 +656,7 @@ va (VaSet
 vasetType 1
 fg "49152,49152,49152"
 )
-xt "32250,53250,33750,54750"
+xt "32250,28250,33750,29750"
 iconName "BlockDiagram.png"
 iconMaskName "BlockDiagram.msk"
 ftype 1
@@ -3524,10 +3524,10 @@ lineColor "32768,0,0"
 lineStyle 3
 lineWidth 2
 )
-xt "42000,34000,45000,34000"
+xt "38000,38000,45000,38000"
 pts [
-"42000,34000"
-"45000,34000"
+"38000,38000"
+"45000,38000"
 ]
 )
 end &17
@@ -3542,9 +3542,9 @@ uid 168,0
 va (VaSet
 font "courier,8,0"
 )
-xt "41000,32100,45000,33000"
+xt "37000,36100,41000,37000"
 st "MemoryIn"
-blo "41000,32800"
+blo "37000,36800"
 tm "BundleNameMgr"
 )
 second (MLText
@@ -3553,7 +3553,7 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "41000,33000,52000,33900"
+xt "37000,37000,48000,37900"
 st "(datamemin,instmemin)"
 tm "BundleContentsMgr"
 )
@@ -3896,11 +3896,10 @@ lineColor "32768,0,0"
 lineStyle 3
 lineWidth 2
 )
-xt "24000,29000,32000,29000"
+xt "24000,24000,32000,24000"
 pts [
-"24000,29000"
-"29000,29000"
-"32000,29000"
+"24000,24000"
+"32000,24000"
 ]
 )
 end &12
@@ -3915,9 +3914,9 @@ uid 748,0
 va (VaSet
 font "courier,8,0"
 )
-xt "25000,28100,31000,29000"
+xt "25000,23100,31000,24000"
 st "MemResponse"
-blo "25000,28800"
+blo "25000,23800"
 tm "BundleNameMgr"
 )
 second (MLText
@@ -3926,7 +3925,7 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "25000,29000,42000,29900"
+xt "25000,24000,42000,24900"
 st "(DM_RESP_H,dMiss,iMiss,im_resp_h)"
 tm "BundleContentsMgr"
 )
@@ -5125,7 +5124,7 @@ cachedDiagramExtent "-140000,0,70000,62000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-207000,0"
 active 1
-lastUid 4493,0
+lastUid 4619,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
