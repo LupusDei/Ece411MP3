@@ -111,7 +111,9 @@ BEGIN
 			elsif (PCInstAddr = "0000000101100100") then  --pc = 356
 					instruction <= "1010111010001110"; -- ldi r7, r2, 14 
 			elsif (PCInstAddr = "0000000101100110") then  --pc = 358
-					instruction <= "0001110010000100"; -- add r6, r2, r4 dummy instruction 
+					instruction <= "1010100001011000"; -- ldi r4, r1, 24 dummy instruction
+			elsif (PCInstAddr = "0000000101101000") then  --pc = 360
+					instruction <= "1011001010001011"; -- sti r1, r2, 11 
 			else
 					instruction <= "0000000000000000";
 			end if;
@@ -137,12 +139,18 @@ BEGIN
 			elsif (DataAddr = "0000000000100100") then
 				magic_data <= "0000000001010010";
 			elsif (DataAddr = "0000000001010010") then
-				magic_data <= "0000000010000000";	
+				magic_data <= "0000000010000000";
+			elsif (DataAddr = "0000000001011010") then
+				magic_data <= "0000000000101000";
+			elsif (DataAddr = "0000000000101000") then
+				magic_data <= "0000000000001111";
+			elsif (DataAddr = "0000000000011110") then
+				magic_data <= "0000000000001010";
 			else
 				magic_data <= "0000101110101101"; --0BAD
 			end if;
 		else
-				if (DataAddr = "0000000000001001" or DataAddr = "0000000001011000" or DataAddr = "0000000000001111" or DataAddr = "0000000000100110") then
+				if (DataAddr = "0000000000001001" or DataAddr = "0000000001011000" or DataAddr = "0000000000001111" or DataAddr = "0000000000100110" or DataAddr = "0000000000001010") then
 					dm_resp <= '1';
 					if (dm_writeh_l = '0' and dm_writel_l = '0') then
 						magic_data <= MEMWriteData;

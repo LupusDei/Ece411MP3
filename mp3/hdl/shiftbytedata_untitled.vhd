@@ -16,10 +16,10 @@ USE ece411.LC3b_types.all;
 
 ENTITY shiftbytedata IS
    PORT( 
-      is_byte       : IN     std_logic;
-      lastbit       : IN     std_logic;
-      preMEMDataOut : IN     lc3b_word;
-      memdataout    : OUT    lc3b_word
+      datamemin  : IN     lc3b_word;
+      is_byte    : IN     std_logic;
+      lastbit    : IN     std_logic;
+      memdataout : OUT    lc3b_word
    );
 
 -- Declarations
@@ -29,14 +29,14 @@ END shiftbytedata ;
 --
 ARCHITECTURE untitled OF shiftbytedata IS
 BEGIN
-	PROCESS(lastbit, prememdataout, is_byte) 
+	PROCESS(lastbit, datamemin, is_byte) 
 	variable tempdataout : lc3b_word;
 	BEGIN
 		if(lastbit = '1' and is_byte = '1') then
-			tempdataout := "00000000" & prememdataout(15 downto 8); 
+			tempdataout := "00000000" & datamemin(15 downto 8); 
 		elsif(is_byte = '1') then 
-			tempdataout := "00000000" & prememdataout(7 downto 0);
-		else tempdataout := prememdataout;
+			tempdataout := "00000000" & datamemin(7 downto 0);
+		else tempdataout := datamemin;
 		end if;
 	memdataout <= tempdataout after delay_mux2;
 	END PROCESS;

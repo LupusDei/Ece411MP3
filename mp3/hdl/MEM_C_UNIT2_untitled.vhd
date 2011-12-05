@@ -28,16 +28,26 @@ END MEM_C_UNIT2 ;
 ARCHITECTURE untitled OF MEM_C_UNIT2 IS
 BEGIN
 	PROCESS(instOut)
-	variable check : std_logic;
+	variable is_ldisti : std_logic;
 	variable predmread_l : std_logic;
+	variable predmwritel_l : std_logic;
+	variable predmwriteh_l : std_logic;
+	variable opcode : lc3b_opcode;
 	BEGIN
-		check := '0';
+		is_ldisti := '0';
+		opcode := instOut(15 downto 12);
 		predmread_l := '1';
-		if(instOut = "0000000000000001") then
-			check := '1';
+		predmwritel_l := '1';
+		predmwriteh_l := '1';
+		if(opcode = "1010") then
+			is_ldisti := '1';
 			predmread_l := '0';
+		elsif(opcode = "1011") then
+			is_ldisti := '1';
+			predmwritel_l := '0';
+			predmwriteh_l := '0';
 		end if;
-	mem_c2 <= '0' & check & "000000000" & predmread_l & "0000" after 4 ns;
+	mem_c2 <= '0' & is_ldisti & "0000000" & predmwriteh_l & predmwritel_l & predmread_l & "0000" after 4 ns;
 	END PROCESS;
 END ARCHITECTURE untitled;
 

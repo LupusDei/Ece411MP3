@@ -40,8 +40,7 @@ BEGIN
 		variable inactive : std_logic;
 		variable pre_jmp : std_logic;
 		variable pre_jsr : std_logic;
-		variable is_ldi : std_logic;
-		variable is_sti : std_logic;
+		variable is_ldisti : std_logic;
 		variable isJSR : std_logic;
 		BEGIN 
 			opcode := instOut(15 downto 12);
@@ -51,7 +50,7 @@ BEGIN
 			trapMuxSel := '0';
 			inactive := '0';
 			pre_jmp := '0';
-			is_ldi := '0';
+			is_ldisti := '0';
 			isJSR := '0';
 			pre_jsr := '0';
 			case opcode is
@@ -89,8 +88,12 @@ BEGIN
 						isJSR := '1';
 					else pre_jmp := '1';
 					end if;
+				when "1011" =>
+					ALUMuxSel := "110";
+					RegBMuxSel := '1';
+					is_ldisti := '1';
 				when "1010" =>
-					is_ldi := '1';
+					is_ldisti := '1';
 					ALUMuxSel := "110";
 				when "1110" =>
 					InAMuxSel := '1';
@@ -99,7 +102,7 @@ BEGIN
 				when others =>
 					inactive := '1';
 			END case;
-					pre_ID_C_IN <= inactive & "000" & "0000" & is_ldi & trapMuxSel & isJSR & InAMuxSel & RegBMuxSel & ALUMuxSel;
+					pre_ID_C_IN <= inactive & "000" & "0000" & is_ldisti & trapMuxSel & isJSR & InAMuxSel & RegBMuxSel & ALUMuxSel;
 					jmp <= pre_jmp after delay_decode3;
 					jsr <= pre_jsr after delay_decode3;
 		END PROCESS;

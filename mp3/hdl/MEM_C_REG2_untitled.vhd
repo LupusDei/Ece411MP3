@@ -31,13 +31,13 @@ END MEM_C_REG2 ;
 
 --
 ARCHITECTURE untitled OF MEM_C_REG2 IS
-TYPE MEM_C_Mem IS ARRAY (1 DOWNTO 0) OF LC3B_WORD;
+TYPE MEM_C_Mem IS ARRAY (2 DOWNTO 0) OF LC3B_WORD;
 SIGNAL mem : MEM_C_Mem;
 BEGIN
 	MEM_C_LEAVING : PROCESS(mem)
 	variable control : lc3b_word;
 	BEGIN
-		control := mem(1);
+		control := mem(2);
 		preMEM_C_In2 <= control(15 downto 7) & "000" & control(3 downto 0) after delay_regfile_read;
 		predm_write2h_l <= control(6) after delay_reg;
 		predm_write2l_l <= control(5) after delay_reg;
@@ -49,9 +49,11 @@ BEGIN
 		if RESET_L = '0' then
 			mem(0) <= "0000000001110000";
 			mem(1) <= "0000000001110000";
+			mem(2) <= "0000000001110000";
 		end if;
 
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+			mem(2) <= mem(1);
 			mem(1) <= mem(0);
 			mem(0) <= mem_c2;
 		end if;

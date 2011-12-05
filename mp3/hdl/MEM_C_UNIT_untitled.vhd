@@ -41,15 +41,12 @@ signal pre_trap : std_logic;
 BEGIN
 	PROCESS(instOut)
 		variable opcode : LC3b_opcode;
-		variable count : integer;
 		BEGIN 	
 			opcode := instOut(15 downto 12);
-			count := 1;
 			pre_dm_read_l <= '1';
 			pre_dm_writel_l <= '1';
 			pre_dm_writeh_l <= '1';
 			pre_trap <= '0';
-			is_byte <= '0';
 			is_byte <= '0';
 			inactive <= "0000"; --only becomes inactive if the opcode isn't recognized... mostly for testing purposes
 	  pre_brInst <= '0';
@@ -86,7 +83,10 @@ BEGIN
 	   			 	pre_loadNZP <= '1';
 				 	pre_dm_read_l <= '0';
 					reg_write <= '0';
-					
+				when "1011" =>
+					pre_dm_read_l <= '0';
+					reg_write <= '0';
+					dest <= "000";		
 				when "0011" =>
 					dest <= "000";
 					reg_write <= '0';
