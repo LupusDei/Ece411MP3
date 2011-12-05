@@ -36,7 +36,6 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writehigh(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_1(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.or2(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.magmem(awesome)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.exstage(struct)
@@ -61,10 +60,8 @@
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gen_nops(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(struct)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gencondcodes(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.vhdlsucks(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lastbitstb(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mycounter(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.shiftbytedata(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.srcregshifter(untitled)
 # Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzp(untitled)
@@ -202,9 +199,23 @@ do ACCEPTANCE_TEST.do
 # 0
 # 
 # LDI R7, R2, 14; R7 <= MEM(MEM(36); starts at 356 
-# /mp3_cpu/ldi1
+# /mp3_cpu/ldi1a
 # 0
 # 
-# /mp3_cpu/ldi2
+# /mp3_cpu/ldi1b
+# 0
+# 
+# LDI R4, R1, 24; R4 <= MEM(MEM(90); starts at 358 
+# /mp3_cpu/ldi2a
+# 0
+# 
+# /mp3_cpu/ldi2b
+# 0
+# 
+# STI R1, R2, 11; MEM(R2 + 11) <= R6; starts at 360 
+# /mp3_cpu/sti1a
+# 0
+# 
+# /mp3_cpu/sti1b
 # 0
 # 
