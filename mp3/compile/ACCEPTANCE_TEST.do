@@ -16,8 +16,6 @@ add wave -hex /mp3_cpu/pipelinedatapath/memaccess/DestReg
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/loadNZP
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/brInst
 add wave -hex /mp3_cpu/pipelinedatapath/memaccess/isldisti
-add wave -hex /mp3_cpu/pipelinedatapath/memaccess/predataaddr
-add wave -hex /mp3_cpu/pipelinedatapath/memaccess/prememwritedata
 add wave -hex /mp3_cpu/pipelinedatapath/decode/B
 add wave -hex /mp3_cpu/pipelinedatapath/decode/trapvect8
 add wave -hex /mp3_cpu/pipelinedatapath/memdataout
@@ -205,7 +203,7 @@ virtual signal {/mp3_cpu/pcinstaddr == 360 && /mp3_cpu/datamemin == 82} ldi1a
 add wave -color white /mp3_cpu/ldi1a
 run 200
 	
-virtual signal {/mp3_cpu/pcinstaddr == 364 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 128} ldi1b
+virtual signal {/mp3_cpu/pcinstaddr == 362 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(7) == 128} ldi1b
 add wave -color white /mp3_cpu/ldi1b	
 run 200
 
@@ -223,7 +221,7 @@ virtual signal {/mp3_cpu/pcinstaddr == 364 && /mp3_cpu/datamemin == 10} sti1a
 add wave -color white /mp3_cpu/sti1a
 run 200
 	
-virtual signal {/mp3_cpu/pcinstaddr == 368 && /mp3_cpu/datamemin == 60} sti1b
+virtual signal {/mp3_cpu/pcinstaddr == 366 && /mp3_cpu/datamemin == 42} sti1b
 add wave -color white /mp3_cpu/sti1b	
 run 200
 
