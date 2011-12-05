@@ -212,7 +212,7 @@ virtual signal {/mp3_cpu/pcinstaddr == 362 && /mp3_cpu/datamemin == 40} ldi2a
 add wave -color white /mp3_cpu/ldi2a
 run 200
 	
-virtual signal {/mp3_cpu/pcinstaddr == 366 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == 15} ldi2b
+virtual signal {/mp3_cpu/pcinstaddr == 364 && /mp3_cpu/Pipelinedatapath/ourregfile/ram(4) == 15} ldi2b
 add wave -color white /mp3_cpu/ldi2b	
 run 200
 
