@@ -91,7 +91,7 @@ port (LogicalPort
 m 1
 decl (Decl
 n "DATAIN"
-t "LC3b_word"
+t "LC3b_oword"
 o 10
 suid 3,0
 )
@@ -102,7 +102,7 @@ uid 86,0
 port (LogicalPort
 decl (Decl
 n "DATAOUT"
-t "LC3b_word"
+t "LC3b_oword"
 o 2
 suid 4,0
 )
@@ -630,7 +630,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "07:28:15"
+value "12:51:25"
 )
 (vvPair
 variable "unit"
@@ -785,14 +785,14 @@ uid 127,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,9900,60500,10800"
-st "DATAIN     : OUT    LC3b_word  ;"
+xt "44000,9900,61000,10800"
+st "DATAIN     : OUT    LC3b_oword  ;"
 )
 thePort (LogicalPort
 m 1
 decl (Decl
 n "DATAIN"
-t "LC3b_word"
+t "LC3b_oword"
 o 10
 suid 3,0
 )
@@ -830,13 +830,13 @@ uid 132,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,2700,60500,3600"
-st "DATAOUT    : IN     LC3b_word  ;"
+xt "44000,2700,61000,3600"
+st "DATAOUT    : IN     LC3b_oword  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "DATAOUT"
-t "LC3b_word"
+t "LC3b_oword"
 o 2
 suid 4,0
 )
@@ -2061,5 +2061,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 552,0
+lastUid 600,0
 )

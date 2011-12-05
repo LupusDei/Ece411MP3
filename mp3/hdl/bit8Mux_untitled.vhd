@@ -55,7 +55,7 @@ BEGIN
 			when "111" =>
 				state := a7;
 			when others =>
-				state := (OTHERS => 'X');
+				state := 'X';
 		end case;
 		O <= state after delay_MUX8;
 	END PROCESS;
