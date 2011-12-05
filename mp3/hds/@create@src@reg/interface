@@ -25,7 +25,7 @@ appVersion "2005.3 (Build 75)"
 model (Symbol
 commonDM (CommonDM
 ldm (LogicalDM
-suid 5,0
+suid 8,0
 usingSuid 1
 emptyRow *1 (LEmptyRow
 )
@@ -71,10 +71,10 @@ decl (Decl
 n "ID_C_Out"
 t "lc3b_word"
 o 7
-suid 3,0
+suid 6,0
 )
 )
-uid 122,0
+uid 155,0
 )
 *15 (LogPort
 port (LogicalPort
@@ -82,21 +82,21 @@ decl (Decl
 n "instIn"
 t "lc3b_word"
 o 4
-suid 4,0
+suid 7,0
 )
 )
-uid 124,0
+uid 157,0
 )
 *16 (LogPort
 port (LogicalPort
 decl (Decl
-n "is_ldi"
+n "is_ldisti"
 t "std_logic"
 o 37
-suid 5,0
+suid 8,0
 )
 )
-uid 126,0
+uid 159,0
 )
 ]
 )
@@ -152,19 +152,19 @@ uid 85,0
 litem &14
 pos 0
 dimension 20
-uid 123,0
+uid 156,0
 )
 *23 (MRCItem
 litem &15
 pos 1
 dimension 20
-uid 125,0
+uid 158,0
 )
 *24 (MRCItem
 litem &16
 pos 2
 dimension 20
-uid 127,0
+uid 160,0
 )
 ]
 )
@@ -283,19 +283,19 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/CreateSrcReg"
 )
 (vvPair
 variable "date"
-value "12/03/11"
+value "12/05/11"
 )
 (vvPair
 variable "day"
-value "Sat"
+value "Mon"
 )
 (vvPair
 variable "day_long"
-value "Saturday"
+value "Monday"
 )
 (vvPair
 variable "dd"
-value "03"
+value "05"
 )
 (vvPair
 variable "entity_name"
@@ -323,7 +323,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "siebl-0216-08.ews.illinois.edu"
+value "gelib-057-01.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -403,7 +403,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "01:35:24"
+value "00:49:33"
 )
 (vvPair
 variable "unit"
@@ -438,10 +438,10 @@ optionalChildren [
 uid 8,0
 optionalChildren [
 *34 (CptPort
-uid 107,0
+uid 140,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 108,0
+uid 141,0
 ro 90
 va (VaSet
 vasetType 1
@@ -450,11 +450,11 @@ fg "0,65535,0"
 xt "25000,7625,25750,8375"
 )
 tg (CPTG
-uid 109,0
+uid 142,0
 ps "CptPortTextPlaceStrategy"
 stg "RightVerticalLayoutStrategy"
 f (Text
-uid 110,0
+uid 143,0
 va (VaSet
 font "courier,8,0"
 )
@@ -466,12 +466,12 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 111,0
+uid 144,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,3600,58500,4500"
-st "ID_C_Out : OUT    lc3b_word 
+xt "44000,3600,59000,4500"
+st "ID_C_Out  : OUT    lc3b_word 
 "
 )
 thePort (LogicalPort
@@ -480,15 +480,15 @@ decl (Decl
 n "ID_C_Out"
 t "lc3b_word"
 o 7
-suid 3,0
+suid 6,0
 )
 )
 )
 *35 (CptPort
-uid 112,0
+uid 145,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 113,0
+uid 146,0
 ro 90
 va (VaSet
 vasetType 1
@@ -497,11 +497,11 @@ fg "0,65535,0"
 xt "14250,7625,15000,8375"
 )
 tg (CPTG
-uid 114,0
+uid 147,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 115,0
+uid 148,0
 va (VaSet
 font "courier,8,0"
 )
@@ -512,12 +512,12 @@ tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 116,0
+uid 149,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,1800,59500,2700"
-st "instIn   : IN     lc3b_word  ;
+xt "44000,1800,60000,2700"
+st "instIn    : IN     lc3b_word  ;
 "
 )
 thePort (LogicalPort
@@ -525,15 +525,15 @@ decl (Decl
 n "instIn"
 t "lc3b_word"
 o 4
-suid 4,0
+suid 7,0
 )
 )
 )
 *36 (CptPort
-uid 117,0
+uid 150,0
 ps "OnEdgeStrategy"
 shape (Triangle
-uid 118,0
+uid 151,0
 va (VaSet
 vasetType 1
 fg "0,65535,0"
@@ -541,36 +541,36 @@ fg "0,65535,0"
 xt "18625,10000,19375,10750"
 )
 tg (CPTG
-uid 119,0
+uid 152,0
 ps "CptPortTextPlaceStrategy"
 stg "VerticalLayoutStrategy"
 f (Text
-uid 120,0
+uid 153,0
 ro 270
 va (VaSet
 font "courier,8,0"
 )
-xt "18550,6000,19450,9000"
-st "is_ldi"
+xt "18550,4500,19450,9000"
+st "is_ldisti"
 blo "19250,9000"
 tm "CptPortNameMgr"
 )
 )
 dt (MLText
-uid 121,0
+uid 154,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,2700,59500,3600"
-st "is_ldi   : IN     std_logic  ;
+xt "44000,2700,60000,3600"
+st "is_ldisti : IN     std_logic  ;
 "
 )
 thePort (LogicalPort
 decl (Decl
-n "is_ldi"
+n "is_ldisti"
 t "std_logic"
 o 37
-suid 5,0
+suid 8,0
 )
 )
 )
@@ -1256,5 +1256,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 127,0
+lastUid 160,0
 )

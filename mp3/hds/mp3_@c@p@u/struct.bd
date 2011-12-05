@@ -97,19 +97,19 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/mp3_CPU"
 )
 (vvPair
 variable "date"
-value "12/04/11"
+value "12/05/11"
 )
 (vvPair
 variable "day"
-value "Sun"
+value "Mon"
 )
 (vvPair
 variable "day_long"
-value "Sunday"
+value "Monday"
 )
 (vvPair
 variable "dd"
-value "04"
+value "05"
 )
 (vvPair
 variable "entity_name"
@@ -137,7 +137,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-23.ews.illinois.edu"
+value "gelib-057-01.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -217,7 +217,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "18:07:35"
+value "02:16:50"
 )
 (vvPair
 variable "unit"
@@ -837,8 +837,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,23300,-125500,24200"
-st "RESET_L      : std_logic
-"
+st "RESET_L      : std_logic"
 )
 )
 *24 (BundleNet
@@ -907,8 +906,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,35000,-122000,35900"
-st "SIGNAL datamemin    : lc3b_word
-"
+st "SIGNAL datamemin    : lc3b_word"
 )
 )
 )
@@ -974,8 +972,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,44000,-122000,44900"
-st "SIGNAL instmemin    : lc3b_word
-"
+st "SIGNAL instmemin    : lc3b_word"
 )
 )
 )
@@ -1047,8 +1044,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,34100,-122000,35000"
-st "SIGNAL dataaddr     : lc3b_word
-"
+st "SIGNAL dataaddr     : lc3b_word"
 )
 )
 )
@@ -1114,8 +1110,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,46700,-122000,47600"
-st "SIGNAL memwritedata : lc3b_word
-"
+st "SIGNAL memwritedata : lc3b_word"
 )
 )
 )
@@ -1181,8 +1176,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,47600,-122000,48500"
-st "SIGNAL pcinstaddr   : lc3b_word
-"
+st "SIGNAL pcinstaddr   : lc3b_word"
 )
 )
 )
@@ -1244,8 +1238,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,26900,-122000,27800"
-st "SIGNAL EX_C_Out     : lc3b_word
-"
+st "SIGNAL EX_C_Out     : lc3b_word"
 )
 )
 )
@@ -1301,8 +1294,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,28700,-122000,29600"
-st "SIGNAL ID_C_Out     : lc3b_word
-"
+st "SIGNAL ID_C_Out     : lc3b_word"
 )
 )
 )
@@ -1358,8 +1350,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,31400,-122000,32300"
-st "SIGNAL Mem_C_Out    : lc3b_word
-"
+st "SIGNAL Mem_C_Out    : lc3b_word"
 )
 )
 )
@@ -1415,8 +1406,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,43100,-122000,44000"
-st "SIGNAL instOut      : lc3b_word
-"
+st "SIGNAL instOut      : lc3b_word"
 )
 )
 )
@@ -1472,8 +1462,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,45800,-122000,46700"
-st "SIGNAL kill_mread   : std_logic
-"
+st "SIGNAL kill_mread   : std_logic"
 )
 )
 )
@@ -1535,8 +1524,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,26000,-122000,26900"
-st "SIGNAL EX_C_In      : lc3b_word
-"
+st "SIGNAL EX_C_In      : lc3b_word"
 )
 )
 )
@@ -1592,8 +1580,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,27800,-122000,28700"
-st "SIGNAL ID_C_In      : lc3b_word
-"
+st "SIGNAL ID_C_In      : lc3b_word"
 )
 )
 )
@@ -1649,8 +1636,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,29600,-122000,30500"
-st "SIGNAL IF_C_In      : lc3b_word
-"
+st "SIGNAL IF_C_In      : lc3b_word"
 )
 )
 )
@@ -1706,8 +1692,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,30500,-122000,31400"
-st "SIGNAL Mem_C_In     : lc3b_word
-"
+st "SIGNAL Mem_C_In     : lc3b_word"
 )
 )
 )
@@ -1763,8 +1748,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,32300,-122000,33200"
-st "SIGNAL WB_C_In      : lc3b_word
-"
+st "SIGNAL WB_C_In      : lc3b_word"
 )
 )
 )
@@ -1820,8 +1804,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,48500,-122000,49400"
-st "SIGNAL stall        : std_logic
-"
+st "SIGNAL stall        : std_logic"
 )
 )
 )
@@ -1877,8 +1860,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,44900,-122000,45800"
-st "SIGNAL kill         : std_logic
-"
+st "SIGNAL kill         : std_logic"
 )
 )
 )
@@ -1911,8 +1893,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,22400,-125500,23300"
-st "CLK          : std_logic
-"
+st "CLK          : std_logic"
 )
 )
 *63 (PortIoIn
@@ -2027,8 +2008,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,25100,-122000,26000"
-st "SIGNAL DM_RESP_H    : std_logic
-"
+st "SIGNAL DM_RESP_H    : std_logic"
 )
 )
 )
@@ -2094,8 +2074,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,40400,-122000,41300"
-st "SIGNAL im_resp_h    : std_logic
-"
+st "SIGNAL im_resp_h    : std_logic"
 )
 )
 )
@@ -2161,8 +2140,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,38600,-122000,39500"
-st "SIGNAL iMiss        : std_logic
-"
+st "SIGNAL iMiss        : std_logic"
 )
 )
 )
@@ -2228,8 +2206,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,33200,-122000,34100"
-st "SIGNAL dMiss        : std_logic
-"
+st "SIGNAL dMiss        : std_logic"
 )
 )
 )
@@ -2292,7 +2269,7 @@ on *75 (Net
 uid 1200,0
 decl (Decl
 n "dm_read_l"
-t "std_logic"
+t "STD_LOGIC"
 o 14
 suid 30,0
 )
@@ -2302,8 +2279,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,35900,-122000,36800"
-st "SIGNAL dm_read_l    : std_logic
-"
+st "SIGNAL dm_read_l    : STD_LOGIC"
 )
 )
 )
@@ -2369,8 +2345,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,36800,-122000,37700"
-st "SIGNAL dm_writeh_l  : STD_LOGIC
-"
+st "SIGNAL dm_writeh_l  : STD_LOGIC"
 )
 )
 )
@@ -2436,8 +2411,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,37700,-122000,38600"
-st "SIGNAL dm_writel_l  : STD_LOGIC
-"
+st "SIGNAL dm_writel_l  : STD_LOGIC"
 )
 )
 )
@@ -2503,8 +2477,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,39500,-122000,40400"
-st "SIGNAL im_read_l    : std_logic
-"
+st "SIGNAL im_read_l    : std_logic"
 )
 )
 )
@@ -2570,8 +2543,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,41300,-122000,42200"
-st "SIGNAL im_writeh_l  : std_logic
-"
+st "SIGNAL im_writeh_l  : std_logic"
 )
 )
 )
@@ -2637,8 +2609,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "-138000,42200,-122000,43100"
-st "SIGNAL im_writel_l  : std_logic
-"
+st "SIGNAL im_writel_l  : std_logic"
 )
 )
 )
@@ -3668,9 +3639,9 @@ uid 188,0
 va (VaSet
 font "courier,8,0"
 )
-xt "39000,28100,44500,29000"
+xt "38000,28100,43500,29000"
 st "ControlOut"
-blo "39000,28800"
+blo "38000,28800"
 tm "BundleNameMgr"
 )
 second (MLText
@@ -3679,7 +3650,7 @@ va (VaSet
 isHidden 1
 font "courier,8,0"
 )
-xt "39000,29000,63500,29900"
+xt "38000,29000,62500,29900"
 st "(EX_C_Out,ID_C_Out,Mem_C_Out,instOut,kill_mread)"
 tm "BundleContentsMgr"
 )
@@ -5149,12 +5120,12 @@ tm "BdCompilerDirectivesTextMgr"
 associable 1
 )
 windowSize "-6,27,1606,1179"
-viewArea "-26600,-14500,95632,71828"
+viewArea "-26600,-14500,95632,74292"
 cachedDiagramExtent "-140000,0,70000,62000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-207000,0"
 active 1
-lastUid 4347,0
+lastUid 4493,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -6497,7 +6468,7 @@ port (LogicalPort
 m 4
 decl (Decl
 n "dm_read_l"
-t "std_logic"
+t "STD_LOGIC"
 o 14
 suid 30,0
 )

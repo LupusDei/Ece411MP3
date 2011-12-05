@@ -31,7 +31,7 @@ BEGIN
 	variable tempnop : lc3b_word;
 	BEGIN
 		if(kill = '1') then
-			tempnop := "0000000000000001";
+			tempnop := "0000000000000000";
 		end if;
 	NOP <= tempnop after delay_mux2;	
 	END PROCESS;

@@ -223,19 +223,19 @@ value "/home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/hds/IDStage"
 )
 (vvPair
 variable "date"
-value "12/03/11"
+value "12/05/11"
 )
 (vvPair
 variable "day"
-value "Sat"
+value "Mon"
 )
 (vvPair
 variable "day_long"
-value "Saturday"
+value "Monday"
 )
 (vvPair
 variable "dd"
-value "03"
+value "05"
 )
 (vvPair
 variable "entity_name"
@@ -263,7 +263,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "siebl-0216-08.ews.illinois.edu"
+value "gelib-057-01.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -343,7 +343,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "01:35:24"
+value "00:49:33"
 )
 (vvPair
 variable "unit"
@@ -5305,20 +5305,20 @@ st "SrcRegData    : LC3B_WORD
 )
 )
 *179 (Net
-uid 2748,0
+uid 2854,0
 decl (Decl
-n "is_ldi"
+n "is_ldisti"
 t "std_logic"
 o 37
-suid 89,0
+suid 90,0
 )
 declText (MLText
-uid 2749,0
+uid 2855,0
 va (VaSet
 font "courier,8,0"
 )
 xt "-28000,38000,-11500,38900"
-st "SIGNAL is_ldi        : std_logic
+st "SIGNAL is_ldisti     : std_logic
 "
 )
 )
@@ -7686,8 +7686,8 @@ uid 2731,0
 va (VaSet
 font "courier,8,0"
 )
-xt "47000,-2900,50000,-2000"
-st "is_ldi"
+xt "47000,-2900,51500,-2000"
+st "is_ldisti"
 blo "47000,-2200"
 tm "WireNameMgr"
 )
@@ -7732,8 +7732,8 @@ uid 2746,0
 va (VaSet
 font "courier,8,0"
 )
-xt "1000,48100,4000,49000"
-st "is_ldi"
+xt "1000,48100,5500,49000"
+st "is_ldisti"
 blo "1000,48800"
 tm "WireNameMgr"
 )
@@ -7867,13 +7867,13 @@ tm "BdCompilerDirectivesTextMgr"
 ]
 associable 1
 )
-windowSize "166,44,1778,1196"
-viewArea "-33800,-20200,95377,73637"
+windowSize "-6,27,1606,1179"
+viewArea "-33800,-18619,95377,72614"
 cachedDiagramExtent "-50000,-3000,74500,61000"
 hasePageBreakOrigin 1
 pageBreakOrigin "-76000,-51000"
 active 1
-lastUid 2751,0
+lastUid 2857,0
 defaultCommentText (CommentText
 shape (Rectangle
 layer 0
@@ -8934,7 +8934,7 @@ tm "BdDeclarativeTextMgr"
 )
 commonDM (CommonDM
 ldm (LogicalDM
-suid 89,0
+suid 90,0
 usingSuid 1
 emptyRow *270 (LEmptyRow
 )
@@ -9404,13 +9404,13 @@ uid 2617,0
 port (LogicalPort
 m 4
 decl (Decl
-n "is_ldi"
+n "is_ldisti"
 t "std_logic"
 o 37
-suid 89,0
+suid 90,0
 )
 )
-uid 2750,0
+uid 2856,0
 )
 ]
 )
@@ -9682,7 +9682,7 @@ uid 2618,0
 litem &319
 pos 36
 dimension 20
-uid 2751,0
+uid 2857,0
 )
 ]
 )

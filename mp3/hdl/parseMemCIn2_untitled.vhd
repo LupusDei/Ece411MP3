@@ -17,7 +17,7 @@ USE ece411.LC3b_types.all;
 ENTITY parseMemCIn2 IS
    PORT( 
       preMem_C_In2 : IN     lc3b_word;
-      is_nop       : OUT    STD_LOGIC
+      is_ldisti    : OUT    STD_LOGIC
    );
 
 -- Declarations
@@ -27,6 +27,6 @@ END parseMemCIn2 ;
 --
 ARCHITECTURE untitled OF parseMemCIn2 IS
 BEGIN
-	is_nop <= preMem_C_In2(14);
+	is_ldisti <= preMem_C_In2(14);
 END ARCHITECTURE untitled;
 
