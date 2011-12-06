@@ -35,7 +35,7 @@ ARCHITECTURE untitled OF mem_C_decode IS
 BEGIN
 	DestReg <= MEM_C_In(3 downto 1);
 	loadNZP <= MEM_C_In(0);
-	GENMuxSel <= MEM_C_In(9);
+	GENMuxSel <= MEM_C_In(15);
 	brInst <= MEM_C_In(7);
 	TrapDecider <= MEM_C_In(8);
 	is_byte <= MEM_C_In(13);

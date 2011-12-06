@@ -113,6 +113,6 @@ BEGIN
 					reg_write <= '0';
 			END case; 
 	END PROCESS;
-	MEM_C <= "00" & is_byte & reg_write & dest & pre_trap & pre_brInst & pre_dm_writeh_l & pre_dm_writel_l & pre_dm_read_l & pre_checkNZP & pre_loadNZP after delay_decode3;
+	MEM_C <= pre_genmuxsel & '0' & is_byte & reg_write & dest & pre_trap & pre_brInst & pre_dm_writeh_l & pre_dm_writel_l & pre_dm_read_l & pre_checkNZP & pre_loadNZP after delay_decode3;
 END ARCHITECTURE untitled;
 

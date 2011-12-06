@@ -17,11 +17,11 @@ USE ece411.LC3b_types.all;
 ENTITY IF_C_UNIT IS
    PORT( 
       CLK       : IN     std_logic;
+      IM_RESP_H : IN     std_logic;
       JMP       : IN     std_logic;
       JSR       : IN     std_logic;
       Mem_C_Out : IN     lc3b_word;
       RESET_L   : IN     std_logic;
-      im_resp_h : IN     std_logic;
       kill      : IN     std_logic;
       stall     : IN     std_logic;
       IF_C_In   : OUT    lc3b_word;
@@ -34,51 +34,54 @@ END IF_C_UNIT ;
 
 --
 ARCHITECTURE untitled OF IF_C_UNIT IS
-signal pre_read_out : std_logic;
-signal pre_load_pc : std_logic;
-signal pre_PCMuxSel : std_logic;
-signal jmp_sel : std_logic_vector(1 downto 0);
 BEGIN
   IF_CONTROL_PROCESS : PROCESS (CLK, RESET_L, im_resp_h, im_read_l, stall, JMP, JSR, MEM_C_Out)
+variable pre_read_out : std_logic;
+variable pre_load_pc : std_logic;
+variable pre_PCMuxSel : std_logic;
+variable jmp_sel : std_logic_vector(1 downto 0);
     BEGIN
-  	jmp_sel <= "00";
+  	jmp_sel := "00";
+	pre_read_out := '0';
+	pre_load_pc := '0';
+	pre_PCMuxSel := '0';
 	IF (RESET_L = '0') THEN
-  		pre_read_out <= '1';
-  		pre_load_pc <= '0';
-  		pre_PCMuxSel <= '0';
+  		pre_read_out := '1';
+  		pre_load_pc := '0';
+  		pre_PCMuxSel := '0';
 	else
 		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
-			pre_read_out <= '0';
-			pre_load_pc <= '0';
-			pre_PCMuxSel <= '0';
+			pre_read_out := '0';
+			pre_load_pc := '0';
+			pre_PCMuxSel := '0';
 		else
 			if (im_resp_h = '1') then
-				pre_read_out <= '1';
-				pre_load_pc <= '1';
+				pre_read_out := '1';
+				pre_load_pc := '1';
 			end if;
-			if (MEM_C_Out = "0000000000000001") then
-				pre_PCMuxSel <= '1';
-				pre_load_pc <= '1';
+			if (MEM_C_Out(0) = '1') then
+				pre_PCMuxSel := '1';
+				pre_load_pc := '1';
 			end if;
 			if(JMP = '1') then 
-				jmp_sel <= "01";
-				pre_load_pc <= '1';
+				jmp_sel := "01";
+				pre_load_pc := '1';
 			end if;	
 			if(JSR = '1') then 
-				jmp_sel <= "10";
-				pre_load_pc <= '1';
+				jmp_sel := "10";
+				pre_load_pc := '1';
 			end if;	
 			if(MEM_C_Out(1) = '1') then
-				jmp_sel <= "11";
-				pre_load_pc <= '1';
+				jmp_sel := "11";
+				pre_load_pc := '1';
 			end if;
 		end if;
 	end if;
 	if (stall = '1' or kill = '1') then
-		pre_load_pc <= '0';
+		pre_load_pc := '0';
 	end if;
-	END PROCESS;
 	IF_C_In <= "000000000000" & jmp_sel & pre_load_pc & pre_PCMuxSel after delay_decode3;
+	END PROCESS;
 --	im_read_l <= pre_read_out after delay_decode3;
 	im_read_l <= '0' after delay_decode3;
 END ARCHITECTURE untitled;

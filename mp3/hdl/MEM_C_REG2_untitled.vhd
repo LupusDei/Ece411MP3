@@ -19,6 +19,7 @@ ENTITY MEM_C_REG2 IS
       CLK             : IN     std_logic;
       RESET_L         : IN     std_logic;
       mem_c2          : IN     lc3b_word;
+      stall           : IN     std_logic;
       preMem_C_In2    : OUT    lc3b_word;
       predm_read2_l   : OUT    std_logic;
       predm_write2h_l : OUT    std_logic;
@@ -44,7 +45,7 @@ BEGIN
 		predm_read2_l <= control(4) after delay_reg;
 	END PROCESS MEM_C_LEAVING;
 
-	MEM_C_ENTERING : PROCESS(clk, mem_c2, RESET_L)
+	MEM_C_ENTERING : PROCESS(clk, mem_c2, RESET_L, stall)
 	BEGIN
 		if RESET_L = '0' then
 			mem(0) <= "0000000001110000";
@@ -52,7 +53,7 @@ BEGIN
 			mem(2) <= "0000000001110000";
 		end if;
 
-		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0')) THEN
+		IF (CLK'EVENT AND (CLK = '1') AND (CLK'LAST_VALUE = '0') and stall = '0') THEN
 			mem(2) <= mem(1);
 			mem(1) <= mem(0);
 			mem(0) <= mem_c2;

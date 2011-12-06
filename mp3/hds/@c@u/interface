@@ -80,7 +80,7 @@ port (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 6
+o 7
 suid 793,0
 )
 )
@@ -138,7 +138,7 @@ port (LogicalPort
 decl (Decl
 n "dMiss"
 t "std_logic"
-o 7
+o 8
 suid 798,0
 )
 )
@@ -217,9 +217,9 @@ uid 7262,0
 *27 (LogPort
 port (LogicalPort
 decl (Decl
-n "im_resp_h"
+n "IM_RESP_H"
 t "std_logic"
-o 9
+o 5
 suid 805,0
 )
 )
@@ -254,7 +254,7 @@ port (LogicalPort
 decl (Decl
 n "iMiss"
 t "std_logic"
-o 8
+o 9
 suid 808,0
 )
 )
@@ -311,7 +311,7 @@ port (LogicalPort
 decl (Decl
 n "Mem_C_Out"
 t "lc3b_word"
-o 5
+o 6
 suid 813,0
 )
 )
@@ -692,7 +692,7 @@ value "UNKNOWN"
 )
 (vvPair
 variable "host"
-value "gelib-057-01.ews.illinois.edu"
+value "gelib-057-18.ews.illinois.edu"
 )
 (vvPair
 variable "language"
@@ -772,7 +772,7 @@ value "<TBD>"
 )
 (vvPair
 variable "time"
-value "02:43:35"
+value "17:30:18"
 )
 (vvPair
 variable "unit"
@@ -886,14 +886,14 @@ uid 7127,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,6300,61000,7200"
+xt "44000,7200,61000,8100"
 st "RESET_L     : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "RESET_L"
 t "std_logic"
-o 6
+o 7
 suid 793,0
 )
 )
@@ -1112,14 +1112,14 @@ uid 7152,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,7200,61000,8100"
+xt "44000,8100,61000,9000"
 st "dMiss       : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "dMiss"
 t "std_logic"
-o 7
+o 8
 suid 798,0
 )
 )
@@ -1418,7 +1418,7 @@ va (VaSet
 font "courier,8,0"
 )
 xt "16000,10550,20500,11450"
-st "im_resp_h"
+st "IM_RESP_H"
 blo "16000,11250"
 tm "CptPortNameMgr"
 )
@@ -1428,14 +1428,14 @@ uid 7187,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,9000,61000,9900"
-st "im_resp_h   : IN     std_logic  ;"
+xt "44000,5400,61000,6300"
+st "IM_RESP_H   : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
-n "im_resp_h"
+n "IM_RESP_H"
 t "std_logic"
-o 9
+o 5
 suid 805,0
 )
 )
@@ -1564,14 +1564,14 @@ uid 7202,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,8100,61000,9000"
+xt "44000,9000,61000,9900"
 st "iMiss       : IN     std_logic  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "iMiss"
 t "std_logic"
-o 8
+o 9
 suid 808,0
 )
 )
@@ -1788,14 +1788,14 @@ uid 7227,0
 va (VaSet
 font "courier,8,0"
 )
-xt "44000,5400,61000,6300"
+xt "44000,6300,61000,7200"
 st "Mem_C_Out   : IN     lc3b_word  ;"
 )
 thePort (LogicalPort
 decl (Decl
 n "Mem_C_Out"
 t "lc3b_word"
-o 5
+o 6
 suid 813,0
 )
 )
@@ -2575,5 +2575,5 @@ xt "42000,0,42000,0"
 tm "SyDeclarativeTextMgr"
 )
 )
-lastUid 7333,0
+lastUid 7417,0
 )

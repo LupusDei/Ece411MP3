@@ -16,10 +16,13 @@ USE ece411.LC3b_types.all;
 
 ENTITY Staller IS
    PORT( 
-      DM_RESP_H : IN     std_logic;
-      RESET_L   : IN     std_logic;
-      dMiss     : IN     std_logic;
-      stall     : OUT    std_logic
+      DM_RESP_H   : IN     std_logic;
+      RESET_L     : IN     std_logic;
+      dMiss       : IN     std_logic;
+      dm_read_l   : IN     STD_LOGIC;
+      dm_writeh_l : IN     STD_LOGIC;
+      dm_writel_l : IN     STD_LOGIC;
+      stall       : OUT    std_logic
    );
 
 -- Declarations
@@ -30,13 +33,13 @@ END Staller ;
 ARCHITECTURE untitled OF Staller IS
 	signal was_miss : std_logic := '0';
 BEGIN
-	PROCESS(was_miss, RESET_L, dMiss, DM_RESP_H)
+	PROCESS(was_miss, RESET_L, dMiss, DM_RESP_H, dm_read_l, dm_writeh_l, dm_writel_l)
 	begin
 		if RESET_L = '0' then
 			was_miss <= '0';
 		end if;
 
-		if (dMiss = '1' and DM_RESP_H = '0') then
+		if (dMiss = '1' and (dm_read_l = '0' or (dm_writel_l = '0' or dm_writeh_l = '0')) and DM_RESP_H = '0') then
 			was_miss <= '1';
 		end if;
 		if (DM_RESP_H = '1') then

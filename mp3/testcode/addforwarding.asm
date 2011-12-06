@@ -24,4 +24,6 @@ NOP
 ADD R3, R1, 0
 LDR R4, R2, 0
 NOP
--- end result should be r0:0,r1:8,r2:8,r3:8,r4:8,r5:2,r6:2,r7:0
+
+
+;- end result should be r0:0,r1:8,r2:8,r3:8,r4:8,r5:2,r6:2,r7:0

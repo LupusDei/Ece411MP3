@@ -8,46 +8,267 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.L2CacheUnit(struct) 
+# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.mp3_CPU(struct) 
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../std.standard
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.std_logic_1164(body)
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.numeric_std(body)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lc3b_types(body)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.l2cacheunit(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.cache_controller(fsm)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.l2cache(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.encoder8in(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.hit8incalc(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.or8in(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.hitclock8(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.myand(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mynot(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lrutruth(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lunit(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lrureg3bit8(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lruplusone(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.compare3bits(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.equals7(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.zero(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_3(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mux3bit8(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.memaddrcalc(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.splitter1(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.tag2mux(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wayunit(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.datawritecalc(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.writekillclock(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.my3nand(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.myor(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.way(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.compare(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.dataarray(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.worthless2(worthless)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.bit8mux(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.my2nand(struct)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.oword2mux(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.owordmux8(untitled)
-# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.tag8mux(untitled)
-view -new wave
-# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lc3b_types(body)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mp3_cpu(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.cu(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_reg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.forwardingunit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_reg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_reg2(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_unit2(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.staller(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.stripper(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_reg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_unit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.bubbler(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.delayunit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.myor(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.parsememcin2(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.setdmwrites(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writehigh(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_1(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mp3_cache(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.cache_controller(fsm)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.cache_datapath(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.bit2mux(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.datawritecalc(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writekillclock(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.my3nand(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.myand(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mynot(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.hit2incalc(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.hitclock(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lru(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memaddrcomb(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.splitter(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.tag2mux(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.way(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.compare(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.dataarray(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writecombiner(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.byteexchanger(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.byte2mux(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.bytemerger(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wordsplitter(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.decoder3in8out(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.owordmerger(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.owordsplitter(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.my2nand(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.oword2mux(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.owordmux(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.physical_memory(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.exstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.worthless(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux4_16(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.idstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.createsrcreg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.instrripper(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.sext(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wordmux8(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.regextractor(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.shift(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.add16(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_3(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ifstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pc(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pcplus2(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gen_nops(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gencondcodes(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lastbitstb(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.shiftbytedata(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.srcregshifter(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzp(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzpsplit(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wanna_branch(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.stireg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg3(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wbstage(struct)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_decode(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.brreg(untitled)
+# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
+do stallwave.do
+do MP3_FINAL.do
+# --- Executing initialization force file for ../testcode/MP3_FINAL.asm --- 
+# Resetting processor for 5 ns. 
+# Initializing the processor. 
+# Done initializing processor, loading ../testcode/MP3_FINAL.asm program code. 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/ipram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dpram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dpram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/ipram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 4 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: INVALID ALU OPERATION (ALUOP).
+#    Time: 4 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dpram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/ipram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 5 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+# 0
+# 
+# Done loading ../testcode/MP3_FINAL.asm program code. 
+run 80000
+# 0
+# 
