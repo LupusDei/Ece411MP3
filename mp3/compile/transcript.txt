@@ -8,267 +8,1819 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.mp3_CPU(struct) 
+# vsim -L ece411 -L mp3lib -l transcript.txt -i -multisource_delay latest -t ns +typdelays -foreign {hdsInit /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll} -pli /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll ece411.MP3_Cache(struct) 
 # Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../std.standard
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.std_logic_1164(body)
 # Loading /software/fpgadv72-x86_64/Modeltech/linux/../ieee.numeric_std(body)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lc3b_types(body)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mp3_cpu(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.cu(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_reg(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_unit(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.forwardingunit(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_unit(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_unit(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_reg(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_reg2(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_unit(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_unit2(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.staller(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.stripper(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_reg(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_unit(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.bubbler(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.delayunit(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.myor(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.parsememcin2(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.setdmwrites(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writehigh(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_1(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_16(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mp3_cache(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.cache_controller(fsm)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.cache_datapath(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.bit2mux(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.datawritecalc(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writekillclock(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.my3nand(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.myand(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mynot(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.hit2incalc(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.hitclock(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lru(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memaddrcomb(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.splitter(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.tag2mux(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.way(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.compare(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.dataarray(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.writecombiner(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.byteexchanger(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.byte2mux(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.bytemerger(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wordsplitter(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.decoder3in8out(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.owordmerger(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.owordsplitter(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.my2nand(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.oword2mux(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.owordmux(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.physical_memory(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pipeline(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.exstage(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ex_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.worthless(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.alu(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux4_16(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.idstage(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.createsrcreg(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.id_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.instrripper(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.sext(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wordmux8(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.regextractor(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.shift(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.add16(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.mux2_3(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.ifstage(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.if_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pc(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.pcplus2(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gen_nops(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.memstage(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.gencondcodes(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.lastbitstb(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.mem_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.shiftbytedata(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.srcregshifter(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzp(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.thenzpsplit(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wanna_branch(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.stireg(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.transitionreg3(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wbstage(struct)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.wb_c_decode(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/compile.brreg(untitled)
-# Loading /home/bhatia9/Desktop/mp3_gitfolder/Ece411MP3/mp3/mp3lib/compile.regfile(untitled)
-do stallwave.do
-do MP3_FINAL.do
-# --- Executing initialization force file for ../testcode/MP3_FINAL.asm --- 
-# Resetting processor for 5 ns. 
-# Initializing the processor. 
-# Done initializing processor, loading ../testcode/MP3_FINAL.asm program code. 
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lc3b_types(body)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mp3_cache(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.arbiter(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.arbitercontroller(fsm)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.bit2mux(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wordmux2(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.genzero(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.oword2mux(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.pass(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.cache_controller(fsm)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.cache_datapath(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.datawritecalc(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.writekillclock(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.my3nand(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.myand(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mynot(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.myor(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.hit2incalc(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.hitclock(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lru(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.memaddrcomb(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.splitter(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.tag2mux(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.way(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.compare(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.dataarray(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.writecombiner(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.byteexchanger(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.byte2mux(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.bytemerger(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wordsplitter(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.decoder3in8out(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.owordmerger(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.owordsplitter(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.my2nand(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.owordmux(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.l2cacheunit(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.l2cache(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.encoder8in(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.hit8incalc(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.or8in(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.hitclock8(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lrutruth(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lunit(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lrureg3bit8(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.lruplusone(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.compare3bits(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.equals7(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.zero(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/mp3lib/compile.mux2_3(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.mux3bit8(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.memaddrcalc(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.splitter1(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.wayunit(struct)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.worthless2(worthless)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.bit8mux(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.owordmux8(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.tag8mux(untitled)
+# Loading /home/martin43/ece411/Ece411MP3/mp3/compile.physical_memory(untitled)
+view -new wave
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+write format wave -window .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf /home/martin43/ece411/Ece411MP3/mp3/compile/l2wave.do
+env aSplitter
+# Region not found: "aSplitter"
+do L2_TEST.do
+# --- Executing initialization force file for the L2 Tests 
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/pram
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/ipram
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dpram
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dpram
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/ipram
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/icache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/icache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 1 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 2 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 3 ns  Iteration: 1  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 4 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
-# ** Warning: INVALID ALU OPERATION (ALUOP).
-#    Time: 4 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/alru
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/alru
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way0/adataarray
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/icache/way1/adataarray
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dpram
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/ipram
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 0  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 5 ns  Iteration: 1  Instance: /mp3_cpu/pipelinedatapath/ourregfile
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 7 ns  Iteration: 2  Instance: /mp3_cpu/pipelinedatapath/execution/exalu
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 8 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way0/adataarray
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 8 ns  Iteration: 0  Instance: /mp3_cpu/mymp3_cache/dcache/way1/adataarray
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 77 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 77 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 77 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 77 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 81 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 81 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 81 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 81 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 81 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 81 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 81 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 81 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
 # 0
 # 
-# Done loading ../testcode/MP3_FINAL.asm program code. 
-run 80000
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 101 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 101 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 126 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
 # 0
 # 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 151 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 175 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 201 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 225 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 251 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 275 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 301 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 325 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# 0
+# 
+do L2_TEST.do
+# --- Executing initialization force file for the L2 Tests 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ns  Iteration: 2  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ns  Iteration: 2  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ns  Iteration: 2  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 350 ns  Iteration: 3  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 351 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 351 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 352 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 352 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 352 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 353 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 353 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 360 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 360 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 360 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 363 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 365 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 365 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 375 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 375 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 376 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 376 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 376 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 379 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 396 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ns  Iteration: 2  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ns  Iteration: 2  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ns  Iteration: 2  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 400 ns  Iteration: 2  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 427 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 427 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 451 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 451 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 475 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 476 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 501 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 525 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 551 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 575 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 601 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 625 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 651 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 675 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# 0
+# 
+do L2_TEST.do
+# --- Executing initialization force file for the L2 Tests 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 700 ns  Iteration: 2  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 700 ns  Iteration: 2  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 700 ns  Iteration: 2  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 700 ns  Iteration: 3  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 701 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 701 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 702 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 702 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 702 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 703 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 703 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 706 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 706 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 724 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# 0
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 750 ns  Iteration: 2  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 750 ns  Iteration: 2  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 750 ns  Iteration: 2  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 750 ns  Iteration: 2  Instance: /mp3_cache/pram
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do L2_TEST.do
+# --- Executing initialization force file for the L2 Tests 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/pram
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do L2_TEST.do
+# --- Executing initialization force file for the L2 Tests 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/pram
+run 1000
+# 0
+# 
+restart -f
+# Loading /software/fpgadv72-x86_64/Hds/resources/downstream/modelsim/ModelSim_32Bit.dll
+do L2_TEST.do
+# --- Executing initialization force file for the L2 Tests 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /mp3_cache/pram
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 1 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 3 ns  Iteration: 1  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 6 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 7 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/comparring
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 8 ns  Iteration: 1  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 11 ns  Iteration: 0  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 26 ns  Iteration: 0  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/dcache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/alru
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/icache/way1/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit0/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit1/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit2/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit3/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit4/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit5/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit6/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/trueness/unit7/waylrureg
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit0/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit1/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit2/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit3/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit4/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit5/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit6/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/megal2/datapath/wayunit7/way0/adataarray
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 50 ns  Iteration: 2  Instance: /mp3_cache/pram
